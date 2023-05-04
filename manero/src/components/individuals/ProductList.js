@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import UseFetch from './UseFetch';
 import ProductCard from './ProductCard';
 
@@ -10,11 +9,16 @@ const ProductList = () => {
     }  = UseFetch("https://sijb-cms22-backend.azurewebsites.net/api/Products/BestSellers/3");
 
   return (
-    <div className="products">
+    <div className="col">
       {error && <div>{error}</div>}
       {loading && <div>Loading...</div>}
       {products?.map((product) => {
-        return <ProductCard key={product.id} product={product} />;
+        return (
+        <ProductCard 
+        key={product.id} 
+        product={product}
+        />
+        );
       })}
     </div>
   );
