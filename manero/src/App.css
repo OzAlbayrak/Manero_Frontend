@@ -1,1 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap");
+html,
+body {
+  font-family: "Mulish", sans-serif;
+}
 
+.text-light-color {
+  color: #626262;
+}
+
+.text-dark-color {
+  color: #111111;
+}
+
+.headersection {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.headersection .iconcontainer {
+  z-index: 6;
+  margin-left: 15px;
+}
+.headersection .shoppingicon {
+  margin-right: 15px;
+}
+.headersection .page-heading {
+  font-size: 1.125rem;
+  color: #111111;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.headersection .logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111111;
+}
+.headersection .title-container {
+  position: relative;
+}
+.headersection .title-container h1 {
+  font-size: 20px;
+}
+.headersection .title-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15%;
+  height: 2px;
+  background-color: black;
+}
+.headersection .title-container:nth-child(1)::before {
+  width: 20%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+}
+.headersection .search input {
+  border: none;
+  margin-left: 10px;
+}
+.headersection .hide {
+  display: none;
+}
+.headersection .nav {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.headersection .nav h1 {
+  color: white;
+}
+.headersection .nav p {
+  color: rgb(241, 241, 241);
+}
+.headersection .nav .trackorder {
+  position: absolute;
+  bottom: 0;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.headersection .nav .trackorder .inputcontainer {
+  width: 375px;
+  position: relative;
+}
+.headersection .nav .trackorder .inputcontainer p {
+  margin-left: 25px;
+}
+.headersection .nav .trackorder .inputcontainer .baselabel {
+  position: absolute;
+  font-size: 12px;
+  padding-top: 5px;
+  padding-right: 2px;
+  padding-left: 2px;
+  left: 40px;
+  top: -13px;
+  padding-bottom: 0;
+  color: lightgray;
+  z-index: 1;
+}
+.headersection .nav .trackorder .inputcontainer .inputgroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.headersection .nav .trackorder .inputcontainer .inputgroup .inputtrackorder {
+  width: 200px;
+  border: 0.5px solid gray;
+  border-radius: 50px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 30px;
+  color: white;
+  text-align: center;
+}
+.headersection .nav .trackorder .inputcontainer .inputgroup .arrowcontainer {
+  position: absolute;
+  display: flex;
+  left: 165px;
+}
+.headersection .nav .trackorder .inputcontainer .inputgroup .arrowcontainer i {
+  color: lightgray;
+  font-size: 30px;
+}
+.headersection .nav-open {
+  left: 0;
+}
+.headersection .nav-closed {
+  left: -250px;
+}
+.headersection .info-container {
+  display: flex;
+  flex-direction: column;
+}
+.headersection .info-item {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  border-bottom: 1px solid lightgray;
+}
+.headersection .info-item p {
+  margin-left: 15px;
+}
+.headersection .info-item i {
+  margin-top: 10px;
+  color: lightgray;
+}
+.headersection .collection p {
+  font-size: 18px;
+  font-weight: 600;
+}
