@@ -20,7 +20,9 @@ const ProductCard = ({ product }) => {
             <h5 className="card-title">{product.name}</h5>
             <p className="card-price">{product.price}$</p>
         </div>
+        
     </div>
+    
 }
 
 export default ProductCard

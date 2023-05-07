@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from '../../assets/images/img-showcase.png'
 
 const Showcase2 = () => {
   return (
@@ -12,7 +11,7 @@ const Showcase2 = () => {
                     <button className="btn btn-theme mt-4">SHOP NOW</button>
                 </div>            
             </div>
-            <img src={Image} alt="" />
+            <div></div>
         </div>
     </section>
   )

@@ -9,3 +9,15 @@ body{
 .text-dark-color {
 	color: $color-blackish;
 }
+
+.title-1 {
+    font-size: 59px;
+    font-weight: bolder;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+
+.rating {
+  color: $color-rating;  
+}

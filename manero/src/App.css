@@ -12,6 +12,17 @@ body {
   color: #111111;
 }
 
+.title-1 {
+  font-size: 59px;
+  font-weight: bolder;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.rating {
+  color: #FFBE00;
+}
+
 .headersection {
   display: flex;
   justify-content: space-between;
@@ -160,4 +171,114 @@ body {
 .headersection .collection p {
   font-size: 18px;
   font-weight: 600;
+}
+
+.showcase {
+  background: #dbe3f5;
+}
+.showcase .container {
+  height: 600px;
+  display: flex;
+  margin-left: 15px;
+}
+.showcase .container .content {
+  flex: 1;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+.showcase .container .content .titles {
+  text-align: left;
+  color: #ffffff;
+}
+.showcase .container2 {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.showcase .container2 .content {
+  flex: 1;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+}
+.showcase .container2 .content .titles {
+  margin-left: 10px;
+  color: #ffffff;
+}
+.showcase .container2 .content .btn {
+  margin: 30px;
+  color: #ffffff;
+}
+.showcase .container2 img {
+  flex: 1;
+  width: auto;
+  height: 100%;
+}
+
+.product-grid .container {
+  max-width: 1110px;
+}
+.product-grid .title {
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: left;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.product-grid .card {
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product-grid .card .card-img-container {
+  display: grid;
+  position: relative;
+}
+.product-grid .card .card-img-container .card-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+}
+.product-grid .card .card-img-container .card-menu .menu-link {
+  background-color: #ffffff;
+  color: #222529;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+}
+.product-grid .card .card-img-container .card-menu .menu-link:hover {
+  background-color: #222529;
+  color: #ffffff;
+  text-decoration: none;
+}
+.product-grid .card .card-img-container .btn-theme {
+  position: absolute;
+  bottom: 0;
+}
+.product-grid .card .card-body {
+  text-align: center;
+}
+.product-grid .card .card-body .card-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.product-grid .card .card-body .card-price {
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+}
+.product-grid .card:hover .card-menu {
+  display: block !important;
+}
+.product-grid .card:hover .btn-theme {
+  display: block !important;
 }
