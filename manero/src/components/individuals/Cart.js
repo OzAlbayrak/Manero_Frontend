@@ -1,13 +1,12 @@
 import React from 'react';
 import MenuLink from './MenuLink';
 
-// GetAllProduct()
-// GetNumberOfProducts()
-// DeleteOneProductFromList()
-// ViewAllproducts(GetAllProduct())
+// GetAllProduct();
+// GetNumberOfProducts();
+// DeleteOneProductFromList();
+// ViewAllproducts(GetAllProduct());
 
-
-
+// Jag bytte ut denna i headern mot CartIcon, det blir tydligare. Just nu används den här inte. /Per
 const Menu = () => {
 	return (
 		<nav className='cart shoppingicon'>
