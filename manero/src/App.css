@@ -23,6 +23,21 @@ body {
   color: #FFBE00;
 }
 
+.custom-btn {
+  background-color: #111111;
+  border: #111111 solid 2px;
+  color: white;
+  padding: 1rem;
+}
+.custom-btn:hover {
+  border: #111111 solid 2px;
+  background-color: transparent;
+}
+.custom-btn:active {
+  padding: 0.85rem;
+  border: #111111 solid 4px;
+}
+
 .headersection {
   display: flex;
   justify-content: space-between;

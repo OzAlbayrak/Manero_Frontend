@@ -2,6 +2,11 @@
 
 @import './variables';
 @import './base';
+
+// Individuals
+@import './components/individuals/button';
+
+// Sections
 @import './components/sections/header';
 @import './components/sections/showcase';
 @import './components/sections/productsGrid';
