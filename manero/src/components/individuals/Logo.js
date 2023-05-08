@@ -1,10 +1,33 @@
-import React from 'react'
+import React from 'react';
 
-const Logo = () => {
-  return (
-    <div className="logo">MANERO
-    </div>
-  )
-}
+const Logo = ({ title }) => {
+	let className;
+	switch (title) {
+		case 'MANERO':
+			className = 'logo';
+			break;
+		case 'search':
+			className = 'search';
+			break;
+		default:
+			className = 'page-heading';
+			break;
+	}
+	let html;
 
-export default Logo
+	{
+		if (title === 'search') {
+			html = (
+				<div className={className}>
+					<i className='fa-light fa-magnifying-glass 2xs'></i>
+					<input type='text' placeholder='Search'></input>
+				</div>
+			);
+		} else {
+			html = <h1 className={className}>{title}</h1>;
+		}
+	}
+	return <>{html}</>;
+};
+
+export default Logo;

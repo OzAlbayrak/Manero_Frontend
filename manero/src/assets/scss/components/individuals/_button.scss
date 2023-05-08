@@ -1,0 +1,14 @@
+.custom-btn {
+	background-color: $color-blackish;
+	border: $color-blackish solid 2px;
+	color: white;
+	padding: 1rem;
+	&:hover {
+		border: $color-blackish solid 2px;
+		background-color: transparent;
+	}
+	&:active {
+		padding: 0.85rem;
+		border: $color-blackish solid 4px;
+	}
+}

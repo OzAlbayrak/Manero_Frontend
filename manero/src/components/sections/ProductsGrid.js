@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductCard from '../individuals/ProductCard'
+import ProductList from '../individuals/ProductList'
 
 const ProductsGrid = ({title}) => {
   return (
@@ -7,11 +7,8 @@ const ProductsGrid = ({title}) => {
         <div className="container">
             <div className="title">{title}</div>
 
-            <div className="row row-col-sm-8">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-
+            <div className="row row-cols-1-sm-2">
+                <ProductList />
             </div>
         </div>
     </section>

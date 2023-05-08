@@ -1,0 +1,52 @@
+.showcase {
+
+    background: $color-theme;
+
+    .container {
+        height:600px;
+        display: flex;
+        margin-left: 15px;
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: left;
+            align-items:flex-end;
+            margin-bottom: 30px;
+
+            .titles {
+                text-align: left;
+                color: $color-white;
+            }
+        }
+    }
+    .container2 {
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: left;
+            align-items:flex-end;
+
+            .titles {
+                margin-left: 10px;
+                color: $color-white;
+            }
+            .btn{
+                margin: 30px;
+                color: $color-white;
+            }
+        }
+
+        img {
+            flex: 1;
+            width: auto;
+            height: 100%;
+        }
+    }
+
+
+}

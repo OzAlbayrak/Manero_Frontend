@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap');
+
+@import './variables';
+@import './base';
+
+// Individuals
+@import './components/individuals/button';
+
+// Sections
+@import './components/sections/header';
+@import './components/sections/showcase';
+@import './components/sections/productsGrid';
