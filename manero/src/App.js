@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeView from "./Views/HomeView";
 import GetStartedHomeView from "./Views/GetStartedHomeView";
 import GetStartedWelcomeView from "./Views/GetStartedWelcomeView";
+import VerifyNumberView from "./Views/VerifyNumberView";
+import ConfirmCodeView from "./Views/ConfirmCodeView";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
             path="/GetStartedWelcome"
             element={<GetStartedWelcomeView />}
           />
+          <Route path="/VerifyNumber" element={<VerifyNumberView />} />
+          <Route path="/ConfirmCode" element={<ConfirmCodeView />} />
         </Routes>
       </Router>
     </div>
