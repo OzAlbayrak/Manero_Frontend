@@ -1,17 +1,16 @@
+.promo-sideicon {
+    margin-top: 100px;
+}
+
 .top-back-and-text {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    margin: 0;
+    float: inline-start;
   }
   
   .promo-head {
     font-weight: 400;
     font-size: 18px;
-    text-align: center;
+    align-self: center;
   }
-  
-
-  
-
