@@ -42,10 +42,14 @@ body{
           margin: 10px;
           min-width: 335px;
           border: 2px solid $color-theme;
+          border: 2px solid $color-theme;
           border-radius: 50px;
           padding: 12px 20px;
           z-index: -1;
       }
   }
 
+  .color-grey{
+      color:$color-theme;
+  }
 }
