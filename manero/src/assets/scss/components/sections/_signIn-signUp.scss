@@ -1,0 +1,38 @@
+.vr {
+	background-color: $color-blackish;
+	width: 2px;
+	opacity: 1;
+	height: 30px;
+	margin-top: 40px;
+}
+.headline {
+	font-weight: 700;
+	font-size: 2rem;
+	color: $color-blackish;
+}
+a {
+	text-decoration: none;
+}
+.socials-btn-row {
+	button {
+		border: solid 2px $color-theme;
+		height: 60px;
+		width: 60px;
+		font-size: 1.5rem;
+		&:hover {
+			border: solid 3px $color-theme;
+		}
+		&:active {
+			border: solid 4px $color-theme !important;
+		}
+	}
+	.fa-facebook-f {
+		color: #3b5999;
+	}
+	.fa-twitter {
+		color: #55acee;
+	}
+	.fa-google-plus-g {
+		color: #dd4b39;
+	}
+}
