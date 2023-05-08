@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import SideIcon from "../individuals/SideIcon";
 
 const PromoCodes = () => {
-    return (
-        <div>PromoCodes</div>
-    )
-}
+  return (
+    <div>
+      <div className="top-back-and-text">
+        <SideIcon />
+        <h1 className="promo-head">My promocodes</h1>
+      </div>
+    </div>
+  );
+};
 
-export default PromoCodes
+export default PromoCodes;
