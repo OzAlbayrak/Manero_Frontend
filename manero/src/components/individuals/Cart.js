@@ -1,10 +1,10 @@
 import React from 'react';
 import MenuLink from './MenuLink';
 
-GetAllProduct()
-GetNumberOfProducts()
-DeleteOneProductFromList()
-ViewAllproducts(GetAllProduct())
+// GetAllProduct()
+// GetNumberOfProducts()
+// DeleteOneProductFromList()
+// ViewAllproducts(GetAllProduct())
 
 
 
