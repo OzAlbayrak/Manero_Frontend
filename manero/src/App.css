@@ -23,6 +23,33 @@ body {
   color: #FFBE00;
 }
 
+.inputcontainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.inputcontainer .text-center {
+  width: 375px;
+  position: relative;
+}
+.inputcontainer .text-center .baselabel {
+  position: absolute;
+  font-size: 12px;
+  background-color: white;
+  padding: 5px;
+  left: 40px;
+  top: -2px;
+  padding-bottom: 0;
+}
+.inputcontainer .text-center .baseinput {
+  margin: 10px;
+  min-width: 335px;
+  border: 2px solid #dbe3f5;
+  border-radius: 50px;
+  padding: 12px 20px;
+  z-index: -1;
+}
+
 .custom-btn {
   background-color: #111111;
   border: #111111 solid 2px;
@@ -296,4 +323,105 @@ body {
 }
 .product-grid .card:hover .btn-theme {
   display: block !important;
+}
+
+.get-started-root {
+  background-color: #dbe3f5;
+  overflow: hidden;
+}
+.get-started-root .get-started {
+  display: inline;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+.get-started-root .get-started .inner-circle {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.get-started-root .get-started .outer-circle {
+  position: absolute;
+  border: 5px solid white;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+.get-started-root .get-started img {
+  position: absolute;
+}
+
+.get-started-welcome {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  height: 100dvh;
+  background-color: #dbe3f5;
+  overflow: hidden;
+}
+
+.carouselroot {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100dvh;
+  z-index: -2;
+  background-color: #dbe3f5;
+}
+.carouselroot .carouselbtn {
+  display: none;
+}
+.carouselroot .title-1 {
+  font-size: 32px;
+}
+.carouselroot .content {
+  font-size: 16px;
+}
+.carouselroot .button-container {
+  width: 255px;
+  height: 50px;
+  margin-bottom: 80px;
+}
+.carouselroot .button-container .custom-btn {
+  height: 50px;
+  padding: 0;
+}
+.carouselroot .inner-circle {
+  position: absolute;
+  background-color: white;
+  width: 415px;
+  height: 415px;
+  border-radius: 50%;
+  z-index: -1;
+  bottom: -15px;
+}
+.carouselroot .outer-circle {
+  position: absolute;
+  border: 5px solid white;
+  width: 475px;
+  height: 475px;
+  border-radius: 50%;
+  z-index: -1;
+  bottom: -45px;
+}
+.carouselroot .carousel-indicators [data-bs-target] {
+  bottom: 0px;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.carouselroot .carousel-indicators .active {
+  width: 20px;
+  border-radius: 50px;
+}
+
+.welcomecontent {
+  display: none;
 }
