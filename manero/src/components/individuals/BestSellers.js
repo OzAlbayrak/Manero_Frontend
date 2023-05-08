@@ -6,7 +6,7 @@ const ProductList = () => {
         data: products,
         loading,
         error
-    }  = UseFetch("https://sijb-cms22-backend.azurewebsites.net/api/Products/FeaturedProducts/10");
+    }  = UseFetch("https://sijb-cms22-backend.azurewebsites.net/api/Products/BestSellers/5");
 
   return (
     <div className="col">
