@@ -344,3 +344,43 @@ body {
   font-size: 18px;
   text-align: center;
 }
+
+.vr {
+  background-color: #111111;
+  width: 2px;
+  opacity: 1;
+  height: 30px;
+  margin-top: 40px;
+}
+
+.headline {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #111111;
+}
+
+a {
+  text-decoration: none;
+}
+
+.socials-btn-row button {
+  border: solid 2px #dbe3f5;
+  height: 60px;
+  width: 60px;
+  font-size: 1.5rem;
+}
+.socials-btn-row button:hover {
+  border: solid 3px #dbe3f5;
+}
+.socials-btn-row button:active {
+  border: solid 4px #dbe3f5 !important;
+}
+.socials-btn-row .fa-facebook-f {
+  color: #3b5999;
+}
+.socials-btn-row .fa-twitter {
+  color: #55acee;
+}
+.socials-btn-row .fa-google-plus-g {
+  color: #dd4b39;
+}
