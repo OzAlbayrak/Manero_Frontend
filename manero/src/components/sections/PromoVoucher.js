@@ -4,9 +4,11 @@ import SideIcon from '../individuals/SideIcon'
 const PromoVoucher = () => {
     return (
         <div>
-            <div className='top-back-and-text'>
+            <div className='promo-sideicon'>
                 <SideIcon />
-                <h1 className='promo-head'>My promocodes</h1>
+            </div>
+            <div className='top-back-and-text'>
+                <p className='promo-head'>My promocodes</p>
             </div>
         </div>
 
