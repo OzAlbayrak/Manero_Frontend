@@ -1,4 +1,16 @@
-.promo-head {
-  font-weight: 600;
-  font-size: 18px;
+.promo-sideicon {
+    margin-top: 100px;
 }
+
+.top-back-and-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    float: inline-start;
+  }
+  
+  .promo-head {
+    font-weight: 400;
+    font-size: 18px;
+    align-self: center;
+  }
