@@ -1,16 +1,16 @@
 import React from 'react';
 
 const Logo = ({ title }) => {
-	let className;
+	let className = 'mx-auto';
 	switch (title) {
 		case 'MANERO':
-			className = 'logo';
+			className += ' logo';
 			break;
 		case 'search':
-			className = 'search';
+			className += ' search';
 			break;
 		default:
-			className = 'page-heading';
+			className += ' page-heading';
 			break;
 	}
 	let html;
