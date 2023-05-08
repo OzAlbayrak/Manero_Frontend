@@ -19,7 +19,7 @@ const SideMenu = () => {
                 <NavLink to="/HomeView" className='nav-logo'><span className='nav-logo-name'>Homepage</span></NavLink>
   
                 <div className='nav-list'>
-                  <NavLink to="/" className='nav-link active'><span className='nav-link-name'>Products</span></NavLink>
+                  <NavLink to="/" className='nav-link actives'><span className='nav-link-name'>Products</span></NavLink>
                   <NavLink to="/" className='nav-link'><span className='nav-link-name'>About us</span></NavLink>
                   <NavLink to="/" className='nav-link'><span className='nav-link-name'>Contact</span></NavLink>
                 </div>
