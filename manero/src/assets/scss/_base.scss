@@ -17,9 +17,17 @@ body{
     margin-bottom: 2rem;
 }
 
+.title-2{
+  font-size: 40px;
+  font-weight: bolder;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
 
 .rating {
-  color: $color-rating;  
+  color: $color-rating; 
+  text-align: left; 
 }
 
 .inputcontainer{

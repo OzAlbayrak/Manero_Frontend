@@ -19,8 +19,16 @@ body {
   margin-bottom: 2rem;
 }
 
+.title-2 {
+  font-size: 40px;
+  font-weight: bolder;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
 .rating {
   color: #FFBE00;
+  text-align: left;
 }
 
 .inputcontainer {
@@ -239,7 +247,7 @@ body {
   color: #ffffff;
 }
 .showcase .container2 {
-  height: 200px;
+  height: 300px;
   display: flex;
   justify-content: space-between;
 }
@@ -254,8 +262,17 @@ body {
   color: #ffffff;
 }
 .showcase .container2 .content .btn {
-  margin: 30px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-Bottom: 40px;
+  padding: 25px 60px;
+  background-color: #ffffff;
+  border-radius: 300px;
+}
+.showcase .container2 .content .btn:hover {
+  background-color: #111111;
   color: #ffffff;
+  text-decoration: none;
 }
 .showcase .container2 img {
   flex: 1;
@@ -269,13 +286,14 @@ body {
 .product-grid .container .slide-container {
   display: flex;
   align-items: center;
-  max-width: 57rem;
+  max-width: 70rem;
   overflow-y: auto;
 }
 .product-grid .container .item-container {
   display: flex;
   overflow-y: hidden;
-  justify-content: center;
+  justify-content: left;
+  margin-left: 15px;
 }
 .product-grid .title {
   font-size: 40px;
@@ -287,11 +305,11 @@ body {
 .product-grid .card {
   z-index: 0;
   border: none;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   text-align: center;
   cursor: pointer;
-  min-width: 20rem;
+  min-width: 33rem;
 }
 .product-grid .card .card-img-container {
   display: grid;
@@ -304,7 +322,7 @@ body {
   display: block;
 }
 .product-grid .card .card-img-container .card-menu .menu-link {
-  background-color: #ffffff;
+  background-color: none;
   color: #222529;
   width: 36px;
   height: 36px;
@@ -329,13 +347,16 @@ body {
   text-align: center;
 }
 .product-grid .card .card-body .card-title {
+  margin-top: 1rem;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 100;
+  text-align: left;
 }
 .product-grid .card .card-body .card-price {
   margin-top: 1rem;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 100;
+  text-align: left;
 }
 .product-grid .card:hover .card-menu {
   display: block !important;
