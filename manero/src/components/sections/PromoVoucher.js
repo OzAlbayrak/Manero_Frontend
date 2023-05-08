@@ -6,7 +6,7 @@ const PromoVoucher = () => {
         <div>
             <div className='top-back-and-text'>
                 <SideIcon />
-                <h1 className='promo-head'>My promocodes</h1>
+                <p className='promo-head'>My promocodes</p>
             </div>
         </div>
 

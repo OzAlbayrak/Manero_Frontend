@@ -332,7 +332,15 @@ body {
   display: block !important;
 }
 
+.top-back-and-text {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
 .promo-head {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
+  text-align: center;
 }
