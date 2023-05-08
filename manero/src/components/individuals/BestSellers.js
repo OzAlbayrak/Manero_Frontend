@@ -9,17 +9,19 @@ const ProductList = () => {
     }  = UseFetch("https://sijb-cms22-backend.azurewebsites.net/api/Products/BestSellers/5");
 
   return (
-    <div className="col">
-      {error && <div>{error}</div>}
-      {loading && <div>Loading...</div>}
-      {products?.map((product) => {
-        return (
-        <ProductCard 
-        key={product.id} 
-        product={product}
-        />
-        );
-      })}
+    <div className="slide-container">
+      <div className='item-container'>
+        {error && <div>{error}</div>}
+        {loading && <div>Loading...</div>}
+        {products?.map((product) => {
+          return (
+          <ProductCard 
+          key={product.id} 
+          product={product}
+          />
+          );
+        })}
+      </div>
     </div>
   );
 };

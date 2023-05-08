@@ -1,6 +1,20 @@
 .product-grid {
     .container {
         max-width: 1110px;
+
+        .slide-container{
+            display: flex;
+            align-items: center;
+            max-width: 57rem;
+
+            overflow-y: auto;
+        }
+
+        .item-container{
+            display: flex;
+            overflow-y: hidden;
+            justify-content: center;
+        }
     }
 
     .title {
@@ -14,8 +28,11 @@
     .card {
         z-index: 0;
         border: none;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+        cursor: pointer;
+        min-width: 20rem;
 
         .card-img-container {
             display: grid;

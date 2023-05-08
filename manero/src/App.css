@@ -266,6 +266,17 @@ body {
 .product-grid .container {
   max-width: 1110px;
 }
+.product-grid .container .slide-container {
+  display: flex;
+  align-items: center;
+  max-width: 57rem;
+  overflow-y: auto;
+}
+.product-grid .container .item-container {
+  display: flex;
+  overflow-y: hidden;
+  justify-content: center;
+}
 .product-grid .title {
   font-size: 40px;
   font-weight: bolder;
@@ -276,8 +287,11 @@ body {
 .product-grid .card {
   z-index: 0;
   border: none;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  cursor: pointer;
+  min-width: 20rem;
 }
 .product-grid .card .card-img-container {
   display: grid;
