@@ -14,7 +14,7 @@ const SideIcon = ({ isMenu }) => {
 	}
 
 	return (
-		<div>
+		<div role='button'>
 			{isMenu ? (
 				<i className='fa-sharp fa-light fa-bars' onClick={openMenu}></i>
 			) : (

@@ -10,6 +10,8 @@ import MenuLink from './MenuLink';
 
 
 
+
+// Jag bytte ut denna i headern mot CartIcon, det blir tydligare. Just nu används den här inte. /Per
 const Menu = () => {
 	return (
 		<nav className='cart shoppingicon'>
