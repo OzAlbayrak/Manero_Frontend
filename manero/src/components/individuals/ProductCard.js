@@ -1,3 +1,4 @@
+import Cart from './Cart'
 import Rating from './Rating'
 
 const ProductCard = ({ product }) => {
@@ -10,7 +11,7 @@ const ProductCard = ({ product }) => {
             <button className="menu-link">
               <i className="fa-regular fa-heart"></i>
             </button>
-            <button className="menu-link">
+            <button className="menu-link" onClick={() => Cart(product)}>
               <i className="fa-light fa-bag-shopping"></i>
             </button>
           </div>
