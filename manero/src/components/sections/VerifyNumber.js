@@ -28,20 +28,30 @@ const VerifyNumber = () => {
   const updateCountryFlag = (phoneNumber) => {
     let flag = "";
 
-    if (phoneNumber.startsWith("+46")) {
-      flag = Sweden;
-    } else if (phoneNumber.startsWith("+1")) {
-      flag = Usa;
-    } else if (phoneNumber.startsWith("+81")) {
-      flag = Japan;
-    } else if (phoneNumber.startsWith("+358")) {
-      flag = Finland;
-    } else if (phoneNumber.startsWith("+45")) {
-      flag = Denmark;
-    } else if (phoneNumber.startsWith("+47")) {
-      flag = Norway;
-    } else if (phoneNumber.startsWith("+44")) {
-      flag = England;
+    switch (true) {
+      case phoneNumber.startsWith("+46"):
+        flag = Sweden;
+        break;
+      case phoneNumber.startsWith("+1"):
+        flag = Usa;
+        break;
+      case phoneNumber.startsWith("+81"):
+        flag = Japan;
+        break;
+      case phoneNumber.startsWith("+358"):
+        flag = Finland;
+        break;
+      case phoneNumber.startsWith("+45"):
+        flag = Denmark;
+        break;
+      case phoneNumber.startsWith("+47"):
+        flag = Norway;
+        break;
+      case phoneNumber.startsWith("+44"):
+        flag = England;
+        break;
+      default:
+        break;
     }
 
     setCountryFlag(flag);
