@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 function Cart() {
@@ -41,17 +41,7 @@ function Cart() {
 		</ul>
 	  </div>
 	);
-  }
+  } 
   
   export default Cart;
 
-
-
-
-
-{
-//GetAllProduct()
-//GetNumberOfProducts()
-//DeleteOneProductFromList()
-//ViewAllproducts(GetAllProduct())
-}

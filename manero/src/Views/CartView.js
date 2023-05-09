@@ -1,8 +1,10 @@
 import React from 'react'
+import Cart from '../components/individuals/Cart'
 
 export const CartView = () => {
   return (
-    <div>CartView</div>
+    <Cart/>
+    
   )
 }
 
