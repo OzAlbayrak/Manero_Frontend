@@ -9,6 +9,7 @@ import ResetedPassword from './components/sections/ResetedPassword';
 import SignIn from './components/sections/SignIn';
 import SignUp from './components/sections/SignUp';
 import AccountCreated from './components/sections/AccountCreated';
+import CartView from './Views/CartView';
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 					<Route path='/ConfirmCode' element={<ConfirmCodeView />} />
 					<Route path='/SignIn' element={<SignIn />} />
 					<Route path='/SignUp' element={<SignUp />} />
+					<Route path='/CartView' element={<CartView />} />
 				</Routes>
 			</Router>
 		</div>
