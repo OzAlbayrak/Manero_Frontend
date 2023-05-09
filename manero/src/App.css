@@ -409,48 +409,6 @@ body {
   text-decoration: none;
 }
 
-.verify-number {
-  margin: 30px 0px;
-  display: flex;
-  flex-direction: column;
-}
-.verify-number .message {
-  margin: 0px 0px 20px 15px;
-}
-.verify-number .inputcontainer .text-center {
-  width: 355px;
-}
-.verify-number .inputcontainer .text-center .custom-btn {
-  max-width: 335px;
-}
-.verify-number .media-border {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.confirm-code {
-  margin: 30px 0px;
-  display: flex;
-  flex-direction: column;
-}
-.confirm-code input {
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-}
-.confirm-code input:valid {
-  background-color: #dbe3f5;
-}
-.confirm-code input:invalid {
-  background-color: white;
-}
-.confirm-code .resend-link {
-  color: #111111;
-  text-decoration: none;
-}
-
 .vr {
   background-color: #111111;
   width: 2px;
@@ -466,7 +424,6 @@ body {
 }
 
 .register-link {
-a {
   text-decoration: none;
 }
 
@@ -604,4 +561,8 @@ main {
 
 .button-container {
   width: 335px;
+}
+
+.text-box {
+  max-width: 335px;
 }
