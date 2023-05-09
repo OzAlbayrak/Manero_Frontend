@@ -6,6 +6,7 @@ import GetStartedWelcomeView from "./Views/GetStartedWelcomeView";
 import VerifyNumberView from "./Views/VerifyNumberView";
 import ConfirmCodeView from "./Views/ConfirmCodeView";
 import ResetedPassword from "./components/sections/ResetedPassword";
+import AccountCreated from "./components/sections/AccountCreated";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeView />} />
           <Route path="/Reset" element={<ResetedPassword />} />
+          <Route path="/Created" element={<AccountCreated />} />
           <Route path="/GetStarted" element={<GetStartedHomeView />} />
           <Route
             path="/GetStartedWelcome"
