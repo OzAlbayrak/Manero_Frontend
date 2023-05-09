@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Header from './Header';
 import InputField from '../individuals/InputField';
 import Button from '../individuals/Button';
@@ -42,9 +43,9 @@ const SignIn = () => {
 							Remember me
 						</label>
 					</div>
-					<a href='#' className='text-dark-color'>
+					<NavLink to='/ForgotPassword' className='text-dark-color register-link'>
 						Forgot password?
-					</a>
+					</NavLink>
 				</div>
 				<div className='text-center mx-auto px-3'>
 					<Button btnText={'SIGN IN'} btnType='submit' />
@@ -52,9 +53,9 @@ const SignIn = () => {
 			</form>
 			<p className='mx-auto text-light-color'>
 				Don't have an account?{' '}
-				<a href='#' className='text-dark-color'>
+				<NavLink to='/SignUp' className='text-dark-color register-link'>
 					Sign up.
-				</a>
+				</NavLink>
 			</p>
 			<div className='d-flex form-width justify-content-center mx-auto socials-btn-row'>
 				<button className='btn rounded-circle m-2'>

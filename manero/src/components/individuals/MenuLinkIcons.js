@@ -1,16 +1,16 @@
-
 import React from 'react'
-import MenuLink from './MenuLink'
+import { NavLink } from 'react-router-dom'
 
 const MenuLinkIcons = () => {
   return (
-    <div className="menulinkicons">
-      <MenuLink name={(<i className="fa-solid fa-house" style="color: #707070;"></i>)}  link="/" />
-      <MenuLink name={(<i className="fa-sharp fa-regular fa-magnifying-glass" style="color: #707070;"></i>)}  link="/search" />
-      <MenuLink name={(<i className="fa-light fa-bag-shopping" style="color: #707070;"></i>)}  link="/cart" />
-      <MenuLink name={(<i className="fa-sharp fa-light fa-heart" style="color: #707070;"></i>)}  link="/wishlist" />
-      <MenuLink name={(<i className="fa-light fa-circle-user" style="color: #707070;"></i>)} link="/profile" />
-    </div>
+    <nav className="menuLinkIcons">
+      <NavLink to="/HomeView" className="menu-link"><i class="fa-light fa-house"></i></NavLink>
+      <NavLink to="/search" className="menu-link"><i class="fa-light fa-magnifying-glass"></i></NavLink>
+      <NavLink to="/CartView" className="menu-link"><i class="fa-light fa-bag-shopping"></i></NavLink>
+      <NavLink to="/wishlist" className="menu-link"><i class="fa-light fa-heart"></i></NavLink>
+      <NavLink to="/profile" className="menu-link"><i class="fa-light fa-user"></i></NavLink>
+      </nav>
+
   )
 }
 

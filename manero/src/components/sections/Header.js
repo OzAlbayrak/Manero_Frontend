@@ -6,7 +6,7 @@ import SideIcon from '../individuals/SideIcon';
 const Header = ({ title, hasSideIcon, isMenu, hasCart }) => {
 	return (
 		<header className='header-section container'>
-			{hasSideIcon && <SideIcon isMenu={isMenu} />}
+			{hasSideIcon ? <SideIcon isMenu={isMenu} /> : <div></div>}
 			<Logo title={title} />
 			{hasCart && <CartIcon />}
 		</header>

@@ -1,0 +1,22 @@
+
+    /* icon placements */
+    .menuLinkIcons{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        
+    }
+    
+    /* icons */
+    .menu-link {
+        display: flex;
+        justify-content: space-around;
+        margin: 1rem;
+        font-size: 24px;
+        color: $color-dark;
+    
+            &:hover {
+                text-decoration: none;
+                color: $color-theme;
+                cursor: pointer;
+            }
+    }
