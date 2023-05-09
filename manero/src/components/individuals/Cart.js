@@ -49,19 +49,6 @@ function Cart() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
 //GetAllProduct()
 //GetNumberOfProducts()
