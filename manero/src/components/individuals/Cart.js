@@ -1,19 +1,36 @@
-import React, { createContext, useReducer, useEffect, useState } from 'react';
-
-
-
-export const CartContext = createContext();
+import React, { useState, useEffect } from 'react';
+import UseFetch from './UseFetch';
+import ProductCard from './ProductCard';
 
 const Cart = (prod) =>
 {
 
+	//let products = JSON.parse(localStorage.getItem("cartItems"));
+	//let cart = JSON.parse(localStorage.getItem("cart"));
+
+
 	function addToCart(product)
 	{
-	
+		//let pr = products.find(function(pr){
+		//	return pr.id === product.id;
+		//});
+		
+		//if(cart.lenght === 0){
+		//	cart.push(pr);
+		//}else{
+			//let res = cart.find(element => element.id === product);
+			//if(res === undefined){
+			//	cart.push(pr);
+			//}
+		//}
 
+		//localStorage.setItem("cart", JSON.stringify(cart));
+
+		//let products = JSON.parse(localStorage.getItem("cartItems"));
+		//products.push(product);
 		console.log(product);
 		//console.log(JSON.stringify(product));
-		
+	  	localStorage.setItem('cartItems', JSON.stringify(product));
 	}
 
 	return (
