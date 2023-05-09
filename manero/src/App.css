@@ -77,6 +77,26 @@ body {
   border: #111111 solid 4px;
 }
 
+/* icon placements */
+.menuLinkIcons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* icons */
+.menu-link {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+  font-size: 24px;
+  color: #222529;
+}
+.menu-link:hover {
+  text-decoration: none;
+  color: #dbe3f5;
+  cursor: pointer;
+}
+
 .header-section {
   display: grid;
   grid-template-columns: 25px auto 25px;
