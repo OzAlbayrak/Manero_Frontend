@@ -18,7 +18,7 @@ function App() {
 		<div className='App'>
 			<Router>
 				<Routes>
-					<Route path='/' element={<HomeView />} />
+					<Route path='/HomeView' element={<HomeView />} />
 					<Route path='/Reset' element={<ResetedPassword />} />
 					<Route path='/Created' element={<AccountCreated />} />
 					<Route path='/GetStarted' element={<GetStartedHomeView />} />
