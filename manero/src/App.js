@@ -9,6 +9,8 @@ import ResetedPassword from './components/sections/ResetedPassword';
 import SignIn from './components/sections/SignIn';
 import SignUp from './components/sections/SignUp';
 import AccountCreated from './components/sections/AccountCreated';
+import ForgotPassword from './components/sections/ForgotPassword';
+import ResetPassword from './components/sections/ResetPassword';
 import CartView from './Views/CartView';
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
 					<Route path='/ConfirmCode' element={<ConfirmCodeView />} />
 					<Route path='/SignIn' element={<SignIn />} />
 					<Route path='/SignUp' element={<SignUp />} />
+					<Route path='/ForgotPassword' element={<ForgotPassword />} />
+					<Route path='/ResetPassword' element={<ResetPassword />} />
 					<Route path='/CartView' element={<CartView />} />
 				</Routes>
 			</Router>
