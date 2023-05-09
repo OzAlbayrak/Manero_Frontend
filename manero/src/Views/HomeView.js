@@ -5,6 +5,8 @@ import ProductsGrid from '../components/sections/ProductsGrid'
 import PromoVoucher from '../components/sections/PromoVoucher'
 import BestSellersGrid from '../components/sections/BestSellersGrid'
 import SideMenu from '../components/individuals/SideMenu'
+import Menu from '../components/individuals/Menu'
+import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 
 const HomeView = () => {
   return (
@@ -17,6 +19,7 @@ const HomeView = () => {
       <ProductsGrid title="Featured Products"/>
       
       <PromoVoucher />
+      <MenuLinkIcons></MenuLinkIcons>
     </div>
   )
 }
