@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Header from './Header';
 import InputField from '../individuals/InputField';
 import Button from '../individuals/Button';
@@ -29,7 +30,6 @@ const SignUp = () => {
 			<p className='mx-auto my-3 headline'>Sign Up</p>
 
 			<form className='inputcontainer'>
-				{' '}
 				{/*onSubmit={handleSubmit}*/}
 				<InputField
 					type={'text'}
@@ -61,9 +61,9 @@ const SignUp = () => {
 			</form>
 			<p className='mx-auto text-light-color'>
 				Already have an account?{' '}
-				<a href='#' className='text-dark-color'>
+				<NavLink to='/SignIn' className='text-dark-color register-link'>
 					Sign in.
-				</a>
+				</NavLink>
 			</p>
 			<div className='d-flex form-width justify-content-center mx-auto socials-btn-row'>
 				<button className='btn rounded-circle m-2'>

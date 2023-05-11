@@ -5,6 +5,7 @@
 
 // Individuals
 @import './components/individuals/button';
+@import './components/individuals/menuLinkIcons';
 
 // Sections
 @import './components/sections/header';
@@ -15,5 +16,9 @@
 @import './components/sections/carousel';
 @import './components/sections/promocodes';
 @import './components/sections/promoVouchers';
+@import './components/sections/verifyNumber';
+@import './components/sections/confirmCode';
 @import './components/sections/signIn-signUp';
+@import './components/sections/sideMenu';
 @import './components/sections/resetCreate';
+@import './components/sections/forgot-resetPassword';

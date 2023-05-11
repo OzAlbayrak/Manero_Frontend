@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
+import SideMenu from './SideMenu';
 
 const SideIcon = ({ isMenu }) => {
-	const [toggleMenu, setToggleMenu] = useState(false);
-
+	
+	/*const [toggleMenu, setToggleMenu] = useState(false);
 	const openMenu = () => {
 		setToggleMenu(!toggleMenu);
 		console.log('toggle menu');
 	};
-
+	*/
 	function goBack() {
 		window.history.back();
 		console.log('click');
 	}
 
 	return (
-		<div>
+		<div role='button'>
 			{isMenu ? (
-				<i className='fa-sharp fa-light fa-bars' onClick={openMenu}></i>
+				<SideMenu></SideMenu>
 			) : (
 				<i className='fa-regular fa-chevron-left' onClick={goBack}></i>
 			)}

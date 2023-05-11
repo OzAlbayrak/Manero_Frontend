@@ -1,16 +1,14 @@
 import React from 'react';
 import Logo from '../individuals/Logo';
-import Menu from '../individuals/Menu';
-import Cart from '../individuals/Cart';
+import CartIcon from '../individuals/CartIcon';
 import SideIcon from '../individuals/SideIcon';
 
 const Header = ({ title, hasSideIcon, isMenu, hasCart }) => {
 	return (
-		<header className='headersection container'>
-			{/* <Menu/> */}
-			{hasSideIcon && <SideIcon isMenu={isMenu} />}
+		<header className='header-section container'>
+			{hasSideIcon ? <SideIcon isMenu={isMenu} /> : <div></div>}
 			<Logo title={title} />
-			{hasCart && <Cart />}
+			{hasCart && <CartIcon />}
 		</header>
 	);
 };

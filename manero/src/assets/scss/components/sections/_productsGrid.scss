@@ -1,6 +1,21 @@
 .product-grid {
     .container {
         max-width: 1110px;
+
+        .slide-container{
+            display: flex;
+            align-items: center;
+            max-width: 70rem;
+
+            overflow-y: auto;
+        }
+
+        .item-container{
+            display: flex;
+            overflow-y: hidden;
+            justify-content: left;
+            margin-left: 15px;
+        }
     }
 
     .title {
@@ -12,9 +27,13 @@
     }
 
     .card {
+        z-index: 0;
         border: none;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        cursor: pointer;
+        min-width: 33rem;
 
         .card-img-container {
             display: grid;
@@ -27,7 +46,7 @@
                 display: block;
 
                 .menu-link {
-                    background-color: $color-white;
+                    background-color: none;
                     color: $color-dark;
                     width: 36px;
                     height: 36px;
@@ -58,14 +77,17 @@
             text-align: center;
 
             .card-title {
+                margin-top: 1rem;
                 font-size: 1rem;
-                font-weight: 700;
+                font-weight: 100;
+                text-align: left;
             }
 
             .card-price {
                 margin-top: 1rem;
                 font-size: 18px;
-                font-weight: 700;
+                font-weight: 100;
+                text-align: left;
             }
         }
 
