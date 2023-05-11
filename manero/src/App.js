@@ -14,7 +14,6 @@ import ResetPassword from './components/sections/ResetPassword';
 import CartView from './Views/CartView';
 import WishlistView from './Views/WishlistView';
 import PromocodesView from './Views/PromocodesView';
-
 function App() {
 	return (
 		<div className='App'>

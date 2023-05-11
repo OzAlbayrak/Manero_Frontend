@@ -6,8 +6,6 @@ import ProductsGrid from '../components/sections/ProductsGrid'
 import BestSellersGrid from '../components/sections/BestSellersGrid'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import Header from '../components/sections/Header'
-import Logo from '../components/individuals/Logo'
-import SideMenu from '../components/individuals/SideMenu'
 
 
 
