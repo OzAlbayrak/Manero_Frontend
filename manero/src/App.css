@@ -387,6 +387,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   padding: 4px;
+  text-decoration-line: none;
 }
 
 .promo-used-link {
@@ -398,9 +399,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   padding: 4px;
-}
-
-.promo-current-link .promo-used-link {
+  text-decoration-line: none;
   color: black;
   background-color: #dbe3f5;
 }
@@ -428,7 +427,7 @@ body {
   font-size: 18px;
   align-self: center;
   padding-left: 35%;
-  margin-left: 5rem;
+  margin-left: 2vh;
 }
 
 .promocodes-img {
@@ -467,6 +466,10 @@ body {
 
 .promo-btn {
   width: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1vh;
 }
 
 .verify-number {

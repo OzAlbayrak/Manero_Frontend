@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import SideIcon from "../individuals/SideIcon";
 
 
 const PromoCodes = () => {
     const [currentLink, setCurrentLink] = useState(true);
     const [usedLink, setUsedLink] = useState(false);
-    const [promoCode, setPromoCode] = useState("");
 
     const handleCurrentClick = () => {
         setCurrentLink(true);
@@ -20,16 +19,7 @@ const PromoCodes = () => {
     const copyToClipboard = () => {
         console.log("OK!");
         navigator.clipboard.writeText(promoCode);
-        };
-
-    useEffect(() => {
-        const fetchData = async () => {
-        const response = await fetch("/");
-        const data = await response.text();
-        setPromoCode(data);
-        };
-        fetchData();
-    }, []);
+    };
     
   return (
     <div>
@@ -59,6 +49,5 @@ function promoCodeColor(percent) {
         return { color: "orange" };
       }
 }
-
 
 export default PromoCodes;

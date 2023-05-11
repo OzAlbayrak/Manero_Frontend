@@ -9,7 +9,7 @@
     font-size: 18px;
     align-self: center;
     padding-left: 35%;
-    margin-left: 5rem;
+    margin-left: 2vh;
   }
 
 .promocodes-img {
@@ -48,4 +48,8 @@
 
 .promo-btn {
     width: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vh;
 }

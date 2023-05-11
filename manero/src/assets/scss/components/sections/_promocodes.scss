@@ -15,6 +15,7 @@
     font-size: 14px;
     font-weight: 400;
     padding: 4px;
+    text-decoration-line: none;
 }
 
 .promo-used-link {
@@ -26,12 +27,9 @@
     font-size: 14px;
     font-weight: 400;
     padding: 4px;
-}
-
-.promo-current-link
-.promo-used-link {
-  color: black;
-  background-color: $color-theme;
+    text-decoration-line: none;
+    color: black;
+    background-color: $color-theme;
 }
 
 .promo-current-link:hover,
