@@ -12,7 +12,10 @@ import AccountCreated from './components/sections/AccountCreated';
 import ForgotPassword from './components/sections/ForgotPassword';
 import ResetPassword from './components/sections/ResetPassword';
 import CartView from './Views/CartView';
+import WishlistView from './Views/WishlistView';
 import PromocodesView from './Views/PromocodesView';
+
+import WishlistView from './Views/WishlistView';
 
 function App() {
 	return (
@@ -31,7 +34,7 @@ function App() {
 					<Route path='/ForgotPassword' element={<ForgotPassword />} />
 					<Route path='/ResetPassword' element={<ResetPassword />} />
 					<Route path='/CartView' element={<CartView />} />
-					<Route path='/Promocode' element={<PromocodesView />} />
+					<Route path='/Wishlist' element={<WishlistView />} />
 				</Routes>
 			</Router>
 		</div>
