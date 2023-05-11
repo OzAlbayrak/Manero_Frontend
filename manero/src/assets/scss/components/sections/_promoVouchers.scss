@@ -1,16 +1,51 @@
-.promo-sideicon {
-    margin-top: 100px;
-}
-
 .top-back-and-text {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    float: inline-start;
+    justify-content: start;
+    padding-left: 5%;
   }
   
   .promo-head {
     font-weight: 400;
     font-size: 18px;
     align-self: center;
+    padding-left: 35%;
+    margin-left: 5rem;
   }
+
+.promocodes-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.promo-rectangle-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.promo-h2 {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+.promo-text-h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promo-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.promo-btn {
+    width: 340px;
+}

@@ -1,0 +1,47 @@
+.voucher-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.promo-current-link {
+    border-radius: 30px;
+    text-align: center;
+    display: inline-block;
+    width: 89px;
+    height: 28px;
+    margin-right: 1rem;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4px;
+}
+
+.promo-used-link {
+    border-radius: 30px;
+    text-align: center;
+    display: inline-block;
+    width: 89px;
+    height: 28px;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4px;
+}
+
+.promo-current-link
+.promo-used-link {
+  color: black;
+  background-color: $color-theme;
+}
+
+.promo-current-link:hover,
+.promo-used-link:hover {
+  color: $color-white;
+  background-color: $color-blackish;
+}
+
+.promo-current-link.active,
+.promo-used-link.active {
+  background-color: $color-blackish;
+  color: $color-white;
+}
