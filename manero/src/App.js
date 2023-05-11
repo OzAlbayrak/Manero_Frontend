@@ -15,8 +15,6 @@ import CartView from './Views/CartView';
 import WishlistView from './Views/WishlistView';
 import PromocodesView from './Views/PromocodesView';
 
-import WishlistView from './Views/WishlistView';
-
 function App() {
 	return (
 		<div className='App'>
@@ -35,6 +33,7 @@ function App() {
 					<Route path='/ResetPassword' element={<ResetPassword />} />
 					<Route path='/CartView' element={<CartView />} />
 					<Route path='/Wishlist' element={<WishlistView />} />
+					<Route path='/Promo' element={<PromocodesView />} />
 				</Routes>
 			</Router>
 		</div>

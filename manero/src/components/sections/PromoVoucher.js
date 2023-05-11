@@ -17,7 +17,7 @@ const handleInputChange = (event) => {
 const handleFormSubmit = async (event) => {
   event.preventDefault();
   try {
-    const response = await fetch(`https://example.com/api/voucher/${voucherCode}`);
+    const response = await fetch(`/`);
     const data = await response.json();
     setVoucherData(data);
     const isVoucherValid = verifyVoucher(data);
