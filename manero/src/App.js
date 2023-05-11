@@ -13,9 +13,6 @@ import ForgotPassword from './components/sections/ForgotPassword';
 import ResetPassword from './components/sections/ResetPassword';
 import CartView from './Views/CartView';
 import WishlistView from './Views/WishlistView';
-import PromocodesView from './Views/PromocodesView';
-
-import WishlistView from './Views/WishlistView';
 
 function App() {
 	return (
