@@ -14,11 +14,18 @@ const handleInputChange = (event) => {
   setVoucherCode(event.target.value);
 };
 
+const mockData = {
+  valid: true,
+  expired: false,
+  used: false
+};
+
 const handleFormSubmit = async (event) => {
   event.preventDefault();
   try {
-    const response = await fetch(`/`);
-    const data = await response.json();
+    // const response = await fetch(`https://example.com/api/voucher/${voucherCode}`);
+    // const data = await response.json();
+    const data = mockData; // testar att köra utan API... Ta bort när vi har API
     setVoucherData(data);
     const isVoucherValid = verifyVoucher(data);
     if (isVoucherValid) {
@@ -30,6 +37,7 @@ const handleFormSubmit = async (event) => {
     console.error(error);
   }
 };
+
 
 const verifyVoucher = (data) => {
   if (data.valid && !data.expired && !data.used) {
@@ -74,14 +82,19 @@ const verifyVoucher = (data) => {
           </div>
           <div className="promo-btn">
             <Button btnType="submit" btnText={"SUBMIT"} />
-            {voucherData && (
-              <div>
-                <p>Valid: {voucherData.valid ? 'Yes' : 'No'}</p>
-                <p>Expired: {voucherData.expired ? 'Yes' : 'No'}</p>
-                <p>Used: {voucherData.used ? 'Yes' : 'No'}</p>
+
+          </div>
+          {voucherData && (
+              <div className="promo-validation">
+                {voucherData.valid ? (
+                  <p className="promo-valid">Valid</p>
+                ) : voucherData.expired ? (
+                  <p className="promo-expired">Expired</p>
+                ) : voucherData.used ? (
+                  <p className="promo-used">Used</p>
+                ) : null}
               </div>
             )}
-          </div>
         </form>
       </div>
     </div>

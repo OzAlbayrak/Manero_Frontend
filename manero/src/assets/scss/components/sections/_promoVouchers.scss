@@ -53,3 +53,14 @@
     align-items: center;
     margin-left: 1vh;
 }
+
+.promo-validation {
+    display: flex;
+    justify-content: center;
+}
+
+.promo-expired .promo-used {
+    color: $color-attention;
+}
+
+

@@ -472,6 +472,15 @@ body {
   margin-left: 1vh;
 }
 
+.promo-validation {
+  display: flex;
+  justify-content: center;
+}
+
+.promo-expired .promo-used {
+  color: #f4303c;
+}
+
 .verify-number {
   margin: 30px 0px;
   display: flex;
