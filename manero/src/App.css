@@ -418,7 +418,7 @@ body {
 
 .top-back-and-text {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   padding-left: 5%;
 }
 
