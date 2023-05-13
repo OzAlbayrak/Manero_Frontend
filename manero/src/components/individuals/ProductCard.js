@@ -4,8 +4,10 @@ import { useShoppingCartContext } from '../../contexts/ShoppingCartContext'
 
 
 
-const ProductCard = ({ product }) => {
 
+
+const ProductCard = ({ product }) => {
+  const {items, addItem, removeItem} = useShoppingCartContext()
   
   return <div className="card">
         <div className="card-img-container">

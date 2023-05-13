@@ -4,6 +4,7 @@ import Header from '../components/sections/Header'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import Image from '../assets/images/Cart_empty.svg'
 import { NavLink } from 'react-router-dom'
+import { useShoppingCartContext } from '../contexts/ShoppingCartContext'
 
 
 
