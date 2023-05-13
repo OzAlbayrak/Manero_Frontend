@@ -1,5 +1,8 @@
 import Cart from './Cart'
 import Rating from './Rating'
+import { useShoppingCartContext } from '../../contexts/ShoppingCartContext'
+
+
 
 const ProductCard = ({ product }) => {
 
@@ -11,7 +14,7 @@ const ProductCard = ({ product }) => {
             <button className="menu-link">
               <i className="fa-regular fa-heart"></i>
             </button>
-            <button className="menu-link" onClick={() => Cart(product)}>
+            <button className="menu-link" onClick={() => addItem(product)}>
               <i className="fa-light fa-bag-shopping"></i>
             </button>
           </div>
