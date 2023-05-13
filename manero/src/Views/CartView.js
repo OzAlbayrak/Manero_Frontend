@@ -37,8 +37,8 @@ export const CartView = () => {
               : 
               items.map(item => (
                 <div key={item.id}>
-                    <div>{item.quantity} x {item.name}</div>
-                    <div>
+                    <div className='text-center pt-md-4'>{item.name} 
+                        <div>x {item.quantity} </div> 
                         <button onClick={() => addItem(item)}>+</button>
                         <button onClick={() => removeItem(item)}>-</button>
                     </div>
@@ -48,9 +48,6 @@ export const CartView = () => {
 
           </div>
  
-           
-    
-
           <div className='mx-auto'>
           <NavLink to='/'>
             <button className='btn rounded-pill my-3 custom-btn'>
