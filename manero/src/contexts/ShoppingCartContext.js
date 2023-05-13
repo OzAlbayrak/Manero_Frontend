@@ -27,7 +27,8 @@ export const ShoppingCartProvider = ({children}) => {
     } 
     else
     {
-      setItems([...items, {id: product.id, name: product.name, quantity: 1}])
+      setItems([...items, {id: product.id, name: product.name, price: product.price, quantity: 1 }])
+      console.log(items)
     }
   }
 
@@ -45,6 +46,7 @@ export const ShoppingCartProvider = ({children}) => {
     {
       const itemList = items.filter(item => item.id !== _item.id)
       setItems(itemList)
+      console.log(itemList)
     }
   }
 

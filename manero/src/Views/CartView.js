@@ -9,6 +9,13 @@ import { useShoppingCartContext } from '../contexts/ShoppingCartContext'
 
 
 export const CartView = () => {
+  const {items, addItem, removeItem} = useShoppingCartContext()
+
+  useEffect(() => {
+    getProducts()
+    console.log(items)
+}, [items])
+
   return (
     <div className='container d-flex flex-column'>
       <Header title={"MANERO"} hasSideIcon={true} isMenu={true} hasCart={true}/>
