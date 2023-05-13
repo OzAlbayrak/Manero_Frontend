@@ -27,7 +27,7 @@ export const ShoppingCartProvider = ({children}) => {
     } 
     else
     {
-      setItems([...items, {id: product.id, name: product.name, price: product.price, quantity: 1 }])
+      setItems([...items, {id: product.id, name: product.name, price: product.price, image: product.imageName, quantity: 1 }])
       console.log(items)
     }
   }

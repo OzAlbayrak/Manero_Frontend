@@ -6,6 +6,7 @@ import Image from '../assets/images/Cart_empty.svg'
 import { NavLink } from 'react-router-dom'
 import { useShoppingCartContext } from '../contexts/ShoppingCartContext'
 import { useEffect } from 'react'
+import Rating from '../components/individuals/Rating'
 
 
 
@@ -37,12 +38,19 @@ export const CartView = () => {
               : 
               items.map(item => (
                 <div key={item.id}>
-                    <div className='text-center pt-md-4'>{item.name} 
-                        <div>x {item.quantity} </div> 
-                        <button onClick={() => addItem(item)}>+</button>
-                        <button onClick={() => removeItem(item)}>-</button>
-                    </div>
+                  <div>
+                    <img src={item.image} className="rounded float-left " alt="..." />
+                    {item.name}
+                    {item.price} kr   
+                    x {item.quantity}
+                    <button onClick={() => addItem(item)}>+</button>
+                    <button onClick={() => removeItem(item)}>-</button>
+                    <Rating />
+
+                    
+                  </div>
                 </div>
+                
               ))
             }  
 
