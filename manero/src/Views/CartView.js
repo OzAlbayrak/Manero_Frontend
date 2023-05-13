@@ -5,6 +5,7 @@ import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import Image from '../assets/images/Cart_empty.svg'
 import { NavLink } from 'react-router-dom'
 import { useShoppingCartContext } from '../contexts/ShoppingCartContext'
+import { useEffect } from 'react'
 
 
 
@@ -12,7 +13,7 @@ export const CartView = () => {
   const {items, addItem, removeItem} = useShoppingCartContext()
 
   useEffect(() => {
-    getProducts()
+    //getProducts()
     console.log(items)
 }, [items])
 
