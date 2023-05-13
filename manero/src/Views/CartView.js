@@ -14,6 +14,7 @@ export const CartView = () => {
 
   useEffect(() => {
     //getProducts()
+    localStorage.setItem('items', JSON.stringify(items));
     console.log(items)
 }, [items])
 
@@ -21,13 +22,35 @@ export const CartView = () => {
     <div className='container d-flex flex-column'>
       <Header title={"MANERO"} hasSideIcon={true} isMenu={true} hasCart={true}/>
         
-         <Cart/>
+        <Cart/>
+          <img className='mx-auto' src={Image}/>
+          <div className='vr mx-auto'></div>
+          <div>
+      
+            {
+              items.length === 0 
+              ?
+              <div className='text-center'>
+                <p className='mx-auto my-3 headline'>Your Cart Is Empty!</p>
+                <p className='mx-auto text-light-color'>Looks like you haven`t made your order yet</p>
+              </div> 
+              : 
+              items.map(item => (
+                <div key={item.id}>
+                    <div>{item.quantity} x {item.name}</div>
+                    <div>
+                        <button onClick={() => addItem(item)}>+</button>
+                        <button onClick={() => removeItem(item)}>-</button>
+                    </div>
+                </div>
+              ))
+            }  
+
+          </div>
+ 
            
-           <img className='mx-auto' src={Image}/>
-           <div className='vr mx-auto'></div>
-           <p className='mx-auto my-3 headline'>Your Cart Is Empty!</p>
-		       <p className='mx-auto text-light-color'>Looks like you haven`t made your order yet</p>
     
+
           <div className='mx-auto'>
           <NavLink to='/'>
             <button className='btn rounded-pill my-3 custom-btn'>
