@@ -40,11 +40,9 @@ export const CartView = () => {
                 <div key={item.id}>
                   <div>
                     <img src={item.image} className="rounded float-left " alt="..." />
-                    {item.name}
-                    {item.price} kr   
-                    x {item.quantity}
-                    <button onClick={() => addItem(item)}>+</button>
-                    <button onClick={() => removeItem(item)}>-</button>
+                    {item.name}  -  ({item.price} kr)   x {item.quantity}
+                    <button onClick={() => addItem(item)} className='btn btn-secondary'> + </button>
+                    <button onClick={() => removeItem(item)} className='btn btn-secondary'> - </button>
                     <Rating />
 
                     
