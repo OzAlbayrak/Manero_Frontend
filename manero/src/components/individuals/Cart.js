@@ -34,9 +34,11 @@ const Cart = (prod) =>
 	}
 
 	return (
-		<div className='d-flex justify-content-center align-items-center'>
+		<div className='d-flex justify-content-center align-items-center' >
 			{prod.id ? addToCart(prod) : 
+				
 				<h2>Varukorg</h2>
+				
 			}
 		</div>
 	);
