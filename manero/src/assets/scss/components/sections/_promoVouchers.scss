@@ -1,6 +1,6 @@
 .top-back-and-text {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     padding-left: 5%;
   }
   
@@ -9,7 +9,7 @@
     font-size: 18px;
     align-self: center;
     padding-left: 35%;
-    margin-left: 5rem;
+    margin-left: 2vh;
   }
 
 .promocodes-img {
@@ -48,4 +48,19 @@
 
 .promo-btn {
     width: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vh;
 }
+
+.promo-validation {
+    display: flex;
+    justify-content: center;
+}
+
+.promo-expired .promo-used {
+    color: $color-attention;
+}
+
+
