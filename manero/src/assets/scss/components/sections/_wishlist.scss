@@ -8,7 +8,9 @@
         overflow: hidden;
         display: flex;
         justify-content: center;
-        height:100px
+        width: 100%;
+        height: 150px;
+
     }
     .wishlist-info{
         grid-area: info;
@@ -24,7 +26,6 @@
     .wishlist-btns{
         grid-area: btns;
         overflow: hidden;
-        border-radius: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -33,12 +34,20 @@
             color:red;
         }
 
+        #bag{
+            color: white;
+            background-color: black;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;;
+        }
+
         .menu-link{
             border:none;
             background:none;
 
             &:hover {
-                background: black;
+                color: $color-theme !important;
                 text-decoration: none;
             }
         }

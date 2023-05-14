@@ -48,9 +48,9 @@ const WishListView = () => {
                     </div>
                     <div className="wishlist-btns">
                     <button id="heart" className="menu-link" onClick={() => removeFavorite(favorite)}>
-                      <i className="fa-regular fa-heart"></i>
+                    <i className="fa-solid fa-heart"></i>
                     </button>
-                    <button className="menu-link" onClick={() => addItem(favorite)}>
+                    <button id="bag" className="menu-link" onClick={() => addItem(favorite)}>
                       <i className="fa-light fa-bag-shopping"></i>
                     </button>
                     </div>                   
