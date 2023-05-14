@@ -47,7 +47,7 @@ const WishListView = () => {
                       <Rating/>
                     </div>
                     <div className="wishlist-btns">
-                    <button className="menu-link" onClick={() => removeFavorite(favorite)}>
+                    <button id="heart" className="menu-link" onClick={() => removeFavorite(favorite)}>
                       <i className="fa-regular fa-heart"></i>
                     </button>
                     <button className="menu-link" onClick={() => addItem(favorite)}>

@@ -741,4 +741,46 @@ main {
 
 .text-box {
   max-width: 335px;
-}/*# sourceMappingURL=App.css.map */
+}
+
+.wishlist-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "img img info info info btns";
+}
+.wishlist-container .wishlist-img {
+  grid-area: img;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+.wishlist-container .wishlist-info {
+  grid-area: info;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 10px;
+}
+.wishlist-container .wishlist-btns {
+  grid-area: btns;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wishlist-container .wishlist-btns #heart {
+  color: red;
+}
+.wishlist-container .wishlist-btns .menu-link {
+  border: none;
+  background: none;
+}
+.wishlist-container .wishlist-btns .menu-link:hover {
+  background: black;
+  text-decoration: none;
+}
