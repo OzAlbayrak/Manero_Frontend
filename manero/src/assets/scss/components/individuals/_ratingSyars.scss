@@ -1,0 +1,26 @@
+.star-rating {
+    font-size: 2em; 
+  }
+  
+  .star-rating span {
+    display: inline-block;
+    font-size: 25px; 
+    cursor: pointer;
+  }
+  
+  .star-rating span.on {
+    color: $color-yellow; 
+  }
+  
+
+button {
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+  .on {
+    color: $color-yellow;
+  }
+  .off {
+    color: #ccc;
+  }
