@@ -416,6 +416,8 @@ button {
   font-weight: 400;
   padding: 4px;
   text-decoration-line: none;
+  background-color: #111111;
+  color: #ffffff;
 }
 
 .promo-used-link {
@@ -560,7 +562,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 1vh;
+  margin-left: 2vh;
 }
 
 .promo-validation {
