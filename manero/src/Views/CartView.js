@@ -24,17 +24,23 @@ export const CartView = () => {
       <Header title={"MANERO"} hasSideIcon={true} isMenu={true} hasCart={true}/>
         
         <Cart/>
-          <img className='mx-auto' src={Image}/>
-          <div className='vr mx-auto'></div>
+
+          
           <div>
       
             {
               items.length === 0 
               ?
               <div className='text-center'>
+              <img className='mx-auto' src={Image}/>
+              <br></br>
+              <div className='vr'></div>
+              
+              <div className='text-center'>
                 <p className='mx-auto my-3 headline'>Your Cart Is Empty!</p>
                 <p className='mx-auto text-light-color'>Looks like you haven`t made your order yet</p>
               </div> 
+              </div>
               : 
               items.map(item => (
                 <div key={item.id}>
