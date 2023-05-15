@@ -416,6 +416,8 @@ button {
   font-weight: 400;
   padding: 4px;
   text-decoration-line: none;
+  background-color: #111111;
+  color: #ffffff;
 }
 
 .promo-used-link {
