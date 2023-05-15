@@ -9,7 +9,7 @@
   }
   
   .star-rating span.on {
-    color: $color-yellow; 
+    color: $color-rating; 
   }
   
 
@@ -19,7 +19,7 @@ button {
     cursor: pointer;
   }
   .on {
-    color: $color-yellow;
+    color: $color-rating; 
   }
   .off {
     color: #ccc;

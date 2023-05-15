@@ -90,12 +90,39 @@ body {
   margin: 1rem;
   font-size: 24px;
   color: #222529;
-  text-decoration: none;
 }
 .menu-link:hover {
   text-decoration: none;
   color: #dbe3f5;
   cursor: pointer;
+}
+
+.star-rating {
+  font-size: 2em;
+}
+
+.star-rating span {
+  display: inline-block;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.star-rating span.on {
+  color: #FFBE00;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.on {
+  color: #FFBE00;
+}
+
+.off {
+  color: #ccc;
 }
 
 .header-section {
