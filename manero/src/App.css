@@ -90,6 +90,7 @@ body {
   margin: 1rem;
   font-size: 24px;
   color: #222529;
+  text-decoration: none;
 }
 .menu-link:hover {
   text-decoration: none;
@@ -237,10 +238,10 @@ body {
   align-items: center;
   border: none;
   outline: none;
+  background: none;
 }
 .product-grid .card .card-img-container .card-menu .menu-link:hover {
-  background-color: #222529;
-  color: #ffffff;
+  color: #dbe3f5;
   text-decoration: none;
 }
 .product-grid .card .card-img-container .btn-theme {
@@ -418,7 +419,7 @@ body {
 
 .top-back-and-text {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   padding-left: 5%;
 }
 
@@ -741,4 +742,53 @@ main {
 
 .text-box {
   max-width: 335px;
+}
+
+.wishlist-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "img img info info info btns";
+}
+.wishlist-container .wishlist-img {
+  grid-area: img;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+}
+.wishlist-container .wishlist-info {
+  grid-area: info;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 10px;
+}
+.wishlist-container .wishlist-btns {
+  grid-area: btns;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wishlist-container .wishlist-btns #heart {
+  color: red;
+}
+.wishlist-container .wishlist-btns #bag {
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+.wishlist-container .wishlist-btns .menu-link {
+  border: none;
+  background: none;
+}
+.wishlist-container .wishlist-btns .menu-link:hover {
+  color: #dbe3f5 !important;
+  text-decoration: none;
 }

@@ -57,10 +57,10 @@
                     align-items: center;
                     border: none;
                     outline: none;
+                    background: none;
 
                     &:hover {
-                        background-color: $color-dark;
-                        color: $color-white;
+                        color: $color-theme;
                         text-decoration: none;
                     }
                 }

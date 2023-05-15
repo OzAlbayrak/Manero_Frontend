@@ -1,17 +1,21 @@
 import Cart from './Cart'
 import Rating from './Rating'
+import { useShoppingCartContext } from '../../contexts/ShoppingCartContext'
+import { useWishlistContext } from '../../contexts/WishlistContext'
+
 
 const ProductCard = ({ product }) => {
-
+  const {items, addItem, removeItem} = useShoppingCartContext()
+  const {addFavorite} = useWishlistContext()
   
   return <div className="card">
         <div className="card-img-container">
           <img src={product.imageName} className="card-img-top" alt="..." />
           <div className="card-menu d-xl-none">
-            <button className="menu-link">
+            <button className="menu-link" onClick={() => addFavorite(product)}>
               <i className="fa-regular fa-heart"></i>
             </button>
-            <button className="menu-link" onClick={() => Cart(product)}>
+            <button className="menu-link" onClick={() => addItem(product)}>
               <i className="fa-light fa-bag-shopping"></i>
             </button>
           </div>
