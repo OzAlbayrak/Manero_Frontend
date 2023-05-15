@@ -444,6 +444,69 @@ button {
   color: #ffffff;
 }
 
+.containerpro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.promo-company-info {
+  display: block;
+  margin-left: 40px;
+  width: 80%;
+  height: 80%;
+  padding: 0px;
+}
+
+.fa-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  width: 50px;
+  height: 20px;
+}
+
+.promored {
+  color: red;
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+.promoyellow {
+  color: rgb(194, 155, 28);
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+.promogreen {
+  color: rgb(9, 188, 9);
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+.promo-company-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.promo-company-info {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.promo-validation {
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .top-back-and-text {
   display: flex;
   justify-content: flex-start;
