@@ -14,6 +14,7 @@ import ResetPassword from './components/sections/ResetPassword';
 import CartView from './Views/CartView';
 import WishlistView from './Views/WishlistView';
 import PromocodesView from './Views/PromocodesView';
+import BestSellerView from './Views/BestSellerView';
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 			<Router>
 				<Routes>
 					<Route path='/' element={<HomeView />} />
+					<Route path='/best' element={<BestSellerView/>} />
 					<Route path='/Reset' element={<ResetedPassword />} />
 					<Route path='/Created' element={<AccountCreated />} />
 					<Route path='/GetStarted' element={<GetStartedHomeView />} />
