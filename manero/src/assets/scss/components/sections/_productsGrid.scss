@@ -63,6 +63,13 @@
                         color: $color-theme;
                         text-decoration: none;
                     }
+
+                    #card-heart{
+                        
+                        &:active{
+                            color: red;
+                        }
+                    }
                 }
             }
             .btn-theme {

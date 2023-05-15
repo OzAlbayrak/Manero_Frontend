@@ -15,6 +15,7 @@ import CartView from './Views/CartView';
 import WishlistView from './Views/WishlistView';
 import PromocodesView from './Views/PromocodesView';
 import BestSellerView from './Views/BestSellerView';
+import SearchView from './Views/SearchView';
 
 function App() {
 	return (
@@ -29,6 +30,7 @@ function App() {
 					<Route path='/GetStartedWelcome' element={<GetStartedWelcomeView />} />
 					<Route path='/VerifyNumber' element={<VerifyNumberView />} />
 					<Route path='/ConfirmCode' element={<ConfirmCodeView />} />
+					<Route path='/Search' element={<SearchView />}/>
 					<Route path='/SignIn' element={<SignIn />} />
 					<Route path='/SignUp' element={<SignUp />} />
 					<Route path='/ForgotPassword' element={<ForgotPassword />} />

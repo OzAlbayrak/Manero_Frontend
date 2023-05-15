@@ -7,7 +7,7 @@ const MenuLinkIcons = () => {
       <NavLink to="/" className="menu-link">
         <i className="fa-light fa-house"></i>
       </NavLink>
-      <NavLink to="/search" className="menu-link">
+      <NavLink to="/Search" className="menu-link">
         <i className="fa-light fa-magnifying-glass"></i>
       </NavLink>
       <NavLink to="/CartView" className="menu-link">
