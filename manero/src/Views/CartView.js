@@ -23,7 +23,7 @@ export const CartView = () => {
     <div className='container d-flex flex-column'>
       <Header title={"MANERO"} hasSideIcon={true} isMenu={true} hasCart={true}/>
         
-        <Cart/>
+ 
 
           
           <div>
@@ -32,42 +32,56 @@ export const CartView = () => {
               items.length === 0 
               ?
               <div className='text-center'>
-              <img className='mx-auto' src={Image}/>
-              <br></br>
-              <div className='vr'></div>
-              
-              <div className='text-center'>
-                <p className='mx-auto my-3 headline'>Your Cart Is Empty!</p>
-                <p className='mx-auto text-light-color'>Looks like you haven`t made your order yet</p>
-              </div> 
-              </div>
-              : 
-              items.map(item => (
-                <div key={item.id}>
-                  <div>
-                    <img src={item.image} className="rounded float-left " alt="..." />
-                    {item.name}  -  ({item.price} kr)   x {item.quantity}
-                    <button onClick={() => addItem(item)} className='btn btn-secondary'> + </button>
-                    <button onClick={() => removeItem(item)} className='btn btn-secondary'> - </button>
-                    <Rating />
-
-                    
-                  </div>
-                </div>
+                <img className='mx-auto' src={Image}/>
+                <br></br>
+                <div className='vr'></div>
                 
-              ))
+                <div className='text-center'>
+                  <p className='mx-auto my-3 headline'>Your Cart Is Empty!</p>
+                  <p className='mx-auto text-light-color'>Looks like you haven`t made your order yet</p>
+                </div> 
+                <div className='mx-auto'>
+                  <NavLink to='/'>
+                    <button className='btn rounded-pill my-3 custom-btn'>
+                      SHOP NOW
+                    </button>
+                  </NavLink>
+                </div>
+              </div>
+              
+              : 
+              
+                <div className='text-center'>
+                  <img className='mx-auto' src={Image}/>
+                  <br></br>
+                {
+                  
+                  items.map(item => (
+                    <div key={item.id}>
+                      <div>
+                        <img src={item.image} className="rounded float-left " alt="..." />
+                        {item.name}  -  ({item.price} kr)   x {item.quantity}
+                        <button onClick={() => addItem(item)} className='btn btn-secondary'> + </button>
+                        <button onClick={() => removeItem(item)} className='btn btn-secondary'> - </button>
+
+                      </div>
+                    </div>
+                    
+                  ))
+                }
+                <div className='mx-auto'>
+                  <NavLink to='/OrderView'>
+                    <button className='btn rounded-pill my-3 custom-btn'>
+                      Make Order
+                    </button>
+                  </NavLink>
+                </div>
+              </div>
             }  
 
           </div>
  
-          <div className='mx-auto'>
-          <NavLink to='/'>
-            <button className='btn rounded-pill my-3 custom-btn'>
-              SHOP NOW
-            </button>
-          </NavLink>
-          </div>
-
+          
           <MenuLinkIcons/>
         
       </div>
