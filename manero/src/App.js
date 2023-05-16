@@ -16,6 +16,7 @@ import WishlistView from './Views/WishlistView';
 import PromocodesView from './Views/PromocodesView';
 import BestSellerView from './Views/BestSellerView';
 import SearchView from './Views/SearchView';
+import OrderView from './Views/OrderView';
 
 function App() {
 	return (
@@ -38,6 +39,7 @@ function App() {
 					<Route path='/CartView' element={<CartView />} />
 					<Route path='/Wishlist' element={<WishlistView />} />
 					<Route path='/Promo' element={<PromocodesView />} />
+					<Route path='/OrderView' element={<OrderView />} />
 				</Routes>
 			</Router>
 		</div>
