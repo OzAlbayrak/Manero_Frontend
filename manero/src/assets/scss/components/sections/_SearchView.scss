@@ -18,7 +18,26 @@
 }
 
 .categories-container{
-    height: 3rem;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .category-buttons{
+
+
+        .category-button{
+            border: none;
+
+            &:hover {
+                text-decoration: none;
+                background-color: $color-theme;
+                border-radius: 25px;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
     .search-column-container{
