@@ -6,7 +6,7 @@ import Image from '../assets/images/Cart_empty.svg'
 import { NavLink } from 'react-router-dom'
 import { useShoppingCartContext } from '../contexts/ShoppingCartContext'
 import { useEffect } from 'react'
-import Rating from '../components/individuals/Rating'
+
 
 
 
@@ -52,25 +52,31 @@ export const CartView = () => {
               : 
               
                 <div className='text-center'>
-                  <img className='mx-auto' src={Image}/>
-                  <br></br>
+                  
                 {
                   
                   items.map(item => (
                     <div key={item.id}>
-                      <div>
-                        <img src={item.image} className="rounded float-left " alt="..." />
-                        {item.name}  -  ({item.price} kr)   x {item.quantity}
+                      <div className='cart-container'>
+                        <img src={item.image} className="cart-img" alt="..." />
+                        
+                        <div className='cart-info'>
+                          <div className='cart-info-name'>{item.name}</div>
+                          <div className='cart-info-price'>{item.price} kr </div>
+                        </div>
+                        
+                        <div className='cart-btns'>
                         <button onClick={() => addItem(item)} className='btn btn-secondary'> + </button>
+                        <div>{item.quantity}</div>
                         <button onClick={() => removeItem(item)} className='btn btn-secondary'> - </button>
-
+                        </div>
                       </div>
                     </div>
                     
                   ))
                 }
                 <div className='mx-auto'>
-                  <NavLink to='/OrderView'>
+                  <NavLink to='/Order'>
                     <button className='btn rounded-pill my-3 custom-btn'>
                       Make Order
                     </button>

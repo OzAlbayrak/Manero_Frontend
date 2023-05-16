@@ -10,7 +10,7 @@ const MenuLinkIcons = () => {
       <NavLink to="/Search" className="menu-link">
         <i className="fa-light fa-magnifying-glass"></i>
       </NavLink>
-      <NavLink to="/CartView" className="menu-link">
+      <NavLink to="/Cart" className="menu-link">
         <i className="fa-light fa-bag-shopping"></i>
       </NavLink>
       <NavLink to="/Wishlist" className="menu-link">

@@ -36,10 +36,10 @@ function App() {
 					<Route path='/SignUp' element={<SignUp />} />
 					<Route path='/ForgotPassword' element={<ForgotPassword />} />
 					<Route path='/ResetPassword' element={<ResetPassword />} />
-					<Route path='/CartView' element={<CartView />} />
+					<Route path='/Cart' element={<CartView />} />
 					<Route path='/Wishlist' element={<WishlistView />} />
 					<Route path='/Promo' element={<PromocodesView />} />
-					<Route path='/OrderView' element={<OrderView />} />
+					<Route path='/Order' element={<OrderView />} />
 				</Routes>
 			</Router>
 		</div>
