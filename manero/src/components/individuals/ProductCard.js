@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
           <img src={product.imageName} className="card-img-top" alt="..." />
           <div className="card-menu d-xl-none">
             <button className="menu-link" onClick={() => addFavorite(product)}>
-              <i className="fa-regular fa-heart"></i>
+              <i id="card-heart" className="fa-regular fa-heart"></i>
             </button>
             <button className="menu-link" onClick={() => addItem(product)}>
               <i className="fa-light fa-bag-shopping"></i>
