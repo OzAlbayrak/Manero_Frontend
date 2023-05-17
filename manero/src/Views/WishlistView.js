@@ -5,7 +5,7 @@ import MenuLinkIcons from '../components/individuals/MenuLinkIcons';
 import Wishlist from '../components/individuals/Wishlist';
 import { useWishlistContext } from '../contexts/WishlistContext';
 import { useShoppingCartContext } from '../contexts/ShoppingCartContext';
-import Rating from '../components/individuals/Rating'
+import RatingStars from '../components/individuals/RatingStars'
 
 
 const WishListView = () => {
@@ -13,7 +13,7 @@ const WishListView = () => {
   const {addItem} = useShoppingCartContext()
 
   return (
-    <div className='container d-flex flex-column'>
+    <div className="">
         <Header
             title={'Wishlist'}
             hasSideIcon={true}
@@ -44,7 +44,7 @@ const WishListView = () => {
                     <div className="wishlist-info">
                       <div>{favorite.name}</div>
                       <div>${favorite.price}</div>
-                      <Rating/>
+                      <RatingStars/>
                     </div>
                     <div className="wishlist-btns">
                     <button id="heart" className="menu-link" onClick={() => removeFavorite(favorite)}>

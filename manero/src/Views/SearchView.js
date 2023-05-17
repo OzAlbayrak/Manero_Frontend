@@ -7,12 +7,23 @@ const SearchView = () => {
     const [products, setProducts] = useState([])
     const [selectedFilters, setSelectedFilters] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState(products);
+    const [input, setInput] = useState("");
+
+    //fetch the products
 
     const getProducts = async () => {
         const result = await fetch('https://sijb-cms22-backend.azurewebsites.net/api/Products/FeaturedProducts/40')
-        // console.log(await result.json())
+
         setProducts(await result.json())
     }
+
+    // search function
+
+    const handleChange = (products) => {
+        setInput(products)
+    }
+
+    // filter function
 
     let filters = ["Jackets", "Sweaters", "Dresses", "Accessories", "Shoes"];
 
@@ -44,7 +55,7 @@ const SearchView = () => {
       
   return (
     <div>
-        <Header className="search-header" title={<Searchbar/>} hasSideIcon={true} isMenu={true} hasCart={true}/>
+        <Header title={<Searchbar/>} hasSideIcon={true} isMenu={true} hasCart={true}/>
         <hr/>
         <div className='categories-container'>
             <div className="category-buttons">
@@ -61,11 +72,25 @@ const SearchView = () => {
                 ))}
             </div>
         </div>
+
+        <div className="filtred-products-container">
+                <div className="filtred-products">
+                        {filteredProducts.map((product, idx) => (
+                        <div key={`products-${idx}`} className="filtred-product">
+                            <div className='filtred-product-img-container'>
+                            <img src={product.imageName} className="filtred-product-img" alt="..." />
+                            </div>
+                            <div className='filtred-product-name'>
+                                <p>{product.name}</p>
+                                <p>${product.price}</p>
+
+                            </div>
+                        </div>
+                        ))}
+                    </div>
+            </div>
         
         <div>
-            {
-              products.length === 0 
-              ?
                 <div className="product-type-container">
                 <div className='search-column-container'>
                     <div className="search-column1">
@@ -101,23 +126,6 @@ const SearchView = () => {
                     </div>
                 </div>
             </div>
-          :
-            <div className="product-type-container">
-                <div className="items-container">
-                        {filteredProducts.map((product, idx) => (
-                        <div key={`products-${idx}`} className="product">
-                            <div>
-                                <p>{product.name}</p>
-                            </div>
-                            <div>
-                            <img src={product.imageName} className="rounded float-left " alt="..." />
-                            </div>
-                        </div>
-                        ))}
-                    </div>
-            </div>
-
-            }
         </div>
         <MenuLinkIcons/>
     </div>
