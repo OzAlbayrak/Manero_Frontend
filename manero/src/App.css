@@ -79,21 +79,27 @@ body {
   border: #111111 solid 4px;
 }
 
-/* icon placements */
-.menuLinkIcons {
+.bottom-menu-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  /* icon placements */
+  /* icons */
+}
+.bottom-menu-container .menuLinkIcons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-
-/* icons */
-.menu-link {
+.bottom-menu-container .menu-link {
   display: flex;
   justify-content: space-around;
   margin: 1rem;
   font-size: 24px;
   color: #222529;
+  text-decoration: none;
 }
-.menu-link:hover {
+.bottom-menu-container .menu-link:hover {
   text-decoration: none;
   color: #dbe3f5;
   cursor: pointer;
@@ -226,6 +232,7 @@ button {
   overflow-y: hidden;
   justify-content: left;
   margin-left: 15px;
+  margin-bottom: 25px;
 }
 .product-grid .title {
   font-size: 40px;
@@ -464,7 +471,7 @@ button {
   padding: 0px;
 }
 
-.fa-lightdfd {
+.fa-lightsd {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -869,6 +876,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .wishlist-container .wishlist-btns #heart {
   color: red;
