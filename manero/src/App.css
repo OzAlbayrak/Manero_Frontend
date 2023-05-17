@@ -471,7 +471,7 @@ button {
   padding: 0px;
 }
 
-.fa-lightsd {
+.fa-lightdfd {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -851,6 +851,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: "img img info info info btns";
+  margin-bottom: 5vh;
 }
 .wishlist-container .wishlist-img {
   grid-area: img;
@@ -1022,10 +1023,6 @@ main {
   display: block;
 }
 
-.search-header {
-  position: sticky;
-}
-
 .search-container {
   border: none;
 }
@@ -1056,6 +1053,9 @@ main {
   cursor: pointer;
 }
 
+.search-column-container {
+  margin-bottom: 7vh;
+}
 .search-column-container .search-column1 {
   grid-area: col1;
   display: flex;
