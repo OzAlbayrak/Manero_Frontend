@@ -17,6 +17,7 @@ import PromocodesView from './Views/PromocodesView';
 import BestSellerView from './Views/BestSellerView';
 import SearchView from './Views/SearchView';
 import OrderView from './Views/OrderView';
+import DescriptionView from './Views/DescriptionView';
 
 function App() {
 	return (
@@ -27,6 +28,7 @@ function App() {
 					<Route path='/best' element={<BestSellerView/>} />
 					<Route path='/Reset' element={<ResetedPassword />} />
 					<Route path='/Created' element={<AccountCreated />} />
+					<Route path='/DescriptionView' element={<DescriptionView />} />
 					<Route path='/GetStarted' element={<GetStartedHomeView />} />
 					<Route path='/GetStartedWelcome' element={<GetStartedWelcomeView />} />
 					<Route path='/VerifyNumber' element={<VerifyNumberView />} />
