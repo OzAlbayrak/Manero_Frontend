@@ -1,5 +1,4 @@
-import Cart from './Cart'
-import Rating from './Rating'
+import RatingStars from './RatingStars'
 import { useShoppingCartContext } from '../../contexts/ShoppingCartContext'
 import { useWishlistContext } from '../../contexts/WishlistContext'
 
@@ -21,7 +20,7 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
         <div className="card-body">
-          <Rating />
+          <RatingStars />
             <h5 className="card-title">{product.name}</h5>
             <p className="card-price">{product.price}$</p>
         </div>

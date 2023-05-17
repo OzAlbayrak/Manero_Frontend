@@ -99,4 +99,29 @@
         }
 
     }
+    .filtred-products-container{
+    
+        .filtred-products{
+            display: flex;
+            flex-wrap: wrap;
+    
+            .filtred-product{
+                margin: 4px;
+    
+                .filtred-product-name{
+                    align-items: center;
+                    margin-left:3px;
+                    font-weight: 900;
+                }
+    
+                .filtred-product-img-container{
+                
+                    .filtred-product-img{
+    
+                        height: 9rem;
+                    }
+                }
+            }
+        }
+    }
 
