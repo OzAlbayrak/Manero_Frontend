@@ -62,7 +62,7 @@ export const CartView = () => {
                         
                         <div className='cart-info'>
                           <div className='cart-info-name'>{item.name}</div>
-                          <div className='cart-info-price'>{item.price} kr </div>
+                          <div className='cart-info-price'>${item.price}</div>
                         </div>
                         
                         <div className='cart-btns'>
@@ -71,6 +71,7 @@ export const CartView = () => {
                         <button onClick={() => removeItem(item)} className='btn btn-secondary'> - </button>
                         </div>
                       </div>
+                      <hr/>
                     </div>
                     
                   ))
