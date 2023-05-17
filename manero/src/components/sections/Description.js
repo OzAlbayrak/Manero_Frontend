@@ -1,5 +1,5 @@
 import React from "react";
-import SizeColor from "../individuals/SizeColor";
+import SizeColor from "../individuals/SizeColor.js";
 import Button from "../individuals/Button";
 import Rating from "../individuals/Rating";
 import StarRating from "../individuals/RatingStars";
