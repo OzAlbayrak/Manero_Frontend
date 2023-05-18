@@ -19,12 +19,35 @@
         }
     }
 
-    .title {
+    .titleBestSeller{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 375px;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    
+    
+        .title {
         font-size: 40px;
         font-weight: bolder;
         text-align: left;
-        margin-bottom: 2rem;
-        margin-top: 2rem;
+        margin-left: 1.5rem;
+        }
+    
+        .title2{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            font-weight: bolder;
+            text-align: right;
+            margin-right: -2rem;
+            margin-bottom: -1rem;
+            .icon-right{
+                margin-left: -2.5rem;
+                
+            }
+        }
     }
 
     .card {

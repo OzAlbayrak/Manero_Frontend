@@ -100,22 +100,31 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;    
+    min-width: 375px;
+    max-width: 1100px;
 
  
 
     .salesIcons{
         position: absolute;
-        transform: translateX(-27rem) translateY(2rem);
+        transform: translateX(-29rem) translateY(2rem);
         color: #626262;
         border: none;
         background-color: $color-white;
+    }
+    
+    .filterIcon{
+        margin-right: -1rem;
         
+    }
+    .sortingIcon{
+        margin-left: -1rem;
     }
   
     .dropdownbutton{
         position: relative;
-        transform: translateX(26rem) translateY(2rem);
+        transform: translateX(28rem) translateY(2rem);
         color: #626262;
         border: none;
         background-color: $color-white;
@@ -132,7 +141,7 @@
         position: absolute;
         padding-left: 0px;
         list-style-type: none;
-        transform: translateX(26rem) translateY(2rem);
+        transform: translateX(28rem);
         background-color: $color-white;
         z-index: 1;
       }
@@ -146,7 +155,7 @@
       display: inline;
       border: none;
       background-color: $color-white;
-      font-size: 13px;
+      font-size: 14px;
       &:hover {
         display: block;
     }
