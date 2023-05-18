@@ -48,47 +48,48 @@ export const CartView = () => {
                   </NavLink>
                 </div>
               </div>
-              
               : 
               
-                <div className='text-center'>
-                  
-                {
-                  
-                  items.map(item => (
-                    <div key={item.id}>
-                      <div className='cart-container'>
-                        <img src={item.image} className="cart-img" alt="..." />
-                        
-                        <div className='cart-info'>
-                          <div className='cart-info-name'>{item.name}</div>
-                          <div className='cart-info-price'>${item.price}</div>
-                        </div>
-                        
-                        <div className='cart-btns'>
-                        <button onClick={() => addItem(item)} className='btn btn-secondary'> + </button>
-                        <div>{item.quantity}</div>
-                        <button onClick={() => removeItem(item)} className='btn btn-secondary'> - </button>
-                        </div>
+              <div className='text-center'>
+                
+              {
+                
+                items.map(item => (
+                  <div key={item.id}>
+                    <div className='cart-container'>
+                      <img src={item.image} className="cart-img" alt="..." />
+                      
+                      <div className='cart-info'>
+                        <div className='cart-info-name'>{item.name}</div>
+                        <div className='cart-info-price'>${item.price}</div>
                       </div>
-                      <hr/>
+                      
+                      <div className='cart-btns'>
+                      <button onClick={() => addItem(item)} className='btn btn-secondary'> + </button>
+                      <div>{item.quantity}</div>
+                      <button onClick={() => removeItem(item)} className='btn btn-secondary'> - </button>
+                      </div>
                     </div>
-                    
-                  ))
-                }
-                <div className='mx-auto'>
-                  <NavLink to='/Order'>
-                    <button className='btn rounded-pill my-3 custom-btn'>
-                      Make Order
-                    </button>
-                  </NavLink>
-                </div>
+                    <hr/>
+                  </div>
+                  
+                ))
+              }
+              <div className='mx-auto'>
+                <NavLink to='/Order'>
+                  <button className='btn rounded-pill my-3 custom-btn'>
+                    Make Order
+                  </button>
+                </NavLink>
               </div>
-            }  
+            </div>
+          }  
 
           </div>
- 
-          
+          <p></p>
+          <p></p>
+          <p></p>
+
           <MenuLinkIcons/>
         
       </div>
