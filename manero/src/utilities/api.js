@@ -4,11 +4,15 @@
 const sqlUrl = 'https://localhost:7235/api';
 
 export async function logIn(res) {
-	return await fetch(sqlUrl + '/authentication/signin', {
-		method: 'post',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(res),
-	});
+	try {
+		return await fetch(sqlUrl + '/authentication/signin', {
+			method: 'post',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(res),
+		});
+	} catch {
+		return 'no connection';
+	}
 }

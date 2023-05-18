@@ -24,6 +24,7 @@ const SignIn = () => {
 
 		const result = await logIn(res);
 
+		//console.log(result);
 		switch (result.status) {
 			case 200:
 				{
