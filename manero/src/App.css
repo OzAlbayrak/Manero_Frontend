@@ -135,6 +135,21 @@ button {
   color: #ccc;
 }
 
+.Review-Container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  margin-top: 5rem;
+}
+
+.review-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
 .header-section {
   display: grid;
   grid-template-columns: 25px auto 25px;
