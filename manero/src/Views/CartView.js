@@ -86,9 +86,9 @@ export const CartView = () => {
           }  
 
           </div>
-          <p></p>
-          <p></p>
-          <p></p>
+          <p>x</p>
+          <p>x</p>
+          <p>x</p>
 
           <MenuLinkIcons/>
         
