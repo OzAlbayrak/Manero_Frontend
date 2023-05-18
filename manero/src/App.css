@@ -735,7 +735,6 @@ main {
   display: flex;
   align-items: center;
   transition: 0.5s;
-  z-index: 3;
 }
 
 .header-toggle {
@@ -839,7 +838,7 @@ main {
   text-decoration: none;
   font-size: 14px;
   transform: translateX(-5px) translateY(-135px);
-  color: #b3b9c7;
+  color: #B3B9C7;
 }
 .inputBox .icon {
   color: rgba(179, 185, 199, 0.5843137255);
@@ -852,7 +851,7 @@ main {
   height: 50px;
   width: 100%;
   padding: 15px;
-  border: 1px solid #b3b9c7;
+  border: 1px solid #B3B9C7;
   background: #111111;
   border-radius: 25px;
   outline: none;
@@ -863,7 +862,7 @@ main {
 .inputBox label {
   position: absolute;
   left: 0;
-  color: #b3b9c7;
+  color: #B3B9C7;
   transform: translateX(20px) translateY(-60px);
   font-size: 12px;
   padding: 0 6px 0 6px;
@@ -1166,8 +1165,8 @@ main {
 
 .cart-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "img info info btns";
+  grid-template-columns: 1fr 2fr 0.25fr;
+  grid-template-areas: "img info btns";
 }
 
 .cart.img {
@@ -1201,4 +1200,49 @@ main {
   flex-direction: column;
   justify-content: center;
   padding: 2px;
-}/*# sourceMappingURL=App.css.map */
+}
+
+.order-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.25fr;
+  grid-template-areas: "img info btns";
+}
+
+.order-img {
+  grid-area: img;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.order-info {
+  grid-area: info;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.order-info-name {
+  margin-bottom: 20px;
+}
+
+.order-btns {
+  grid-area: btns;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px;
+  align-items: center;
+}
+
+.order-total-price {
+  display: flex;
+  justify-content: space-between;
+}
