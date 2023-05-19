@@ -119,7 +119,7 @@ body {
 }
 
 .star-rating span.on {
-  color: #FFBE00;
+  color: #ffbe00;
 }
 
 button {
@@ -129,7 +129,7 @@ button {
 }
 
 .on {
-  color: #FFBE00;
+  color: #ffbe00;
 }
 
 .off {
@@ -223,7 +223,7 @@ button {
 .showcase .container2 .content .btn {
   margin-left: 10px;
   margin-top: 5px;
-  margin-Bottom: 40px;
+  margin-bottom: 40px;
   padding: 25px 60px;
   background-color: #ffffff;
   border-radius: 300px;
@@ -313,7 +313,12 @@ button {
   color: #dbe3f5;
   text-decoration: none;
 }
-.product-grid .card .card-img-container .card-menu .menu-link #card-heart:active {
+.product-grid
+  .card
+  .card-img-container
+  .card-menu
+  .menu-link
+  #card-heart:active {
   color: red;
 }
 .product-grid .card .card-img-container .btn-theme {
@@ -838,7 +843,7 @@ main {
   text-decoration: none;
   font-size: 14px;
   transform: translateX(-5px) translateY(-135px);
-  color: #B3B9C7;
+  color: #b3b9c7;
 }
 .inputBox .icon {
   color: rgba(179, 185, 199, 0.5843137255);
@@ -851,7 +856,7 @@ main {
   height: 50px;
   width: 100%;
   padding: 15px;
-  border: 1px solid #B3B9C7;
+  border: 1px solid #b3b9c7;
   background: #111111;
   border-radius: 25px;
   outline: none;
@@ -862,7 +867,7 @@ main {
 .inputBox label {
   position: absolute;
   left: 0;
-  color: #B3B9C7;
+  color: #b3b9c7;
   transform: translateX(20px) translateY(-60px);
   font-size: 12px;
   padding: 0 6px 0 6px;
@@ -1089,7 +1094,7 @@ main {
 .categories-container .category-buttons .category-button {
   border: none;
 }
-.categories-container .category-buttons .category-button:hover {
+.categories-container .category-buttons .active {
   text-decoration: none;
   background-color: #dbe3f5;
   border-radius: 25px;
@@ -1104,13 +1109,13 @@ main {
   display: flex;
 }
 .search-column-container .search-column1 .search-dresses {
-  background-color: #8D94A6;
+  background-color: #8d94a6;
   margin: 1px;
   height: 25vh;
   width: 50%;
 }
 .search-column-container .search-column1 .search-pants {
-  background-color: #8D94A6;
+  background-color: #8d94a6;
   margin: 1px;
   height: 25vh;
   width: 50%;
@@ -1120,7 +1125,7 @@ main {
   grid-area: col2;
 }
 .search-column-container .search-column2 .search-accessories {
-  background-color: #8D94A6;
+  background-color: #8d94a6;
   margin: 1px;
   height: 25vh;
   width: 100%;
@@ -1130,13 +1135,13 @@ main {
   grid-area: col3;
 }
 .search-column-container .search-column3 .search-shoes {
-  background-color: #8D94A6;
+  background-color: #8d94a6;
   margin: 1px;
   height: 25vh;
   width: 50%;
 }
 .search-column-container .search-column3 .search-tshirts {
-  background-color: #8D94A6;
+  background-color: #8d94a6;
   margin: 1px;
   height: 25vh;
   width: 50%;
@@ -1154,12 +1159,19 @@ main {
 .filtred-products-container .filtred-products .filtred-product {
   margin: 4px;
 }
-.filtred-products-container .filtred-products .filtred-product .filtred-product-name {
+.filtred-products-container
+  .filtred-products
+  .filtred-product
+  .filtred-product-name {
   align-items: center;
   margin-left: 3px;
   font-weight: 900;
 }
-.filtred-products-container .filtred-products .filtred-product .filtred-product-img-container .filtred-product-img {
+.filtred-products-container
+  .filtred-products
+  .filtred-product
+  .filtred-product-img-container
+  .filtred-product-img {
   height: 9rem;
 }
 
@@ -1250,4 +1262,4 @@ main {
 .checkout {
   margin-bottom: 50px;
   margin-top: 30px;
-}
+} /*# sourceMappingURL=App.css.map */
