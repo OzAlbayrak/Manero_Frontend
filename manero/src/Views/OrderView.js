@@ -5,6 +5,7 @@ import Header from '../components/sections/Header'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import { NavLink } from 'react-router-dom'
 
+
 const OrderView = () => {
 
   const {items, addItem, removeItem} = useShoppingCartContext()
@@ -86,6 +87,13 @@ const OrderView = () => {
        <div>${totPrice}</div>
     </div>
 
+    <div className='mx-auto'>
+        <NavLink to='/Checkout'>
+        <button className='btn rounded-pill my-3 custom-btn'>
+                    Confirm Order
+        </button>
+        </NavLink>
+    </div>
    
    
     <p>x</p>
