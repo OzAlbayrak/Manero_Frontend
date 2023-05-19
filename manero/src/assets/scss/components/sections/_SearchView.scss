@@ -28,13 +28,12 @@
 
         .category-button{
             border: none;
-
-            &:hover {
-                text-decoration: none;
-                background-color: $color-theme;
-                border-radius: 25px;
-                cursor: pointer;
-            }
+        }
+        .active {
+            text-decoration: none;
+            background-color: $color-theme;
+            border-radius: 25px;
+            cursor: pointer;
         }
     }
 }

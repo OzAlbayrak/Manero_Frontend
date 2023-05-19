@@ -1089,7 +1089,7 @@ main {
 .categories-container .category-buttons .category-button {
   border: none;
 }
-.categories-container .category-buttons .category-button:hover {
+.categories-container .category-buttons .active {
   text-decoration: none;
   background-color: #dbe3f5;
   border-radius: 25px;
@@ -1245,4 +1245,4 @@ main {
 .order-total-price {
   display: flex;
   justify-content: space-between;
-}
+}/*# sourceMappingURL=App.css.map */
