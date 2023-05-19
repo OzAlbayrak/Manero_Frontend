@@ -69,7 +69,7 @@ const CheckoutView = () => {
         ?
         <p>Delivery: Free</p>
         :
-        <p>Delivery: 49$</p>
+        <p>Delivery: $49</p>
     }
     
  
