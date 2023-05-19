@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "img img info info info btns";
+    margin-bottom: 5vh;
 
     .wishlist-img{
         grid-area: img;
@@ -29,6 +30,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
 
         #heart{
             color:red;

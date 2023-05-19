@@ -26,9 +26,11 @@ body {
   margin-bottom: 2rem;
 }
 
-.rating {
-  color: #FFBE00;
-  text-align: left;
+.title-3 {
+  font-size: 25px;
+  font-weight: bolder;
+  line-height: 1;
+  margin-bottom: 2rem;
 }
 
 .inputcontainer {
@@ -41,6 +43,7 @@ body {
   position: relative;
 }
 .inputcontainer .text-center .baselabel {
+  text-transform: uppercase;
   position: absolute;
   font-size: 12px;
   background-color: white;
@@ -77,21 +80,27 @@ body {
   border: #111111 solid 4px;
 }
 
-/* icon placements */
-.menuLinkIcons {
+.bottom-menu-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  /* icon placements */
+  /* icons */
+}
+.bottom-menu-container .menuLinkIcons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-
-/* icons */
-.menu-link {
+.bottom-menu-container .menu-link {
   display: flex;
   justify-content: space-around;
   margin: 1rem;
   font-size: 24px;
   color: #222529;
+  text-decoration: none;
 }
-.menu-link:hover {
+.bottom-menu-container .menu-link:hover {
   text-decoration: none;
   color: #dbe3f5;
   cursor: pointer;
@@ -99,6 +108,8 @@ body {
 
 .star-rating {
   font-size: 2em;
+  display: flex;
+  text-align: left;
 }
 
 .star-rating span {
@@ -123,6 +134,21 @@ button {
 
 .off {
   color: #ccc;
+}
+
+.Review-Container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  margin-top: 5rem;
+}
+
+.review-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rem;
 }
 
 .header-section {
@@ -166,6 +192,7 @@ button {
   height: 600px;
   display: flex;
   margin-left: 15px;
+  margin-bottom: 15px;
 }
 .showcase .container .content {
   flex: 1;
@@ -206,11 +233,6 @@ button {
   color: #ffffff;
   text-decoration: none;
 }
-.showcase .container2 img {
-  flex: 1;
-  width: auto;
-  height: 100%;
-}
 
 .product-grid .container {
   max-width: 1110px;
@@ -226,13 +248,33 @@ button {
   overflow-y: hidden;
   justify-content: left;
   margin-left: 15px;
+  margin-bottom: 25px;
 }
-.product-grid .title {
+.product-grid .titleBestSeller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 375px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.product-grid .titleBestSeller .title {
   font-size: 40px;
   font-weight: bolder;
   text-align: left;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-left: 1.5rem;
+}
+.product-grid .titleBestSeller .title2 {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: right;
+  margin-right: -2rem;
+  margin-bottom: -1rem;
+}
+.product-grid .titleBestSeller .title2 .icon-right {
+  margin-left: -2.5rem;
 }
 .product-grid .card {
   z-index: 0;
@@ -270,6 +312,9 @@ button {
 .product-grid .card .card-img-container .card-menu .menu-link:hover {
   color: #dbe3f5;
   text-decoration: none;
+}
+.product-grid .card .card-img-container .card-menu .menu-link #card-heart:active {
+  color: red;
 }
 .product-grid .card .card-img-container .btn-theme {
   position: absolute;
@@ -807,7 +852,7 @@ main {
   width: 100%;
   padding: 15px;
   border: 1px solid #B3B9C7;
-  background: black;
+  background: #111111;
   border-radius: 25px;
   outline: none;
   color: #ffffff;
@@ -841,6 +886,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: "img img info info info btns";
+  margin-bottom: 5vh;
 }
 .wishlist-container .wishlist-img {
   grid-area: img;
@@ -866,6 +912,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .wishlist-container .wishlist-btns #heart {
   color: red;
@@ -969,18 +1016,26 @@ main {
   display: flex;
   justify-content: center;
   margin-top: 10px;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  min-width: 375px;
+  max-width: 1100px;
 }
 .salesBtnContainer .salesIcons {
   position: absolute;
-  transform: translateX(-27rem) translateY(2rem);
+  transform: translateX(-29rem) translateY(2rem);
   color: #626262;
   border: none;
   background-color: #ffffff;
 }
+.salesBtnContainer .filterIcon {
+  margin-right: -1rem;
+}
+.salesBtnContainer .sortingIcon {
+  margin-left: -1rem;
+}
 .salesBtnContainer .dropdownbutton {
   position: relative;
-  transform: translateX(26rem) translateY(2rem);
+  transform: translateX(28rem) translateY(2rem);
   color: #626262;
   border: none;
   background-color: #ffffff;
@@ -994,7 +1049,7 @@ main {
   position: absolute;
   padding-left: 0px;
   list-style-type: none;
-  transform: translateX(26rem) translateY(2rem);
+  transform: translateX(28rem);
   background-color: #ffffff;
   z-index: 1;
 }
@@ -1005,8 +1060,189 @@ main {
   display: inline;
   border: none;
   background-color: #ffffff;
-  font-size: 13px;
+  font-size: 14px;
 }
 .salesBtnContainer .dropdownitems:hover {
   display: block;
+}
+
+.search-container {
+  border: none;
+}
+.search-container .search-mag-glas {
+  background-color: none;
+  margin-left: 25px;
+  margin-right: 10px;
+}
+.search-container .search-field {
+  border: none;
+  outline: none;
+}
+
+.categories-container {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.categories-container .category-buttons .category-button {
+  border: none;
+}
+.categories-container .category-buttons .category-button:hover {
+  text-decoration: none;
+  background-color: #dbe3f5;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.search-column-container {
+  margin-bottom: 7vh;
+}
+.search-column-container .search-column1 {
+  grid-area: col1;
+  display: flex;
+}
+.search-column-container .search-column1 .search-dresses {
+  background-color: #8D94A6;
+  margin: 1px;
+  height: 25vh;
+  width: 50%;
+}
+.search-column-container .search-column1 .search-pants {
+  background-color: #8D94A6;
+  margin: 1px;
+  height: 25vh;
+  width: 50%;
+}
+.search-column-container .search-column2 {
+  display: flex;
+  grid-area: col2;
+}
+.search-column-container .search-column2 .search-accessories {
+  background-color: #8D94A6;
+  margin: 1px;
+  height: 25vh;
+  width: 100%;
+}
+.search-column-container .search-column3 {
+  display: flex;
+  grid-area: col3;
+}
+.search-column-container .search-column3 .search-shoes {
+  background-color: #8D94A6;
+  margin: 1px;
+  height: 25vh;
+  width: 50%;
+}
+.search-column-container .search-column3 .search-tshirts {
+  background-color: #8D94A6;
+  margin: 1px;
+  height: 25vh;
+  width: 50%;
+}
+.search-column-container .category-titles {
+  color: white;
+  margin-left: 15px;
+  margin-top: 10rem;
+}
+
+.filtred-products-container .filtred-products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filtred-products-container .filtred-products .filtred-product {
+  margin: 4px;
+}
+.filtred-products-container .filtred-products .filtred-product .filtred-product-name {
+  align-items: center;
+  margin-left: 3px;
+  font-weight: 900;
+}
+.filtred-products-container .filtred-products .filtred-product .filtred-product-img-container .filtred-product-img {
+  height: 9rem;
+}
+
+.cart-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.25fr;
+  grid-template-areas: "img info btns";
+}
+
+.cart.img {
+  grid-area: img;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+}
+
+.cart-info {
+  grid-area: info;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.cart-info-name {
+  margin-bottom: 20px;
+}
+
+.cart-btns {
+  grid-area: btns;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px;
+}
+
+.order-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.25fr;
+  grid-template-areas: "img info btns";
+}
+
+.order-img {
+  grid-area: img;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.order-info {
+  grid-area: info;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.order-info-name {
+  margin-bottom: 20px;
+}
+
+.order-btns {
+  grid-area: btns;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px;
+  align-items: center;
+}
+
+.order-total-price {
+  display: flex;
+  justify-content: space-between;
 }

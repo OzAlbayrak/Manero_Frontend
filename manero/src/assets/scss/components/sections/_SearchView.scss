@@ -1,0 +1,125 @@
+
+.search-container{
+    border: none;
+
+
+    .search-mag-glas{
+        background-color: none;
+        margin-left: 25px;
+        margin-right: 10px;
+    }
+
+    .search-field{
+        border: none;
+        outline: none;
+
+    }
+}
+
+.categories-container{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .category-buttons{
+
+
+        .category-button{
+            border: none;
+
+            &:hover {
+                text-decoration: none;
+                background-color: $color-theme;
+                border-radius: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+    .search-column-container{
+        margin-bottom: 7vh;
+
+        .search-column1{
+            grid-area: col1;
+            display:flex;
+    
+            .search-dresses{
+                background-color: #8D94A6;
+                margin: 1px;
+                height: 25vh;
+                width: 50%;
+            }
+            .search-pants{
+                background-color: #8D94A6;
+                margin: 1px;
+                height: 25vh;
+                width: 50%;
+            }
+        }
+        .search-column2{
+            display: flex;
+            grid-area: col2;
+    
+            .search-accessories{
+                background-color: #8D94A6;
+                margin: 1px;
+                height: 25vh;
+                width: 100%;
+    
+            }
+        }
+        .search-column3{
+            display:flex;
+            grid-area: col3;
+    
+            .search-shoes{
+                background-color: #8D94A6;
+                margin: 1px;
+                height: 25vh;
+                width: 50%;
+            }
+            .search-tshirts{
+                background-color: #8D94A6;
+                margin: 1px;
+                height: 25vh;
+                width: 50%;
+            }
+    
+        }
+
+        .category-titles{
+            color: white;
+            margin-left: 15px;
+            margin-top: 10rem;
+        }
+
+    }
+    .filtred-products-container{
+
+        .filtred-products{
+            display: flex;
+            flex-wrap: wrap;
+    
+            .filtred-product{
+                margin: 4px;
+    
+                .filtred-product-name{
+                    align-items: center;
+                    margin-left:3px;
+                    font-weight: 900;
+                }
+    
+                .filtred-product-img-container{
+                
+                    .filtred-product-img{
+    
+                        height: 9rem;
+                    }
+                }
+            }
+        }
+    }
+

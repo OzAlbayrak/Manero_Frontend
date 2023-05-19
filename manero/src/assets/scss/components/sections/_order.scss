@@ -1,17 +1,18 @@
-.cart-container{
+.order-container{
     display: grid;
     grid-template-columns: 1fr 2fr 0.25fr;
     grid-template-areas: "img info btns";
 }
-.cart.img{
+.order-img{
     grid-area: img;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    //height: 150px;
+    margin-bottom: 10px;
 }
-.cart-info{
+.order-info{
     grid-area: info;
     display: flex;
     margin-top: 10px;
@@ -21,15 +22,21 @@
     text-align: left;
     margin-left: 40px;
 }
-.cart-info-name{
+.order-info-name{
     margin-bottom: 20px;
 }
-.cart-btns{
+
+.order-btns{
     grid-area: btns;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 2px;
+    align-items: center;
+}
+.order-total-price{
+    display: flex;
+    justify-content:space-between;
     
 }

@@ -15,6 +15,10 @@ import CartView from './Views/CartView';
 import WishlistView from './Views/WishlistView';
 import PromocodesView from './Views/PromocodesView';
 import BestSellerView from './Views/BestSellerView';
+import SearchView from './Views/SearchView';
+import OrderView from './Views/OrderView';
+import DescriptionView from './Views/DescriptionView';
+import CheckoutView from './Views/CheckoutView';
 
 function App() {
 	return (
@@ -22,20 +26,24 @@ function App() {
 			<Router>
 				<Routes>
 					<Route path='/' element={<HomeView />} />
-					<Route path='/best' element={<BestSellerView/>} />
+					<Route path='/bestSellers' element={<BestSellerView/>} />
 					<Route path='/Reset' element={<ResetedPassword />} />
 					<Route path='/Created' element={<AccountCreated />} />
+					<Route path='/DescriptionView' element={<DescriptionView />} />
 					<Route path='/GetStarted' element={<GetStartedHomeView />} />
 					<Route path='/GetStartedWelcome' element={<GetStartedWelcomeView />} />
 					<Route path='/VerifyNumber' element={<VerifyNumberView />} />
 					<Route path='/ConfirmCode' element={<ConfirmCodeView />} />
+					<Route path='/Search' element={<SearchView />}/>
 					<Route path='/SignIn' element={<SignIn />} />
 					<Route path='/SignUp' element={<SignUp />} />
 					<Route path='/ForgotPassword' element={<ForgotPassword />} />
 					<Route path='/ResetPassword' element={<ResetPassword />} />
-					<Route path='/CartView' element={<CartView />} />
+					<Route path='/Cart' element={<CartView />} />
 					<Route path='/Wishlist' element={<WishlistView />} />
 					<Route path='/Promo' element={<PromocodesView />} />
+					<Route path='/Order' element={<OrderView />} />
+					<Route path='/Checkout' element={<CheckoutView />} />
 				</Routes>
 			</Router>
 		</div>
