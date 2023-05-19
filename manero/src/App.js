@@ -18,6 +18,7 @@ import BestSellerView from './Views/BestSellerView';
 import SearchView from './Views/SearchView';
 import OrderView from './Views/OrderView';
 import DescriptionView from './Views/DescriptionView';
+import CheckoutView from './Views/CheckoutView';
 
 function App() {
 	return (
@@ -42,6 +43,7 @@ function App() {
 					<Route path='/Wishlist' element={<WishlistView />} />
 					<Route path='/Promo' element={<PromocodesView />} />
 					<Route path='/Order' element={<OrderView />} />
+					<Route path='/Checkout' element={<CheckoutView />} />
 				</Routes>
 			</Router>
 		</div>

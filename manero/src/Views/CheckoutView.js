@@ -5,7 +5,7 @@ import Header from '../components/sections/Header'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import { NavLink } from 'react-router-dom'
 
-const OrderView = () => {
+const CheckoutView = () => {
 
   const {items, addItem, removeItem} = useShoppingCartContext()
   const [totAmountOfItems, setTotAmountOfItems] = useState(0);
@@ -46,7 +46,7 @@ const OrderView = () => {
   return (
     <div className='container d-flex flex-column'>
       <Header
-          title={'Order'}
+          title={'Checkout'}
           hasSideIcon={true}
           isMenu={true}
           hasCart={true}
@@ -55,25 +55,33 @@ const OrderView = () => {
       items.map(item => (
         <div key={item.id}>
           <div className='d-flex justify-content-center align-items-center'>
-            <img src={item.image} className="rounded float-left" alt="..." />
             {item.name}  -  ({item.price} kr)   x {item.quantity}
-            <button onClick={() => increaseTotItem(item)} className='btn btn-secondary'> + </button>
-            <button onClick={() => decreaseTotItem(item)} className='btn btn-secondary'> - </button>
           </div>
         </div>
       ))
     }
-    TotItem: {totAmountOfItems}
-    TotPrice: {totPrice}
     
+    <p>TotItem: {totAmountOfItems}</p>
+    <p>TotPrice: {totPrice}</p>
+    <p>Discount: None</p>
+    {
+        totPrice >= 100 
+        ?
+        <p>Delivery: Free</p>
+        :
+        <p>Delivery: 49$</p>
+    }
+    
+ 
+
     <div className='mx-auto'>
-        <NavLink to='/Checkout'>
+        <NavLink to='/'>
         <button className='btn rounded-pill my-3 custom-btn'>
-                    Proceed To Checkout
+                    Confirm Order
         </button>
         </NavLink>
     </div>
-
+    
     <p>x</p>
     <p>x</p>
     <p>x</p>
@@ -84,4 +92,4 @@ const OrderView = () => {
   )
 }
 
-export default OrderView
+export default CheckoutView
