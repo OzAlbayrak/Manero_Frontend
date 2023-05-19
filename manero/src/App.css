@@ -506,7 +506,7 @@ button {
   padding: 0px;
 }
 
-.fa-light {
+.promo-copy-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1245,4 +1245,9 @@ main {
 .order-total-price {
   display: flex;
   justify-content: space-between;
+}
+
+.checkout {
+  margin-bottom: 50px;
+  margin-top: 30px;
 }
