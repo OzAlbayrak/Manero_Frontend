@@ -43,6 +43,7 @@ body {
   position: relative;
 }
 .inputcontainer .text-center .baselabel {
+  text-transform: uppercase;
   position: absolute;
   font-size: 12px;
   background-color: white;
@@ -1164,8 +1165,8 @@ main {
 
 .cart-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "img info info btns";
+  grid-template-columns: 1fr 2fr 0.25fr;
+  grid-template-areas: "img info btns";
 }
 
 .cart.img {
@@ -1199,4 +1200,49 @@ main {
   flex-direction: column;
   justify-content: center;
   padding: 2px;
-}/*# sourceMappingURL=App.css.map */
+}
+
+.order-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.25fr;
+  grid-template-areas: "img info btns";
+}
+
+.order-img {
+  grid-area: img;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.order-info {
+  grid-area: info;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.order-info-name {
+  margin-bottom: 20px;
+}
+
+.order-btns {
+  grid-area: btns;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px;
+  align-items: center;
+}
+
+.order-total-price {
+  display: flex;
+  justify-content: space-between;
+}

@@ -3,9 +3,53 @@ import { NavLink } from 'react-router-dom';
 import Header from './Header';
 import InputField from '../individuals/InputField';
 import Button from '../individuals/Button';
+import { logIn } from '../../utilities/api';
+import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
+	const navigate = useNavigate();
 	const [rememberMe, setRememberMe] = useState(false);
+	const [error, setError] = useState('');
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+
+		setError('');
+		const formData = new FormData(e.target);
+		const res = Object.fromEntries(formData);
+		rememberMe ? (res.rememberMe = true) : (res.rememberMe = false);
+
+		console.log(JSON.stringify(res));
+		//e.target.reset();
+
+		const result = await logIn(res);
+
+		//console.log(result);
+		switch (result.status) {
+			case 200:
+				{
+					const token = await result.text();
+					localStorage.setItem('accessToken', token);
+					console.log(token);
+					navigate('/');
+				}
+				break;
+			case 400:
+				{
+					const data = await result.json();
+					setError(data.title);
+				}
+				break;
+			case 401:
+				{
+					const data = await result.text();
+					setError(data);
+				}
+				break;
+			default:
+				setError('An unknown error occurred.');
+		}
+	};
 
 	return (
 		<div className='container d-flex flex-column'>
@@ -18,16 +62,17 @@ const SignIn = () => {
 			<div className='vr mx-auto'></div>
 			<p className='mx-auto my-3 headline'>Welcome Back!</p>
 			<p className='mx-auto text-light-color'>Sign in to continue</p>
-			<form className='inputcontainer'>
+			<form className='inputcontainer' onSubmit={handleSubmit}>
+				<p className='text-danger text-center mx-auto'>{error}</p>
 				<InputField
 					type={'email'}
-					name={'EMAIL'}
+					name={'email'}
 					nameid={'email'}
 					placeholder={'Enter email'}
 				></InputField>
 				<InputField
 					type={'password'}
-					name={'PASSWORD'}
+					name={'password'}
 					nameid={'password'}
 					placeholder={'Enter password'}
 				></InputField>
@@ -38,6 +83,7 @@ const SignIn = () => {
 							id='rememberMe'
 							name='rememberMe'
 							value={rememberMe}
+							onChange={() => setRememberMe(!rememberMe)}
 						/>
 						<label htmlFor='rememberMe' className='text-light-color'>
 							Remember me

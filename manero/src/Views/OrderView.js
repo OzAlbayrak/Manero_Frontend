@@ -54,26 +54,40 @@ const OrderView = () => {
       {
       items.map(item => (
         <div key={item.id}>
-          <div className='d-flex justify-content-center align-items-center'>
-            <img src={item.image} className="rounded float-left" alt="..." />
-            {item.name}  -  ({item.price} kr)   x {item.quantity}
-            <button onClick={() => increaseTotItem(item)} className='btn btn-secondary'> + </button>
-            <button onClick={() => decreaseTotItem(item)} className='btn btn-secondary'> - </button>
+          <div className='order-container'>
+            <img src={item.image} className="order-img" alt="..." />
+            <div className='order-info'>
+              <div className='order-info-name'>
+                 {item.name}
+              </div>   
+              <div className='order-info-price'>
+                 ${item.price} 
+              </div>
+             </div>
+           <div className='order-btns'> 
+              <button onClick={() => increaseTotItem(item)} className='btn btn-secondary'> + </button>
+              <div>{item.quantity}</div>
+              <button onClick={() => decreaseTotItem(item)} className='btn btn-secondary'> - </button>
+           </div> 
           </div>
-        </div>
+         </div>
       ))
     }
-    TotItem: {totAmountOfItems}
-    TotPrice: {totPrice}
-    
-    <div className='mx-auto'>
-        <NavLink to='/Checkout'>
-        <button className='btn rounded-pill my-3 custom-btn'>
-                    Proceed To Checkout
-        </button>
-        </NavLink>
+    <hr/>
+    <div>Promocode applied!!!!!!!!!!!</div>
+    <div className='d-flex flex-column'> 
+      <div>Items: {totAmountOfItems}</div> 
+   </div>
+    <p>Discount:</p>
+    <p>Delivery:</p>
+    <hr/>
+   <div className='order-total-price'>
+      <div>Total:</div> 
+       <div>${totPrice}</div>
     </div>
 
+   
+   
     <p>x</p>
     <p>x</p>
     <p>x</p>
