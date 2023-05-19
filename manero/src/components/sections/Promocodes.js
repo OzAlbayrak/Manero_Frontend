@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SideIcon from "../individuals/SideIcon";
 import EmptyImg from "../../assets/images/empty-img.svg";
 
@@ -6,6 +6,7 @@ const PromoCodes = () => {
   const [currentLink, setCurrentLink] = useState("");
   const [usedLink, setUsedLink] = useState(false);
   const [copiedText, setCopiedText] = useState("");
+  const [promocodes, setPromocodes] = useState([]);
 
   const handleCurrentClick = () => {
     setCurrentLink(true);
@@ -33,6 +34,21 @@ const PromoCodes = () => {
     }, 1200);
   };
 
+  useEffect(() => {
+    fetchPromoCodes();
+  }, []);
+
+  // måste testas när api:et är klar
+  const fetchPromoCodes = async () => {
+    try {
+      const response = await fetch("/api");
+      const data = await response.json();
+      setPromocodes(data);
+    } catch (error) {
+      console.error("Error promocodes", error);
+    }
+  };
+
   return (
     <div>
       <div className="top-back-and-text">
@@ -52,7 +68,7 @@ const PromoCodes = () => {
           <h3 className="promored" style={promoCodeColor(50)}>50% off</h3>
           <p className="promo-validation">Valid until June 30, 2024</p>
         </div>
-        <i className="fa-light fa-copy" onClick={() => copyToClipboard("promokoder här 3", "promo3")}></i>
+        <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard("promokoder här 3", "promo3")}></i>
         {copiedText["promo3"] && <span className="copied-message">Copied</span>}
       </div>
       <hr />
@@ -64,7 +80,7 @@ const PromoCodes = () => {
           <h3 className="promoyellow" style={promoCodeColor(30)}>30% off</h3>
           <p className="promo-validation">Valid until August 30, 2023</p>
         </div>
-        <i className="fa-light fa-copy" onClick={() => copyToClipboard("promokoder här 2", "promo2")}></i>
+        <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard("promokoder här 2", "promo2")}></i>
         {copiedText["promo2"] && <span className="copied-message">Copied</span>}
       </div>
       <hr />
@@ -76,7 +92,7 @@ const PromoCodes = () => {
           <h3 className="promoyellow" style={promoCodeColor(15)}>15% off</h3>
           <p className="promo-validation">Valid until December 31, 2023</p>
         </div>
-        <i className="fa-light fa-copy" onClick={() => copyToClipboard("promokoder här", "promo1")}></i>
+        <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard("promokoder här", "promo1")}></i>
         {copiedText["promo1"] && <span className="copied-message">Copied</span>}
       </div>
       <hr />
