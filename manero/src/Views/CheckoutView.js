@@ -14,6 +14,21 @@ const CheckoutView = () => {
   const [totAmountOfItems, setTotAmountOfItems] = useState(0);
   const [totPrice, setTotPrice] = useState(0);
   const [start, setStart] = useState(true);
+  const [comment, setComment] = useState('');
+
+
+
+  const handleChange = (event) => {
+    setComment(event.target.value);
+  };
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Hantera inskickade kommentaren, t.ex. skicka till en API eller spara i en lokal lista
+    console.log('Skicka kommentar:', comment);
+    setComment('');
+  };
 
 
 
@@ -22,7 +37,7 @@ const CheckoutView = () => {
      setTotPrice(totPrice + item.price);
      addItem(item);
    })
-
+ 
    const decreaseTotItem = ((item) => {
      setTotAmountOfItems(totAmountOfItems - 1);
      setTotPrice(totPrice - item.price);
@@ -80,13 +95,13 @@ const CheckoutView = () => {
 
       <hr />
 
-      <form className='inputcontainer checkout' /*onSubmit={handleSubmit}*/>
-
-        <InputField className=''
-          type={'comment'}
-          name={'comment'}
-          nameid={'comment'}
-        ></InputField>
+      <form className='checkout-form' onSubmit={handleSubmit}>
+        <label>COMMENT</label>
+        <textarea className='area' rows="10" colum="70"
+          value={comment}
+          onChange={handleChange}
+          placeholder="Enter your comment"
+        />
       </form>
 
       <div className='mx-auto'>
