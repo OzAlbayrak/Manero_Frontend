@@ -1247,6 +1247,12 @@ main {
   justify-content: space-between;
 }
 
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0;
+}
+
 .checkout-form {
   display: grid;
   justify-content: center;
@@ -1263,4 +1269,13 @@ main {
 .shipping-address {
   display: flex;
   justify-content: space-between;
+  margin-left: 10px;
+}
+
+.checkout-info {
+  margin-left: 10px;
+}
+
+.p-info {
+  margin-left: 10px;
 }

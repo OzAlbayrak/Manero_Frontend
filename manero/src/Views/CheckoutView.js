@@ -64,14 +64,16 @@ const CheckoutView = () => {
 
 
   return (
-    <div className='container d-flex flex-column'>
-      <SideIcon />
-      <Header
-        title={'Checkout'}
+    <div className='d-flex flex-column'>
+      <div className='container'>
+        <SideIcon />
+        <Header
+          title={'Checkout'}
 
-        isMenu={true}
-        hasCart={true}
-      ></Header>
+          isMenu={true}
+          hasCart={true}
+        ></Header>
+      </div>
       {
         items.map(item => (
           <div key={item.id}>
@@ -99,14 +101,14 @@ const CheckoutView = () => {
         <p>Shipping details</p>
         <i className='fa-regular fa-chevron-right'></i>
       </div>
-      <p>Nordkapsvägen 1, 136 57, Vega SVERIGE</p>
+      <p className='p-info'>Nordkapsvägen 1, 136 57, Vega SVERIGE</p>
 
       <hr />
       <div className='shipping-address'>
         <p>Payment Method</p>
         <i className='fa-regular fa-chevron-right'></i>
       </div>
-      <p>7741********6644</p>
+      <p className='p-info'>7741********6644</p>
 
       <hr />
 
