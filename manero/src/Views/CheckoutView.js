@@ -64,14 +64,16 @@ const CheckoutView = () => {
 
 
   return (
-    <div className='container d-flex flex-column'>
-      <SideIcon />
-      <Header
-        title={'Checkout'}
+    <div className='d-flex flex-column'>
+      <div className='container'>
+        <SideIcon />
+        <Header
+          title={'Checkout'}
 
-        isMenu={true}
-        hasCart={true}
-      ></Header>
+          isMenu={true}
+          hasCart={true}
+        ></Header>
+      </div>
       {
         items.map(item => (
           <div key={item.id}>
@@ -82,29 +84,68 @@ const CheckoutView = () => {
         ))
       }
 
-      <p>TotItem: {totAmountOfItems}</p>
-      <p>TotPrice: {totPrice}</p>
-      <p>Discount: None</p>
-      {
-        totPrice >= 100
-          ?
-          <p>Delivery: Free</p>
-          :
-          <p>Delivery: $49</p>
-      }
+      <div className='checkout-info'>
+        <div className='checkout-info-order'>
+          <p>My order</p>
+          <p className='totPrice'>
+            <div>
+              {totPrice}
+            </div>
+          </p>
+        </div>
+        <hr />
+        <p className='totItem'>
+          <div>Shoulder bag, black</div>
+          <div>
+            TotItem:  {totAmountOfItems}
+          </div>
+        </p>
+
+        <p className='discount'>Discount:
+          <div>
+            None
+          </div>
+        </p>
+        {
+          totPrice >= 100
+            ?
+            <p>Delivery:
+              Free
+            </p>
+            :
+            <p className='delivery'>Delivery:
+              <div>
+                $49
+              </div>
+            </p>
+        }
+      </div>
+      <hr />
+      <div className='shipping-address'>
+        <p>Shipping details</p>
+        <i className='fa-regular fa-chevron-right'></i>
+      </div>
+      <p className='p-info'>Nordkapsvägen 1, 136 57, Vega SVERIGE</p>
+
+      <hr />
+      <div className='shipping-address'>
+        <p>Payment Method</p>
+        <i className='fa-regular fa-chevron-right'></i>
+      </div>
+      <p className='p-info'>7741********6644</p>
 
       <hr />
 
       <form className='checkout-form' onSubmit={handleSubmit}>
         <label>COMMENT</label>
-        <textarea className='area' rows="10" colum="70"
+        <textarea className='area' rows="8" colum="10"
           value={comment}
           onChange={handleChange}
           placeholder="Enter your comment"
         />
       </form>
 
-      <div className='mx-auto'>
+      <div className='mx-auto button-container'>
         <NavLink to='/'>
           <button className='btn rounded-pill my-3 custom-btn'>
             Confirm Order
@@ -112,12 +153,7 @@ const CheckoutView = () => {
         </NavLink>
       </div>
 
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-
-
-      <MenuLinkIcons />
+      <MenuLinkIcons className='menu-icons' />
     </div>
   )
 }
