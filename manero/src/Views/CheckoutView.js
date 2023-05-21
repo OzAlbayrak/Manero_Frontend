@@ -77,56 +77,60 @@ const CheckoutView = () => {
 
       <div className='checkout-info'>
         <div className='checkout-info-order'>
-          <p>My order</p>
+          <p className='semi'>My order</p>
           <p className='totPrice'>
             <div>
               ${totPrice}
             </div>
           </p>
         </div>
-        <hr />
-        <p className='totItem'>
-          {
-            items.map(item => (
-              <div
-                key={item.id}>
-                <div className='check-inf'>
-                  <div >
-                    {item.name}
-                  </div>
-                  <div>
-                    {item.quantity} x ${item.price}
+
+        <div className='info-color'>
+          <hr />
+          <p className='totItem'>
+            {
+              items.map(item => (
+                <div
+                  key={item.id}>
+                  <div className='check-inf'>
+                    <div >
+                      {item.name}
+                    </div>
+                    <div>
+                      {item.quantity} x ${item.price}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))
-          }
-        </p>
+              ))
+            }
+          </p>
 
-        <p className='discount'>Discount:
-          <div>
-            None
-          </div>
-        </p>
-        {
-          totPrice >= 100
-            ?
-            <p className='delivery'>Delivery
-              <div>
-                Free
-              </div>
-            </p>
-            :
-            <p className='delivery'>Delivery
-              <div>
-                $49
-              </div>
-            </p>
-        }
+          <p className='discount'>Discount:
+            <div>
+              None
+            </div>
+          </p>
+          {
+            totPrice >= 100
+              ?
+              <p className='delivery'>Delivery
+                <div>
+                  Free
+                </div>
+              </p>
+              :
+              <p className='delivery'>Delivery
+                <div>
+                  $49
+                </div>
+              </p>
+          }
+          <hr />
+        </div>
       </div>
-      <hr />
+
       <div className='shipping-address'>
-        <p>Shipping details</p>
+        <p className='semi'>Shipping details</p>
         <NavLink to='/Shipping details'>
           <i className='fa-regular fa-chevron-right'></i>
         </NavLink>
@@ -135,7 +139,7 @@ const CheckoutView = () => {
 
       <hr />
       <div className='shipping-address'>
-        <p>Payment Method</p>
+        <p className='semi'>Payment Method</p>
         <NavLink to='/Payment method'>
           <i className='fa-regular fa-chevron-right'></i>
         </NavLink>

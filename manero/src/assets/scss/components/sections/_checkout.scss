@@ -54,6 +54,10 @@
     z-index: 2;
 }
 
+.info-color {
+    background-color: rgb(235, 245, 247);
+}
+
 .totItem {
     display: flex;
     flex-direction: column;
@@ -78,4 +82,10 @@
 .check-inf {
     display: flex;
     justify-content: space-between;
+}
+
+.semi {
+    font-size: 18px;
+    font-family: 'Mulish';
+    font-weight: 600;
 }
