@@ -82,16 +82,31 @@ const CheckoutView = () => {
         ))
       }
 
-      <p>TotItem: {totAmountOfItems}</p>
-      <p>TotPrice: {totPrice}</p>
-      <p>Discount: None</p>
-      {
-        totPrice >= 100
-          ?
-          <p>Delivery: Free</p>
-          :
-          <p>Delivery: $49</p>
-      }
+      <div className='checkout-info'>
+        <p>TotItem: {totAmountOfItems}</p>
+        <p>TotPrice: {totPrice}</p>
+        <p>Discount: None</p>
+        {
+          totPrice >= 100
+            ?
+            <p>Delivery: Free</p>
+            :
+            <p>Delivery: $49</p>
+        }
+      </div>
+      <hr />
+      <div className='shipping-address'>
+        <p>Shipping details</p>
+        <i className='fa-regular fa-chevron-right'></i>
+      </div>
+      <p>Nordkapsvägen 1, 136 57, Vega SVERIGE</p>
+
+      <hr />
+      <div className='shipping-address'>
+        <p>Payment Method</p>
+        <i className='fa-regular fa-chevron-right'></i>
+      </div>
+      <p>7741********6644</p>
 
       <hr />
 

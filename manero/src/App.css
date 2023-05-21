@@ -1257,8 +1257,10 @@ main {
 
 .area {
   border-radius: 10px;
+  width: 300px;
 }
 
-.btn {
-  margin: 0px;
+.shipping-address {
+  display: flex;
+  justify-content: space-between;
 }

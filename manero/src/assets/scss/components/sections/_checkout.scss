@@ -9,9 +9,11 @@
 
 .area {
     border-radius: 10px;
+    width: 300px;
 }
 
+.shipping-address {
+    display: flex;
+    justify-content: space-between;
 
-.btn {
-    margin: 0px;
 }
