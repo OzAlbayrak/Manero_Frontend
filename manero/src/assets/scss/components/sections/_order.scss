@@ -1,9 +1,10 @@
-.order-container{
+.order-container {
     display: grid;
     grid-template-columns: 1fr 2fr 0.25fr;
     grid-template-areas: "img info btns";
 }
-.order-img{
+
+.order-img {
     grid-area: img;
     overflow: hidden;
     display: flex;
@@ -12,7 +13,8 @@
     //height: 150px;
     margin-bottom: 10px;
 }
-.order-info{
+
+.order-info {
     grid-area: info;
     display: flex;
     margin-top: 10px;
@@ -22,11 +24,12 @@
     text-align: left;
     margin-left: 40px;
 }
-.order-info-name{
+
+.order-info-name {
     margin-bottom: 20px;
 }
 
-.order-btns{
+.order-btns {
     grid-area: btns;
     overflow: hidden;
     display: flex;
@@ -35,8 +38,31 @@
     padding: 2px;
     align-items: center;
 }
-.order-total-price{
+
+.order-total-price {
     display: flex;
-    justify-content:space-between;
-    
+    justify-content: space-between;
+
+}
+
+.order-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.custom-btn {
+    z-index: 1;
+}
+
+.menu-icons {
+    position: relative;
+    z-index: 2;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }

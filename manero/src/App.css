@@ -1174,6 +1174,21 @@ main {
   padding: 2px;
 }
 
+.cart-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.custom-btn {
+  z-index: 1;
+}
+
+.menu-icons {
+  position: relative;
+  z-index: 2;
+}
+
 .order-container {
   display: grid;
   grid-template-columns: 1fr 2fr 0.25fr;
@@ -1217,6 +1232,28 @@ main {
 .order-total-price {
   display: flex;
   justify-content: space-between;
+}
+
+.order-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.custom-btn {
+  z-index: 1;
+}
+
+.menu-icons {
+  position: relative;
+  z-index: 2;
+}
+
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .container {

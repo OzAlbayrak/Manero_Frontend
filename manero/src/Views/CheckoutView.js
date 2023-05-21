@@ -95,7 +95,7 @@ const CheckoutView = () => {
                     {item.name}
                   </div>
                   <div>
-                    {item.quantity} x {item.price}
+                    {item.quantity} x ${item.price}
                   </div>
                 </div>
               </div>
@@ -127,7 +127,7 @@ const CheckoutView = () => {
       <hr />
       <div className='shipping-address'>
         <p>Shipping details</p>
-        <NavLink to='/Shipping'>
+        <NavLink to='/Shipping details'>
           <i className='fa-regular fa-chevron-right'></i>
         </NavLink>
       </div>
@@ -136,7 +136,7 @@ const CheckoutView = () => {
       <hr />
       <div className='shipping-address'>
         <p>Payment Method</p>
-        <NavLink to='/Payment'>
+        <NavLink to='/Payment method'>
           <i className='fa-regular fa-chevron-right'></i>
         </NavLink>
       </div>
