@@ -10,3 +10,4 @@ export const AllReviewsView = () => {
     </div>
   )
 }
+export default AllReviewsView
