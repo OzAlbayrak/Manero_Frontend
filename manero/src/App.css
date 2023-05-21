@@ -1276,6 +1276,11 @@ main {
   margin-left: 10px;
 }
 
+.checkout-info-order {
+  display: flex;
+  justify-content: space-between;
+}
+
 .p-info {
   margin-left: 10px;
 }
@@ -1293,4 +1298,24 @@ main {
 .menu-icons {
   position: relative;
   z-index: 2;
+}
+
+.totItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totPrice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery {
+  display: flex;
+  justify-content: space-between;
 }

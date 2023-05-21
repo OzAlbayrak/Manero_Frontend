@@ -85,15 +85,39 @@ const CheckoutView = () => {
       }
 
       <div className='checkout-info'>
-        <p>TotItem: {totAmountOfItems}</p>
-        <p>TotPrice: {totPrice}</p>
-        <p>Discount: None</p>
+        <div className='checkout-info-order'>
+          <p>My order</p>
+          <p className='totPrice'>
+            <div>
+              {totPrice}
+            </div>
+          </p>
+        </div>
+        <hr />
+        <p className='totItem'>
+          <div>Shoulder bag, black</div>
+          <div>
+            TotItem:  {totAmountOfItems}
+          </div>
+        </p>
+
+        <p className='discount'>Discount:
+          <div>
+            None
+          </div>
+        </p>
         {
           totPrice >= 100
             ?
-            <p>Delivery: Free</p>
+            <p>Delivery:
+              Free
+            </p>
             :
-            <p>Delivery: $49</p>
+            <p className='delivery'>Delivery:
+              <div>
+                $49
+              </div>
+            </p>
         }
       </div>
       <hr />
