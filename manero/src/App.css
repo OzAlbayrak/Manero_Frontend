@@ -1079,17 +1079,17 @@ main {
   outline: none;
 }
 
-.categories-container {
+.genders-container {
   height: 5rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.categories-container .category-buttons .category-button {
+.genders-container .gender-buttons .gender-button {
   border: none;
 }
-.categories-container .category-buttons .category-button:hover {
+.genders-container .gender-buttons .active {
   text-decoration: none;
   background-color: #dbe3f5;
   border-radius: 25px;
@@ -1098,53 +1098,25 @@ main {
 
 .search-column-container {
   margin-bottom: 7vh;
-}
-.search-column-container .search-column1 {
-  grid-area: col1;
   display: flex;
+  justify-content: center;
+  text-align: center;
 }
-.search-column-container .search-column1 .search-dresses {
-  background-color: #8D94A6;
-  margin: 1px;
-  height: 25vh;
-  width: 50%;
-}
-.search-column-container .search-column1 .search-pants {
-  background-color: #8D94A6;
-  margin: 1px;
-  height: 25vh;
-  width: 50%;
-}
-.search-column-container .search-column2 {
+.search-column-container .category-buttons {
   display: flex;
-  grid-area: col2;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.search-column-container .search-column2 .search-accessories {
+.search-column-container .category-buttons .category-button {
   background-color: #8D94A6;
   margin: 1px;
   height: 25vh;
-  width: 100%;
-}
-.search-column-container .search-column3 {
-  display: flex;
-  grid-area: col3;
-}
-.search-column-container .search-column3 .search-shoes {
-  background-color: #8D94A6;
-  margin: 1px;
-  height: 25vh;
-  width: 50%;
-}
-.search-column-container .search-column3 .search-tshirts {
-  background-color: #8D94A6;
-  margin: 1px;
-  height: 25vh;
-  width: 50%;
-}
-.search-column-container .category-titles {
+  width: 60vh;
   color: white;
-  margin-left: 15px;
-  margin-top: 10rem;
+  border: none;
+}
+.search-column-container .category-buttons .category-button:hover {
+  background-color: #384158;
 }
 
 .filtred-products-container .filtred-products {
