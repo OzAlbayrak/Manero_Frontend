@@ -121,7 +121,7 @@ const CheckoutView = () => {
         />
       </form>
 
-      <div className='mx-auto'>
+      <div className='mx-auto button-container'>
         <NavLink to='/'>
           <button className='btn rounded-pill my-3 custom-btn'>
             Confirm Order
@@ -129,12 +129,7 @@ const CheckoutView = () => {
         </NavLink>
       </div>
 
-      <p>x</p>
-      <p>x</p>
-      <p>x</p>
-
-
-      <MenuLinkIcons />
+      <MenuLinkIcons className='menu-icons' />
     </div>
   )
 }

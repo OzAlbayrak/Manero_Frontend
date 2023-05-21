@@ -33,3 +33,18 @@
 .p-info {
     margin-left: 10px;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.custom-btn {
+    z-index: 1;
+}
+
+.menu-icons {
+    position: relative;
+    z-index: 2;
+}
