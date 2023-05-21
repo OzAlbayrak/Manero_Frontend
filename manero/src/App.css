@@ -1248,18 +1248,15 @@ main {
 }
 
 .checkout-form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0px;
+  font-size: 10px;
+  margin-top: 2rem;
 }
 
 .area {
-  border-radius: 15px;
-  border: 1px solid rgb(182, 180, 180);
-  outline: none;
+  border-radius: 10px;
 }
 
 .btn {

@@ -97,7 +97,7 @@ const CheckoutView = () => {
 
       <form className='checkout-form' onSubmit={handleSubmit}>
         <label>COMMENT</label>
-        <textarea className='area' rows="10" colum="70"
+        <textarea className='area' rows="8" colum="10"
           value={comment}
           onChange={handleChange}
           placeholder="Enter your comment"
