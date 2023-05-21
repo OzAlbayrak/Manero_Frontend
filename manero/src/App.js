@@ -19,6 +19,7 @@ import SearchView from './Views/SearchView';
 import OrderView from './Views/OrderView';
 import DescriptionView from './Views/DescriptionView';
 import CheckoutView from './Views/CheckoutView';
+import AllReviewsView from './Views/AllReviewsView';
 
 function App() {
 	return (
@@ -30,6 +31,7 @@ function App() {
 					<Route path='/Reset' element={<ResetedPassword />} />
 					<Route path='/Created' element={<AccountCreated />} />
 					<Route path='/DescriptionView' element={<DescriptionView />} />
+					<Route path='/AllReviewsView' element={<AllReviewsView />} />
 					<Route path='/GetStarted' element={<GetStartedHomeView />} />
 					<Route path='/GetStartedWelcome' element={<GetStartedWelcomeView />} />
 					<Route path='/VerifyNumber' element={<VerifyNumberView />} />

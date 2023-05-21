@@ -62,3 +62,4 @@ export const AllReviews = () => {
     </div>
   )
 }
+export default AllReviews
