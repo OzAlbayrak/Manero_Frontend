@@ -74,31 +74,34 @@ const CheckoutView = () => {
           hasCart={true}
         ></Header>
       </div>
-      {
-        items.map(item => (
-          <div key={item.id}>
-            <div className='d-flex justify-content-center align-items-center'>
-              {item.name}  -  ({item.price} kr)   x {item.quantity}
-            </div>
-          </div>
-        ))
-      }
+
 
       <div className='checkout-info'>
         <div className='checkout-info-order'>
           <p>My order</p>
           <p className='totPrice'>
             <div>
-              {totPrice}
+              ${totPrice}
             </div>
           </p>
         </div>
         <hr />
         <p className='totItem'>
-          <div>Shoulder bag, black</div>
-          <div>
-            TotItem:  {totAmountOfItems}
-          </div>
+          {
+            items.map(item => (
+              <div
+                key={item.id}>
+                <div className='check-inf'>
+                  <div >
+                    {item.name}
+                  </div>
+                  <div>
+                    {item.quantity} x {item.price}
+                  </div>
+                </div>
+              </div>
+            ))
+          }
         </p>
 
         <p className='discount'>Discount:

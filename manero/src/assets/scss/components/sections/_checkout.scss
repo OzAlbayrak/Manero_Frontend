@@ -56,7 +56,7 @@
 
 .totItem {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .totPrice {
@@ -69,7 +69,13 @@
     justify-content: space-between;
 }
 
+
 .delivery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-inf {
     display: flex;
     justify-content: space-between;
 }
