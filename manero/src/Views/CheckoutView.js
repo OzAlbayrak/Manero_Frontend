@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import Header from '../components/sections/Header'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import { NavLink } from 'react-router-dom'
-import InputField from '../components/individuals/InputField';
 import SideIcon from '../components/individuals/SideIcon';
 
 
@@ -112,11 +111,13 @@ const CheckoutView = () => {
         {
           totPrice >= 100
             ?
-            <p>Delivery:
-              Free
+            <p className='delivery'>Delivery
+              <div>
+                Free
+              </div>
             </p>
             :
-            <p className='delivery'>Delivery:
+            <p className='delivery'>Delivery
               <div>
                 $49
               </div>
@@ -126,14 +127,18 @@ const CheckoutView = () => {
       <hr />
       <div className='shipping-address'>
         <p>Shipping details</p>
-        <i className='fa-regular fa-chevron-right'></i>
+        <NavLink to='/Shipping'>
+          <i className='fa-regular fa-chevron-right'></i>
+        </NavLink>
       </div>
       <p className='p-info'>Nordkapsvägen 1, 136 57, Vega SVERIGE</p>
 
       <hr />
       <div className='shipping-address'>
         <p>Payment Method</p>
-        <i className='fa-regular fa-chevron-right'></i>
+        <NavLink to='/Payment'>
+          <i className='fa-regular fa-chevron-right'></i>
+        </NavLink>
       </div>
       <p className='p-info'>7741********6644</p>
 
