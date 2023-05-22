@@ -3,6 +3,7 @@ import SizeColor from "../individuals/SizeColor.js";
 import Button from "../individuals/Button";
 import Rating from "../individuals/Rating";
 import StarRating from "../individuals/RatingStars";
+import { NavLink } from "react-router-dom";
 
 export const Description = () => {
   return (
@@ -27,7 +28,7 @@ export const Description = () => {
         <Button btnType="submit" btnText={"+ ADD TO CART"} />
         <div style={{justifyContent: "end"}}>
                 <p>Reviews (23)</p>
-                <p>View All <i className="fa-solid fa-chevron-right"></i></p>
+                <NavLink to="/AllReviewsView"> <p>View All <i className="fa-solid fa-chevron-right"></i></p></NavLink>
         </div>
 
       <div className="d-flex justify-content-center align-items-center">
