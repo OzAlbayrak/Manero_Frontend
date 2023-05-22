@@ -52,7 +52,10 @@ const SignUp = () => {
 			switch (result.status) {
 				case 201:
 					{
-						logIn(res);
+						const result = await logIn(res);
+						const token = await result.text();
+						sessionStorage.setItem('accessToken', token);
+						//logIn(res);
 						navigate('/Created');
 					}
 					break;

@@ -19,7 +19,7 @@ export async function logIn(res) {
 }
 
 export async function register(res) {
-	return await fetch(sqlUrl + 'authentication/signup', {
+	return await fetch(sqlUrl + '/authentication/signup', {
 		method: 'post',
 		headers: {
 			'Content-Type': 'application/json',
