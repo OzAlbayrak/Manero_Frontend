@@ -19,6 +19,8 @@ import SearchView from './Views/SearchView';
 import OrderView from './Views/OrderView';
 import DescriptionView from './Views/DescriptionView';
 import CheckoutView from './Views/CheckoutView';
+import ShippmentView from './Views/ShippmentView';
+
 
 function App() {
 	return (
@@ -26,7 +28,7 @@ function App() {
 			<Router>
 				<Routes>
 					<Route path='/' element={<HomeView />} />
-					<Route path='/bestSellers' element={<BestSellerView/>} />
+					<Route path='/bestSellers' element={<BestSellerView />} />
 					<Route path='/Reset' element={<ResetedPassword />} />
 					<Route path='/Created' element={<AccountCreated />} />
 					<Route path='/DescriptionView' element={<DescriptionView />} />
@@ -34,7 +36,7 @@ function App() {
 					<Route path='/GetStartedWelcome' element={<GetStartedWelcomeView />} />
 					<Route path='/VerifyNumber' element={<VerifyNumberView />} />
 					<Route path='/ConfirmCode' element={<ConfirmCodeView />} />
-					<Route path='/Search' element={<SearchView />}/>
+					<Route path='/Search' element={<SearchView />} />
 					<Route path='/SignIn' element={<SignIn />} />
 					<Route path='/SignUp' element={<SignUp />} />
 					<Route path='/ForgotPassword' element={<ForgotPassword />} />
@@ -44,6 +46,7 @@ function App() {
 					<Route path='/Promo' element={<PromocodesView />} />
 					<Route path='/Order' element={<OrderView />} />
 					<Route path='/Checkout' element={<CheckoutView />} />
+					<Route path='/Shippment' element={<ShippmentView />} />
 				</Routes>
 			</Router>
 		</div>

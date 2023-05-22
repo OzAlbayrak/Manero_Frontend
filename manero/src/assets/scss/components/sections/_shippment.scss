@@ -1,0 +1,47 @@
+/*body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}*/
+
+.shippment-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 0px;
+}
+
+.shippment-img {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.form-shipp {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.form-shipp-input {
+    color: red;
+    background-color: red;
+    cursor: pointer;
+}
+
+.shipp-checkbox {
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+.shipp-checkbox-input {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    cursor: pointer;
+}
