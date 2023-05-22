@@ -64,7 +64,7 @@ const CheckoutView = () => {
 
   return (
     <div className='d-flex flex-column'>
-      <div className='container'>
+      <div className='checkout-container'>
         <SideIcon />
         <Header
           title={'Checkout'}
