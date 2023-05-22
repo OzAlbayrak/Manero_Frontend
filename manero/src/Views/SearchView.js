@@ -64,6 +64,7 @@ const SearchView = () => {
         <Header title={<div className="search-container"><span className="search-mag-glas">
             <i className="fas fa-search"></i>
           </span><input className="search-field" type="text" value={searchTerm} onChange={handleSearch} placeholder="Search" /></div>} hasSideIcon={true} isMenu={true} hasCart={true}/>
+          <hr/>
         <div className='genders-container'>
             <div className="gender-buttons">
             {filters.map((gender, idx) => (

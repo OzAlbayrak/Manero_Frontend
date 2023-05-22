@@ -1085,9 +1085,18 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
+}
+.genders-container .gender-buttons {
+  display: flex;
+  align-items: center;
+  max-width: 70rem;
+  overflow-y: hidden;
 }
 .genders-container .gender-buttons .gender-button {
   border: none;
+  margin-left: 2.5vh;
+  margin-right: 2.5vh;
 }
 .genders-container .gender-buttons .active {
   text-decoration: none;
@@ -1106,14 +1115,18 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1100px;
 }
 .search-column-container .category-buttons .category-button {
   background-color: #8D94A6;
+  font-weight: bolder;
   margin: 1px;
-  height: 10vh;
-  width: 20vh;
+  height: 22.5vh;
+  width: 22.5vh;
   color: white;
   border: none;
+  padding-top: 120px;
+  padding-right: 100px;
 }
 .search-column-container .category-buttons .category-button:hover {
   background-color: #384158;

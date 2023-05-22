@@ -23,11 +23,19 @@
     align-items: center;
     justify-content: center;
 
-    .gender-buttons{
+    overflow-y: auto;
 
+    .gender-buttons{
+        display: flex;
+        align-items: center;
+        max-width: 70rem;
+
+        overflow-y: hidden;
 
         .gender-button{
             border: none;
+            margin-left: 2.5vh;
+            margin-right: 2.5vh;
         }
         .active {
             text-decoration: none;
@@ -48,14 +56,18 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            max-width: 1100px;
 
             .category-button{
                 background-color: #8D94A6;
+                font-weight: bolder;
                 margin: 1px;
-                height: 10vh;
-                width: 20vh;
+                height: 22.5vh;
+                width: 22.5vh;
                 color: white;
                 border: none;
+                padding-top: 120px;
+                padding-right: 100px;
                 
                 &:hover{
                     background-color: #384158;
