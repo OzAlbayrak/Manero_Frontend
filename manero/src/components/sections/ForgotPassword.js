@@ -15,9 +15,10 @@ const ForgotPassword = () => {
 				<form className='inputcontainer'>
 					<InputField
 						type={'email'}
-						name={'EMAIL'}
+						name={'email'}
 						nameid={'email'}
 						placeholder={'Enter email'}
+						labelName={'email'}
 					/>
 					<div className='text-center mx-auto px-3'>
 						<Button btnText={'SEND'} btnType='submit' />

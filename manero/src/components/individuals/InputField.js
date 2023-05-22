@@ -8,11 +8,12 @@ const InputField = ({
 	value,
 	onChange,
 	style,
+	labelName,
 }) => {
 	return (
 		<div className='text-center mx-auto'>
 			<label className='baselabel' htmlFor={nameid}>
-				{name}
+				{labelName}
 			</label>
 			<input
 				className='baseinput'

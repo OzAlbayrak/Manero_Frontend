@@ -14,13 +14,15 @@ const ResetPassword = () => {
 				<form className='inputcontainer'>
 					<InputField
 						type={'password'}
-						name={'NEW PASSWORD'}
+						name={'newPassword'}
 						nameid={'newPassword'}
+						labelName={'new password'}
 					/>
 					<InputField
 						type={'password'}
-						name={'CONFIRM PASSWORD'}
+						name={'confirmPassword'}
 						nameid={'confirmPassword'}
+						labelName={'confirm password'}
 					/>
 					<div className='text-center mx-auto px-3'>
 						<Button btnText={'CHANGE PASSWORD'} btnType='submit' />
