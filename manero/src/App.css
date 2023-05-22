@@ -234,21 +234,27 @@ button {
   text-decoration: none;
 }
 
-.product-grid .container {
+.product-grid .home-container {
   max-width: 1110px;
 }
-.product-grid .container .slide-container {
+.product-grid .home-container .slide-container {
   display: flex;
   align-items: center;
   max-width: 70rem;
   overflow-y: auto;
 }
-.product-grid .container .item-container {
+.product-grid .home-container .item-container {
   display: flex;
   overflow-y: hidden;
   justify-content: left;
   margin-left: 15px;
   margin-bottom: 25px;
+}
+.product-grid .title {
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 1.5rem;
 }
 .product-grid .titleBestSeller {
   display: flex;
@@ -257,12 +263,6 @@ button {
   min-width: 375px;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-}
-.product-grid .titleBestSeller .title {
-  font-size: 40px;
-  font-weight: bolder;
-  text-align: left;
-  margin-left: 1.5rem;
 }
 .product-grid .titleBestSeller .title2 {
   text-decoration: none;
@@ -1111,7 +1111,7 @@ main {
   background-color: #8D94A6;
   margin: 1px;
   height: 25vh;
-  width: 60vh;
+  width: 40vh;
   color: white;
   border: none;
 }
