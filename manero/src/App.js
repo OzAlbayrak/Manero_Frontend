@@ -21,6 +21,7 @@ import DescriptionView from './Views/DescriptionView';
 import CheckoutView from './Views/CheckoutView';
 import ShippmentView from './Views/ShippmentView';
 import AllReviewsView from './Views/AllReviewsView';
+import LeaveReviewView from './Views/LeaveReviewView';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
 					<Route path='/Order' element={<OrderView />} />
 					<Route path='/Checkout' element={<CheckoutView />} />
 					<Route path='/Shippment' element={<ShippmentView />} />
+					<Route path='/leaveReview' element={<LeaveReviewView/>} />
 				</Routes>
 			</Router>
 		</div>

@@ -1,0 +1,84 @@
+.Review-Container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.revpicture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -4rem;
+    margin-bottom: -1rem;
+}
+.revText{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 1rem;
+
+}
+.revText-small{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.star-rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.review-inputBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.review-inputBox input{
+  height: 111px;
+  width: 335px;
+  border: 2px solid #DBE3F5;
+  border-radius: 25px;
+  outline: none;
+  color: $color-dark;
+  font-size: 18px;
+  padding:0 12px 60px;
+  display:inline-block;
+  
+}
+
+
+.review-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    .review-btn-submit{
+        height: 50px;
+        width: 335px;
+        border-radius: 25px;
+        background-color: $color-blackish;
+        border: $color-blackish solid 2px;
+        color: white;
+        margin-bottom: 1rem;
+        &:hover {
+            border: $color-dark solid 2px;
+            background-color: transparent;
+            color: $color-dark;
+        }
+        &:active {
+            border: $color-blackish solid 3px;
+        }
+    }
+}

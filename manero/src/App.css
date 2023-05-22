@@ -234,21 +234,27 @@ button {
   text-decoration: none;
 }
 
-.product-grid .container {
+.product-grid .home-container {
   max-width: 1110px;
 }
-.product-grid .container .slide-container {
+.product-grid .home-container .slide-container {
   display: flex;
   align-items: center;
   max-width: 70rem;
   overflow-y: auto;
 }
-.product-grid .container .item-container {
+.product-grid .home-container .item-container {
   display: flex;
   overflow-y: hidden;
   justify-content: left;
   margin-left: 15px;
   margin-bottom: 25px;
+}
+.product-grid .title {
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 1.5rem;
 }
 .product-grid .titleBestSeller {
   display: flex;
@@ -257,12 +263,6 @@ button {
   min-width: 375px;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-}
-.product-grid .titleBestSeller .title {
-  font-size: 40px;
-  font-weight: bolder;
-  text-align: left;
-  margin-left: 1.5rem;
 }
 .product-grid .titleBestSeller .title2 {
   text-decoration: none;
@@ -1111,7 +1111,7 @@ main {
   background-color: #8D94A6;
   margin: 1px;
   height: 25vh;
-  width: 60vh;
+  width: 40vh;
   color: white;
   border: none;
 }
@@ -1389,4 +1389,88 @@ main {
   height: 22px;
   margin-right: 10px;
   cursor: pointer;
+}
+
+.Review-Container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.revpicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -4rem;
+  margin-bottom: -1rem;
+}
+
+.revText {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 1rem;
+}
+
+.revText-small {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.review-inputBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-inputBox input {
+  height: 111px;
+  width: 335px;
+  border: 2px solid #DBE3F5;
+  border-radius: 25px;
+  outline: none;
+  color: #222529;
+  font-size: 18px;
+  padding: 0 12px 60px;
+  display: inline-block;
+}
+
+.review-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.review-btn .review-btn-submit {
+  height: 50px;
+  width: 335px;
+  border-radius: 25px;
+  background-color: #111111;
+  border: #111111 solid 2px;
+  color: white;
+  margin-bottom: 1rem;
+}
+.review-btn .review-btn-submit:hover {
+  border: #222529 solid 2px;
+  background-color: transparent;
+  color: #222529;
+}
+.review-btn .review-btn-submit:active {
+  border: #111111 solid 3px;
 }
