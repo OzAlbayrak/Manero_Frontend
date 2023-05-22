@@ -2,6 +2,7 @@
 //Vi kan använda variabler för url:en så blir det lätt att byta när vi lägger upp API:et
 
 const sqlUrl = 'https://localhost:7235/api';
+// const sqlUrl = 'https://sijb-cms22-backend.azurewebsites.net/api';
 
 export async function logIn(res) {
 	try {
@@ -15,4 +16,14 @@ export async function logIn(res) {
 	} catch {
 		return 'no connection';
 	}
+}
+
+export async function register(res) {
+	return await fetch(sqlUrl + 'authentication/signup', {
+		method: 'post',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(res),
+	});
 }
