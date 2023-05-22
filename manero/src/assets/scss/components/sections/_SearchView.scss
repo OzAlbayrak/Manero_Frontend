@@ -52,8 +52,8 @@
             .category-button{
                 background-color: #8D94A6;
                 margin: 1px;
-                height: 25vh;
-                width: 40vh;
+                height: 10vh;
+                width: 20vh;
                 color: white;
                 border: none;
                 
@@ -66,28 +66,98 @@
         }
     
     .filtred-products-container{
-
         .filtred-products{
             display: flex;
             flex-wrap: wrap;
-    
-            .filtred-product{
-                margin: 4px;
-    
-                .filtred-product-name{
-                    align-items: center;
-                    margin-left:3px;
-                    font-weight: 900;
+            justify-content: center;
+            margin-bottom: 4vh;
+
+
+            .card {
+                z-index: 0;
+                border: none;
+                margin-left: 10px;
+                margin-right: 10px;
+                text-align: center;
+                cursor: pointer;
+                min-width: 20rem;
+        
+                .card-img-container {
+                    display: grid;
+                    position: relative;
+
+        
+                    .card-menu {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        display: block;
+        
+                        .menu-link {
+                            background-color: none;
+                            color: $color-dark;
+                            width: 36px;
+                            height: 36px;
+                            border-radius: 50%;
+                            margin-bottom: 15px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: none;
+                            outline: none;
+                            background: none;
+        
+                            &:hover {
+                                color: $color-theme;
+                                text-decoration: none;
+                            }
+        
+                            #card-heart{
+                                
+                                &:active{
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                    .btn-theme {
+                        position: absolute;
+                        bottom: 0;
+                        
+                        
+                    }
                 }
-    
-                .filtred-product-img-container{
-                
-                    .filtred-product-img{
-    
-                        height: 9rem;
+        
+                .card-body {
+                    text-align: center;
+        
+                    .card-title {
+                        margin-top: 1rem;
+                        font-size: 1rem;
+                        font-weight: 100;
+                        text-align: left;
+                    }
+        
+                    .card-price {
+                        margin-top: 1rem;
+                        font-size: 18px;
+                        font-weight: 100;
+                        text-align: left;
+                    }
+                }
+        
+                &:hover {
+                    .card-menu {
+                        display: block !important;
+                    }
+                    .btn-theme {
+                        display: block !important;
                     }
                 }
             }
+        
+    
+
         }
     }
 

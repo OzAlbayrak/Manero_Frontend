@@ -86,7 +86,7 @@ const SearchView = () => {
                         {products
                             .filter(product => product.gender === genderFilter)
                             .map(product => (
-                                <button className="category-button" key={product.category} onClick={() => handleCategoryFilter(product.category)}>
+                                <button className="category-button" key={product.id} onClick={() => handleCategoryFilter(product.category)}>
                                 {product.category}
                                 </button>
                                 ))}

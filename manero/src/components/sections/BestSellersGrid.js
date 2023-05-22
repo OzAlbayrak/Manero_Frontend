@@ -8,7 +8,7 @@ const BestSellersGrid = ({title}) => {
         <div className="home-container">
           <div className="titleBestSeller">
             <div className="title">{title}</div>
-            <NavLink className="title2 " to="/bestSellers">View all <i class="icon-right fa-light fa-angle-right"></i></NavLink>
+            <NavLink className="title2 " to="/bestSellers">View all <i className="icon-right fa-light fa-angle-right"></i></NavLink>
             </div>
 
 
