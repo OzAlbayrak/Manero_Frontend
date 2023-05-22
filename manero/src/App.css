@@ -1256,7 +1256,7 @@ main {
   margin-bottom: 10px;
 }
 
-.container {
+.checkout-container {
   display: flex;
   justify-content: space-around;
   margin-left: 0;

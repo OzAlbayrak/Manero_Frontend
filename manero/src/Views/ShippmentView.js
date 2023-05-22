@@ -23,7 +23,7 @@ const ShippmentView = () => {
 
     return (
         <div>
-            <div className='shippment-container'>
+            <div className='d-flex flex-column'>
                 <div>
                     <SideIcon />
                 </div>
@@ -34,49 +34,50 @@ const ShippmentView = () => {
                 </div>
             </div>
             <img className='shippment-img' src={Image} />
+            <form>
+                <div className="form-shipp">
+                    <label className="form-shipp-label"
+                        htmlFor="radioAddress1">
+                        Address 1
+                    </label>
+                    <input className="form-shipp-input"
+                        type="radio"
+                        name="radioGroup"
+                        id="radioAddress1"
+                        value="Address1"
+                        checked={selectedAddress === 'address1'}
+                        onChange={handleAddressChange} />
+                </div>
+                <hr />
 
-            <div className="form-shipp">
-                <label className="form-shipp-label"
-                    htmlFor="radioAddress1">
-                    Address 1
-                </label>
-                <input className="form-shipp-input"
-                    type="radio"
-                    name="radioGroup"
-                    id="radioAddress1"
-                    value="Address1"
-                    checked={selectedAddress === 'address1'}
-                    onChange={handleAddressChange} />
-            </div>
-            <hr />
+                <div className="form-shipp">
+                    <label className="form-shipp-label" htmlFor="radioAddress2">
+                        Address 2
+                    </label>
+                    <input className="form-shipp-input"
+                        type="radio"
+                        name="radioGroup"
+                        id="radioAddress2"
+                        value="option1Address2"
+                        checked={selectedAddress === 'address2'}
+                        onChange={handleAddressChange} />
+                </div>
+                <hr />
 
-            <div className="form-shipp">
-                <label className="form-shipp-label" htmlFor="radioAddress2">
-                    Address 2
-                </label>
-                <input className="form-shipp-input"
-                    type="radio"
-                    name="radioGroup"
-                    id="radioAddress2"
-                    value="option1Address2"
-                    checked={selectedAddress === 'address2'}
-                    onChange={handleAddressChange} />
-            </div>
-            <hr />
-
-            <div className="form-shipp">
-                <label className="form-shipp-label" htmlFor="radioAddress3">
-                    Address 3
-                </label>
-                <input className="form-shipp-input"
-                    type="radio"
-                    name="radioGroup"
-                    id="radioAddress3"
-                    value="Address3"
-                    checked={selectedAddress === 'address3'}
-                    onChange={handleAddressChange} />
-            </div>
-            <hr />
+                <div className="form-shipp">
+                    <label className="form-shipp-label" htmlFor="radioAddress3">
+                        Address 3
+                    </label>
+                    <input className="form-shipp-input"
+                        type="radio"
+                        name="radioGroup"
+                        id="radioAddress3"
+                        value="Address3"
+                        checked={selectedAddress === 'address3'}
+                        onChange={handleAddressChange} />
+                </div>
+                <hr />
+            </form>
 
             <div className='shipp-checkbox'>
                 <input className='shipp-checkbox-input'
