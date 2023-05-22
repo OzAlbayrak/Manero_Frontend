@@ -5,7 +5,7 @@ const formEl = document.querySelector('.form');
 const formData = new FormData(formEl);
 const data = Object.fromEntries(formData);
 
-fetch('https://localhost:7235/api/Order',{
+fetch('https://sijb-cms22-backend.azurewebsites.net/api/Products/Orders',{
 method: 'POST',
 headers: {'Content-type': 'application/json'},
 body: JSON.stringify(data)
