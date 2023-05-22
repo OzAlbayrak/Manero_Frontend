@@ -1405,15 +1405,15 @@ main {
     justify-content: center;
     align-items: center;
 
-}*/
-.shippment-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 1rem;
-  margin-left: 0px;
 }
 
+.shippment-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 0px;
+}*/
 .shippment-img {
   margin-left: 20px;
   display: flex;
@@ -1529,4 +1529,38 @@ main {
 }
 .review-btn .review-btn-submit:active {
   border: #111111 solid 3px;
+}
+
+.payment-container {
+  margin: 20px;
+}
+
+.payment-header {
+  margin-top: 20px;
+}
+
+.payment-custom-radio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.payment-color {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(244, 248, 250);
+}
+
+.order-completed-img {
+  margin-top: 80px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+h4 {
+  text-align: center;
+  margin-top: 40px;
 }

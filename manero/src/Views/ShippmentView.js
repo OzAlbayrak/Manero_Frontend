@@ -23,15 +23,13 @@ const ShippmentView = () => {
 
     return (
         <div>
-            <div className='d-flex flex-column'>
-                <div>
-                    <SideIcon />
-                </div>
-                <div>
-                    <Header
-                        title={'Shipping details'}
-                    ></Header>
-                </div>
+            <div className='d-flex flex-raw'>
+
+                <SideIcon />
+                <Header
+                    title={'Shipping details'}
+                ></Header>
+
             </div>
             <img className='shippment-img' src={Image} />
             <form>
