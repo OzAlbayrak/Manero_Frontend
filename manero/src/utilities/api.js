@@ -16,3 +16,13 @@ export async function logIn(res) {
 		return 'no connection';
 	}
 }
+
+export async function register(res) {
+	return await fetch('https://localhost:7235/api/authentication/signup', {
+		method: 'post',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(res),
+	});
+}

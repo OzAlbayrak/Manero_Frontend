@@ -38,6 +38,13 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+.inputcontainer input:focus {
+  background-color: transparent;
+}
+.inputcontainer input:-webkit-internal-autofill-selected,
+.inputcontainer input:-webkit-autofill:focus {
+  background-color: transparent;
+}
 .inputcontainer .text-center {
   width: 375px;
   position: relative;

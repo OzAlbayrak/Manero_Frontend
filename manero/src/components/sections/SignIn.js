@@ -29,7 +29,7 @@ const SignIn = () => {
 			case 200:
 				{
 					const token = await result.text();
-					localStorage.setItem('accessToken', token);
+					sessionStorage.setItem('accessToken', token);
 					console.log(token);
 					navigate('/');
 				}
