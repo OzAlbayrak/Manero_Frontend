@@ -20,6 +20,7 @@ import OrderView from './Views/OrderView';
 import DescriptionView from './Views/DescriptionView';
 import CheckoutView from './Views/CheckoutView';
 import ShippmentView from './Views/ShippmentView';
+import AllReviewsView from './Views/AllReviewsView';
 
 
 function App() {
