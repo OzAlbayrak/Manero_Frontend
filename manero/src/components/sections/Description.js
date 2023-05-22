@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 export const Description = () => {
   return (
-    <div className="container">
+    <div className="description-container">
         <p>Knitted summer top</p>
         <i class="fa-thin fa-heart"></i>      
       <div>
