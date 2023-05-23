@@ -44,7 +44,7 @@ export const Description = () => {
           </div>
         </div>
       </div>
-
+      <hr />
       <div className="d-flex justify-content-center align-items-center">
         <div className="row">
           <div className="col-10">
