@@ -18,32 +18,40 @@ const PromoCodes = () => {
     setUsedLink(true);
   };
 
-  const copyToClipboard = (promoCopy, id) => {
-    //const promoCode = "Copied";
-    console.log("OK!");
-    navigator.clipboard.writeText(promoCopy);
-    setCopiedText((prevState) => ({
-      ...prevState,
-      [id]: true,
-    }));
-    setTimeout(() => {
+  const copyToClipboard = async (promoCopy, id) => {
+    try {
+      await navigator.clipboard.writeText(promoCopy);
       setCopiedText((prevState) => ({
         ...prevState,
-        [id]: false,
+        [id]: true,
       }));
-    }, 1200);
+      setTimeout(() => {
+        setCopiedText((prevState) => ({
+          ...prevState,
+          [id]: false,
+        }));
+      }, 1200);
+    } catch (error) {
+      console.error("Error copying promo code", error);
+    }
   };
+  
+
 
   useEffect(() => {
     fetchPromoCodes();
   }, []);
 
-  // måste testas när api:et är klar
+  // måste testas när api:et är klart
   const fetchPromoCodes = async () => {
     try {
-      const response = await fetch("/api");
+      const response = await fetch("https://sijb-cms22-backend.azurewebsites.net/api/promoCode");
+    if (response.ok) {
       const data = await response.json();
       setPromocodes(data);
+    } else {
+      console.error("Failed to fetch promo codes");
+    }
     } catch (error) {
       console.error("Error promocodes", error);
     }
@@ -68,8 +76,12 @@ const PromoCodes = () => {
           <h3 className="promored" style={promoCodeColor(50)}>50% off</h3>
           <p className="promo-validation">Valid until June 30, 2024</p>
         </div>
-        <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard("promokoder här 3", "promo3")}></i>
         {copiedText["promo3"] && <span className="copied-message">Copied</span>}
+        <i
+  className="fa-light fa-copy promo-copy-btn"
+  onClick={() => copyToClipboard("promokoder här 3", "promo3")}
+></i>
+
       </div>
       <hr />
       <div className="containerpro">
@@ -80,8 +92,8 @@ const PromoCodes = () => {
           <h3 className="promoyellow" style={promoCodeColor(30)}>30% off</h3>
           <p className="promo-validation">Valid until August 30, 2023</p>
         </div>
-        <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard("promokoder här 2", "promo2")}></i>
         {copiedText["promo2"] && <span className="copied-message">Copied</span>}
+        <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard("promokoder här 2", "promo2")}></i>
       </div>
       <hr />
       <div className="containerpro">
@@ -92,8 +104,8 @@ const PromoCodes = () => {
           <h3 className="promoyellow" style={promoCodeColor(15)}>15% off</h3>
           <p className="promo-validation">Valid until December 31, 2023</p>
         </div>
-        <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard("promokoder här", "promo1")}></i>
         {copiedText["promo1"] && <span className="copied-message">Copied</span>}
+        <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard("promokoder här", "promo1")}></i>
       </div>
       <hr />
     </div>
