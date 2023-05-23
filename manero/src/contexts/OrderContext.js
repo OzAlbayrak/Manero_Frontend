@@ -1,9 +1,27 @@
 import React from 'react'
 
 
-const formEl = document.querySelector('.form');
-const formData = new FormData(formEl);
-const data = Object.fromEntries(formData);
+//const formEl = document.querySelector('.form');
+//const formData = new FormData(formEl);
+
+
+export const addOrder = (
+    email,
+    items,
+    paymentMethod,
+    comment,
+    delivery,
+    promoCodes
+) => {
+
+const data = Object.fromEntries(
+    email,
+    items,
+    paymentMethod,
+    comment,
+    delivery,
+    promoCodes
+    );    
 
 fetch('https://sijb-cms22-backend.azurewebsites.net/api/Products/Orders',{
 method: 'POST',
@@ -13,7 +31,11 @@ body: JSON.stringify(data)
 .then(data => console.log(data))
 .then(error => console.log(error));
 
-export default OrderContext;
+}
+
+return addOrder;
+
+
 /*
 
 const formEl = document.querySelector('.form');
