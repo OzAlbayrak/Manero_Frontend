@@ -561,6 +561,14 @@ button {
   font-weight: 400;
 }
 
+.copied-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+}
+
 .top-back-and-text {
   display: flex;
   justify-content: flex-start;

@@ -76,13 +76,9 @@ const PromoCodes = () => {
           <h3 className="promored" style={promoCodeColor(50)}>50% off</h3>
           <p className="promo-validation">Valid until June 30, 2024</p>
         </div>
-        {copiedText["promo3"] && <span className="copied-message">Copied</span>}
-        <i
-  className="fa-light fa-copy promo-copy-btn"
-  onClick={() => copyToClipboard("promokoder här 3", "promo3")}
-></i>
-
+        <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard("promokoder här 3", "promo3")}></i>
       </div>
+        {copiedText["promo3"] && <span className="copied-message">Copied</span>}
       <hr />
       <div className="containerpro">
         <div></div>
@@ -92,9 +88,9 @@ const PromoCodes = () => {
           <h3 className="promoyellow" style={promoCodeColor(30)}>30% off</h3>
           <p className="promo-validation">Valid until August 30, 2023</p>
         </div>
-        {copiedText["promo2"] && <span className="copied-message">Copied</span>}
         <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard("promokoder här 2", "promo2")}></i>
       </div>
+        {copiedText["promo2"] && <span className="copied-message">Copied</span>}
       <hr />
       <div className="containerpro">
         <div></div>
@@ -104,9 +100,9 @@ const PromoCodes = () => {
           <h3 className="promoyellow" style={promoCodeColor(15)}>15% off</h3>
           <p className="promo-validation">Valid until December 31, 2023</p>
         </div>
-        {copiedText["promo1"] && <span className="copied-message">Copied</span>}
         <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard("promokoder här", "promo1")}></i>
       </div>
+        {copiedText["promo1"] && <span className="copied-message">Copied</span>}
       <hr />
     </div>
   );
