@@ -5,7 +5,7 @@ import Header from '../components/sections/Header'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import { NavLink } from 'react-router-dom'
 import SideIcon from '../components/individuals/SideIcon';
-import { addOrder } from '../contexts/OrderContext'
+import OrderContext from '../contexts/OrderContext'
 
 
 const CheckoutView = () => {
@@ -14,22 +14,120 @@ const CheckoutView = () => {
   const [totAmountOfItems, setTotAmountOfItems] = useState(0);
   const [totPrice, setTotPrice] = useState(0);
   const [start, setStart] = useState(true);
-  const [comment, setComment] = useState('');
-
-
+  const [comments, setComments] = useState('');
+  //const [email, setEmail] = useState("order@myorder.com");
+  const [deliveryMethod, setdeliveryMethod] = useState("PostNord");
+  const [payment, setpayment] = useState("VISA CARD");
+  const [promoCodes, setPromoCodes ] = useState([]);
+  const [data, setData] = useState({
+    Price: 45,
+    Profile: {
+      Email: "order@myorder.com",
+      Name: "Namn",
+      StreetName: "Gata",
+      PostalCode: "12345",
+      City: "Stockholm",
+      PhoneNumber: "070111111"
+    },
+    Products: [],
+    PaymentMethod: "VISA CARD",
+    Comment: "hej",
+    Delivery: "PostNord",
+    PromoCodes: []
+  });
+  
 
   const handleChange = (event) => {
-    setComment(event.target.value);
+    setComments(event.target.value);
   };
 
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Hantera inskickade kommentaren, t.ex. skicka till en API eller spara i en lokal lista
-    console.log('Skicka kommentar:', comment);
-    setComment('');
+    console.log('Skicka kommentar:', comments);
+    setComments('');
   };
 
+  const handleOnClick = (event) => {
+    event.preventDefault();
+    // Hantera inskickade kommentaren, t.ex. skicka till en API eller spara i en lokal lista
+    /*
+    setData({
+      Price: totPrice,
+      Profile: [{
+        Email: email,
+        Name: "Namn",
+        StreetName: "Gata",
+        PostalCode: "12345",
+        City: "Stockholm",
+        PhoneNumber: "070111111"
+      }],
+      Products: [{items}],
+      PaymentMethod: payment,
+      Comment: comments,
+      Delivery: deliveryMethod,
+      PromoCodes: [{}]
+    });
+    */
+
+    //console.log('email:',email);
+    console.log('items:',items);
+    console.log('paymentMethod:',payment);
+    console.log('comment:',comments);
+    console.log('delivery:',deliveryMethod);
+    console.log('promoCodes:',promoCodes);
+    
+    console.log('profile:',data.Profile);
+    console.log('Products:',data.Products);
+    console.log('Comment:',data.Comment);
+    console.log('Delivery:',data.Delivery);
+    console.log('PromoCode:',data.PromoCodes);
+
+     /*
+    const [data, setData] = useState({
+      email,
+      items,
+      paymentMethod,
+      comment,
+      delivery,
+      promoCodes
+    });
+
+   
+    const data = Object.fromEntries(
+      email,
+      items,
+      paymentMethod,
+      comment,
+      delivery,
+      promoCodes
+      );
+      
+      OrderContext(
+        email,
+        items,
+        paymentMethod,
+        comment,
+        delivery,
+        promoCodes
+      );
+     
+
+*/
+    
+  fetch('https://sijb-cms22-backend.azurewebsites.net/api/Order',{
+    
+    method: 'POST',
+    headers: {'Content-type': 'application/json'},
+    body: JSON.stringify(data)
+    }).then(res => res.json())
+    .then(data => console.log(data))
+    .then(error => console.log(error));
+
+      
+
+  };
 
 
   /* const increaseTotItem = ((item) => {
@@ -152,7 +250,7 @@ const CheckoutView = () => {
       <form className='checkout-form' onSubmit={handleSubmit}>
         <label>COMMENT</label>
         <textarea className='area' rows="8" colum="10"
-          value={comment}
+          value={comments}
           onChange={handleChange}
           placeholder="Enter your comment"
         />
@@ -161,14 +259,7 @@ const CheckoutView = () => {
       <div className='mx-auto button-container'>
         <NavLink to='/'>
           <button className='btn rounded-pill my-3 custom-btn' onClick={
-            addOrder(
-              email = "order@myorder.com",
-              items,
-              paymentMethod = "VISA CARD",
-              comment,
-              delivery = "PostNord",
-              promoCodes = []
-            )}>
+            handleOnClick}>
             Confirm Order
           </button>
         </NavLink>
