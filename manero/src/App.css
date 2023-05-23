@@ -1264,10 +1264,6 @@ main {
   margin-bottom: 80px;
 }
 
-.custom-btn {
-  z-index: 1;
-}
-
 .menu-icons {
   position: relative;
   z-index: 2;
@@ -1322,10 +1318,6 @@ main {
   display: flex;
   justify-content: center;
   margin-bottom: 80px;
-}
-
-.custom-btn {
-  z-index: 1;
 }
 
 .menu-icons {
@@ -1384,13 +1376,8 @@ main {
   margin-bottom: 60px;
 }
 
-.custom-btn {
-  z-index: 1;
-}
-
 .menu-icons {
   position: relative;
-  z-index: 2;
 }
 
 .info-color {
