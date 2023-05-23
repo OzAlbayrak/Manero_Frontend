@@ -11,71 +11,71 @@ import { useEffect } from 'react'
 
 
 export const CartView = () => {
-  const {items, addItem, removeItem} = useShoppingCartContext()
+  const { items, addItem, removeItem } = useShoppingCartContext()
 
   useEffect(() => {
     //getProducts()
     localStorage.setItem('items', JSON.stringify(items));
     console.log(items)
-}, [items])
+  }, [items])
 
   return (
     <div className='container d-flex flex-column'>
-      <Header title={"MANERO"} hasSideIcon={true} isMenu={true} hasCart={true}/>
-        
- 
+      <Header title={"MANERO"} hasSideIcon={true} isMenu={true} hasCart={true} />
 
-          
-          <div>
-      
-            {
-              items.length === 0 
-              ?
+
+
+
+      <div>
+
+        {
+          items.length === 0
+            ?
+            <div className='text-center'>
+              <img className='mx-auto' src={Image} />
+              <br></br>
+              <div className='vr'></div>
+
               <div className='text-center'>
-                <img className='mx-auto' src={Image}/>
-                <br></br>
-                <div className='vr'></div>
-                
-                <div className='text-center'>
-                  <p className='mx-auto my-3 headline'>Your Cart Is Empty!</p>
-                  <p className='mx-auto text-light-color'>Looks like you haven`t made your order yet</p>
-                </div> 
-                <div className='mx-auto'>
-                  <NavLink to='/'>
-                    <button className='btn rounded-pill my-3 custom-btn'>
-                      SHOP NOW
-                    </button>
-                  </NavLink>
-                </div>
+                <p className='mx-auto my-3 headline'>Your Cart Is Empty!</p>
+                <p className='mx-auto text-light-color'>Looks like you haven`t made your order yet</p>
               </div>
-              : 
-              
-              <div className='text-center'>
-                
+              <div className='mx-auto'>
+                <NavLink to='/'>
+                  <button className='btn rounded-pill my-3 custom-btn'>
+                    SHOP NOW
+                  </button>
+                </NavLink>
+              </div>
+            </div>
+            :
+
+            <div className='text-center'>
+
               {
-                
+
                 items.map(item => (
                   <div key={item.id}>
                     <div className='cart-container'>
                       <img src={item.image} className="cart-img" alt="..." />
-                      
+
                       <div className='cart-info'>
                         <div className='cart-info-name'>{item.name}</div>
                         <div className='cart-info-price'>${item.price}</div>
                       </div>
-                      
+
                       <div className='cart-btns'>
-                      <button onClick={() => addItem(item)} className='btn btn-secondary'> + </button>
-                      <div>{item.quantity}</div>
-                      <button onClick={() => removeItem(item)} className='btn btn-secondary'> - </button>
+                        <button onClick={() => addItem(item)} className='btn btn-secondary'> + </button>
+                        <div>{item.quantity}</div>
+                        <button onClick={() => removeItem(item)} className='btn btn-secondary'> - </button>
                       </div>
                     </div>
-                    <hr/>
+                    <hr />
                   </div>
-                  
+
                 ))
               }
-              <div className='mx-auto'>
+              <div className='mx-auto cart-btn-container'>
                 <NavLink to='/Order'>
                   <button className='btn rounded-pill my-3 custom-btn'>
                     Make Order
@@ -83,16 +83,13 @@ export const CartView = () => {
                 </NavLink>
               </div>
             </div>
-          }  
+        }
 
-          </div>
-          <p>x</p>
-          <p>x</p>
-          <p>x</p>
-
-          <MenuLinkIcons/>
-        
       </div>
+
+      <MenuLinkIcons className='menu-icons' />
+
+    </div>
   )
 }
 

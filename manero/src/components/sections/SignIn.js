@@ -29,7 +29,7 @@ const SignIn = () => {
 			case 200:
 				{
 					const token = await result.text();
-					localStorage.setItem('accessToken', token);
+					sessionStorage.setItem('accessToken', token);
 					console.log(token);
 					navigate('/');
 				}
@@ -69,12 +69,14 @@ const SignIn = () => {
 					name={'email'}
 					nameid={'email'}
 					placeholder={'Enter email'}
+					labelName={'email'}
 				></InputField>
 				<InputField
 					type={'password'}
 					name={'password'}
 					nameid={'password'}
 					placeholder={'Enter password'}
+					labelName={'password'}
 				></InputField>
 				<div className='d-flex justify-content-between container text-center my-3'>
 					<div>

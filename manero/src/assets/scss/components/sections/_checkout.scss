@@ -1,0 +1,91 @@
+.checkout-container {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 0;
+}
+
+
+.checkout-form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    margin-top: 2rem;
+
+}
+
+.area {
+    border-radius: 10px;
+    width: 300px;
+}
+
+.shipping-address {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+
+}
+
+.checkout-info {
+    margin-left: 10px;
+}
+
+.checkout-info-order {
+    display: flex;
+    justify-content: space-between;
+}
+
+.p-info {
+    margin-left: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.custom-btn {
+    z-index: 1;
+}
+
+.menu-icons {
+    position: relative;
+    z-index: 2;
+}
+
+.info-color {
+    background-color: rgb(235, 245, 247);
+}
+
+.totItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.totPrice {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discount {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.delivery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-inf {
+    display: flex;
+    justify-content: space-between;
+}
+
+.semi {
+    font-size: 18px;
+    font-family: 'Mulish';
+    font-weight: 600;
+}
