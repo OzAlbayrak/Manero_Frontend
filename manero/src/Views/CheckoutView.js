@@ -5,6 +5,7 @@ import Header from '../components/sections/Header'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import { NavLink } from 'react-router-dom'
 import SideIcon from '../components/individuals/SideIcon';
+import { addOrder } from '../contexts/OrderContext'
 
 
 const CheckoutView = () => {
@@ -159,7 +160,15 @@ const CheckoutView = () => {
 
       <div className='mx-auto button-container'>
         <NavLink to='/'>
-          <button className='btn rounded-pill my-3 custom-btn'>
+          <button className='btn rounded-pill my-3 custom-btn' onClick={
+            addOrder(
+              email = "order@myorder.com",
+              items,
+              paymentMethod = "VISA CARD",
+              comment,
+              delivery = "PostNord",
+              promoCodes = []
+            )}>
             Confirm Order
           </button>
         </NavLink>
