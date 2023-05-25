@@ -1261,11 +1261,7 @@ main {
 .cart-btn-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 60px;
-}
-
-.custom-btn {
-  z-index: 1;
+  margin-bottom: 80px;
 }
 
 .menu-icons {
@@ -1324,10 +1320,6 @@ main {
   margin-bottom: 80px;
 }
 
-.custom-btn {
-  z-index: 1;
-}
-
 .menu-icons {
   position: relative;
   z-index: 2;
@@ -1384,13 +1376,8 @@ main {
   margin-bottom: 60px;
 }
 
-.custom-btn {
-  z-index: 1;
-}
-
 .menu-icons {
   position: relative;
-  z-index: 2;
 }
 
 .info-color {
@@ -1542,6 +1529,9 @@ main {
   margin-bottom: 1rem;
 }
 .review-btn .review-btn-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
   width: 335px;
   border-radius: 25px;

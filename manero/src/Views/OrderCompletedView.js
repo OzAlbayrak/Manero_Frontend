@@ -13,7 +13,7 @@ const OrderCompletedView = () => {
             <h4>Thank you!</h4>
 
             <div className='mx-auto'>
-                <NavLink to='/'>
+                <NavLink to='/Order'>
                     <button className='btn rounded-pill my-3 custom-btn'>
                         VIEW ORDER
                     </button>
