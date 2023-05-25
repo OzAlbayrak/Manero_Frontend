@@ -241,6 +241,11 @@ button {
   text-decoration: none;
 }
 
+.product-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .product-grid .home-container {
   max-width: 1110px;
 }
@@ -566,16 +571,13 @@ button {
 
 .top-back-and-text {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   padding-left: 5%;
 }
 
 .promo-head {
   font-weight: 400;
   font-size: 18px;
-  align-self: center;
-  padding-left: 35%;
-  margin-left: 2vh;
 }
 
 .promocodes-img {
@@ -1064,14 +1066,11 @@ main {
 .salesBtnContainer {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 1rem;
-  min-width: 375px;
-  max-width: 1100px;
+  margin-bottom: 3rem;
 }
 .salesBtnContainer .salesIcons {
   position: absolute;
-  transform: translateX(-29rem) translateY(2rem);
+  transform: translateX(-28rem) translateY(2rem);
   color: #626262;
   border: none;
   background-color: #ffffff;
@@ -1084,9 +1083,10 @@ main {
 }
 .salesBtnContainer .dropdownbutton {
   position: relative;
-  transform: translateX(28rem) translateY(2rem);
+  transform: translateX(27rem) translateY(2rem);
   color: #626262;
   border: none;
+  text-decoration: none;
   background-color: #ffffff;
 }
 .salesBtnContainer .dropdown {
@@ -1098,7 +1098,7 @@ main {
   position: absolute;
   padding-left: 0px;
   list-style-type: none;
-  transform: translateX(28rem);
+  transform: translateX(27rem) translateY(2rem);
   background-color: #ffffff;
   z-index: 1;
 }
