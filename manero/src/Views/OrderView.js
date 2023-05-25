@@ -80,7 +80,7 @@ const OrderView = () => {
           Subtotal
         </div>
         <div>
-          {totPrice}
+          ${totPrice}
         </div>
       </div>
       <p>Discount</p>

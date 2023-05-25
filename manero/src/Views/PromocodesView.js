@@ -6,7 +6,6 @@ import PromoCodes from '../components/sections/Promocodes';
 const PromocodesView = () => {
   return (
     <div>
-        <PromoVoucher />
         <PromoCodes />
     </div>
   )
