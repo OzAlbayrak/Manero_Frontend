@@ -1631,5 +1631,31 @@ h1 {
 
 h4 {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.h4-under {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  margin-top: 0px;
+}
+
+.order-completed-b {
+  margin-left: 400px;
+  padding: 10px 180px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Mulish", sans-serif;
+}
+
+.order-completed-nav {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-left: 530px;
 }
