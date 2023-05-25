@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Promocodes from "../../assets/images/Promocodes.svg";
 import Rectangle from "../../assets/images/Rectangle.svg";
 import InputField from "../individuals/InputField";
@@ -8,6 +8,7 @@ import Header from "./Header";
 const PromoCode = () => {
   const [voucherCode, setVoucherCode] = useState("");
   const [validationResult, setValidationResult] = useState(null);
+  const [showValidMessage, setShowValidMessage] = useState(false);
 
   const handleInputChange = (event) => {
     setVoucherCode(event.target.value);
@@ -17,21 +18,38 @@ const PromoCode = () => {
     event.preventDefault();
     try {
       const response = await fetch(
-        "https://sijb-cms22-backend.azurewebsites.net/api/promoCode",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ voucherCode }),
-        }
+        "https://sijb-cms22-backend.azurewebsites.net/api/promoCode"
       );
       const data = await response.json();
-      setValidationResult(data);
+      console.log("API-svar:", data);
+
+      // Kontrollera om värdekoden finns i listan
+      const voucherExists = data.value.some(
+        (item) => item.name === voucherCode
+      );
+
+      if (voucherExists) {
+        setValidationResult({ valid: true });
+      } else {
+        setValidationResult({ valid: false });
+      }
+      setVoucherCode("");
     } catch (error) {
       console.error(error);
     }
   };
+
+  useEffect(() => {
+    let timer;
+    if (validationResult) {
+      timer = setTimeout(() => {
+        setValidationResult(null);
+      }, 1200);
+    }
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [validationResult]);
 
   return (
     <div className="container d-flex flex-column">
@@ -53,6 +71,17 @@ const PromoCode = () => {
         <h2 className="promo-h2">yet!</h2>
       </div>
       <div className="promo-input">
+      <div className="container d-flex flex-column">
+      {validationResult && (
+            <div className="promo-validation">
+              {validationResult.valid ? (
+                <p className="promo-valid">Valid</p>
+              ) : (
+                <p className="promo-expired">Invalid</p>
+              )}
+            </div>
+          )}
+        </div>
         <form onSubmit={handleFormSubmit}>
           <div className="inputcontainer">
             <InputField
@@ -68,17 +97,6 @@ const PromoCode = () => {
           <div className="promo-btn">
             <Button btnType="submit" btnText={"SUBMIT"} />
           </div>
-          {validationResult && (
-            <div className="promo-validation">
-              {validationResult.valid ? (
-                <p className="promo-valid">Valid</p>
-              ) : validationResult.expired ? (
-                <p className="promo-expired">Expired</p>
-              ) : validationResult.used ? (
-                <p className="promo-used">Used</p>
-              ) : null}
-            </div>
-          )}
         </form>
       </div>
     </div>
