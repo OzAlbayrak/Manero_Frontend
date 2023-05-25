@@ -3,7 +3,6 @@ import { useShoppingCartContext } from '../../contexts/ShoppingCartContext';
 
 const CartIcon = () => {
 	const { cartTotalQuantity, calculateTotalAmount } = useShoppingCartContext()
-
 	return (
 		<div>
 			<NavLink to="/Cart" className="menu-link">

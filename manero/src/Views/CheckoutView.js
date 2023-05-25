@@ -168,9 +168,7 @@ const CheckoutView = () => {
         <SideIcon />
         <Header
           title={'Checkout'}
-
           isMenu={true}
-          hasCart={true}
         ></Header>
       </div>
 
