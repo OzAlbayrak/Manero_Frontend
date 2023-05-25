@@ -6,12 +6,13 @@ import Image from '../assets/images/Cart_empty.svg'
 import { NavLink } from 'react-router-dom'
 import { useShoppingCartContext } from '../contexts/ShoppingCartContext'
 import { useEffect } from 'react'
+import CartIcon from '../components/individuals/CartIcon'
 
 
 
 
 export const CartView = () => {
-  const { items, addItem, removeItem } = useShoppingCartContext()
+  const { items, addItem, removeItem } = useShoppingCartContext();
 
   useEffect(() => {
     //getProducts()
@@ -21,11 +22,12 @@ export const CartView = () => {
 
   return (
     <div className='cart-container d-flex flex-column'>
-      <Header title={"Cart"} hasSideIcon={true} isMenu={true} hasCart={true} />
-
-
-
-
+      <div className='d-flex '>
+        <Header title={"Cart"}
+          hasSideIcon={true}
+          isMenu={true} />
+        <CartIcon />
+      </div>
       <div>
 
         {
@@ -33,6 +35,7 @@ export const CartView = () => {
             ?
             <div className='text-center'>
               <img className='mx-auto' src={Image} />
+
               <br></br>
               <div className='vr'></div>
 
