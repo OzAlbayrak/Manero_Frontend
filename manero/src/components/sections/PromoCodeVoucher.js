@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from './Header';
 import EmptyImg from "../../assets/images/empty-img.svg";
 
-const PromoCodes = () => {
+const PromoCodesVoucher = () => {
   const [currentLink, setCurrentLink] = useState("");
   const [usedLink, setUsedLink] = useState(false);
   const [copiedText, setCopiedText] = useState("");
@@ -65,7 +65,7 @@ const PromoCodes = () => {
 				hasCart={false}
 			></Header>
       <div className="voucher-link">
-        <a className={ currentLink ? "promo-current-link active" : "promo-current-link" } href="/" onClick={handleCurrentClick}>Current</a>
+        <a className={ currentLink ? "promo-current-link active" : "promo-current-link" } href="" onClick={handleCurrentClick}>Current</a>
         <a className={usedLink ? "promo-used-link active" : "promo-used-link"} href="/" onClick={handleUsedClick}>Used</a>
       </div>
       <hr />
@@ -116,4 +116,4 @@ function promoCodeColor(percent) {
   }
 }
 
-export default PromoCodes;
+export default PromoCodesVoucher;
