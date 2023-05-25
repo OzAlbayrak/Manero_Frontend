@@ -20,6 +20,14 @@ const Reviews = () => {
       };
       setReviews([...reviews, newrating]);
     };
+
+    
+const deleteReview = (e, index) => {
+  e.preventDefault();
+  const clone = [...reviews];
+  const newState = clone.filter((x, i) => i !== index);
+  setReviews(newState);
+};
   
   return (
     
@@ -50,8 +58,29 @@ const Reviews = () => {
       >
       </input>
     </div>
-      
     <div className="review-btn"><button className="review-btn-submit" variant="success" onClick={e => submitReview(e)}>submit</button></div>
+
+    <div> 
+      {reviews.map((r, rIndex) => {
+      return (
+    <div className="mt-3 mb-3 text-dark">
+    <div>
+      {[...Array(r.rating)].map((s, sIndex) => {
+      return <i className="fas fa-star text-warning" />;
+      })}
+      <p>{r.description}</p>
+    </div>
+    <div>
+      <button
+      variant="danger"
+      onClick={(e) => deleteReview(e, rIndex)}>
+      Delete
+      </button>
+    </div>
+    </div>
+      );
+      })}
+    </div>
     
 </section>
 
@@ -60,35 +89,9 @@ const Reviews = () => {
 export default Reviews;
 
 /*
-const deleteReview = (e, index) => {
-      e.preventDefault();
-      const clone = [...reviews];
-      const newState = clone.filter((x, i) => i !== index);
-      setReviews(newState);
-    };
 
 
 
-<div> 
-{reviews.map((r, rIndex) => {
-return (
-<div className="mt-3 mb-3 text-dark">
-<div>
-{[...Array(r.rating)].map((s, sIndex) => {
-return <i className="fas fa-star text-warning" />;
-})}
-<p>{r.description}</p>
-</div>
-<div>
-<button
-variant="danger"
-onClick={(e) => deleteReview(e, rIndex)}>
-Delete
-</button>
-</div>
-</div>
-);
-})}
-</div>
+
 
 */

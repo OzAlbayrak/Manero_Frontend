@@ -65,6 +65,9 @@
     margin-bottom: 1rem;
 
     .review-btn-submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 50px;
         width: 335px;
         border-radius: 25px;

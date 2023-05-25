@@ -18,7 +18,7 @@ const CheckoutView = () => {
   const [email, setEmail] = useState("order@myorder.com");
   const [deliveryMethod, setdeliveryMethod] = useState("PostNord");
   const [payment, setpayment] = useState("VISA CARD");
-  const [promoCodes, setPromoCodes ] = useState([]);
+  const [promoCodes, setPromoCodes] = useState([]);
   const [data, setData] = useState({
     Price: 999,
     Profile: {
@@ -35,7 +35,7 @@ const CheckoutView = () => {
     Delivery: "Dammy",
     PromoCodes: {}
   });
-  
+
 
   const handleChange = (event) => {
     setComments(event.target.value);
@@ -85,48 +85,48 @@ const CheckoutView = () => {
     console.log('Delivery:',data.Delivery);
     console.log('PromoCode:',data.PromoCodes);
 
-     /*
-    const [data, setData] = useState({
-      email,
-      items,
-      paymentMethod,
-      comment,
-      delivery,
-      promoCodes
-    });
+    /*
+   const [data, setData] = useState({
+     email,
+     items,
+     paymentMethod,
+     comment,
+     delivery,
+     promoCodes
+   });
 
-   
-    const data = Object.fromEntries(
-      email,
-      items,
-      paymentMethod,
-      comment,
-      delivery,
-      promoCodes
-      );
-      
-      OrderContext(
-        email,
-        items,
-        paymentMethod,
-        comment,
-        delivery,
-        promoCodes
-      );
+  
+   const data = Object.fromEntries(
+     email,
+     items,
+     paymentMethod,
+     comment,
+     delivery,
+     promoCodes
+     );
      
+     OrderContext(
+       email,
+       items,
+       paymentMethod,
+       comment,
+       delivery,
+       promoCodes
+     );
+    
 
 */
-    
-  fetch('https://sijb-cms22-backend.azurewebsites.net/api/Order',{
-    
-    method: 'POST',
-    headers: {'Content-type': 'application/json'},
-    body: JSON.stringify(data)
-    }).then(res => res.json())
-    .then(data => console.log(data))
-    .then(error => console.log(error));
 
-      
+    fetch('https://sijb-cms22-backend.azurewebsites.net/api/Order', {
+
+      method: 'POST',
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(res => res.json())
+      .then(data => console.log(data))
+      .then(error => console.log(error));
+
+
 
   };
 
@@ -231,7 +231,7 @@ const CheckoutView = () => {
 
       <div className='shipping-address'>
         <p className='semi'>Shipping details</p>
-        <NavLink to='/Shipping details'>
+        <NavLink to='/Shippment'>
           <i className='fa-regular fa-chevron-right'></i>
         </NavLink>
       </div>
@@ -240,7 +240,7 @@ const CheckoutView = () => {
       <hr />
       <div className='shipping-address'>
         <p className='semi'>Payment Method</p>
-        <NavLink to='/Payment method'>
+        <NavLink to='/Payment'>
           <i className='fa-regular fa-chevron-right'></i>
         </NavLink>
       </div>
