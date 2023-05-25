@@ -1,3 +1,57 @@
+.nav-link-name-toggle{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $color-sideBar;
+  font-size: 22px;
+  transition: 0.5s;
+  .contacttext{
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+  }
+}
+.sidebar-p{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  overflow: hidden;
+  color: $color-white;
+  margin-left: 1rem;
+  
+  .icons{
+    margin-right: 10px;
+    font-size: 23px;
+  }
+}
+.sidebarcontactus{ 
+  z-index: 9;
+  position: relative;
+  top: 0;
+  height: 33vh;
+  width: 0px; 
+  background-color: $color-sideBar;
+}
+.showcontact{ 
+  width: 275px;
+  top: 0;
+}
+.contactpage{
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  color: $color-white;
+}
+
+
+
+
+
+
+
+
+
+
+
 main {
   margin: 3rem 0 0 0;
   padding: 0 1rem;
@@ -19,7 +73,7 @@ main {
 }
 
 .sidebar {
-  z-index: 2;
+  z-index: 9;
   position: fixed;
   top: 0;
   height: 100vh;
@@ -90,24 +144,18 @@ main {
 }
 
 .show {
+  width: 275px;
   left: 0;
 }
 
 .space-toggle {
-  padding-left: 275px;
-}
-
-.show {
-  width: 275px;
-}
-
-.space-toggle {
   z-index: 1;
-  padding-left: 260px;
+  padding-left: 285px;
 }
+
 .inputBox{
   position: relative;
-  margin: 20px 10px 10px 20px;
+  margin: 20px 10px 0px 20px;
   width: 230px;
 
   .text-trackorder{
@@ -127,7 +175,6 @@ main {
 .inputBox input{
   height: 50px;
   width: 100%;
-  padding: 15px;
   border: 1px solid #B3B9C7;
   background: $color-sideBar;
   border-radius: 25px;
