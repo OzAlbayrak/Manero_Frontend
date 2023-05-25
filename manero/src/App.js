@@ -52,7 +52,7 @@ function App() {
 					<Route path='/ResetPassword' element={<ResetPassword />} />
 					<Route path='/Cart' element={<CartView />} />
 					<Route path='/Wishlist' element={<WishlistView />} />
-					<Route path='/Promo' element={<PromocodesView />} />
+					<Route path='/PromoCode' element={<PromocodesView />} />
 					<Route path='/Order' element={<OrderView />} />
 					<Route path='/Checkout' element={<CheckoutView />} />
 					<Route path='/Shippment' element={<ShippmentView />} />

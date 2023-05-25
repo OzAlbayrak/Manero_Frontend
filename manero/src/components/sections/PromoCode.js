@@ -4,6 +4,7 @@ import Promocodes from "../../assets/images/Promocodes.svg";
 import Rectangle from "../../assets/images/Rectangle.svg";
 import InputField from "../individuals/InputField";
 import Button from "../individuals/Button";
+import Header from './Header';
 
 const PromoVoucher = () => {
 
@@ -23,7 +24,7 @@ const mockData = {
 const handleFormSubmit = async (event) => {
   event.preventDefault();
   try {
-    const response = await fetch(`https://example.com/api/voucher/${voucherCode}`);
+    const response = await fetch("https://sijb-cms22-backend.azurewebsites.net/api/promoCode");
     const data = await response.json();;
     const isVoucherValid = verifyVoucher(data);
     if (isVoucherValid) {
@@ -46,22 +47,19 @@ const verifyVoucher = (data) => {
 };
 
   return (
-    <div>
-      <div className="top-back-and-text">
-        <SideIcon />
-        <h1 className="promo-head">My promocodes</h1>
-      </div>
+    <div className='container d-flex flex-column'>
+      <Header
+				title={'My promocodes'}
+				hasSideIcon={true}
+				isMenu={false}
+				hasCart={false}
+			></Header>
       <div className="promocodes-img">
         <img src={Promocodes} alt="Promocodes" />
       </div>
       <div className="promo-rectangle-img">
         <img src={Rectangle} alt="Rectangle" />
       </div>
-
-        <div className="promo-text-h2">
-          <h2 className="promo-h2">Your promocode is:</h2>
-          <h2 className="promo-h2">promocode</h2>
-        </div>
         <div className="promo-text-h2">
           <h2 className="promo-h2">You don't have</h2>
           <h2 className="promo-h2">promocodes</h2>
@@ -73,14 +71,15 @@ const verifyVoucher = (data) => {
             <InputField 
               nameid={"voucher-code-input"}
               type={"text"}
-              name={"ENTER THE VOUCHER"}
+              name={"voucher"}
               value={voucherCode}
               onChange={handleInputChange}
+              placeholder={""}
+              labelName={'ENTER THE VOUCHER'}
             />
           </div>
           <div className="promo-btn">
             <Button btnType="submit" btnText={"SUBMIT"} />
-
           </div>
           {voucherData && (
               <div className="promo-validation">

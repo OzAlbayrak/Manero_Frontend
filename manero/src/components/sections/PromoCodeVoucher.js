@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SideIcon from "../individuals/SideIcon";
+import Header from './Header';
 import EmptyImg from "../../assets/images/empty-img.svg";
 
 const PromoCodes = () => {
@@ -42,9 +42,7 @@ const PromoCodes = () => {
 
   const fetchPromoCodes = async () => {
     try {
-      const response = await fetch(
-        "https://sijb-cms22-backend.azurewebsites.net/api/promoCode"
-      );
+      const response = await fetch("https://sijb-cms22-backend.azurewebsites.net/api/promoCode");
       if (response.ok) {
         const data = await response.json();
         console.log(data); // Felsökning: Skriv ut datan i konsolen
@@ -59,11 +57,13 @@ const PromoCodes = () => {
   };
 
   return (
-    <div>
-      <div className="top-back-and-text">
-        <SideIcon />
-        <h1 className="promo-head">My promocodes</h1>
-      </div>
+    <div className='container d-flex flex-column'>
+      <Header
+				title={'My promocodes'}
+				hasSideIcon={true}
+				isMenu={false}
+				hasCart={false}
+			></Header>
       <div className="voucher-link">
         <a className={ currentLink ? "promo-current-link active" : "promo-current-link" } href="/" onClick={handleCurrentClick}>Current</a>
         <a className={usedLink ? "promo-used-link active" : "promo-used-link"} href="/" onClick={handleUsedClick}>Used</a>
