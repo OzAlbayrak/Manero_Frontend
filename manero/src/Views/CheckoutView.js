@@ -15,25 +15,25 @@ const CheckoutView = () => {
   const [totPrice, setTotPrice] = useState(0);
   const [start, setStart] = useState(true);
   const [comments, setComments] = useState('');
-  //const [email, setEmail] = useState("order@myorder.com");
+  const [email, setEmail] = useState("order@myorder.com");
   const [deliveryMethod, setdeliveryMethod] = useState("PostNord");
   const [payment, setpayment] = useState("VISA CARD");
   const [promoCodes, setPromoCodes ] = useState([]);
   const [data, setData] = useState({
-    Price: 45,
+    Price: 999,
     Profile: {
-      Email: "order@myorder.com",
-      Name: "Namn",
-      StreetName: "Gata",
-      PostalCode: "12345",
-      City: "Stockholm",
-      PhoneNumber: "070111111"
+      Email: "Dammy",
+      Name: "Dammy",
+      StreetName: "DammyStreetName",
+      PostalCode: "DammyPostalCode",
+      City: "Dammycity",
+      PhoneNumber: "DammyPhoneNumber"
     },
-    Products: [],
-    PaymentMethod: "VISA CARD",
-    Comment: "hej",
-    Delivery: "PostNord",
-    PromoCodes: []
+    Products: {items},
+    PaymentMethod: "Dammycity",
+    Comment: "DammyComment",
+    Delivery: "Dammy",
+    PromoCodes: {}
   });
   
 
@@ -54,32 +54,33 @@ const CheckoutView = () => {
     // Hantera inskickade kommentaren, t.ex. skicka till en API eller spara i en lokal lista
     /*
     setData({
-      Price: totPrice,
-      Profile: [{
-        Email: email,
+      Price: {totPrice},
+      Profile: {
+        Email: {email},
         Name: "Namn",
         StreetName: "Gata",
         PostalCode: "12345",
         City: "Stockholm",
         PhoneNumber: "070111111"
-      }],
-      Products: [{items}],
-      PaymentMethod: payment,
-      Comment: comments,
-      Delivery: deliveryMethod,
-      PromoCodes: [{}]
+      },
+      Products: {items},
+      PaymentMethod: {payment},
+      Comment: {comments},
+      Delivery: {deliveryMethod},
+      //PromoCodes: [{}]
     });
     */
 
     //console.log('email:',email);
-    console.log('items:',items);
-    console.log('paymentMethod:',payment);
+    //console.log('items:',items);
+    //console.log('paymentMethod:',payment);
     console.log('comment:',comments);
-    console.log('delivery:',deliveryMethod);
-    console.log('promoCodes:',promoCodes);
+    //console.log('delivery:',deliveryMethod);
+    //console.log('promoCodes:',promoCodes);
     
     console.log('profile:',data.Profile);
     console.log('Products:',data.Products);
+    console.log('paymentMethod:',data.PaymentMethod);
     console.log('Comment:',data.Comment);
     console.log('Delivery:',data.Delivery);
     console.log('PromoCode:',data.PromoCodes);
