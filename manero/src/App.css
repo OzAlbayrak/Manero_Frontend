@@ -241,6 +241,11 @@ button {
   text-decoration: none;
 }
 
+.product-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .product-grid .home-container {
   max-width: 1110px;
 }
@@ -277,11 +282,6 @@ button {
   font-size: 20px;
   font-weight: bolder;
   text-align: right;
-  margin-right: -2rem;
-  margin-bottom: -1rem;
-}
-.product-grid .titleBestSeller .title2 .icon-right {
-  margin-left: -2.5rem;
 }
 .product-grid .card {
   z-index: 0;
@@ -571,16 +571,13 @@ button {
 
 .top-back-and-text {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   padding-left: 5%;
 }
 
 .promo-head {
   font-weight: 400;
   font-size: 18px;
-  align-self: center;
-  padding-left: 35%;
-  margin-left: 2vh;
 }
 
 .promocodes-img {
@@ -736,6 +733,53 @@ button {
   color: #dd4b39;
 }
 
+.nav-link-name-toggle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111111;
+  font-size: 22px;
+  transition: 0.5s;
+}
+.nav-link-name-toggle .contacttext {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+.sidebar-p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  overflow: hidden;
+  color: #ffffff;
+  margin-left: 1rem;
+}
+.sidebar-p .icons {
+  margin-right: 10px;
+  font-size: 23px;
+}
+
+.sidebarcontactus {
+  z-index: 9;
+  position: relative;
+  top: 0;
+  height: 33vh;
+  width: 0px;
+  background-color: #111111;
+}
+
+.showcontact {
+  width: 275px;
+  top: 0;
+}
+
+.contactpage {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  color: #ffffff;
+}
+
 main {
   margin: 3rem 0 0 0;
   padding: 0 1rem;
@@ -757,7 +801,7 @@ main {
 }
 
 .sidebar {
-  z-index: 2;
+  z-index: 9;
   position: fixed;
   top: 0;
   height: 100vh;
@@ -827,25 +871,18 @@ main {
 }
 
 .show {
+  width: 275px;
   left: 0;
 }
 
 .space-toggle {
-  padding-left: 275px;
-}
-
-.show {
-  width: 275px;
-}
-
-.space-toggle {
   z-index: 1;
-  padding-left: 260px;
+  padding-left: 285px;
 }
 
 .inputBox {
   position: relative;
-  margin: 20px 10px 10px 20px;
+  margin: 20px 10px 0px 20px;
   width: 230px;
 }
 .inputBox .text-trackorder {
@@ -865,7 +902,6 @@ main {
 .inputBox input {
   height: 50px;
   width: 100%;
-  padding: 15px;
   border: 1px solid #B3B9C7;
   background: #111111;
   border-radius: 25px;
@@ -1030,14 +1066,11 @@ main {
 .salesBtnContainer {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 1rem;
-  min-width: 375px;
-  max-width: 1100px;
+  margin-bottom: 3rem;
 }
 .salesBtnContainer .salesIcons {
   position: absolute;
-  transform: translateX(-29rem) translateY(2rem);
+  transform: translateX(-28rem) translateY(2rem);
   color: #626262;
   border: none;
   background-color: #ffffff;
@@ -1050,9 +1083,10 @@ main {
 }
 .salesBtnContainer .dropdownbutton {
   position: relative;
-  transform: translateX(28rem) translateY(2rem);
+  transform: translateX(27rem) translateY(2rem);
   color: #626262;
   border: none;
+  text-decoration: none;
   background-color: #ffffff;
 }
 .salesBtnContainer .dropdown {
@@ -1064,7 +1098,7 @@ main {
   position: absolute;
   padding-left: 0px;
   list-style-type: none;
-  transform: translateX(28rem);
+  transform: translateX(27rem) translateY(2rem);
   background-color: #ffffff;
   z-index: 1;
 }

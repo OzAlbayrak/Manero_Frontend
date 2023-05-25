@@ -99,21 +99,18 @@
 .salesBtnContainer{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 1rem;    
-    min-width: 375px;
-    max-width: 1100px;
+    margin-bottom: 3rem;    
 
  
 
     .salesIcons{
         position: absolute;
-        transform: translateX(-29rem) translateY(2rem);
+        transform: translateX(-28rem) translateY(2rem);
         color: #626262;
         border: none;
         background-color: $color-white;
     }
-    
+    //
     .filterIcon{
         margin-right: -1rem;
         
@@ -121,12 +118,13 @@
     .sortingIcon{
         margin-left: -1rem;
     }
-  
+  //
     .dropdownbutton{
         position: relative;
-        transform: translateX(28rem) translateY(2rem);
+        transform: translateX(27rem) translateY(2rem);
         color: #626262;
         border: none;
+        text-decoration: none;
         background-color: $color-white;
     }
 
@@ -141,7 +139,7 @@
         position: absolute;
         padding-left: 0px;
         list-style-type: none;
-        transform: translateX(28rem);
+        transform: translateX(27rem) translateY(2rem);
         background-color: $color-white;
         z-index: 1;
       }

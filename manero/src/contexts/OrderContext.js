@@ -27,7 +27,7 @@ export const useOrderContext = (
         fetch('https://sijb-cms22-backend.azurewebsites.net/api/Products/Orders',{
         method: 'POST',
         headers: {'Content-type': 'application/json'},
-        body: JSON.stringify(data)
+       // body: JSON.stringify(data) // var tvungen att kommentera linen pga att de inte gick att öppna sidan// Sam
         }).then(res => res.json())
         .then(data => console.log(data))
         .then(error => console.log(error));
