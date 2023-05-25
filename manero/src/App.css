@@ -191,6 +191,24 @@ button {
   border: none;
   margin-left: 10px;
 }
+.header-section .shopping-cart-icon {
+  color: black;
+  position: relative;
+  text-align: right;
+}
+.header-section .shopping-cart-icon .cart-icon-amount {
+  background-color: red;
+  border-radius: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  top: 8px;
+  right: 45%;
+  padding: 2px 5px;
+  font-size: 9px;
+}
 
 .showcase {
   background: #dbe3f5;
