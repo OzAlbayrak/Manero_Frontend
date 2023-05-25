@@ -23,10 +23,8 @@ const mockData = {
 const handleFormSubmit = async (event) => {
   event.preventDefault();
   try {
-    // const response = await fetch(`https://example.com/api/voucher/${voucherCode}`);
-    // const data = await response.json();
-    const data = mockData; // testar att köra utan API... Ta bort när vi har API
-    setVoucherData(data);
+    const response = await fetch(`https://example.com/api/voucher/${voucherCode}`);
+    const data = await response.json();;
     const isVoucherValid = verifyVoucher(data);
     if (isVoucherValid) {
       console.log('Voucher is Valid');
