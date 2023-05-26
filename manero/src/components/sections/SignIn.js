@@ -5,11 +5,18 @@ import InputField from '../individuals/InputField';
 import Button from '../individuals/Button';
 import { logIn } from '../../utilities/api';
 import { useNavigate } from 'react-router-dom';
+import {
+	LoginSocialFacebook,
+	LoginSocialGoogle,
+	LoginSocialTwitter,
+} from 'reactjs-social-login';
+import { useProfileContext } from '../../contexts/ProfileContext';
 
 const SignIn = () => {
 	const navigate = useNavigate();
 	const [rememberMe, setRememberMe] = useState(false);
 	const [error, setError] = useState('');
+	const { handleResponse } = useProfileContext();
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -24,12 +31,12 @@ const SignIn = () => {
 
 		const result = await logIn(res);
 
-		//console.log(result);
 		switch (result.status) {
 			case 200:
 				{
 					const token = await result.text();
-					sessionStorage.setItem('accessToken', token);
+					sessionStorage.setItem('apiAccessToken', token);
+					sessionStorage.setItem('provider', 'local');
 					console.log(token);
 					navigate('/');
 				}
@@ -106,15 +113,51 @@ const SignIn = () => {
 				</NavLink>
 			</p>
 			<div className='d-flex form-width justify-content-center mx-auto socials-btn-row'>
-				<button className='btn rounded-circle m-2'>
-					<i className='fa-brands fa-facebook-f'></i>
-				</button>
-				<button className='btn rounded-circle m-2'>
-					<i className='fa-brands fa-twitter'></i>
-				</button>
-				<button className='btn rounded-circle m-2'>
-					<i className='fa-brands fa-google-plus-g'></i>
-				</button>
+				<LoginSocialFacebook
+					appId='778333243702664'
+					onResolve={(res) => {
+						console.log('fb res: ', res);
+						handleResponse(res);
+						navigate('/');
+					}}
+					onReject={(error) => {
+						console.log('error:', error);
+					}}
+				>
+					<button className='btn rounded-circle m-2'>
+						<i className='fa-brands fa-facebook-f'></i>
+					</button>
+				</LoginSocialFacebook>
+				<LoginSocialTwitter
+					client_id='TXJUeGJhRWYtaHhENFoySWNxR1I6MTpjaQ'
+					onResolve={(res) => {
+						handleResponse(res);
+						navigate('/');
+					}}
+					onReject={(error) => {
+						console.log(error);
+					}}
+				>
+					<button className='btn rounded-circle m-2'>
+						<i className='fa-brands fa-twitter'></i>
+					</button>
+				</LoginSocialTwitter>
+				<LoginSocialGoogle
+					client_id='287952620391-q4761s4igqnl0uflbkv5jm3nqe594l3c.apps.googleusercontent.com'
+					scope='openid profile email'
+					onResolve={(res) => {
+						console.log('google resolve');
+						handleResponse(res);
+						navigate('/');
+					}}
+					onReject={(error) => {
+						console.log('google reject', error);
+					}}
+				>
+					<button className='btn rounded-circle m-2'>
+						<i className='fa-brands fa-google-plus-g'></i>
+					</button>
+				</LoginSocialGoogle>
 			</div>
 		</div>
 	);

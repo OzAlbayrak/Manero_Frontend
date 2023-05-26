@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { ShoppingCartProvider } from './contexts/ShoppingCartContext';
 import { WishlistProvider } from './contexts/WishlistContext';
+import { ProfileProvider } from './contexts/ProfileContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	<React.StrictMode>
-		<ShoppingCartProvider>
-			<WishlistProvider>
+	<ShoppingCartProvider>
+		<WishlistProvider>
+			<ProfileProvider>
 				<App />
-			</WishlistProvider>
-		</ShoppingCartProvider>
-	</React.StrictMode>
+			</ProfileProvider>
+		</WishlistProvider>
+	</ShoppingCartProvider>
 );
