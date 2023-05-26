@@ -50,3 +50,20 @@
     position: relative;
     z-index: 2;
 }
+
+.cart-icon {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+
+.cart-total {
+    position: relative;
+    top: 4px;
+    right: 25px;
+    background-color: red;
+    color: white;
+    font-size: 8px;
+    padding: 3px;
+    border-radius: 50%;
+}

@@ -1,12 +1,12 @@
 import React from 'react';
-import PromoVoucher from '../components/sections/PromoVoucher';
-import PromoCodes from '../components/sections/Promocodes';
+import PromoCode from '../components/sections/PromoCode';
+import PromoVoucher from '../components/sections/PromoCodeVoucher';
 
 
 const PromocodesView = () => {
   return (
     <div>
-        <PromoCodes />
+      <PromoCode />
     </div>
   )
 }

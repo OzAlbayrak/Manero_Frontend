@@ -1,4 +1,7 @@
 .product-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .home-container {
         max-width: 1110px;
 
@@ -42,12 +45,6 @@
             font-size: 20px;
             font-weight: bolder;
             text-align: right;
-            margin-right: -2rem;
-            margin-bottom: -1rem;
-            .icon-right{
-                margin-left: -2.5rem;
-                
-            }
         }
     }
 
