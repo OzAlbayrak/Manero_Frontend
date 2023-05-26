@@ -27,3 +27,38 @@ export async function register(res) {
 		body: JSON.stringify(res),
 	});
 }
+
+export async function registerSocialAccount(res) {
+	return await fetch(sqlUrl + '/authentication/socialaccountsignup', {
+		method: 'post',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(res),
+	});
+}
+
+export async function getProfile(token) {
+	return await fetch(sqlUrl + '/user/profile', {
+		method: 'get',
+		headers: {
+			Authorization: `Bearer ${token}`,
+		},
+	});
+}
+
+export async function getSocialProfile(userId) {
+	return await fetch(sqlUrl + '/user/socialprofile', {
+		method: 'get',
+		headers: {
+			Authorization: `Bearer ${userId}`,
+		},
+	});
+}
+
+//Kanske inte behövs:
+export async function getToken(userId) {
+	return await fetch(sqlUrl + '/authentication/gettoken/' + userId, {
+		method: 'get',
+	});
+}
