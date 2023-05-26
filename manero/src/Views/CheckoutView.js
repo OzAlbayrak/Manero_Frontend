@@ -7,9 +7,7 @@ import { NavLink } from 'react-router-dom'
 import SideIcon from '../components/individuals/SideIcon';
 import OrderContext from '../contexts/OrderContext'
 
-
 const CheckoutView = () => {
-
   const { items, addItem, removeItem } = useShoppingCartContext()
   const [totAmountOfItems, setTotAmountOfItems] = useState(0);
   const [totPrice, setTotPrice] = useState(0);
@@ -19,23 +17,48 @@ const CheckoutView = () => {
   const [deliveryMethod, setdeliveryMethod] = useState("PostNord");
   const [payment, setpayment] = useState("VISA CARD");
   const [promoCodes, setPromoCodes] = useState([]);
-  const [data, setData] = useState({
-    Price: 999,
-    Profile: {
-      Email: "Dammy",
-      Name: "Dammy",
-      StreetName: "DammyStreetName",
-      PostalCode: "DammyPostalCode",
-      City: "Dammycity",
-      PhoneNumber: "DammyPhoneNumber"
-    },
-    Products: {items},
-    PaymentMethod: "Dammycity",
-    Comment: "DammyComment",
-    Delivery: "Dammy",
-    PromoCodes: {}
-  });
 
+  const handleOnSubmit = (e) => {
+    e.preventDefault()
+
+    const formData = {
+        price: totPrice,
+        profile: {
+          email: email,
+          name: "Namn",
+          streetName: "Gata",
+          postalCode: "12345",
+          city: "Stockholm",
+          phoneNumber: "070111111"
+        },
+        products: items,
+        paymentMethod: payment,
+        comment: comments,
+        delivery: deliveryMethod,
+        PromoCodes: []
+    }
+     
+    console.log('profile:',formData.profile);
+    console.log('Products:',formData.products);
+    console.log('paymentMethod:',formData.paymentMethod);
+    console.log('Comment:',formData.comment);
+    console.log('Delivery:',formData.delivery);
+    console.log('PromoCode:',formData.promoCodes);
+
+
+    fetch('https://sijb-cms22-backend.azurewebsites.net/api/Order', {
+
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+    .then(res => res.json())
+    .then(formData => {
+      console.log(formData)
+      // window.location.replace('/')
+    })
+    .catch(error => console.log(error));
+  }
 
   const handleChange = (event) => {
     setComments(event.target.value);
@@ -48,88 +71,6 @@ const CheckoutView = () => {
     console.log('Skicka kommentar:', comments);
     setComments('');
   };
-
-  const handleOnClick = (event) => {
-    event.preventDefault();
-    // Hantera inskickade kommentaren, t.ex. skicka till en API eller spara i en lokal lista
-    /*
-    setData({
-      Price: {totPrice},
-      Profile: {
-        Email: {email},
-        Name: "Namn",
-        StreetName: "Gata",
-        PostalCode: "12345",
-        City: "Stockholm",
-        PhoneNumber: "070111111"
-      },
-      Products: {items},
-      PaymentMethod: {payment},
-      Comment: {comments},
-      Delivery: {deliveryMethod},
-      //PromoCodes: [{}]
-    });
-    */
-
-    //console.log('email:',email);
-    //console.log('items:',items);
-    //console.log('paymentMethod:',payment);
-    console.log('comment:',comments);
-    //console.log('delivery:',deliveryMethod);
-    //console.log('promoCodes:',promoCodes);
-    
-    console.log('profile:',data.Profile);
-    console.log('Products:',data.Products);
-    console.log('paymentMethod:',data.PaymentMethod);
-    console.log('Comment:',data.Comment);
-    console.log('Delivery:',data.Delivery);
-    console.log('PromoCode:',data.PromoCodes);
-
-    /*
-   const [data, setData] = useState({
-     email,
-     items,
-     paymentMethod,
-     comment,
-     delivery,
-     promoCodes
-   });
-
-  
-   const data = Object.fromEntries(
-     email,
-     items,
-     paymentMethod,
-     comment,
-     delivery,
-     promoCodes
-     );
-     
-     OrderContext(
-       email,
-       items,
-       paymentMethod,
-       comment,
-       delivery,
-       promoCodes
-     );
-    
-
-*/
-
-    fetch('https://sijb-cms22-backend.azurewebsites.net/api/Order', {
-
-      method: 'POST',
-      headers: { 'Content-type': 'application/json' },
-      body: JSON.stringify(data)
-    }).then(res => res.json())
-      .then(data => console.log(data))
-      .then(error => console.log(error));
-
-
-
-  };
-
 
   /* const increaseTotItem = ((item) => {
      setTotAmountOfItems(totAmountOfItems + 1);
@@ -248,6 +189,28 @@ const CheckoutView = () => {
 
       <hr />
 
+      <form className='checkout-form' onSubmit={handleOnSubmit}>
+      <label>COMMENT</label>
+        <div>
+          <textarea className='area' rows="8" colum="10"
+            value={comments}
+            onChange={(e) => setComments(e.target.value)}
+            placeholder="Enter your comment"
+          />
+        </div>
+        <div className='mx-auto button-container'>
+          <button className='btn rounded-pill my-3 custom-btn'type="submit">
+            Confirm Order
+          </button>
+        </div>
+      </form>
+      {
+          
+/*
+
+<button type="submit">SUBMIT</button>
+
+
       <form className='checkout-form' onSubmit={handleSubmit}>
         <label>COMMENT</label>
         <textarea className='area' rows="8" colum="10"
@@ -265,6 +228,11 @@ const CheckoutView = () => {
           </button>
         </NavLink>
       </div>
+*/
+}
+
+
+  
 
       <MenuLinkIcons className='menu-icons' />
     </div>
