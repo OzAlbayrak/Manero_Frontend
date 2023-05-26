@@ -25,8 +25,9 @@ export const CartView = () => {
       <div className='d-flex '>
         <Header title={"Cart"}
           hasSideIcon={true}
-          isMenu={true} />
-        <CartIcon />
+          isMenu={true} 
+          hasCart={true}
+          />
       </div>
       <div>
 

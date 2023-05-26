@@ -51,8 +51,8 @@ const OrderView = () => {
           title={'Order'}
           hasSideIcon={true}
           isMenu={true}
+          hasCart={true}
         ></Header>
-        <CartIcon />
       </div>
       {
         items.map(item => (
