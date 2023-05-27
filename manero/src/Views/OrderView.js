@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Header from '../components/sections/Header'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import { NavLink } from 'react-router-dom'
-import CartIcon from '../components/individuals/CartIcon'
+
 
 
 const OrderView = () => {
@@ -97,7 +97,7 @@ const OrderView = () => {
       <div className='mx-auto order-btn-container'>
         <NavLink to='/Checkout'>
           <button className='btn rounded-pill my-3 custom-btn'>
-            Confirm Order
+            PROCEED TO CHECKOUT
           </button>
         </NavLink>
       </div>
