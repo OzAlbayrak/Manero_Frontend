@@ -195,10 +195,11 @@ button {
   color: black;
   position: relative;
   text-align: right;
+  margin-right: 0px;
 }
 .header-section .shopping-cart-icon .cart-icon-amount {
   background-color: red;
-  border-radius: 25%;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1269,6 +1270,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 2fr 0.25fr;
   grid-template-areas: "img info btns";
+  margin: 3px;
 }
 
 .cart.img {
@@ -1655,11 +1657,15 @@ h4 {
 }
 
 .order-completed-b {
-  margin-left: 400px;
+  margin-left: 380px;
   padding: 10px 180px;
   font-size: 14px;
   font-weight: 600;
   font-family: "Mulish", sans-serif;
+  border-radius: 40px;
+  background-color: black;
+  color: white;
+  margin-bottom: 20px;
 }
 
 .order-completed-nav {
