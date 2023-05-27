@@ -87,11 +87,3 @@ const deleteReview = (e, index) => {
   );
 };
 export default Reviews;
-
-/*
-
-
-
-
-
-*/
