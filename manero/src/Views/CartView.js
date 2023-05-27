@@ -22,12 +22,12 @@ export const CartView = () => {
 
   return (
     <div className='cart-container d-flex flex-column'>
-      <div className='d-flex '>
+      <div className='d-flex flex-direction-column '>
         <Header title={"Cart"}
           hasSideIcon={true}
-          isMenu={true} 
+          isMenu={true}
           hasCart={true}
-          />
+        />
       </div>
       <div>
 

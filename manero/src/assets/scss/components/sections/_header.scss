@@ -10,6 +10,7 @@
 		font-weight: 600;
 		margin-bottom: 16px;
 	}
+
 	.logo {
 		font-size: 1.25rem;
 		font-weight: 700;
@@ -28,27 +29,30 @@
 			transform: translateX(-50%);
 		}
 	}
+
 	.search {
 		input {
 			border: none;
 			margin-left: 10px;
-		}		
+		}
 	}
-	.shopping-cart-icon{
+
+	.shopping-cart-icon {
 		color: black;
 		position: relative;
 		text-align: right;
+		margin-right: 0px;
 
-		.cart-icon-amount{
+		.cart-icon-amount {
 			background-color: red;
-			border-radius: 25%;
-			display:flex;
+			border-radius: 50%;
+			display: flex;
 			justify-content: center;
 			align-items: center;
 			color: white;
 			position: absolute;
 			top: 8px;
-			right:45%;
+			right: 45%;
 			padding: 2px 5px;
 			font-size: 9px;
 		}

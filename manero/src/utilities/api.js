@@ -1,64 +1,66 @@
 //I den här filen kan vi lägga alla fetch-funktioner.
 //Vi kan använda variabler för url:en så blir det lätt att byta när vi lägger upp API:et
 
-const sqlUrl = 'https://localhost:7235/api';
+const sqlUrl = "https://localhost:7235/api";
 // const sqlUrl = 'https://sijb-cms22-backend.azurewebsites.net/api';
 
 export async function logIn(res) {
-	try {
-		return await fetch(sqlUrl + '/authentication/signin', {
-			method: 'post',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(res),
-		});
-	} catch {
-		return 'no connection';
-	}
+  try {
+    return await fetch(sqlUrl + "/authentication/signin", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(res),
+    });
+  } catch {
+    return "no connection";
+  }
 }
 
 export async function register(res) {
-	return await fetch(sqlUrl + '/authentication/signup', {
-		method: 'post',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(res),
-	});
+  return await fetch(sqlUrl + "/authentication/signup", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(res),
+  });
 }
 
 export async function registerSocialAccount(res) {
-	return await fetch(sqlUrl + '/authentication/socialaccountsignup', {
-		method: 'post',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(res),
-	});
+  return await fetch(sqlUrl + "/authentication/socialaccountsignup", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(res),
+  });
 }
 
 export async function getProfile(token) {
-	return await fetch(sqlUrl + '/user/profile', {
-		method: 'get',
-		headers: {
-			Authorization: `Bearer ${token}`,
-		},
-	});
+  return await fetch(sqlUrl + "/user/profile", {
+    method: "get",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
 }
 
-export async function getSocialProfile(userId) {
-	return await fetch(sqlUrl + '/user/socialprofile', {
-		method: 'get',
-		headers: {
-			Authorization: `Bearer ${userId}`,
-		},
-	});
+export async function getSocialProfile(token) {
+  return await fetch(sqlUrl + "/user/socialprofile", {
+    method: "get",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
 }
 
-//Kanske inte behövs:
-export async function getToken(userId) {
-	return await fetch(sqlUrl + '/authentication/gettoken/' + userId, {
-		method: 'get',
-	});
+export async function getAddresses(token) {
+  return await fetch(sqlUrl + "/user/addresses", {
+    method: "get",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
 }

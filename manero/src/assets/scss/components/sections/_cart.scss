@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr 0.25fr;
     grid-template-areas: "img info btns";
+    margin: 3px;
 }
 
 .cart.img {

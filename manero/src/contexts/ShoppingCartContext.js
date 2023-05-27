@@ -56,7 +56,7 @@ export const ShoppingCartProvider = ({children}) => {
       0
     );
 
-    return totalAmount.toFixed(0);
+    return totalAmount.toFixed(2);
   };
 
   const cartTotalQuantity = items.reduce(

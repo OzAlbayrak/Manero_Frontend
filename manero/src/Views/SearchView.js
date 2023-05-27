@@ -12,7 +12,7 @@ const SearchView = () => {
 
     //fetch the products
     useEffect(() => {
-        fetch('https://sijb-cms22-backend.azurewebsites.net/api/Products/FeaturedProducts/100')
+        fetch('https://sijb-cms22-backend.azurewebsites.net/api/Products')
           .then(response => response.json())
           .then(data => {
             setProducts(data);
