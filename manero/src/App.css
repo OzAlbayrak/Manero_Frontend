@@ -81,7 +81,7 @@ body {
 }
 
 .bottom-menu-container {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.779);
@@ -241,11 +241,6 @@ button {
   text-decoration: none;
 }
 
-.product-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .product-grid .home-container {
   max-width: 1110px;
 }
@@ -258,7 +253,7 @@ button {
 .product-grid .home-container .item-container {
   display: flex;
   overflow-y: hidden;
-  justify-content: left;
+  justify-content: center;
   margin-left: 15px;
   margin-bottom: 25px;
 }
@@ -781,15 +776,14 @@ button {
 }
 
 main {
-  margin: 3rem 0 0 0;
   padding: 0 1rem;
-  font-size: 22px;
+  font-size: 1.25rem;
   transition: 0.5s;
 }
 
 .header {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  margin-top: 0.5rem;
   left: 0;
   display: flex;
   align-items: center;

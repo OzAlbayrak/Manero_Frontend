@@ -1,10 +1,7 @@
 .product-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     .home-container {
         max-width: 1110px;
-
+        
         .slide-container{
             display: flex;
             align-items: center;
@@ -16,7 +13,7 @@
         .item-container{
             display: flex;
             overflow-y: hidden;
-            justify-content: left;
+            justify-content: center;
             margin-left: 15px;
             margin-bottom: 25px;
         }
