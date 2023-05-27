@@ -5,7 +5,6 @@ import Header from '../components/sections/Header'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import { NavLink } from 'react-router-dom'
 import SideIcon from '../components/individuals/SideIcon';
-import OrderContext from '../contexts/OrderContext'
 
 const CheckoutView = () => {
   const { items, addItem, removeItem } = useShoppingCartContext()
