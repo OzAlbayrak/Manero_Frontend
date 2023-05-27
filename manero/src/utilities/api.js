@@ -55,3 +55,12 @@ export async function getSocialProfile(token) {
     },
   });
 }
+
+export async function getAddresses(token) {
+  return await fetch(sqlUrl + "/user/addresses", {
+    method: "get",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}

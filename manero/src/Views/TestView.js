@@ -1,12 +1,12 @@
 import { useProfileContext } from "../contexts/ProfileContext";
 
 const TestView = () => {
-  const { profile } = useProfileContext();
+  const { profile, addresses } = useProfileContext();
 
   return (
     <div>
-      {profile.name} - {profile.email} - {profile.roleId}{" "}
-      {/*addresses[0].streetName */}
+      {profile.name} - {profile.email} - {profile.roleId} -{" "}
+      {addresses[1].streetName}
     </div>
   );
 };

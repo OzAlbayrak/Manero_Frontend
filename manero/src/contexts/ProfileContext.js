@@ -3,6 +3,7 @@ import {
   getProfile,
   registerSocialAccount,
   getSocialProfile,
+  getAddresses,
 } from "../utilities/api";
 
 const ProfileContext = createContext();
@@ -92,23 +93,19 @@ export const ProfileProvider = ({ children }) => {
       console.log("error!");
     }
   };
-  /*
-	const getAddresses = async () => {
-		const token = sessionStorage.getItem('accessToken');
-		const response = await fetch('https://localhost:7235/api/user/addresses', {
-			method: 'get',
-			headers: {
-				Authorization: `Bearer ${token}`,
-			},
-		});
-		if (response.ok) {
-			const addressData = await response.json();
-			setAddresses(addressData);
-		} else {
-			console.log('error!');
-		}
-	};
-*/
+
+  const getUserAddresses = async () => {
+    let token = sessionStorage.getItem("apiAccessToken");
+    const response = await getAddresses(token);
+
+    if (response.ok) {
+      const addressData = await response.json();
+      setAddresses(addressData);
+      console.log("addressdata:", addressData);
+    } else {
+      console.log("error!");
+    }
+  };
 
   const getProvider = () => {
     if (
@@ -130,6 +127,12 @@ export const ProfileProvider = ({ children }) => {
     getProvider();
   }, []);
 
+  useEffect(() => {
+    if (profile && Object.keys(profile).length !== 0) {
+      getUserAddresses();
+    }
+  }, [profile]);
+
   return (
     <ProfileContext.Provider
       value={{
@@ -139,7 +142,11 @@ export const ProfileProvider = ({ children }) => {
         addresses,
       }}
     >
-      {children}
+      {addresses && Object.keys(addresses).length !== 0 ? (
+        children
+      ) : (
+        <div>Loading...</div>
+      )}
     </ProfileContext.Provider>
   );
 };
