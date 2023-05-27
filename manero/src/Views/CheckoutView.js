@@ -18,32 +18,33 @@ const CheckoutView = () => {
   const [payment, setpayment] = useState("VISA CARD");
   const [promoCodes, setPromoCodes] = useState([]);
 
+
   const handleOnSubmit = (e) => {
     e.preventDefault()
 
     const formData = {
-        price: totPrice,
-        profile: {
-          email: email,
-          name: "Namn",
-          streetName: "Gata",
-          postalCode: "12345",
-          city: "Stockholm",
-          phoneNumber: "070111111"
-        },
-        products: items,
-        paymentMethod: payment,
-        comment: comments,
-        delivery: deliveryMethod,
-        PromoCodes: []
+      price: totPrice,
+      profile: {
+        email: email,
+        name: "Namn",
+        streetName: "Gata",
+        postalCode: "12345",
+        city: "Stockholm",
+        phoneNumber: "070111111"
+      },
+      products: items,
+      paymentMethod: payment,
+      comment: comments,
+      delivery: deliveryMethod,
+      PromoCodes: []
     }
-     
-    console.log('profile:',formData.profile);
-    console.log('Products:',formData.products);
-    console.log('paymentMethod:',formData.paymentMethod);
-    console.log('Comment:',formData.comment);
-    console.log('Delivery:',formData.delivery);
-    console.log('PromoCode:',formData.promoCodes);
+
+    console.log('profile:', formData.profile);
+    console.log('Products:', formData.products);
+    console.log('paymentMethod:', formData.paymentMethod);
+    console.log('Comment:', formData.comment);
+    console.log('Delivery:', formData.delivery);
+    console.log('PromoCode:', formData.promoCodes);
 
 
     fetch('https://sijb-cms22-backend.azurewebsites.net/api/Order', {
@@ -52,12 +53,12 @@ const CheckoutView = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
     })
-    .then(res => res.json())
-    .then(formData => {
-      console.log(formData)
-      // window.location.replace('/')
-    })
-    .catch(error => console.log(error));
+      .then(res => res.json())
+      .then(formData => {
+        console.log(formData)
+        // window.location.replace('/')
+      })
+      .catch(error => console.log(error));
   }
 
   const handleChange = (event) => {
@@ -188,7 +189,7 @@ const CheckoutView = () => {
       <hr />
 
       <form className='checkout-form' onSubmit={handleOnSubmit}>
-      <label>COMMENT</label>
+        <label>COMMENT</label>
         <div>
           <textarea className='area' rows="8" colum="10"
             value={comments}
@@ -197,40 +198,42 @@ const CheckoutView = () => {
           />
         </div>
         <div className='mx-auto button-container'>
-          <button className='btn rounded-pill my-3 custom-btn'type="submit">
-            Confirm Order
-          </button>
+          <NavLink to='/OrderCompleted'>
+            <button className='btn rounded-pill my-3 custom-btn' type="submit">
+              Confirm Order
+            </button>
+          </NavLink>
         </div>
       </form>
       {
-          
-/*
 
-<button type="submit">SUBMIT</button>
+        /*
+        
+        <button type="submit">SUBMIT</button>
+        
+        
+              <form className='checkout-form' onSubmit={handleSubmit}>
+                <label>COMMENT</label>
+                <textarea className='area' rows="8" colum="10"
+                  value={comments}
+                  onChange={handleChange}
+                  placeholder="Enter your comment"
+                />
+              </form>
+        
+              <div className='mx-auto button-container'>
+                <NavLink to='/'>
+                  <button className='btn rounded-pill my-3 custom-btn' onClick={
+                    handleOnClick}>
+                    Confirm Order
+                  </button>
+                </NavLink>
+              </div>
+        */
+      }
 
 
-      <form className='checkout-form' onSubmit={handleSubmit}>
-        <label>COMMENT</label>
-        <textarea className='area' rows="8" colum="10"
-          value={comments}
-          onChange={handleChange}
-          placeholder="Enter your comment"
-        />
-      </form>
 
-      <div className='mx-auto button-container'>
-        <NavLink to='/'>
-          <button className='btn rounded-pill my-3 custom-btn' onClick={
-            handleOnClick}>
-            Confirm Order
-          </button>
-        </NavLink>
-      </div>
-*/
-}
-
-
-  
 
       <MenuLinkIcons className='menu-icons' />
     </div>
