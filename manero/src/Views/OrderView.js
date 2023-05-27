@@ -95,7 +95,7 @@ const OrderView = () => {
       </div>
 
       <div className='mx-auto order-btn-container'>
-        <NavLink to='/Checkout'>
+        <NavLink>
           <button className='btn rounded-pill my-3 custom-btn'>
             PROCEED TO CHECKOUT
           </button>
