@@ -11,8 +11,9 @@ root.render(
 	<PromoCodeProvider>
 	<ShoppingCartProvider>
 		<WishlistProvider>
-			<ProfileProvider>
+			
 				<App />
+				<ProfileProvider>
 			</ProfileProvider>
 		</WishlistProvider>
 	</ShoppingCartProvider>
