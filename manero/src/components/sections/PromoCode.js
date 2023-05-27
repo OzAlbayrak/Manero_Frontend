@@ -4,11 +4,12 @@ import Rectangle from "../../assets/images/Rectangle.svg";
 import InputField from "../individuals/InputField";
 import Button from "../individuals/Button";
 import Header from "./Header";
+import { usePromoCodeContext } from "../../contexts/PromoCodeContext";
 
 const PromoCode = () => {
   const [voucherCode, setVoucherCode] = useState("");
   const [validationResult, setValidationResult] = useState(null);
-  const [showValidMessage, setShowValidMessage] = useState(false);
+  const { promoCode, addPromoCode, removePromoCode } = usePromoCodeContext();
 
   const handleInputChange = (event) => {
     setVoucherCode(event.target.value);
@@ -30,6 +31,7 @@ const PromoCode = () => {
 
       if (voucherExists) {
         setValidationResult({ valid: true });
+        addPromoCode(voucherCode)
       } else {
         setValidationResult({ valid: false });
       }
