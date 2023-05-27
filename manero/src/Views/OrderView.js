@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Header from '../components/sections/Header'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import { NavLink } from 'react-router-dom'
-import CartIcon from '../components/individuals/CartIcon'
+
 
 
 const OrderView = () => {
