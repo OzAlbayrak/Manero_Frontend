@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react';
-import { useProfileContext } from '../contexts/ProfileContext';
+import { useProfileContext } from "../contexts/ProfileContext";
 
 const TestView = () => {
-	const { profile, provider, getProfile, getProvider, getLocalProfile } =
-		useProfileContext();
+  const { profile } = useProfileContext();
 
-	return (
-		<div>
-			{profile.name} - {profile.email} - {/*addresses[0].streetName */}
-		</div>
-	);
+  return (
+    <div>
+      {profile.name} - {profile.email} - {profile.roleId}{" "}
+      {/*addresses[0].streetName */}
+    </div>
+  );
 };
 
 export default TestView;
