@@ -25,10 +25,7 @@ import LeaveReviewView from './Views/LeaveReviewView';
 import PaymentView from './Views/PaymentView';
 import OrderCompletedView from './Views/OrderCompletedView';
 import OrderFailedView from './Views/OrderFailedView';
-
-
-
-
+import TestView from './Views/TestView';
 
 function App() {
 	return (
@@ -59,6 +56,7 @@ function App() {
 					<Route path='/leaveReview' element={<LeaveReviewView />} />
 					<Route path='/Payment' element={<PaymentView />} />
 					<Route path='/OrderCompleted' element={<OrderCompletedView />} />
+					<Route path='/test' element={<TestView />} />
 					<Route path='/OrderFailed' element={<OrderFailedView />} />
 				</Routes>
 			</Router>

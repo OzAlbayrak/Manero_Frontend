@@ -2,6 +2,7 @@ import React from 'react';
 import Image from '../assets/images/payment-order-img.png';
 import { NavLink } from 'react-router-dom';
 
+
 const OrderCompletedView = () => {
     return (
         <div>
@@ -10,17 +11,21 @@ const OrderCompletedView = () => {
             <h1>Thank you for your order!</h1>
 
             <h4>Your order will be delivered on time.</h4>
-            <h4>Thank you!</h4>
+            <h4 className='h4-under'>Thank you!</h4>
 
-            <div className='mx-auto'>
+            <div className=''>
                 <NavLink to='/Order'>
-                    <button className='btn rounded-pill my-3 custom-btn'>
+                    <button className='btn rounded-pill my-3 custom-btn order-completed-b'>
                         VIEW ORDER
                     </button>
                 </NavLink>
             </div>
 
-            <div>CONTINUE SHOPPING</div>
+            <div className='order-completed-p'>
+                <NavLink to='/'>
+                    <button className='order-completed-nav'>CONTINUE SHOPPING</button>
+                </NavLink>
+            </div>
         </div>
     )
 }

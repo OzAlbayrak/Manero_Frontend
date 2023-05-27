@@ -50,8 +50,22 @@ export const ShoppingCartProvider = ({children}) => {
     }
   }
 
+  const calculateTotalAmount = () => {
+    const totalAmount = items.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
 
-  return <ShoppingCartContext.Provider value = { { items, addItem, removeItem } }>
+    return totalAmount.toFixed(0);
+  };
+
+  const cartTotalQuantity = items.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
+
+  return <ShoppingCartContext.Provider value = { { items, addItem, removeItem, cartTotalQuantity, calculateTotalAmount } }>
     {children}
   </ShoppingCartContext.Provider>
 }

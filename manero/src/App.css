@@ -191,6 +191,24 @@ button {
   border: none;
   margin-left: 10px;
 }
+.header-section .shopping-cart-icon {
+  color: black;
+  position: relative;
+  text-align: right;
+}
+.header-section .shopping-cart-icon .cart-icon-amount {
+  background-color: red;
+  border-radius: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  top: 8px;
+  right: 45%;
+  padding: 2px 5px;
+  font-size: 9px;
+}
 
 .showcase {
   background: #dbe3f5;
@@ -1297,6 +1315,23 @@ main {
   z-index: 2;
 }
 
+.cart-icon {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+
+.cart-total {
+  position: relative;
+  top: 4px;
+  right: 25px;
+  background-color: red;
+  color: white;
+  font-size: 8px;
+  padding: 3px;
+  border-radius: 50%;
+}
+
 .order-container {
   display: grid;
   grid-template-columns: 1fr 2fr 0.25fr;
@@ -1608,5 +1643,31 @@ h1 {
 
 h4 {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.h4-under {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  margin-top: 0px;
+}
+
+.order-completed-b {
+  margin-left: 400px;
+  padding: 10px 180px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Mulish", sans-serif;
+}
+
+.order-completed-nav {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-left: 530px;
 }

@@ -14,7 +14,7 @@ export const useOrderContext = (
     delivery,
     promoCodes
 ) => {
-        /*
+        
         const data = Object.fromEntries(
             email,
             items,
@@ -23,7 +23,7 @@ export const useOrderContext = (
             delivery,
             promoCodes
             );    
-            */
+            
         fetch('https://sijb-cms22-backend.azurewebsites.net/api/Products/Orders',{
         method: 'POST',
         headers: {'Content-type': 'application/json'},

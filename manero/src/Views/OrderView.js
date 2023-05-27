@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Header from '../components/sections/Header'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import { NavLink } from 'react-router-dom'
+import CartIcon from '../components/individuals/CartIcon'
 
 
 const OrderView = () => {
@@ -45,12 +46,14 @@ const OrderView = () => {
 
   return (
     <div className='container d-flex flex-column'>
-      <Header
-        title={'Order'}
-        hasSideIcon={true}
-        isMenu={true}
-        hasCart={true}
-      ></Header>
+      <div className='d-flex'>
+        <Header
+          title={'Order'}
+          hasSideIcon={true}
+          isMenu={true}
+          hasCart={true}
+        ></Header>
+      </div>
       {
         items.map(item => (
           <div key={item.id}>

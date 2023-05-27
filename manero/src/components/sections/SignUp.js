@@ -4,11 +4,18 @@ import Header from './Header';
 import InputField from '../individuals/InputField';
 import Button from '../individuals/Button';
 import { logIn, register } from '../../utilities/api';
+import {
+	LoginSocialFacebook,
+	LoginSocialGoogle,
+	LoginSocialTwitter,
+} from 'reactjs-social-login';
+import { useProfileContext } from '../../contexts/ProfileContext';
 
 const SignUp = () => {
 	const [error, setError] = useState('');
 	const [validationError, setValidationError] = useState(false);
 	const navigate = useNavigate();
+	const { handleResponse } = useProfileContext();
 
 	const validateEmail = (res) => {
 		if (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(res.email)) {
@@ -55,7 +62,7 @@ const SignUp = () => {
 						const result = await logIn(res);
 						const token = await result.text();
 						sessionStorage.setItem('accessToken', token);
-						//logIn(res);
+
 						navigate('/Created');
 					}
 					break;
@@ -140,15 +147,52 @@ const SignUp = () => {
 				</NavLink>
 			</p>
 			<div className='d-flex form-width justify-content-center mx-auto socials-btn-row'>
-				<button className='btn rounded-circle m-2'>
-					<i className='fa-brands fa-facebook-f'></i>
-				</button>
+				<LoginSocialFacebook
+					appId='778333243702664'
+					onResolve={(res) => {
+						handleResponse(res);
+						navigate('/');
+					}}
+					onReject={(error) => {
+						console.log('error:', error);
+					}}
+				>
+					<button className='btn rounded-circle m-2'>
+						<i className='fa-brands fa-facebook-f'></i>
+					</button>
+				</LoginSocialFacebook>
+				{/* <LoginSocialTwitter
+					client_id='TXJUeGJhRWYtaHhENFoySWNxR1I6MTpjaQ'
+					onResolve={(res) => {
+						handleResponse(res);
+						navigate('/');
+					}}
+					onReject={(error) => {
+						console.log(error);
+					}}
+				>
+					<button className='btn rounded-circle m-2'>
+						<i className='fa-brands fa-twitter'></i>
+					</button>
+				</LoginSocialTwitter> */}
 				<button className='btn rounded-circle m-2'>
 					<i className='fa-brands fa-twitter'></i>
 				</button>
-				<button className='btn rounded-circle m-2'>
-					<i className='fa-brands fa-google-plus-g'></i>
-				</button>
+				<LoginSocialGoogle
+					client_id='287952620391-q4761s4igqnl0uflbkv5jm3nqe594l3c.apps.googleusercontent.com'
+					scope='openid profile email'
+					onResolve={(res) => {
+						handleResponse(res);
+						navigate('/');
+					}}
+					onReject={(error) => {
+						console.log(error);
+					}}
+				>
+					<button className='btn rounded-circle m-2'>
+						<i className='fa-brands fa-google-plus-g'></i>
+					</button>
+				</LoginSocialGoogle>
 			</div>
 		</div>
 	);
