@@ -1,0 +1,42 @@
+.profile-section {
+	border-top: 1px solid $color-theme;
+	border-bottom: 1px solid $color-theme;
+	h1 {
+		font-size: 1.25rem;
+		font-weight: 700;
+	}
+	.profile-email {
+		font-size: 0.875rem;
+	}
+
+	.profile-link {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 100%;
+		width: 600px;
+		display: grid;
+
+		grid-template-columns: 35px auto 35px;
+		align-items: center;
+		border-top: 1px solid $color-theme;
+		text-decoration: none;
+		cursor: pointer;
+		&:hover {
+			background-color: $color-theme;
+			transition: 0.2s;
+		}
+		&:active {
+			background-color: darken($color-theme, 10%);
+		}
+		span {
+			font-weight: 600;
+			// min-width: 200px;
+		}
+		i {
+			// font-size: 1.25rem;
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+	}
+	// }
+}
