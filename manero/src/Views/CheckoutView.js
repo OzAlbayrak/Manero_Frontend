@@ -55,9 +55,12 @@ const CheckoutView = () => {
       .then(res => res.json())
       .then(formData => {
         console.log(formData)
-        // window.location.replace('/')
+        window.location.replace('/OrderCompleted')
       })
-      .catch(error => console.log(error));
+      .catch(error => {
+        console.log(error)
+        window.location.replace('/OrderFailed')
+      });
   }
 
   const handleChange = (event) => {
@@ -197,7 +200,7 @@ const CheckoutView = () => {
           />
         </div>
         <div className='mx-auto button-container'>
-          <NavLink to='/OrderCompleted'>
+          <NavLink>
             <button className='btn rounded-pill my-3 custom-btn' type="submit" onClick={handleOnSubmit}>
               Confirm Order
             </button>
