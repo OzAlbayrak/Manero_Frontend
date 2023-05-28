@@ -64,3 +64,12 @@ export async function getAddresses(token) {
     },
   });
 }
+
+export async function getCreditCards(token) {
+  return await fetch(sqlUrl + "/creditcard/creditcards", {
+    method: "get",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}

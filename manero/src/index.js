@@ -6,6 +6,7 @@ import { WishlistProvider } from "./contexts/WishlistContext";
 import { ProfileProvider } from "./contexts/ProfileContext";
 import { PromoCodeProvider } from "./contexts/PromoCodeContext";
 import { AddressProvider } from "./contexts/AddressContext";
+import { CreditCardProvider } from "./contexts/CreditCardContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +15,9 @@ root.render(
       <WishlistProvider>
         <ProfileProvider>
           <AddressProvider>
-            <App />
+            <CreditCardProvider>
+              <App />
+            </CreditCardProvider>
           </AddressProvider>
         </ProfileProvider>
       </WishlistProvider>

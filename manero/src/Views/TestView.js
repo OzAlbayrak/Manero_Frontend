@@ -1,9 +1,11 @@
 import { useAddressContext } from "../contexts/AddressContext";
+import { useCreditCardContext } from "../contexts/CreditCardContext";
 import { useProfileContext } from "../contexts/ProfileContext";
 
 const TestView = () => {
   const { profile } = useProfileContext();
   const { addresses } = useAddressContext();
+  const { creditCards } = useCreditCardContext();
 
   return (
     <div>
@@ -19,6 +21,27 @@ const TestView = () => {
             {address.streetName}
             <br />
             {address.postalCode}, {address.city}
+          </div>
+        ))}
+      {Array.isArray(creditCards) &&
+        creditCards.map((creditcard) => (
+          <div key={creditcard.creditCardId}>
+            <br />
+            Creditcard Name:
+            <br />
+            {creditcard.cardName}
+            <br />
+            Creditcard number:
+            <br />
+            {creditcard.cardNumber}
+            <br />
+            Expire:
+            <br />
+            {creditcard.expireMonth} / {creditcard.expireYear}
+            <br />
+            CVV:
+            <br />
+            {creditcard.cvvCode}
           </div>
         ))}
     </div>
