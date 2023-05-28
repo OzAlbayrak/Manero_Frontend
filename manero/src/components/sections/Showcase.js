@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Image from "../../assets/images/red-bull.png";
 
 const Showcase = () => {
   return (
@@ -36,7 +37,7 @@ const Showcase = () => {
         <div className="container">
             <div className="content">
             <div className="titles">
-                    <p className="title-1">Welcome To Manero! 50% off</p>
+                    <p className="title-1">Welcome To Manero! <br/> 50% off</p>
                 </div> 
                 <div className="col-6">
                 </div>
@@ -48,7 +49,7 @@ const Showcase = () => {
         <div className="container">
             <div className="content">
             <div className="titles">
-                    <p className="title-1">Welcome To Manero! 50% extra</p>
+                    <p className="title-1">Welcome To Manero! <br/> 50% extra</p>
                 </div> 
                 <div className="col-6">
 
@@ -61,8 +62,10 @@ const Showcase = () => {
       <div className="container">
             <div className="content">
             <div className="titles">
-                    <p className="title-1">Welcome To Manero! </p>
-                </div> 
+                    <p className="title-1"> Exclusive offer!
+                    </p>
+                    <img  src={Image} className="redbullpicture"></img> 
+                </div>
                 <div className="col-6">
                 </div>
             </div>

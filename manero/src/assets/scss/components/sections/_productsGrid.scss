@@ -1,12 +1,13 @@
 .product-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .home-container {
-        max-width: 1110px;
-        
+        min-width: 375px;
         .slide-container{
             display: flex;
             align-items: center;
             max-width: 70rem;
-
             overflow-y: auto;
         }
 
@@ -33,8 +34,6 @@
         margin-top: 1.5rem;
         margin-bottom: 1rem;
     
-    
-
     
         .title2{
             text-decoration: none;

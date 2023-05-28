@@ -220,7 +220,7 @@ button {
   background: #dbe3f5;
 }
 .showcase .container {
-  height: 600px;
+  height: 500px;
   display: flex;
   margin-left: 15px;
   margin-bottom: 15px;
@@ -235,6 +235,9 @@ button {
 .showcase .container .content .titles {
   text-align: left;
   color: #ffffff;
+}
+.showcase .container .content .titles .redbullpicture {
+  max-width: 10rem;
 }
 .showcase .container2 {
   height: 300px;
@@ -265,8 +268,13 @@ button {
   text-decoration: none;
 }
 
+.product-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .product-grid .home-container {
-  max-width: 1110px;
+  min-width: 375px;
 }
 .product-grid .home-container .slide-container {
   display: flex;
@@ -1046,6 +1054,7 @@ main {
 .bestproduct-grid .bestproductscontainer .bestproductsitem-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
 }
 .bestproduct-grid .title {
   font-size: 40px;

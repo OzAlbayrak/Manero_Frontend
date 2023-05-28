@@ -12,20 +12,25 @@ const BestSellerProducts = () => {
     setProducts(data)
   }
 
-  useEffect(() => {
-    getProducts()
+  const sortProducts = () => {
+    if (sortBy === 'asc') {
+      const sorted = [...products].sort((a, b) => a.price - b.price);
+      setProducts(sorted);
+    } else if (sortBy === 'dsc') {
+      const sorted = [...products].sort((a, b) => b.price - a.price);
+      setProducts(sorted);
+    }
+  };
 
-    if (sortBy === 'asc'){
-      const sorted = [...products].sort((a, b) => a.price - b.price)
-      setProducts(sorted)
-    }
-    else if (sortBy === 'dsc') {
-      const sorted = [...products].sort((a, b) => b.price - a.price)
-      setProducts(sorted)
-    }
-    console.log(sortBy)
-  }, [sortBy, setSortBy, getProducts])
-  
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+  useEffect(() => {
+    sortProducts();
+  }, [sortBy]);
+
+  console.log(sortBy)
   
   
   return (

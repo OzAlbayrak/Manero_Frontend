@@ -46,15 +46,15 @@ const SideMenu = () => {
             className={`sidebarcontactus ${showcontact ? "showcontact" : null}`}>  
             
               <p className="sidebar-p">
-              <i class="icons fa-light fa-location-dot"></i>
+              <i className="icons fa-light fa-location-dot"></i>
               27 Division St, New York,<br/> NY 10002, USA </p>
             <hr/>
               <p className="sidebar-p">
-              <i class="icons fa-light fa-envelope"></i>
+              <i className="icons fa-light fa-envelope"></i>
               menrosale@mail.com<br/>Manerosupport@mail.com</p>
             <hr/>
               <p className="sidebar-p">
-              <i class="icons fa-light fa-phone-volume"></i>
+              <i className="icons fa-light fa-phone-volume"></i>
               +17 123456789<br/>+17 987654321</p>
             <hr/>
           </div>
