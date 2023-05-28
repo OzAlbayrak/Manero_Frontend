@@ -27,6 +27,7 @@ import OrderCompletedView from './Views/OrderCompletedView';
 import OrderFailedView from './Views/OrderFailedView';
 import TestView from './Views/TestView';
 import ProfileView from './Views/ProfileView';
+import EditProfileView from './Views/EditProfileView';
 
 function App() {
 	return (
@@ -60,6 +61,7 @@ function App() {
 					<Route path='/test' element={<TestView />} />
 					<Route path='/OrderFailed' element={<OrderFailedView />} />
 					<Route path='/Profile' element={<ProfileView />} />
+					<Route path='/EditProfile' element={<EditProfileView />} />
 				</Routes>
 			</Router>
 		</div>

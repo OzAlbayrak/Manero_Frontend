@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import ProfilePicture from '../individuals/ProfilePicture';
 import { useProfileContext } from '../../contexts/ProfileContext';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const ProfileSection = ({ signOutOverlay, setSignOutOverlay }) => {
 	const { profile, fetchData } = useProfileContext();
+	const navigate = useNavigate();
 	useEffect(() => {
 		fetchData();
 	}, []);
+
+	const goToEditProfile = () => {
+		navigate('/EditProfile');
+	};
 
 	return (
 		<section className='profile-section d-flex flex-column'>
@@ -15,6 +20,7 @@ const ProfileSection = ({ signOutOverlay, setSignOutOverlay }) => {
 				icon={'pen'}
 				imageUrl={profile.imageSrc}
 				altText={profile.name}
+				handleClick={goToEditProfile}
 			></ProfilePicture>
 			<h1 className='text-dark-color'>{profile.name}</h1>
 			{/* <h1 className='text-dark-color'>Per Norin</h1> */}
