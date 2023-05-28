@@ -158,6 +158,25 @@ button {
   margin-bottom: 10rem;
 }
 
+.profile-pic-container {
+  width: 140px;
+  height: 140px;
+}
+.profile-pic-container img {
+  height: 100%;
+  width: auto;
+  border: solid #dbe3f5 6px;
+}
+.profile-pic-container button {
+  border: none;
+  background-color: #dbe3f5;
+  height: 40px;
+  width: 40px;
+}
+.profile-pic-container button:active {
+  background-color: #b3c4ea;
+}
+
 .header-section {
   display: grid;
   grid-template-columns: 25px auto 25px;
@@ -1665,4 +1684,83 @@ h4 {
   margin-bottom: 40px;
   text-align: center;
   margin-left: 530px;
+}
+
+.profile-section {
+  border-top: 1px solid #dbe3f5;
+  border-bottom: 1px solid #dbe3f5;
+}
+.profile-section h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.profile-section .profile-email {
+  font-size: 0.875rem;
+}
+.profile-section .profile-link {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: 600px;
+  display: grid;
+  grid-template-columns: 35px auto 35px;
+  align-items: center;
+  border-top: 1px solid #dbe3f5;
+  text-decoration: none;
+  cursor: pointer;
+}
+.profile-section .profile-link:hover {
+  background-color: #dbe3f5;
+  transition: 0.2s;
+}
+.profile-section .profile-link:active {
+  background-color: #b3c4ea;
+}
+.profile-section .profile-link span {
+  font-weight: 600;
+}
+.profile-section .profile-link i {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.sign-out-overlay {
+  z-index: 2;
+  background-color: #111111;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.signout-outer-circle {
+  z-index: 3;
+  height: 21rem;
+  width: 21rem;
+  background: transparent;
+  border-radius: 50%;
+  border: solid white 3px;
+  overflow: hidden;
+}
+
+.signout-inner-circle {
+  z-index: 4;
+  height: 19rem;
+  width: 19rem;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+}
+.signout-inner-circle .signout-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 15rem;
+}
+.signout-inner-circle .button-box {
+  width: 140px;
+}
+.signout-inner-circle .cancel-btn {
+  font-size: 0.875rem;
 }

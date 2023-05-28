@@ -8,6 +8,7 @@
 @import './components/individuals/menuLinkIcons';
 @import './components/individuals/ratingStars';
 @import './components/individuals/reviews';
+@import './components/individuals/profilePicture';
 
 // Sections
 @import './components/sections/header';
@@ -35,3 +36,5 @@
 @import './components/sections/reviews';
 @import './components/sections/payment';
 @import './components/sections/orderCompleted';
+@import './components/sections/profileSection';
+@import './components/sections/signOut';
