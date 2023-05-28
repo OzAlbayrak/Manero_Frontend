@@ -1,4 +1,10 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useCallback,
+} from "react";
 import {
   getProfile,
   registerSocialAccount,
@@ -42,6 +48,9 @@ export const ProfileProvider = ({ children }) => {
         };
         break;
       }
+      default: {
+        console.log("Unknown provider:", res.provider);
+      }
     }
 
     console.log("obj id: ", obj.Id, typeof obj.Id);
@@ -56,7 +65,7 @@ export const ProfileProvider = ({ children }) => {
     }
   };
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     const provider = sessionStorage.getItem("provider");
     const token = getToken();
 
@@ -87,11 +96,11 @@ export const ProfileProvider = ({ children }) => {
     } catch (error) {
       console.log("error:", error);
     }
-  };
+  }, []);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   return (
     <ProfileContext.Provider

@@ -1,4 +1,10 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useCallback,
+} from "react";
 import { getAddresses } from "../utilities/api";
 
 const AddressContext = createContext();
@@ -14,7 +20,7 @@ export const AddressProvider = ({ children }) => {
     return sessionStorage.getItem("apiAccessToken");
   };
 
-  const getUserAddresses = async () => {
+  const getUserAddresses = useCallback(async () => {
     const token = getToken();
     try {
       const response = await getAddresses(token);
@@ -29,11 +35,11 @@ export const AddressProvider = ({ children }) => {
     } catch (error) {
       console.log("error:", error);
     }
-  };
+  }, []);
 
   useEffect(() => {
     getUserAddresses();
-  }, []);
+  }, [getUserAddresses]);
 
   return (
     <AddressContext.Provider
