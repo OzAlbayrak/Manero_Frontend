@@ -198,41 +198,12 @@ const CheckoutView = () => {
         </div>
         <div className='mx-auto button-container'>
           <NavLink to='/OrderCompleted'>
-            <button className='btn rounded-pill my-3 custom-btn' type="submit">
+            <button className='btn rounded-pill my-3 custom-btn' type="submit" onClick={handleOnSubmit}>
               Confirm Order
             </button>
           </NavLink>
         </div>
       </form>
-      {
-
-        /*
-        
-        <button type="submit">SUBMIT</button>
-        
-        
-              <form className='checkout-form' onSubmit={handleSubmit}>
-                <label>COMMENT</label>
-                <textarea className='area' rows="8" colum="10"
-                  value={comments}
-                  onChange={handleChange}
-                  placeholder="Enter your comment"
-                />
-              </form>
-        
-              <div className='mx-auto button-container'>
-                <NavLink to='/'>
-                  <button className='btn rounded-pill my-3 custom-btn' onClick={
-                    handleOnClick}>
-                    Confirm Order
-                  </button>
-                </NavLink>
-              </div>
-        */
-      }
-
-
-
 
       <MenuLinkIcons className='menu-icons' />
     </div>
