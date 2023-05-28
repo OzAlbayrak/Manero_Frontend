@@ -1,57 +1,42 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useState, useEffect } from "react"
 
 const WishlistContext = createContext();
 export const useWishlistContext = () => {
   return useContext(WishlistContext);
 }
 
-const initialState = {
-  favorites: [],
-  totalQuantity: 0,
-  totalAmount: 0
-}
 
 export const WishlistProvider = ({children}) => {
+  const [wishlist, setWishlist] = useState([]);
 
-  const [favorites, setFavorites] = useState(initialState.favorites)
 
-  const addFavorite = (product) => {
-    let _favorite = favorites.find(favorite => favorite.id === product.id)
-    if(_favorite)
-    {
-      setFavorites(favorites.map(favorite => 
-        favorite.id === _favorite.id
-        ? { ...favorite, quantity: favorite.quantity + 1 }
-        : favorite
-      ))
-    } 
-    else
-    {
-      setFavorites([...favorites, {id: product.id, name: product.name, price: product.price, image: product.imageName, quantity: 1 }])
-      console.log(favorites)
+  useEffect(() => {
+    const storedWishlist = localStorage.getItem('wishlist');
+    if (storedWishlist) {
+      setWishlist(JSON.parse(storedWishlist));
     }
-  }
+  }, []);
 
-  const removeFavorite = (product) => {
-    let _favorite = favorites.find(favorite => favorite.id === product.id)
-    if(_favorite.quantity > 1)
-    {
-      setFavorites(favorites.map(favorite => 
-        favorite.id === _favorite.id
-        ? { ...favorite, quantity: favorite.quantity - 1 }
-        : favorite
-      ))
-    } 
-    else
-    {
-      const favoriteList = favorites.filter(favorite => favorite.id !== _favorite.id)
-      setFavorites(favoriteList)
-      console.log(favoriteList)
-    }
-  }
+  const addToWishlist = (product) => {
+    const updatedWishlist = [...wishlist, product];
+    setWishlist(updatedWishlist);
+    localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
+  };
+
+  const removeFromWishlist = (productId) => {
+    const updatedWishlist = wishlist.filter(
+      (product) => product.id !== productId
+    );
+    setWishlist(updatedWishlist);
+    localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
+  };
+
+  const isInWishlist = (productId) => {
+    return wishlist.some((product) => product.id === productId);
+  };
 
 
-  return <WishlistContext.Provider value = { { favorites, addFavorite, removeFavorite } }>
+  return <WishlistContext.Provider value = { { wishlist, addToWishlist, removeFromWishlist, isInWishlist } }>
     {children}
   </WishlistContext.Provider>
 }

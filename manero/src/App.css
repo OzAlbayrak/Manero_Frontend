@@ -339,8 +339,24 @@ button {
   color: #dbe3f5;
   text-decoration: none;
 }
-.product-grid .card .card-img-container .card-menu .menu-link #card-heart:active {
+.product-grid .card .card-img-container .card-menu .heart {
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.product-grid .card .card-img-container .card-menu .heart:hover {
   color: red;
+}
+.product-grid .card .card-img-container .card-menu .heart-active {
+  border: none;
+  background: none;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 .product-grid .card .card-img-container .btn-theme {
   position: absolute;
@@ -986,6 +1002,9 @@ main {
 .wishlist-container .wishlist-btns #heart {
   color: red;
 }
+.wishlist-container .wishlist-btns #heart:hover {
+  color: black;
+}
 .wishlist-container .wishlist-btns #bag {
   color: white;
   background-color: black;
@@ -1226,8 +1245,24 @@ main {
   color: #dbe3f5;
   text-decoration: none;
 }
-.filtred-products-container .filtred-products .card .card-img-container .card-menu .menu-link #card-heart:active {
+.filtred-products-container .filtred-products .card .card-img-container .card-menu .heart {
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.filtred-products-container .filtred-products .card .card-img-container .card-menu .heart:hover {
   color: red;
+}
+.filtred-products-container .filtred-products .card .card-img-container .card-menu .heart-active {
+  border: none;
+  background: none;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 .filtred-products-container .filtred-products .card .card-img-container .btn-theme {
   position: absolute;
