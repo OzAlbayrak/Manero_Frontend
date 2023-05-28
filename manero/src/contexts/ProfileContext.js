@@ -3,7 +3,6 @@ import {
   getProfile,
   registerSocialAccount,
   getSocialProfile,
-  getAddresses,
 } from "../utilities/api";
 
 const ProfileContext = createContext();
@@ -14,34 +13,35 @@ export const useProfileContext = () => {
 
 export const ProfileProvider = ({ children }) => {
   const [profile, setProfile] = useState({});
-  const [addresses, setAddresses] = useState({});
+
+  const getToken = () => {
+    return sessionStorage.getItem("apiAccessToken");
+  };
 
   const handleResponse = async (res) => {
     let obj = {};
 
     switch (res.provider) {
-      case "google":
-        {
-          obj = {
-            Id: res.data.sub,
-            Email: res.data.email,
-            Name: res.data.name,
-            ImageSrc: res.data.picture,
-            Provider: res.provider,
-          };
-        }
+      case "google": {
+        obj = {
+          Id: res.data.sub,
+          Email: res.data.email,
+          Name: res.data.name,
+          ImageSrc: res.data.picture,
+          Provider: res.provider,
+        };
         break;
-      case "facebook":
-        {
-          obj = {
-            Id: res.data.id,
-            Email: res.data.email,
-            Name: res.data.name,
-            ImageSrc: res.data.picture.data.url,
-            Provider: res.provider,
-          };
-        }
+      }
+      case "facebook": {
+        obj = {
+          Id: res.data.id,
+          Email: res.data.email,
+          Name: res.data.name,
+          ImageSrc: res.data.picture.data.url,
+          Provider: res.provider,
+        };
         break;
+      }
     }
 
     console.log("obj id: ", obj.Id, typeof obj.Id);
@@ -56,97 +56,51 @@ export const ProfileProvider = ({ children }) => {
     }
   };
 
-  const getSocialData = async (provider) => {
-    let token = "";
+  const fetchData = async () => {
+    const provider = sessionStorage.getItem("provider");
+    const token = getToken();
 
-    switch (provider) {
-      case "google":
-        token = sessionStorage.getItem("apiAccessToken");
-        break;
-      case "facebook":
-        token = sessionStorage.getItem("apiAccessToken");
-        break;
-    }
-    const response = await getSocialProfile(token);
-
-    console.log("token:", token);
-    if (response.ok) {
-      const profileData = await response.json();
-      setProfile(profileData);
-      console.log("profile:", profileData);
-    } else {
-      console.log("error!");
-    }
-  };
-
-  const getData = async () => {
-    let token = sessionStorage.getItem("apiAccessToken");
-
-    console.log(token);
-    const response = await getProfile(token);
-
-    if (response.ok) {
-      const profileData = await response.json();
-      setProfile(profileData);
-      console.log("profile:", profileData);
-    } else {
-      console.log("error!");
-    }
-  };
-
-  const getUserAddresses = async () => {
-    let token = sessionStorage.getItem("apiAccessToken");
-    const response = await getAddresses(token);
-
-    if (response.ok) {
-      const addressData = await response.json();
-      setAddresses(addressData);
-      console.log("addressdata:", addressData);
-    } else {
-      console.log("error!");
-    }
-  };
-
-  const getProvider = () => {
-    if (
-      sessionStorage.getItem("provider") === "facebook" ||
-      sessionStorage.getItem("provider") === "google"
-    ) {
-      console.log("using socialmedia provider");
-      setProfile(JSON.parse(sessionStorage.getItem("profile")));
-      getSocialData(sessionStorage.getItem("provider"));
-    } else if (sessionStorage.getItem("provider") === "local") {
-      console.log("using local provider");
-      getData();
-    } else {
-      console.log("not logged in");
+    try {
+      if (provider === "facebook" || provider === "google") {
+        console.log("using social media provider");
+        const response = await getSocialProfile(token);
+        if (response.ok) {
+          const profileData = await response.json();
+          setProfile(profileData);
+          console.log("profile:", profileData);
+        } else {
+          console.log("error!");
+        }
+      } else if (provider === "local") {
+        console.log("using local provider");
+        const response = await getProfile(token);
+        if (response.ok) {
+          const profileData = await response.json();
+          setProfile(profileData);
+          console.log("profile:", profileData);
+        } else {
+          console.log("error!");
+        }
+      } else {
+        console.log("not logged in");
+      }
+    } catch (error) {
+      console.log("error:", error);
     }
   };
 
   useEffect(() => {
-    getProvider();
+    fetchData();
   }, []);
-
-  useEffect(() => {
-    if (profile && Object.keys(profile).length !== 0) {
-      getUserAddresses();
-    }
-  }, [profile]);
 
   return (
     <ProfileContext.Provider
       value={{
         handleResponse,
-        getProvider,
         profile,
-        addresses,
       }}
     >
-      {addresses && Object.keys(addresses).length !== 0 ? (
-        children
-      ) : (
-        <div>Loading...</div>
-      )}
+      {children}
     </ProfileContext.Provider>
   );
 };
