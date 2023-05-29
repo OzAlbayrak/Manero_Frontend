@@ -6,11 +6,9 @@ import SignOut from '../components/sections/SignOut';
 
 const ProfileView = () => {
 	const [signOutOverlay, setSignOutOverlay] = useState(false);
-	// useEffect(() => {
-	// 	console.log(signOutOverlay);
-	// }, [signOutOverlay]);
+
 	return (
-		<div className='position-relative d-flex flex-column overflow-hidden vh-100'>
+		<div className=' d-flex flex-column overflow-hidden vh-100'>
 			{signOutOverlay && (
 				<SignOut
 					setSignOutOverlay={setSignOutOverlay}

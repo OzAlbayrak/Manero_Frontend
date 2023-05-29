@@ -15,18 +15,17 @@ const WishListView = () => {
 	};
 
 	return (
-		<div className='vh-100 m-0 p-0'>
+		<div className='d-flex flex-column overflow-hidden vh-100 m-0 p-0'>
 			<Header
 				title={'Wishlist'}
 				hasSideIcon={true}
 				isMenu={true}
 				hasCart={true}
 			></Header>
-
 			<div>
 				{wishlist.length === 0 ? (
 					<div className='text-center'>
-						<img className='password-image mx-auto' src={Image} alt="..." />
+						<img className='password-image mx-auto' src={Image} alt='...' />
 						<br></br>
 						<div className='vr mx-auto'></div>
 						<p className='mx-auto my-3 headline'>Your Wishlist Is Empty!</p>
@@ -69,7 +68,7 @@ const WishListView = () => {
 				)}
 			</div>
 
-			<MenuLinkIcons />
+			<MenuLinkIcons></MenuLinkIcons>
 		</div>
 	);
 };
