@@ -77,7 +77,9 @@ const OrderView = () => {
         ))
       }
       <hr />
-      <div>Promocode applied!!!!!!!!!!!</div>
+      <div>Promocode applied
+        <span className='promo-app-span'>&#10003;</span>
+      </div>
       <div className='subtotal'>
         <div>
           Subtotal
@@ -87,7 +89,10 @@ const OrderView = () => {
         </div>
       </div>
       <p>Discount</p>
-      <p>Delivery</p>
+      <div className='d-flex order-delivery-p' >
+        <p className='delivery'>Delivery</p>
+        <p className='odp'>Free</p>
+      </div>
       <hr />
       <div className='order-total-price'>
         <div>Total</div>
