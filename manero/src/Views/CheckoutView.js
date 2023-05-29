@@ -36,9 +36,9 @@ const CheckoutView = () => {
         phoneNumber: ""
       },
       address: {
-        address: "Gata",
-        postalCode: "123 45",
-        city: "Stockholm",
+        address: addresses[0].streetName,
+        postalCode: addresses[0].postalCode,
+        city: addresses[0].city,
       },
       products: items,
       paymentMethod: payment,
