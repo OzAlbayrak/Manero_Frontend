@@ -47,6 +47,7 @@ export const CreditCardProvider = ({ children }) => {
     <CreditCardContext.Provider
       value={{
         creditCards,
+        getUserCreditCards,
       }}
     >
       {children}

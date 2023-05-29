@@ -1876,3 +1876,68 @@ h4 {
 .myaddress .media-border .new-address-box p {
   margin-top: 10px;
 }
+
+.payment-method .slide-container {
+  display: flex;
+  align-items: center;
+  max-width: 70rem;
+  overflow-y: auto;
+}
+.payment-method .slide-container .card-container {
+  display: flex;
+}
+.payment-method .slide-container .card-container .item-container {
+  display: flex;
+  overflow-y: hidden;
+  justify-content: center;
+  margin-left: 15px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.payment-method .slide-container .card-container .item-container .card-title {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  color: white;
+  font-weight: 900;
+  font-size: 24px;
+}
+.payment-method .slide-container .card-container .item-container .card-number {
+  position: absolute;
+  top: 65px;
+  left: 25px;
+  color: white;
+  font-size: 14px;
+}
+.payment-method .slide-container .card-container .item-container .card-name {
+  position: absolute;
+  top: 120px;
+  left: 25px;
+  color: white;
+  font-size: 12px;
+}
+.payment-method .slide-container .card-container .item-container .card-month {
+  position: absolute;
+  top: 120px;
+  left: 185px;
+  color: white;
+  font-size: 12px;
+}
+.payment-method .slide-container .card-container .item-container .card-slash {
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  color: white;
+  font-size: 12px;
+}
+.payment-method .slide-container .card-container .item-container .card-year {
+  position: absolute;
+  top: 120px;
+  left: 205px;
+  color: white;
+  font-size: 12px;
+}
+.payment-method .field {
+  padding: 0px;
+  min-width: 360px;
+}

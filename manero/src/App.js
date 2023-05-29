@@ -30,6 +30,7 @@ import NewAddressView from "./Views/NewAddressView";
 import ProfileView from "./Views/ProfileView";
 import EditProfileView from "./Views/EditProfileView";
 import TestView from "./Views/TestView";
+import PaymentMethodView from "./Views/PaymentMethodView";
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
           <Route path="/newaddress" element={<NewAddressView />} />
           <Route path="/Profile" element={<ProfileView />} />
           <Route path="/EditProfile" element={<EditProfileView />} />
+          <Route path="/paymentmethods" element={<PaymentMethodView />} />
         </Routes>
       </Router>
     </div>
