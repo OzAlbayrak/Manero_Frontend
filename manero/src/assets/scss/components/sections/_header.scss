@@ -1,7 +1,7 @@
 .header-section {
 	display: grid;
 	grid-template-columns: 25px auto 25px;
-	margin-top: 10px;
+	margin-top: -10px;
 	margin-bottom: 10px;
 
 	.page-heading {
@@ -42,6 +42,8 @@
 		position: relative;
 		text-align: right;
 		margin-right: 0px;
+		margin-top: 2.25rem;
+		font-size: 1.25rem;
 
 		.cart-icon-amount {
 			background-color: red;
@@ -57,9 +59,18 @@
 			font-size: 9px;
 		}
 	}
-}
-
-.chevronicon{
-	font-size: 1.25rem;
-	margin-top: 2.25rem;
+	.icon-xmark{
+		margin-top: 0.75rem;
+	}
+	.icon-bars{
+		margin-top: 2.25rem;
+		font-size: 1.25rem;
+		color: $color-blackish;
+		padding-left: 1rem;
+		
+	}
+	.chevronicon{
+		font-size: 1.25rem;
+		margin-top: 2.45rem;
+	}
 }

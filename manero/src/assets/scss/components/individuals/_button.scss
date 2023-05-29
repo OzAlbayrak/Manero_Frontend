@@ -12,3 +12,15 @@
 		border: $color-blackish solid 4px;
 	}
 }
+
+.navlinkbutton{
+	text-decoration: none;
+	border: none;
+	height: 0px;
+	&:hover {
+		text-decoration: none;
+		background-color: transparent;
+		color: $color-blackish;
+		height: 10px;
+	}
+}

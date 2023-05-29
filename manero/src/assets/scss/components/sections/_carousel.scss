@@ -18,9 +18,11 @@
     }
 
     .button-container{
+        text-decoration: none;
         width: 255px;
         height: 50px;
         margin-bottom: 80px;
+        color: $color-blackish;
 
         .custom-btn{
             height: 50px;

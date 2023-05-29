@@ -7,7 +7,7 @@ const ForgotPassword = () => {
 	return (
 		<>
 			<Header title={'Forgot password'} hasSideIcon={true} isMenu={false} />
-			<main className='container'>
+			<main className='container p-0'>
 				<p className='text-light-color text-box mx-auto mb-5'>
 					Please enter your email address. You will recive a link to create a new
 					password via email.

@@ -26,27 +26,29 @@ import PaymentView from './Views/PaymentView';
 import OrderCompletedView from './Views/OrderCompletedView';
 import OrderFailedView from './Views/OrderFailedView';
 import TestView from './Views/TestView';
+import FilterView from './Views/FilterView';
 
 function App() {
 	return (
 		<div className='App'>
 			<Router>
 				<Routes>
-					<Route path='/' element={<HomeView />} />
+					<Route path='/home' element={<HomeView />} />
 					<Route path='/bestSellers' element={<BestSellerView />} />
-					<Route path='/Reset' element={<ResetedPassword />} />
-					<Route path='/Created' element={<AccountCreated />} />
-					<Route path='/DescriptionView' element={<DescriptionView />} />
-					<Route path='/AllReviewsView' element={<AllReviewsView />} />
-					<Route path='/GetStarted' element={<GetStartedHomeView />} />
-					<Route path='/GetStartedWelcome' element={<GetStartedWelcomeView />} />
-					<Route path='/VerifyNumber' element={<VerifyNumberView />} />
-					<Route path='/ConfirmCode' element={<ConfirmCodeView />} />
-					<Route path='/Search' element={<SearchView />} />
-					<Route path='/SignIn' element={<SignIn />} />
-					<Route path='/SignUp' element={<SignUp />} />
-					<Route path='/ForgotPassword' element={<ForgotPassword />} />
-					<Route path='/ResetPassword' element={<ResetPassword />} />
+					<Route path='/filter' element={<FilterView />} />
+					<Route path='/reset' element={<ResetedPassword />} />
+					<Route path='/created' element={<AccountCreated />} />
+					<Route path='/description' element={<DescriptionView />} />
+					<Route path='/reviews' element={<AllReviewsView />} />
+					<Route path='/' element={<GetStartedHomeView />} />
+					<Route path='/getStartedWelcome' element={<GetStartedWelcomeView />} />
+					<Route path='/verifyNumber' element={<VerifyNumberView />} />
+					<Route path='/confirmCode' element={<ConfirmCodeView />} />
+					<Route path='/search' element={<SearchView />} />
+					<Route path='/signIn' element={<SignIn />} />
+					<Route path='/signUp' element={<SignUp />} />
+					<Route path='/forgotPassword' element={<ForgotPassword />} />
+					<Route path='/resetPassword' element={<ResetPassword />} />
 					<Route path='/Cart' element={<CartView />} />
 					<Route path='/Wishlist' element={<WishlistView />} />
 					<Route path='/PromoCode' element={<PromocodesView />} />

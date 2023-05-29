@@ -11,8 +11,8 @@ const SideMenu = () => {
     <header className={`header ${show ? "space-toggle" : null}`}>
       <div className="header-toggle" onClick={() => setShow(!show)}>
         <i
-          className={`fa-light fa-bars-staggered ${
-            show ? "fa-light fa-xmark" : null
+          className={`icon-bars fa-light fa-bars-staggered ${
+            show ? "icon-xmark fa-light fa-xmark" : null
           }`}
         ></i>
       </div>
