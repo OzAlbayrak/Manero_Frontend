@@ -1,39 +1,54 @@
-.bottom-menu-container{
-    position:relative;
-    bottom: 0;
-    width:100%;
-    background-color: rgba(255, 255, 255, 0.779);
+.bottom-menu-container {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.779);
+	padding-bottom: 20px;
 
+	/* icon placements */
+	.menuLinkIcons {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-        /* icon placements */
-        .menuLinkIcons{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-            
-        }
-        
-        /* icons */
-        .menu-link {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 1rem;
-            font-size: 24px;
-            color: $color-dark;
-            text-decoration: none;
-        
-                &:hover {
-                    text-decoration: none;
-                    color: $color-theme;
-                    cursor: pointer;
-                }
-                
-        }
-        .active{
-            background-color: $color-theme;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-        }  
+	/* icons */
+	.menu-link {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
 
+		//margin: 1rem;
+		font-size: 24px;
+		color: $color-dark;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+			color: $color-theme;
+			cursor: pointer;
+		}
+	}
+	.active {
+		&:hover {
+			color: $color-dark;
+		}
+
+		div {
+			background-color: $color-theme;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			i {
+				vertical-align: bottom;
+			}
+
+			&:hover div {
+				background-color: darken($color-theme, 10%);
+			}
+		}
+	}
 }

@@ -81,22 +81,25 @@ body {
 }
 
 .bottom-menu-container {
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.779);
+  padding-bottom: 20px;
   /* icon placements */
   /* icons */
 }
 .bottom-menu-container .menuLinkIcons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .bottom-menu-container .menu-link {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 1rem;
   font-size: 24px;
   color: #222529;
   text-decoration: none;
@@ -106,11 +109,21 @@ body {
   color: #dbe3f5;
   cursor: pointer;
 }
-.bottom-menu-container .active {
+.bottom-menu-container .active:hover {
+  color: #222529;
+}
+.bottom-menu-container .active div {
   background-color: #dbe3f5;
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  text-align: center;
+}
+.bottom-menu-container .active div i {
+  vertical-align: bottom;
+}
+.bottom-menu-container .active div:hover div {
+  background-color: #b3c4ea;
 }
 
 .star-rating {
@@ -1733,6 +1746,7 @@ h4 {
 .profile-section {
   border-top: 1px solid #dbe3f5;
   border-bottom: 1px solid #dbe3f5;
+  margin-bottom: 60px;
 }
 .profile-section h1 {
   font-size: 1.25rem;
