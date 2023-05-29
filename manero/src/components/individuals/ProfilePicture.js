@@ -8,8 +8,7 @@ const ProfilePicture = ({
 	imageUrl,
 }) => {
 	let image = DefaultImage;
-	if (imageUrl !== undefined) {
-		console.log('img:', image);
+	if (imageUrl !== null) {
 		image = imageUrl;
 	}
 
