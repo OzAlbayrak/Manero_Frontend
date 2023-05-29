@@ -1,8 +1,8 @@
 //I den här filen kan vi lägga alla fetch-funktioner.
 //Vi kan använda variabler för url:en så blir det lätt att byta när vi lägger upp API:et
 
-//const sqlUrl = "https://localhost:7235/api";
-const sqlUrl = "https://sijb-cms22-backend.azurewebsites.net/api";
+const sqlUrl = "https://localhost:7235/api";
+//const sqlUrl = "https://sijb-cms22-backend.azurewebsites.net/api";
 
 export async function logIn(res) {
   try {
@@ -29,6 +29,17 @@ export async function register(res) {
 }
 
 export async function registerAddress(res, token) {
+  return await fetch(sqlUrl + "/address/register", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(res),
+  });
+}
+
+export async function registerCreditCard(res, token) {
   return await fetch(sqlUrl + "/address/register", {
     method: "post",
     headers: {

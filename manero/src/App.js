@@ -31,6 +31,7 @@ import ProfileView from "./Views/ProfileView";
 import EditProfileView from "./Views/EditProfileView";
 import TestView from "./Views/TestView";
 import PaymentMethodView from "./Views/PaymentMethodView";
+import NewCreditCardView from "./Views/NewCreditCardView";
 
 function App() {
   return (
@@ -71,6 +72,7 @@ function App() {
           <Route path="/Profile" element={<ProfileView />} />
           <Route path="/EditProfile" element={<EditProfileView />} />
           <Route path="/paymentmethods" element={<PaymentMethodView />} />
+          <Route path="/newcard" element={<NewCreditCardView />} />
         </Routes>
       </Router>
     </div>

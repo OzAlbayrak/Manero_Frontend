@@ -37,7 +37,7 @@ const SignIn = () => {
           sessionStorage.setItem("apiAccessToken", token);
           sessionStorage.setItem("provider", "local");
           console.log(token);
-          navigate("/");
+          navigate("/home");
         }
         break;
       case 400:
