@@ -7,7 +7,7 @@ const MenuLinkIcons = () => {
 	return (
 		<div className='bottom-menu-container'>
 			<nav className='menuLinkIcons'>
-				<NavLink to='/' className='menu-link' activeClassName='active'>
+				<NavLink to='/home' className='menu-link' activeClassName='active'>
 					<div>
 						<i className='fa-light fa-house'></i>
 					</div>
