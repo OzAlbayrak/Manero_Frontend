@@ -4,7 +4,7 @@ import { useWishlistContext } from '../../contexts/WishlistContext'
 import { NavLink } from 'react-router-dom'
 
 const ProductCard = ({ product }) => {
-  const {items, addItem, removeItem} = useShoppingCartContext()
+  const {addItem} = useShoppingCartContext()
   const {addToWishlist, removeFromWishlist, isInWishlist} = useWishlistContext()
 
   const handleWishlistClick = () => {

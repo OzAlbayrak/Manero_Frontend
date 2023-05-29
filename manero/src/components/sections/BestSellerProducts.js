@@ -40,7 +40,7 @@ const BestSellerProducts = () => {
           <div className="salesBtnContainer">
             <button className="salesIcons"><i className="fa-light fa-sliders-up"></i> Filters</button>
             <div className="dropdown">
-              <button className="dropdownbutton" >Sorting by <i class="icon fa-light fa-angle-down"></i></button>       
+              <button className="dropdownbutton" >Sorting by <i className="icon fa-light fa-angle-down"></i></button>       
               <ul className="dropdown-content" >
                 <li>
                   <button onClick={() => setSortBy('dsc')} className="dropdownitems" >price (Highest)</button>

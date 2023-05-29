@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../components/sections/Header';
 import Image from '../assets/images/wishlist_empty.svg';
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons';
-import Wishlist from '../components/individuals/Wishlist';
 import { useWishlistContext } from '../contexts/WishlistContext';
 import { useShoppingCartContext } from '../contexts/ShoppingCartContext';
 import RatingStars from '../components/individuals/RatingStars';
@@ -24,11 +23,10 @@ const WishListView = () => {
 				hasCart={true}
 			></Header>
 
-			<Wishlist />
 			<div>
 				{wishlist.length === 0 ? (
 					<div className='text-center'>
-						<img className='password-image mx-auto' src={Image} />
+						<img className='password-image mx-auto' src={Image} alt="..." />
 						<br></br>
 						<div className='vr mx-auto'></div>
 						<p className='mx-auto my-3 headline'>Your Wishlist Is Empty!</p>
