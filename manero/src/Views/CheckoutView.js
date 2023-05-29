@@ -5,6 +5,9 @@ import Header from '../components/sections/Header'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import { NavLink } from 'react-router-dom'
 import SideIcon from '../components/individuals/SideIcon';
+import { useAddressContext } from "../contexts/AddressContext";
+import { useCreditCardContext } from "../contexts/CreditCardContext";
+import { useProfileContext } from "../contexts/ProfileContext";
 
 const CheckoutView = () => {
   const { items, addItem, removeItem } = useShoppingCartContext()
@@ -16,6 +19,9 @@ const CheckoutView = () => {
   const [deliveryMethod, setdeliveryMethod] = useState("PostNord");
   const [payment, setpayment] = useState("VISA CARD");
   const [promoCodes, setPromoCodes] = useState([]);
+  const { profile } = useProfileContext();
+  const { addresses } = useAddressContext();
+  const { creditCards } = useCreditCardContext();
 
 
   const handleOnSubmit = (e) => {
@@ -24,12 +30,14 @@ const CheckoutView = () => {
     const formData = {
       price: totPrice,
       profile: {
-        email: email,
-        name: "Namn",
-        streetName: "Gata",
-        postalCode: "12345",
+        email: profile.email,
+        name: profile.name,
+        phoneNumber: ""
+      },
+      address: {
+        address: "Gata",
+        postalCode: "123 45",
         city: "Stockholm",
-        phoneNumber: "070111111"
       },
       products: items,
       paymentMethod: payment,
@@ -170,7 +178,7 @@ const CheckoutView = () => {
           <hr />
         </div>
       </div>
-
+      
       <div className='shipping-address'>
         <p className='semi'>Shipping details</p>
         <NavLink to='/Shippment'>
@@ -189,6 +197,8 @@ const CheckoutView = () => {
       <p className='p-info'>7741********6644</p>
 
       <hr />
+
+      
 
       <form className='checkout-form' onSubmit={handleOnSubmit}>
         <label>COMMENT</label>
