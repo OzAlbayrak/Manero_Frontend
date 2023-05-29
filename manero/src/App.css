@@ -158,6 +158,25 @@ button {
   margin-bottom: 10rem;
 }
 
+.field {
+  height: 70px;
+  min-width: 380px;
+  height: 70px;
+  padding: 20px 20px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dbe3f5;
+  border-bottom: 1px solid #dbe3f5;
+}
+.field .fieldicon {
+  display: flex;
+  align-items: center;
+}
+.field .fieldicon p {
+  margin: 0 0px 0 30px;
+}
+
 .header-section {
   display: grid;
   grid-template-columns: 25px auto 25px;
@@ -1709,4 +1728,25 @@ h4 {
   margin-bottom: 40px;
   text-align: center;
   margin-left: 530px;
+}
+
+.myaddress .media-border {
+  display: flex;
+  flex-direction: column;
+}
+.myaddress .media-border .field-box .field {
+  min-width: 360px;
+  max-width: none;
+}
+.myaddress .media-border .field-box .field .field-content .sub-text {
+  font-size: 14px;
+}
+.myaddress .media-border .new-address-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.myaddress .media-border .new-address-box p {
+  margin-top: 10px;
 }
