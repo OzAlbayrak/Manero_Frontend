@@ -5,6 +5,7 @@ import Header from '../components/sections/Header'
 import MenuLinkIcons from '../components/individuals/MenuLinkIcons'
 import { NavLink } from 'react-router-dom'
 import SideIcon from '../components/individuals/SideIcon';
+import { PromoCodeProvider } from '../contexts/PromoCodeContext'
 
 const CheckoutView = () => {
   const { items, addItem, removeItem } = useShoppingCartContext()
@@ -107,8 +108,8 @@ const CheckoutView = () => {
 
 
   return (
-    <div className='d-flex flex-column'>
-      <div className='checkout-container'>
+    <div className='d-flex flex-column '>
+      <div className='checkout-container m-1'>
         <SideIcon />
         <Header
           title={'Checkout'}
@@ -147,26 +148,17 @@ const CheckoutView = () => {
             }
           </p>
 
-          <p className='discount'>Discount:
-            <div>
-              None
-            </div>
-          </p>
-          {
-            totPrice >= 100
-              ?
-              <p className='delivery'>Delivery
-                <div>
-                  Free
-                </div>
-              </p>
-              :
-              <p className='delivery'>Delivery
-                <div>
-                  $49
-                </div>
-              </p>
-          }
+          <p className='discount'>Discount</p>
+          <div>
+
+          </div>
+
+
+          <div className='d-flex order-delivery-p' >
+            <p className='delivery'>Delivery</p>
+            <p className='odp'>Free</p>
+          </div>
+
           <hr />
         </div>
       </div>
@@ -214,3 +206,25 @@ const CheckoutView = () => {
 }
 
 export default CheckoutView
+
+
+/* <p className='discount'>Discount
+            <div>
+              {promoCodes}
+            </div>
+          </p>
+          {
+            totPrice >= 100
+              ?
+              <p className='delivery'>Delivery
+                <div>
+                  Free
+                </div>
+              </p>
+              :
+              <p className='delivery'>Delivery
+                <div>
+                  $49
+                </div>
+              </p>
+          }*/
