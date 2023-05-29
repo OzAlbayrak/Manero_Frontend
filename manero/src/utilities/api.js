@@ -3,7 +3,7 @@
 
 const sqlUrl = 'https://localhost:7235/api';
 // const sqlUrl = 'https://sijb-cms22-backend.azurewebsites.net/api';
-const sqlUrl = 'https://localhost:7235/api';
+//const sqlUrl = 'https://localhost:7235/api';
 //const sqlUrl = "https://sijb-cms22-backend.azurewebsites.net/api";
 
 export async function logIn(res) {
