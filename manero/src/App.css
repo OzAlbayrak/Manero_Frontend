@@ -80,6 +80,18 @@ body {
   border: #111111 solid 4px;
 }
 
+.navlinkbutton {
+  text-decoration: none;
+  border: none;
+  height: 0px;
+}
+.navlinkbutton:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: #111111;
+  height: 10px;
+}
+
 .bottom-menu-container {
   position: absolute;
   bottom: 0;
@@ -212,7 +224,7 @@ button {
 .header-section {
   display: grid;
   grid-template-columns: 25px auto 25px;
-  margin-top: 10px;
+  margin-top: -10px;
   margin-bottom: 10px;
 }
 .header-section .page-heading {
@@ -247,6 +259,8 @@ button {
   position: relative;
   text-align: right;
   margin-right: 0px;
+  margin-top: 2.25rem;
+  font-size: 1.25rem;
 }
 .header-section .shopping-cart-icon .cart-icon-amount {
   background-color: red;
@@ -261,10 +275,18 @@ button {
   padding: 2px 5px;
   font-size: 9px;
 }
-
-.chevronicon {
-  font-size: 1.25rem;
+.header-section .icon-xmark {
+  margin-top: 0.75rem;
+}
+.header-section .icon-bars {
   margin-top: 2.25rem;
+  font-size: 1.25rem;
+  color: #111111;
+  padding-left: 1rem;
+}
+.header-section .chevronicon {
+  font-size: 1.25rem;
+  margin-top: 2.45rem;
 }
 
 .showcase {
@@ -344,7 +366,7 @@ button {
   font-size: 25px;
   font-weight: bolder;
   text-align: left;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }
 .product-grid .titleBestSeller {
   display: flex;
@@ -502,9 +524,11 @@ button {
   font-size: 16px;
 }
 .carouselroot .button-container {
+  text-decoration: none;
   width: 255px;
   height: 50px;
   margin-bottom: 80px;
+  color: #111111;
 }
 .carouselroot .button-container .custom-btn {
   height: 50px;
@@ -859,7 +883,7 @@ button {
   z-index: 9;
   position: relative;
   top: 0;
-  height: 33vh;
+  height: 25vh;
   width: 0px;
   background-color: #111111;
 }
@@ -953,11 +977,6 @@ main {
   transition: 0.5s;
 }
 
-.header {
-  height: 5rem;
-  padding-left: 1rem;
-}
-
 .sidebar {
   left: 0;
   padding: 1rem 0 0 0;
@@ -970,7 +989,7 @@ main {
 
 .space-toggle {
   z-index: 1;
-  padding-left: 285px;
+  padding-left: 265px;
 }
 
 .inputBox {

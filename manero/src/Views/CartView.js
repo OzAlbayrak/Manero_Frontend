@@ -45,7 +45,7 @@ export const CartView = () => {
                 <p className='mx-auto text-light-color'>Looks like you haven`t made your order yet</p>
               </div>
               <div className='mx-auto'>
-                <NavLink to='/'>
+                <NavLink to='/home'>
                   <button className='btn rounded-pill my-3 custom-btn'>
                     SHOP NOW
                   </button>

@@ -1,19 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SizeColor from "../individuals/SizeColor.js";
 import Button from "../individuals/Button";
 import Rating from "../individuals/Rating";
-import StarRating from "../individuals/RatingStars";
-import { NavLink } from "react-router-dom";
-
+import RatingStars from "../individuals/RatingStars";
+import { NavLink, useParams } from "react-router-dom";
 export const Description = () => {
+
+  const [product, setProduct] = useState({})
+  const { id } = useParams()
+
+  useEffect(() => {
+    fetch(`https://sijb-cms22-backend.azurewebsites.net/api/Products/${id}`)
+    .then(res => res.json())
+    .then(data => {
+      setProduct(data)
+    })
+  }, [])
+
+  
   return (
-    <div className="description-container">
-        <p>Knitted summer top</p>
-        <i class="fa-thin fa-heart"></i>      
-      <div>
-        <StarRating /> <span>(23)</span>
-        <p>$37.88</p>
-      </div>
+    <div className="container">
+
+      {id}
+
+        <div className="card-body">
+          <RatingStars />
+            <h5 className="card-title">{product.name}</h5>
+            <p className="card-price">{product.price}$</p>
+        </div>
+
+
       <div>
         <SizeColor />
       </div>
@@ -28,7 +44,7 @@ export const Description = () => {
         <Button btnType="submit" btnText={"+ ADD TO CART"} />
         <div style={{justifyContent: "end"}}>
                 <p>Reviews (23)</p>
-                <NavLink to="/AllReviewsView"> <p>View All <i className="fa-solid fa-chevron-right"></i></p></NavLink>
+                <NavLink to="/reviews"> <p>View All <i className="fa-solid fa-chevron-right"></i></p></NavLink>
         </div>
 
       <div className="d-flex justify-content-center align-items-center">
@@ -63,3 +79,13 @@ export const Description = () => {
 };
 
 export default Description;
+
+/*
+const imgURL = 
+fetch(imgURL)
+  .then(response => response.blob())
+  .then(blob => {
+    document.getElementById('my-img').src = URL.createObjectURL(blob)
+  })
+<img id="my-img" />
+*/

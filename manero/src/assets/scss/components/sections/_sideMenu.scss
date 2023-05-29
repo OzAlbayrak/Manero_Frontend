@@ -29,7 +29,7 @@
   z-index: 9;
   position: relative;
   top: 0;
-  height: 33vh;
+  height: 25vh;
   width: 0px; 
   background-color: $color-sideBar;
 }
@@ -124,10 +124,6 @@ main {
   transition: 0.5s;
 }
 
-.header {
-  height: 5rem;
-  padding-left: 1rem;
-}
 
 .sidebar {
   left: 0;
@@ -141,7 +137,7 @@ main {
 
 .space-toggle {
   z-index: 1;
-  padding-left: 285px;
+  padding-left: 265px;
 }
 
 .inputBox{
