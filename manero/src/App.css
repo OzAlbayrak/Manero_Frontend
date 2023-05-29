@@ -93,22 +93,25 @@ body {
 }
 
 .bottom-menu-container {
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.779);
+  padding-bottom: 20px;
   /* icon placements */
   /* icons */
 }
 .bottom-menu-container .menuLinkIcons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .bottom-menu-container .menu-link {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 1rem;
   font-size: 24px;
   color: #222529;
   text-decoration: none;
@@ -118,11 +121,21 @@ body {
   color: #dbe3f5;
   cursor: pointer;
 }
-.bottom-menu-container .active {
+.bottom-menu-container .active:hover {
+  color: #222529;
+}
+.bottom-menu-container .active div {
   background-color: #dbe3f5;
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  text-align: center;
+}
+.bottom-menu-container .active div i {
+  vertical-align: bottom;
+}
+.bottom-menu-container .active div:hover div {
+  background-color: #b3c4ea;
 }
 
 .star-rating {
@@ -168,6 +181,44 @@ button {
   justify-content: center;
   align-items: center;
   margin-bottom: 10rem;
+}
+
+.field {
+  height: 70px;
+  min-width: 380px;
+  height: 70px;
+  padding: 20px 20px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dbe3f5;
+  border-bottom: 1px solid #dbe3f5;
+}
+.field .fieldicon {
+  display: flex;
+  align-items: center;
+}
+.field .fieldicon p {
+  margin: 0 0px 0 30px;
+}
+
+.profile-pic-container {
+  width: 140px;
+  height: 140px;
+}
+.profile-pic-container img {
+  height: 100%;
+  width: auto;
+  border: solid #dbe3f5 6px;
+}
+.profile-pic-container button {
+  border: none;
+  background-color: #dbe3f5;
+  height: 40px;
+  width: 40px;
+}
+.profile-pic-container button:active {
+  background-color: #b3c4ea;
 }
 
 .header-section {
@@ -1449,6 +1500,15 @@ main {
   margin-bottom: 10px;
 }
 
+.order-delivery-p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.odp {
+  color: rgb(13, 147, 102);
+}
+
 .checkout-container {
   display: flex;
   justify-content: space-around;
@@ -1530,6 +1590,11 @@ main {
   font-size: 18px;
   font-family: "Mulish";
   font-weight: 600;
+}
+
+.promo-app-span {
+  margin-left: 4px;
+  color: rgb(31, 152, 112);
 }
 
 /*body {
@@ -1728,4 +1793,105 @@ h4 {
   margin-bottom: 40px;
   text-align: center;
   margin-left: 530px;
+}
+
+.profile-section {
+  border-top: 1px solid #dbe3f5;
+  border-bottom: 1px solid #dbe3f5;
+  margin-bottom: 60px;
+}
+.profile-section h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.profile-section .profile-email {
+  font-size: 0.875rem;
+}
+.profile-section .profile-link {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: 600px;
+  display: grid;
+  grid-template-columns: 35px auto 35px;
+  align-items: center;
+  border-top: 1px solid #dbe3f5;
+  text-decoration: none;
+  cursor: pointer;
+}
+.profile-section .profile-link:hover {
+  background-color: #dbe3f5;
+  transition: 0.2s;
+}
+.profile-section .profile-link:active {
+  background-color: #b3c4ea;
+}
+.profile-section .profile-link span {
+  font-weight: 600;
+}
+.profile-section .profile-link i {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.sign-out-overlay {
+  z-index: 2;
+  background-color: #111111;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.signout-outer-circle {
+  z-index: 3;
+  height: 21rem;
+  width: 21rem;
+  background: transparent;
+  border-radius: 50%;
+  border: solid white 3px;
+  overflow: hidden;
+}
+
+.signout-inner-circle {
+  z-index: 4;
+  height: 19rem;
+  width: 19rem;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+}
+.signout-inner-circle .signout-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 15rem;
+}
+.signout-inner-circle .button-box {
+  width: 140px;
+}
+.signout-inner-circle .cancel-btn {
+  font-size: 0.875rem;
+}
+
+.myaddress .media-border {
+  display: flex;
+  flex-direction: column;
+}
+.myaddress .media-border .field-box .field {
+  min-width: 360px;
+  max-width: none;
+}
+.myaddress .media-border .field-box .field .field-content .sub-text {
+  font-size: 14px;
+}
+.myaddress .media-border .new-address-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.myaddress .media-border .new-address-box p {
+  margin-top: 10px;
 }

@@ -22,18 +22,20 @@ export const AddressProvider = ({ children }) => {
 
   const getUserAddresses = useCallback(async () => {
     const token = getToken();
-    try {
-      const response = await getAddresses(token);
-      if (response.ok) {
-        const addressData = await response.json();
-        setAddresses(addressData);
-        console.log("addressdata:", addressData);
-      } else if (response.status === 404) {
-        const error = await response.text();
-        console.log(error);
+    if (token !== null) {
+      try {
+        const response = await getAddresses(token);
+        if (response.ok) {
+          const addressData = await response.json();
+          setAddresses(addressData);
+          console.log("addressdata:", addressData);
+        } else if (response.status === 404) {
+          const error = await response.text();
+          console.log(error);
+        }
+      } catch (error) {
+        console.log("error:", error);
       }
-    } catch (error) {
-      console.log("error:", error);
     }
   }, []);
 
@@ -45,6 +47,7 @@ export const AddressProvider = ({ children }) => {
     <AddressContext.Provider
       value={{
         addresses,
+        getUserAddresses,
       }}
     >
       {children}

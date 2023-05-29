@@ -1,0 +1,20 @@
+.profile-pic-container {
+	width: 140px;
+	height: 140px;
+
+	img {
+		height: 100%;
+		width: auto;
+		border: solid $color-theme 6px;
+	}
+	button {
+		border: none;
+		background-color: $color-theme;
+		height: 40px;
+		width: 40px;
+
+		&:active {
+			background-color: darken($color-theme, 10%);
+		}
+	}
+}

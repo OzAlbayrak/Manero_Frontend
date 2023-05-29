@@ -62,6 +62,7 @@ const SignUp = () => {
             const result = await logIn(res);
             const token = await result.text();
             sessionStorage.setItem("apiAccessToken", token);
+            sessionStorage.setItem("provider", "local");
 
             navigate("/Created");
           }
