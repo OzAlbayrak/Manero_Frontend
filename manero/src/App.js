@@ -25,6 +25,10 @@ import LeaveReviewView from "./Views/LeaveReviewView";
 import PaymentView from "./Views/PaymentView";
 import OrderCompletedView from "./Views/OrderCompletedView";
 import OrderFailedView from "./Views/OrderFailedView";
+import MyAddressView from "./Views/MyAddressView";
+import NewAddressView from "./Views/NewAddressView";
+import ProfileView from "./Views/ProfileView";
+import EditProfileView from "./Views/EditProfileView";
 import TestView from "./Views/TestView";
 
 function App() {
