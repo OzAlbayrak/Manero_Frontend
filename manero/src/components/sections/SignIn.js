@@ -58,7 +58,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className="container d-flex flex-column">
+    <div className="container d-flex flex-column p-0">
       <Header
         title={"Sign in"}
         hasSideIcon={true}
