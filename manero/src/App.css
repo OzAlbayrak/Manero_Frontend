@@ -65,6 +65,14 @@ body {
   color: #dbe3f5;
 }
 
+.keep-menu-down-outer {
+  height: 100%;
+  max-height: calc(100vh - 70px);
+}
+.keep-menu-down-outer .keep-menu-down-inner {
+  min-height: 100%;
+}
+
 .custom-btn {
   background-color: #111111;
   border: #111111 solid 2px;
@@ -93,11 +101,10 @@ body {
 }
 
 .bottom-menu-container {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.779);
   padding-bottom: 20px;
+  margin-top: auto;
   /* icon placements */
   /* icons */
 }
