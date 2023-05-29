@@ -68,9 +68,9 @@ const OrderView = () => {
                 </div>
               </div>
               <div className='order-btns'>
-                <button onClick={() => increaseTotItem(item)} className='btn btn-secondary'> + </button>
+                <button onClick={() => increaseTotItem(item)} className='btn btn-secondary order-info-btn' > + </button>
                 <div>{item.quantity}</div>
-                <button onClick={() => decreaseTotItem(item)} className='btn btn-secondary'> - </button>
+                <button onClick={() => decreaseTotItem(item)} className='btn btn-secondary order-info-btn'> - </button>
               </div>
             </div>
           </div>
