@@ -3,7 +3,7 @@ import Rating from '../individuals/Rating'
 
 export const AllReviews = () => {
   return (
-    <div>
+    <div className="container">
         <div className="d-flex justify-content-center align-items-center">
         <div className="row">
           <div className="col-10">

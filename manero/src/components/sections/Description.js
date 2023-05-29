@@ -19,7 +19,7 @@ export const Description = () => {
 
   
   return (
-    <div className="description-container">
+    <div className="container">
 
       {id}
 
