@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import AddressField from "../individuals/AddressField";
 import { NavLink } from "react-router-dom";
 import { useAddressContext } from "../../contexts/AddressContext";
 
 const MyAddress = () => {
-  const { addresses } = useAddressContext();
+  const { addresses, getUserAddresses } = useAddressContext();
+  useEffect(() => {
+    getUserAddresses();
+  }, []);
 
   const getTitleIcon = (title) => {
     switch (title.toLowerCase()) {

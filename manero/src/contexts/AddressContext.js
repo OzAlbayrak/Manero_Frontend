@@ -47,6 +47,7 @@ export const AddressProvider = ({ children }) => {
     <AddressContext.Provider
       value={{
         addresses,
+        getUserAddresses,
       }}
     >
       {children}

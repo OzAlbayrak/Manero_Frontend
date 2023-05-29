@@ -1,8 +1,8 @@
 //I den här filen kan vi lägga alla fetch-funktioner.
 //Vi kan använda variabler för url:en så blir det lätt att byta när vi lägger upp API:et
 
-const sqlUrl = "https://localhost:7235/api";
-//const sqlUrl = "https://sijb-cms22-backend.azurewebsites.net/api";
+//const sqlUrl = "https://localhost:7235/api";
+const sqlUrl = "https://sijb-cms22-backend.azurewebsites.net/api";
 
 export async function logIn(res) {
   try {
