@@ -1,9 +1,8 @@
 .showcase {
-
     background: $color-theme;
 
     .container {
-        height:600px;
+        height:500px;
         display: flex;
         margin-left: 15px;
         margin-bottom: 15px;
@@ -18,6 +17,10 @@
             .titles {
                 text-align: left;
                 color: $color-white;
+                
+                .redbullpicture{
+                    max-width: 10rem;
+                }
             }
         }
     }
@@ -52,6 +55,4 @@
             }
         }
     }
-
-
 }

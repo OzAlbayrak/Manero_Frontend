@@ -65,6 +65,14 @@ body {
   color: #dbe3f5;
 }
 
+.keep-menu-down-outer {
+  height: 100%;
+  max-height: calc(100vh - 70px);
+}
+.keep-menu-down-outer .keep-menu-down-inner {
+  min-height: 100%;
+}
+
 .custom-btn {
   background-color: #111111;
   border: #111111 solid 2px;
@@ -80,23 +88,37 @@ body {
   border: #111111 solid 4px;
 }
 
+.navlinkbutton {
+  text-decoration: none;
+  border: none;
+  height: 0px;
+}
+.navlinkbutton:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: #111111;
+  height: 10px;
+}
+
 .bottom-menu-container {
-  position: relative;
-  bottom: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.779);
+  padding-bottom: 20px;
+  margin-top: auto;
   /* icon placements */
   /* icons */
 }
 .bottom-menu-container .menuLinkIcons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .bottom-menu-container .menu-link {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 1rem;
   font-size: 24px;
   color: #222529;
   text-decoration: none;
@@ -106,11 +128,21 @@ body {
   color: #dbe3f5;
   cursor: pointer;
 }
-.bottom-menu-container .active {
+.bottom-menu-container .active:hover {
+  color: #222529;
+}
+.bottom-menu-container .active div {
   background-color: #dbe3f5;
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  text-align: center;
+}
+.bottom-menu-container .active div i {
+  vertical-align: bottom;
+}
+.bottom-menu-container .active div:hover div {
+  background-color: #b3c4ea;
 }
 
 .star-rating {
@@ -158,10 +190,48 @@ button {
   margin-bottom: 10rem;
 }
 
+.field {
+  height: 70px;
+  min-width: 380px;
+  height: 70px;
+  padding: 20px 20px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #dbe3f5;
+  border-bottom: 1px solid #dbe3f5;
+}
+.field .fieldicon {
+  display: flex;
+  align-items: center;
+}
+.field .fieldicon p {
+  margin: 0 0px 0 30px;
+}
+
+.profile-pic-container {
+  width: 140px;
+  height: 140px;
+}
+.profile-pic-container img {
+  height: 100%;
+  width: auto;
+  border: solid #dbe3f5 6px;
+}
+.profile-pic-container button {
+  border: none;
+  background-color: #dbe3f5;
+  height: 40px;
+  width: 40px;
+}
+.profile-pic-container button:active {
+  background-color: #b3c4ea;
+}
+
 .header-section {
   display: grid;
   grid-template-columns: 25px auto 25px;
-  margin-top: 10px;
+  margin-top: -10px;
   margin-bottom: 10px;
 }
 .header-section .page-heading {
@@ -196,6 +266,8 @@ button {
   position: relative;
   text-align: right;
   margin-right: 0px;
+  margin-top: 2.25rem;
+  font-size: 1.25rem;
 }
 .header-section .shopping-cart-icon .cart-icon-amount {
   background-color: red;
@@ -210,12 +282,25 @@ button {
   padding: 2px 5px;
   font-size: 9px;
 }
+.header-section .icon-xmark {
+  margin-top: 0.75rem;
+}
+.header-section .icon-bars {
+  margin-top: 2.25rem;
+  font-size: 1.25rem;
+  color: #111111;
+  padding-left: 1rem;
+}
+.header-section .chevronicon {
+  font-size: 1.25rem;
+  margin-top: 2.45rem;
+}
 
 .showcase {
   background: #dbe3f5;
 }
 .showcase .container {
-  height: 600px;
+  height: 500px;
   display: flex;
   margin-left: 15px;
   margin-bottom: 15px;
@@ -230,6 +315,9 @@ button {
 .showcase .container .content .titles {
   text-align: left;
   color: #ffffff;
+}
+.showcase .container .content .titles .redbullpicture {
+  max-width: 10rem;
 }
 .showcase .container2 {
   height: 300px;
@@ -260,8 +348,13 @@ button {
   text-decoration: none;
 }
 
+.product-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .product-grid .home-container {
-  max-width: 1110px;
+  min-width: 375px;
 }
 .product-grid .home-container .slide-container {
   display: flex;
@@ -280,7 +373,7 @@ button {
   font-size: 25px;
   font-weight: bolder;
   text-align: left;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }
 .product-grid .titleBestSeller {
   display: flex;
@@ -334,8 +427,24 @@ button {
   color: #dbe3f5;
   text-decoration: none;
 }
-.product-grid .card .card-img-container .card-menu .menu-link #card-heart:active {
+.product-grid .card .card-img-container .card-menu .heart {
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.product-grid .card .card-img-container .card-menu .heart:hover {
   color: red;
+}
+.product-grid .card .card-img-container .card-menu .heart-active {
+  border: none;
+  background: none;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 .product-grid .card .card-img-container .btn-theme {
   position: absolute;
@@ -422,9 +531,11 @@ button {
   font-size: 16px;
 }
 .carouselroot .button-container {
+  text-decoration: none;
   width: 255px;
   height: 50px;
   margin-bottom: 80px;
+  color: #111111;
 }
 .carouselroot .button-container .custom-btn {
   height: 50px;
@@ -779,7 +890,7 @@ button {
   z-index: 9;
   position: relative;
   top: 0;
-  height: 33vh;
+  height: 25vh;
   width: 0px;
   background-color: #111111;
 }
@@ -873,11 +984,6 @@ main {
   transition: 0.5s;
 }
 
-.header {
-  height: 5rem;
-  padding-left: 1rem;
-}
-
 .sidebar {
   left: 0;
   padding: 1rem 0 0 0;
@@ -890,7 +996,7 @@ main {
 
 .space-toggle {
   z-index: 1;
-  padding-left: 285px;
+  padding-left: 265px;
 }
 
 .inputBox {
@@ -981,6 +1087,9 @@ main {
 .wishlist-container .wishlist-btns #heart {
   color: red;
 }
+.wishlist-container .wishlist-btns #heart:hover {
+  color: black;
+}
 .wishlist-container .wishlist-btns #bag {
   color: white;
   background-color: black;
@@ -1002,9 +1111,46 @@ main {
   justify-content: center;
   align-items: center;
 }
+.bestproduct-grid .salesBtnContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.bestproduct-grid .salesBtnContainer .salesIcons {
+  color: #626262;
+  border: none;
+  background-color: #ffffff;
+}
+.bestproduct-grid .salesBtnContainer .dropdownbutton {
+  color: #626262;
+  border: none;
+  text-decoration: none;
+  background-color: #ffffff;
+}
+.bestproduct-grid .salesBtnContainer .dropdown-content {
+  display: none;
+  position: absolute;
+  padding-left: 0px;
+  list-style-type: none;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.bestproduct-grid .salesBtnContainer .dropdown:hover .dropdown-content {
+  display: block;
+}
+.bestproduct-grid .salesBtnContainer .dropdownitems {
+  display: inline;
+  border: none;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+.bestproduct-grid .salesBtnContainer .dropdownitems:hover {
+  display: block;
+}
 .bestproduct-grid .bestproductscontainer .bestproductsitem-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
 }
 .bestproduct-grid .title {
   font-size: 40px;
@@ -1020,7 +1166,7 @@ main {
   margin-right: 10px;
   text-align: center;
   cursor: pointer;
-  min-width: 29rem;
+  min-width: 2rem;
 }
 .bestproduct-grid .card .card-img-container {
   display: grid;
@@ -1074,58 +1220,6 @@ main {
 }
 .bestproduct-grid .card:hover .btn-theme {
   display: block !important;
-}
-
-.salesBtnContainer {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-.salesBtnContainer .salesIcons {
-  position: absolute;
-  transform: translateX(-28rem) translateY(2rem);
-  color: #626262;
-  border: none;
-  background-color: #ffffff;
-}
-.salesBtnContainer .filterIcon {
-  margin-right: -1rem;
-}
-.salesBtnContainer .sortingIcon {
-  margin-left: -1rem;
-}
-.salesBtnContainer .dropdownbutton {
-  position: relative;
-  transform: translateX(27rem) translateY(2rem);
-  color: #626262;
-  border: none;
-  text-decoration: none;
-  background-color: #ffffff;
-}
-.salesBtnContainer .dropdown {
-  position: relative;
-  display: inline-block;
-}
-.salesBtnContainer .dropdown-content {
-  display: none;
-  position: absolute;
-  padding-left: 0px;
-  list-style-type: none;
-  transform: translateX(27rem) translateY(2rem);
-  background-color: #ffffff;
-  z-index: 1;
-}
-.salesBtnContainer .dropdown:hover .dropdown-content {
-  display: block;
-}
-.salesBtnContainer .dropdownitems {
-  display: inline;
-  border: none;
-  background-color: #ffffff;
-  font-size: 14px;
-}
-.salesBtnContainer .dropdownitems:hover {
-  display: block;
 }
 
 .search-container {
@@ -1237,8 +1331,24 @@ main {
   color: #dbe3f5;
   text-decoration: none;
 }
-.filtred-products-container .filtred-products .card .card-img-container .card-menu .menu-link #card-heart:active {
+.filtred-products-container .filtred-products .card .card-img-container .card-menu .heart {
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.filtred-products-container .filtred-products .card .card-img-container .card-menu .heart:hover {
   color: red;
+}
+.filtred-products-container .filtred-products .card .card-img-container .card-menu .heart-active {
+  border: none;
+  background: none;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 .filtred-products-container .filtred-products .card .card-img-container .btn-theme {
   position: absolute;
@@ -1286,7 +1396,7 @@ main {
   grid-area: info;
   display: flex;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   flex-direction: column;
   justify-content: center;
   text-align: left;
@@ -1303,7 +1413,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2px;
+  padding: 1px;
 }
 
 .cart-btn-container {
@@ -1352,7 +1462,7 @@ main {
 .order-info {
   grid-area: info;
   display: flex;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 20px;
   flex-direction: column;
   justify-content: center;
@@ -1372,6 +1482,12 @@ main {
   justify-content: center;
   padding: 2px;
   align-items: center;
+}
+
+.order-info-btn {
+  border: none;
+  background-color: white;
+  color: black;
 }
 
 .order-total-price {
@@ -1395,6 +1511,15 @@ main {
   justify-content: space-between;
   margin-top: 30px;
   margin-bottom: 10px;
+}
+
+.order-delivery-p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.odp {
+  color: rgb(13, 147, 102);
 }
 
 .checkout-container {
@@ -1478,6 +1603,11 @@ main {
   font-size: 18px;
   font-family: "Mulish";
   font-weight: 600;
+}
+
+.promo-app-span {
+  margin-left: 4px;
+  color: rgb(31, 152, 112);
 }
 
 /*body {
@@ -1657,7 +1787,7 @@ h4 {
 }
 
 .order-completed-b {
-  margin-left: 380px;
+  margin-left: 450px;
   padding: 10px 180px;
   font-size: 14px;
   font-weight: 600;
@@ -1668,6 +1798,11 @@ h4 {
   margin-bottom: 20px;
 }
 
+.order-completed-p {
+  text-align: start;
+  margin-left: 55px;
+}
+
 .order-completed-nav {
   background: none;
   border: none;
@@ -1676,4 +1811,293 @@ h4 {
   margin-bottom: 40px;
   text-align: center;
   margin-left: 530px;
+}
+
+.profile-section {
+  border-top: 1px solid #dbe3f5;
+  border-bottom: 1px solid #dbe3f5;
+  margin-bottom: 60px;
+}
+.profile-section h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.profile-section .profile-email {
+  font-size: 0.875rem;
+}
+.profile-section .profile-link {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: 600px;
+  display: grid;
+  grid-template-columns: 35px auto 35px;
+  align-items: center;
+  border-top: 1px solid #dbe3f5;
+  text-decoration: none;
+  cursor: pointer;
+}
+.profile-section .profile-link:hover {
+  background-color: #dbe3f5;
+  transition: 0.2s;
+}
+.profile-section .profile-link:active {
+  background-color: #b3c4ea;
+}
+.profile-section .profile-link span {
+  font-weight: 600;
+}
+.profile-section .profile-link i {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.sign-out-overlay {
+  z-index: 2;
+  background-color: #111111;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.signout-outer-circle {
+  z-index: 3;
+  height: 21rem;
+  width: 21rem;
+  background: transparent;
+  border-radius: 50%;
+  border: solid white 3px;
+  overflow: hidden;
+}
+
+.signout-inner-circle {
+  z-index: 4;
+  height: 19rem;
+  width: 19rem;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+}
+.signout-inner-circle .signout-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 15rem;
+}
+.signout-inner-circle .button-box {
+  width: 140px;
+}
+.signout-inner-circle .cancel-btn {
+  font-size: 0.875rem;
+}
+
+.add-new-card .slide-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 70rem;
+  overflow-y: auto;
+}
+.add-new-card .slide-container .item-container {
+  display: flex;
+  overflow-y: hidden;
+  justify-content: center;
+  margin-left: 15px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.add-new-card .slide-container .item-container .card-title {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  color: white;
+  font-weight: 900;
+  font-size: 24px;
+}
+.add-new-card .slide-container .item-container .card-number {
+  position: absolute;
+  top: 65px;
+  left: 25px;
+  color: white;
+  font-size: 14px;
+}
+.add-new-card .slide-container .item-container .card-name {
+  position: absolute;
+  top: 120px;
+  left: 25px;
+  color: white;
+  font-size: 12px;
+}
+.add-new-card .slide-container .item-container .card-month {
+  position: absolute;
+  top: 120px;
+  left: 185px;
+  color: white;
+  font-size: 12px;
+}
+.add-new-card .slide-container .item-container .card-slash {
+  position: absolute;
+  top: 120px;
+  left: 208px;
+  color: white;
+  font-size: 12px;
+}
+.add-new-card .slide-container .item-container .card-year {
+  position: absolute;
+  top: 120px;
+  left: 214px;
+  color: white;
+  font-size: 12px;
+}
+.add-new-card .inputcontainer {
+  align-items: center;
+}
+.add-new-card .inputcontainer .expire-cvv {
+  display: flex;
+  position: relative;
+  margin: 10px;
+}
+.add-new-card .inputcontainer .expire-cvv .expire-label-month {
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 12px;
+  background-color: white;
+  padding: 5px;
+  left: 20px;
+  top: -11px;
+  padding-bottom: 0;
+}
+.add-new-card .inputcontainer .expire-cvv .expire-input-month {
+  margin-right: 10px;
+  width: 85px;
+  border: 2px solid #dbe3f5;
+  border: 2px solid #dbe3f5;
+  border-radius: 50px;
+  padding: 12px 20px;
+  z-index: -1;
+}
+.add-new-card .inputcontainer .expire-cvv .expire-label-year {
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 12px;
+  background-color: white;
+  padding: 5px;
+  left: 117px;
+  top: -11px;
+  padding-bottom: 0;
+}
+.add-new-card .inputcontainer .expire-cvv .expire-input-year {
+  margin-right: 10px;
+  width: 85px;
+  border: 2px solid #dbe3f5;
+  border: 2px solid #dbe3f5;
+  border-radius: 50px;
+  padding: 12px 20px;
+  z-index: -1;
+}
+.add-new-card .inputcontainer .expire-cvv .cvv-label {
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 12px;
+  background-color: white;
+  padding: 5px;
+  left: 210px;
+  top: -11px;
+  padding-bottom: 0;
+}
+.add-new-card .inputcontainer .expire-cvv .cvv-input {
+  width: 145px;
+  border: 2px solid #dbe3f5;
+  border: 2px solid #dbe3f5;
+  border-radius: 50px;
+  padding: 12px 20px;
+  z-index: -1;
+}
+
+.myaddress .media-border {
+  display: flex;
+  flex-direction: column;
+}
+.myaddress .media-border .field-box .field {
+  min-width: 360px;
+  max-width: none;
+}
+.myaddress .media-border .field-box .field .field-content .sub-text {
+  font-size: 14px;
+}
+.myaddress .media-border .new-address-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.myaddress .media-border .new-address-box p {
+  margin-top: 10px;
+}
+
+.payment-method .slide-container {
+  display: flex;
+  align-items: center;
+  max-width: 70rem;
+  overflow-y: auto;
+}
+.payment-method .slide-container .card-container {
+  display: flex;
+}
+.payment-method .slide-container .card-container .item-container {
+  display: flex;
+  overflow-y: hidden;
+  justify-content: center;
+  margin-left: 15px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.payment-method .slide-container .card-container .item-container .card-title {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  color: white;
+  font-weight: 900;
+  font-size: 24px;
+}
+.payment-method .slide-container .card-container .item-container .card-number {
+  position: absolute;
+  top: 65px;
+  left: 25px;
+  color: white;
+  font-size: 14px;
+}
+.payment-method .slide-container .card-container .item-container .card-name {
+  position: absolute;
+  top: 120px;
+  left: 25px;
+  color: white;
+  font-size: 12px;
+}
+.payment-method .slide-container .card-container .item-container .card-month {
+  position: absolute;
+  top: 120px;
+  left: 185px;
+  color: white;
+  font-size: 12px;
+}
+.payment-method .slide-container .card-container .item-container .card-slash {
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  color: white;
+  font-size: 12px;
+}
+.payment-method .slide-container .card-container .item-container .card-year {
+  position: absolute;
+  top: 120px;
+  left: 205px;
+  color: white;
+  font-size: 12px;
+}
+.payment-method .field {
+  padding: 0px;
+  min-width: 360px;
 }

@@ -62,6 +62,7 @@ const SignUp = () => {
             const result = await logIn(res);
             const token = await result.text();
             sessionStorage.setItem("apiAccessToken", token);
+            sessionStorage.setItem("provider", "local");
 
             navigate("/Created");
           }
@@ -84,7 +85,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="container d-flex flex-column">
+    <div className="container d-flex flex-column p-0">
       <Header
         title={"Sign up"}
         hasSideIcon={true}

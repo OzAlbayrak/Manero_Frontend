@@ -1,145 +1,117 @@
-import { createContext, useContext, useState, useEffect } from "react";
 import {
-  getProfile,
-  registerSocialAccount,
-  getSocialProfile,
-} from "../utilities/api";
+	createContext,
+	useContext,
+	useState,
+	useEffect,
+	useCallback,
+} from 'react';
+import {
+	getProfile,
+	registerSocialAccount,
+	getSocialProfile,
+} from '../utilities/api';
 
 const ProfileContext = createContext();
 
 export const useProfileContext = () => {
-  return useContext(ProfileContext);
+	return useContext(ProfileContext);
 };
 
 export const ProfileProvider = ({ children }) => {
-  const [profile, setProfile] = useState({});
-  const [addresses, setAddresses] = useState({});
+	const [profile, setProfile] = useState({});
 
-  const handleResponse = async (res) => {
-    let obj = {};
+	const getToken = () => {
+		return sessionStorage.getItem('apiAccessToken');
+	};
 
-    switch (res.provider) {
-      case "google":
-        {
-          obj = {
-            Id: res.data.sub,
-            Email: res.data.email,
-            Name: res.data.name,
-            ImageSrc: res.data.picture,
-            Provider: res.provider,
-          };
-        }
-        break;
-      case "facebook":
-        {
-          obj = {
-            Id: res.data.id,
-            Email: res.data.email,
-            Name: res.data.name,
-            ImageSrc: res.data.picture.data.url,
-            Provider: res.provider,
-          };
-        }
-        break;
-    }
+	const handleResponse = async (res) => {
+		let obj = {};
 
-    console.log("obj id: ", obj.Id, typeof obj.Id);
-    const response = await registerSocialAccount(obj);
-    if (response.ok) {
-      const data = await response.json();
-      const apiToken = await data.token;
-      sessionStorage.setItem("profile", JSON.stringify(res.data));
-      sessionStorage.setItem("provider", res.provider);
-      sessionStorage.setItem("apiAccessToken", apiToken);
-      console.log(res);
-    }
-  };
+		switch (res.provider) {
+			case 'google': {
+				obj = {
+					Id: res.data.sub,
+					Email: res.data.email,
+					Name: res.data.name,
+					ImageSrc: res.data.picture,
+					Provider: res.provider,
+				};
+				break;
+			}
+			case 'facebook': {
+				obj = {
+					Id: res.data.id,
+					Email: res.data.email,
+					Name: res.data.name,
+					ImageSrc: res.data.picture.data.url,
+					Provider: res.provider,
+				};
+				break;
+			}
+			default: {
+				console.log('Unknown provider:', res.provider);
+			}
+		}
 
-  const getSocialData = async (provider) => {
-    let token = "";
-
-    switch (provider) {
-      case "google":
-        token = sessionStorage.getItem("apiAccessToken");
-        break;
-      case "facebook":
-        token = sessionStorage.getItem("apiAccessToken");
-        break;
-    }
-    const response = await getSocialProfile(token);
-
-    console.log("token:", token);
-    if (response.ok) {
-      const profileData = await response.json();
-      setProfile(profileData);
-      console.log("profile:", profileData);
-    } else {
-      console.log("error!");
-    }
-  };
-
-  const getData = async () => {
-    let token = sessionStorage.getItem("apiAccessToken");
-
-    console.log(token);
-    const response = await getProfile(token);
-
-    if (response.ok) {
-      const profileData = await response.json();
-      setProfile(profileData);
-      console.log("profile:", profileData);
-    } else {
-      console.log("error!");
-    }
-  };
-  /*
-	const getAddresses = async () => {
-		const token = sessionStorage.getItem('accessToken');
-		const response = await fetch('https://localhost:7235/api/user/addresses', {
-			method: 'get',
-			headers: {
-				Authorization: `Bearer ${token}`,
-			},
-		});
+		console.log('obj id: ', obj.Id, typeof obj.Id);
+		const response = await registerSocialAccount(obj);
 		if (response.ok) {
-			const addressData = await response.json();
-			setAddresses(addressData);
-		} else {
-			console.log('error!');
+			const data = await response.json();
+			const apiToken = await data.token;
+			sessionStorage.setItem('profile', JSON.stringify(res.data));
+			sessionStorage.setItem('provider', res.provider);
+			sessionStorage.setItem('apiAccessToken', apiToken);
+			console.log(res);
 		}
 	};
-*/
 
-  const getProvider = () => {
-    if (
-      sessionStorage.getItem("provider") === "facebook" ||
-      sessionStorage.getItem("provider") === "google"
-    ) {
-      console.log("using socialmedia provider");
-      setProfile(JSON.parse(sessionStorage.getItem("profile")));
-      getSocialData(sessionStorage.getItem("provider"));
-    } else if (sessionStorage.getItem("provider") === "local") {
-      console.log("using local provider");
-      getData();
-    } else {
-      console.log("not logged in");
-    }
-  };
+	const fetchData = useCallback(async () => {
+		const provider = sessionStorage.getItem('provider');
+		const token = getToken();
 
-  useEffect(() => {
-    getProvider();
-  }, []);
+		try {
+			if (provider === 'facebook' || provider === 'google') {
+				console.log('using social media provider');
+				const response = await getSocialProfile(token);
+				if (response.ok) {
+					const profileData = await response.json();
+					setProfile(profileData);
+					console.log('profile:', profileData);
+				} else {
+					console.log('error!');
+				}
+			} else if (provider === 'local') {
+				console.log('using local provider');
+				const response = await getProfile(token);
+				if (response.ok) {
+					const profileData = await response.json();
+					setProfile(profileData);
+					console.log('profile:', profileData);
+				} else {
+					console.log('error!');
+				}
+			} else {
+				console.log('not logged in');
+			}
+		} catch (error) {
+			console.log('error:', error);
+		}
+	}, []);
 
-  return (
-    <ProfileContext.Provider
-      value={{
-        handleResponse,
-        getProvider,
-        profile,
-        addresses,
-      }}
-    >
-      {children}
-    </ProfileContext.Provider>
-  );
+	useEffect(() => {
+		fetchData();
+	}, [fetchData]);
+
+	return (
+		<ProfileContext.Provider
+			value={{
+				handleResponse,
+				profile,
+				setProfile,
+				fetchData,
+			}}
+		>
+			{children}
+		</ProfileContext.Provider>
+	);
 };

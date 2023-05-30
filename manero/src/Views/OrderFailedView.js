@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 const OrderFailed = () => {
     return (
         <div>
-            <img className='mx-auto d-flex order-completed-img' src={Image} />
+            <img className='mx-auto d-flex order-completed-img' src={Image} alt="..." />
 
             <h1>Sorry!your order has failed!</h1>
 

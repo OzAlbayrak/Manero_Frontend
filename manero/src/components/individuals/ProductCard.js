@@ -4,15 +4,23 @@ import { useWishlistContext } from '../../contexts/WishlistContext'
 import { NavLink } from 'react-router-dom'
 
 const ProductCard = ({ product }) => {
-  const {items, addItem, removeItem} = useShoppingCartContext()
-  const {addFavorite} = useWishlistContext()
+  const {addItem} = useShoppingCartContext()
+  const {addToWishlist, removeFromWishlist, isInWishlist} = useWishlistContext()
+
+  const handleWishlistClick = () => {
+    if (isInWishlist(product.id)) {
+      removeFromWishlist(product.id);
+    } else {
+      addToWishlist(product);
+    }
+  };
   
   return <div className="card">
         <div className="card-img-container">
-        <NavLink to="/DescriptionView"><img src={product.imageName} className="card-img-top" alt="..." /></NavLink>
+        <NavLink to="/description"><img src={product.imageName} className="card-img-top" alt="..." /></NavLink>
           <div className="card-menu d-xl-none">
-            <button className="menu-link" onClick={() => addFavorite(product)}>
-              <i id="card-heart" className="fa-regular fa-heart"></i>
+            <button className={isInWishlist(product.id) ? 'heart-active' : 'heart'} onClick={handleWishlistClick}>
+              <i className="fa-regular fa-heart"></i>
             </button>
             <button className="menu-link" onClick={() => addItem(product)}>
               <i className="fa-light fa-bag-shopping"></i>

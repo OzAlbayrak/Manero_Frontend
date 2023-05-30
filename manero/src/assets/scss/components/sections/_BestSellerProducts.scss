@@ -2,11 +2,52 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .salesBtnContainer{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;    
     
+        .salesIcons{
+            color: #626262;
+            border: none;
+            background-color: $color-white;
+        }
+        .dropdownbutton{
+            color: #626262;
+            border: none;
+            text-decoration: none;
+            background-color: $color-white;
+        }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            padding-left: 0px;
+            list-style-type: none;
+            background-color: $color-white;
+            z-index: 1;
+          }
+          
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+          
+        .dropdownitems{
+          display: inline;
+          border: none;
+          background-color: $color-white;
+          font-size: 14px;
+          &:hover {
+            display: block;
+        }
+    }
+}
+
     .bestproductscontainer {
         .bestproductsitem-container{
             display: grid;
             grid-template-columns: 1fr 1fr;
+            margin-bottom: 2rem;
         }
     }
 
@@ -25,7 +66,7 @@
         margin-right: 10px;
         text-align: center;
         cursor: pointer;
-        min-width: 29rem;
+        min-width: 2rem;
 
         .card-img-container {
             display: grid;
@@ -92,70 +133,4 @@
             }
         }
     }
-    
-    
-}
-
-.salesBtnContainer{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3rem;    
-
- 
-
-    .salesIcons{
-        position: absolute;
-        transform: translateX(-28rem) translateY(2rem);
-        color: #626262;
-        border: none;
-        background-color: $color-white;
-    }
-    //
-    .filterIcon{
-        margin-right: -1rem;
-        
-    }
-    .sortingIcon{
-        margin-left: -1rem;
-    }
-  //
-    .dropdownbutton{
-        position: relative;
-        transform: translateX(27rem) translateY(2rem);
-        color: #626262;
-        border: none;
-        text-decoration: none;
-        background-color: $color-white;
-    }
-
-      .dropdown {
-        position: relative;
-        display: inline-block;
-        
-      }
-      
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        padding-left: 0px;
-        list-style-type: none;
-        transform: translateX(27rem) translateY(2rem);
-        background-color: $color-white;
-        z-index: 1;
-      }
-      
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-      
-
-    .dropdownitems{
-      display: inline;
-      border: none;
-      background-color: $color-white;
-      font-size: 14px;
-      &:hover {
-        display: block;
-    }
-}
 }

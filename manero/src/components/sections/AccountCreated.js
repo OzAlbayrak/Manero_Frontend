@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Button from '../individuals/Button';
 import Image from '../../assets/images/Account.svg';
+import { Link } from 'react-router-dom';
 
 const AccountCreated = () => {
 	return (
@@ -19,9 +20,11 @@ const AccountCreated = () => {
 			<p className='mx-auto text-light-color'>
 				Your account had beed created successfully.
 			</p>
+			<Link to="/home" className='navlinkbutton'>
 			<div className='text-center mx-auto px-3 button-container'>
 				<Button btnText={'SHOP NOW'} btnType='button' />
 			</div>
+			</Link>
 		</div>
 	);
 };

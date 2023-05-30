@@ -7,7 +7,7 @@ const ResetPassword = () => {
 	return (
 		<>
 			<Header title={'Reset password'} hasSideIcon={true} isMenu={false} />
-			<main className='container'>
+			<main className='container p-0'>
 				<p className='text-light-color text-box mx-auto mb-5'>
 					Enter new password and confirm.
 				</p>

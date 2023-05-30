@@ -1,0 +1,135 @@
+.add-new-card{
+    .slide-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 70rem;
+        overflow-y: auto;
+
+        .item-container{
+            display: flex;
+            overflow-y: hidden;
+            justify-content: center;
+            margin-left: 15px;
+            margin-bottom: 25px;
+            position: relative;
+    
+            .card-title{
+                position: absolute;
+                top: 15px;
+                left: 25px;
+                color: white;
+                font-weight: 900;
+                font-size: 24px;
+            }
+    
+            .card-number{
+                position: absolute;
+                top: 65px;
+                left: 25px;
+                color: white;
+                font-size: 14px;
+            }
+    
+            .card-name{
+                position: absolute;
+                top: 120px;
+                left: 25px;
+                color: white;
+                font-size: 12px;
+            }
+    
+            .card-month{
+                position: absolute;
+                top: 120px;
+                left: 185px;
+                color: white;
+                font-size: 12px;
+            }
+            .card-slash{
+                position: absolute;
+                top: 120px;
+                left: 208px;
+                color: white;
+                font-size: 12px;
+            }
+            .card-year{
+                position: absolute;
+                top: 120px;
+                left: 214px;
+                color: white;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .inputcontainer{
+        align-items: center;
+        .expire-cvv{
+            display: flex;
+            position: relative;
+            margin: 10px;
+    
+            .expire-label-month{
+                text-transform: uppercase;
+                position: absolute;
+                font-size: 12px;
+                background-color: white;
+                padding: 5px;
+                left: 20px;
+                top: -11px;
+                padding-bottom: 0;
+            }
+    
+            .expire-input-month{
+                margin-right: 10px;
+                width: 85px;
+                border: 2px solid $color-theme;
+                border: 2px solid $color-theme;
+                border-radius: 50px;
+                padding: 12px 20px;
+                z-index: -1;
+            }
+
+            .expire-label-year{
+                text-transform: uppercase;
+                position: absolute;
+                font-size: 12px;
+                background-color: white;
+                padding: 5px;
+                left: 117px;
+                top: -11px;
+                padding-bottom: 0;
+            }
+    
+            .expire-input-year{
+                margin-right: 10px;
+                width: 85px;
+                border: 2px solid $color-theme;
+                border: 2px solid $color-theme;
+                border-radius: 50px;
+                padding: 12px 20px;
+                z-index: -1;
+            }
+            .cvv-label{
+                text-transform: uppercase;
+                position: absolute;
+                font-size: 12px;
+                background-color: white;
+                padding: 5px;
+                left: 210px;
+                top: -11px;
+                padding-bottom: 0;
+            }
+    
+            .cvv-input{
+                width: 145px;
+                border: 2px solid $color-theme;
+                border: 2px solid $color-theme;
+                border-radius: 50px;
+                padding: 12px 20px;
+                z-index: -1;
+            }
+        } 
+    }
+}

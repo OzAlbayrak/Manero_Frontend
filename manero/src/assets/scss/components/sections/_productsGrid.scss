@@ -1,12 +1,13 @@
 .product-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .home-container {
-        max-width: 1110px;
-        
+        min-width: 375px;
         .slide-container{
             display: flex;
             align-items: center;
             max-width: 70rem;
-
             overflow-y: auto;
         }
 
@@ -22,7 +23,7 @@
         font-size: 25px;
         font-weight: bolder;
         text-align: left;
-        margin-left: 1.5rem;
+        margin-left: 1rem;
         }
 
     .titleBestSeller{
@@ -33,8 +34,6 @@
         margin-top: 1.5rem;
         margin-bottom: 1rem;
     
-    
-
     
         .title2{
             text-decoration: none;
@@ -83,13 +82,29 @@
                         text-decoration: none;
                     }
 
-                    #card-heart{
-                        
-                        &:active{
-                            color: red;
-                        }
-                    }
+            
                 }
+            
+            .heart{
+                border: none;
+                background: none;
+                font-size: 16px;
+                color: black;
+                cursor: pointer;
+                transition: color 0.3s ease;
+            }
+            .heart:hover {
+                color: red;
+              }
+              
+              .heart-active {
+                border: none;
+                background: none;
+                font-size: 24px;
+                color: red;
+                cursor: pointer;
+                transition: color 0.3s ease;
+              }
             }
             .btn-theme {
                 position: absolute;

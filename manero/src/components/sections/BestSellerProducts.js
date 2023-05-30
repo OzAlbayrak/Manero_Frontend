@@ -12,20 +12,25 @@ const BestSellerProducts = () => {
     setProducts(data)
   }
 
-  useEffect(() => {
-    getProducts()
+  const sortProducts = () => {
+    if (sortBy === 'asc') {
+      const sorted = [...products].sort((a, b) => a.price - b.price);
+      setProducts(sorted);
+    } else if (sortBy === 'dsc') {
+      const sorted = [...products].sort((a, b) => b.price - a.price);
+      setProducts(sorted);
+    }
+  };
 
-    if (sortBy === 'asc'){
-      const sorted = [...products].sort((a, b) => a.price - b.price)
-      setProducts(sorted)
-    }
-    else if (sortBy === 'dsc') {
-      const sorted = [...products].sort((a, b) => b.price - a.price)
-      setProducts(sorted)
-    }
-    console.log(sortBy)
-  }, [sortBy, setSortBy, getProducts])
-  
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+  useEffect(() => {
+    sortProducts();
+  }, [sortBy]);
+
+  console.log(sortBy)
   
   
   return (
@@ -35,7 +40,7 @@ const BestSellerProducts = () => {
           <div className="salesBtnContainer">
             <button className="salesIcons"><i className="fa-light fa-sliders-up"></i> Filters</button>
             <div className="dropdown">
-              <button className="dropdownbutton" >Sorting by <i class="icon fa-light fa-angle-down"></i></button>       
+              <button className="dropdownbutton" >Sorting by <i className="icon fa-light fa-angle-down"></i></button>       
               <ul className="dropdown-content" >
                 <li>
                   <button onClick={() => setSortBy('dsc')} className="dropdownitems" >price (Highest)</button>
