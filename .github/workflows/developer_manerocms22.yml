@@ -54,4 +54,4 @@ jobs:
           app-name: 'manerocms22'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA27F450208C499DB4888B07E6607AFD }}
-          package: .
+          package: Manero_Frontend/manero
