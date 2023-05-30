@@ -7,7 +7,7 @@ const ProductsGrid = ({ title }) => {
 			<div className='home-container'>
 				<div className='title'>{title}</div>
 
-				<div className='row row-cols-1-sm-2'>
+				<div>
 					<ProductList />
 				</div>
 			</div>
