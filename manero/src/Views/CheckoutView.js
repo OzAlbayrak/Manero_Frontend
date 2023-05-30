@@ -170,11 +170,11 @@ const CheckoutView = () => {
 			<hr />
 
 			<form className='checkout-form' onSubmit={handleOnSubmit}>
-				<label>COMMENT</label>
+				<label className='checkout-label'>COMMENT</label>
 				<div>
 					<textarea
 						className='area'
-						rows='8'
+						rows='10'
 						colum='10'
 						value={comments}
 						onChange={(e) => setComments(e.target.value)}
@@ -184,7 +184,7 @@ const CheckoutView = () => {
 				<div className='mx-auto button-container'>
 					<NavLink>
 						<button
-							className='btn rounded-pill my-3 custom-btn'
+							className='checkout-btn rounded-pill my-3 custom-btn'
 							type='submit'
 							onClick={handleOnSubmit}
 						>

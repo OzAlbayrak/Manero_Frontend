@@ -22,7 +22,7 @@ const OrderCompletedView = () => {
             </div>
 
             <div className='order-completed-p'>
-                <NavLink to='/'>
+                <NavLink to='/Home'>
                     <button className='order-completed-nav'>CONTINUE SHOPPING</button>
                 </NavLink>
             </div>

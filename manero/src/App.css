@@ -1468,82 +1468,12 @@ main {
   color: rgb(13, 147, 102);
 }
 
-/*.cart-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "img img info info info btns";
-    margin-bottom: 5vh;
-}
-
-.cart.img {
-    grid-area: img;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 150px;
-}
-
-.cart-info {
-    grid-area: info;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    flex-direction: column;
-    align-items: left;
-    margin-left: 10px;
-}
-
-.cart-info-name {
-    margin-bottom: 20px;
-}
-
-.cart-btns {
-    grid-area: btns;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2px;
-    align-items: center;
-
-}
-
-
-.cart-btn-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 80px;
-}
-
-
-.menu-icons {
-    position: relative;
-    z-index: 2;
-}
-
-.cart-icon {
-    position: absolute;
-    right: 40px;
-    top: 40px;
-}
-
-.cart-total {
-    position: relative;
-    top: 4px;
-    right: 25px;
-    background-color: red;
-    color: white;
-    font-size: 8px;
-    padding: 3px;
-    border-radius: 50%;
-}*/
 .order-container {
   display: grid;
   grid-template-columns: 1fr 2fr 0.25fr;
   grid-template-areas: "img info btns";
-  margin: 20px;
+  margin-top: 20px;
+  margin: 10px;
   justify-content: center;
 }
 
@@ -1596,6 +1526,11 @@ main {
   display: flex;
   justify-content: center;
   margin-bottom: 80px;
+  margin-top: 40px;
+}
+
+.order-btn {
+  padding: 5px 50px;
 }
 
 .menu-icons {
@@ -1622,14 +1557,21 @@ main {
 .checkout-container {
   display: flex;
   justify-content: space-around;
+  margin: 5px;
 }
 
 .checkout-form {
   display: grid;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 10px;
-  margin-top: 2rem;
+  margin-top: 1rem;
+}
+
+.checkout-label {
+  text-align: left;
+  margin-left: 20px;
 }
 
 .area {
@@ -1640,11 +1582,11 @@ main {
 .shipping-address {
   display: flex;
   justify-content: space-between;
-  margin-left: 10px;
+  margin: 5px;
 }
 
 .checkout-info {
-  margin-left: 10px;
+  margin: 5px;
 }
 
 .checkout-info-order {
@@ -1659,7 +1601,12 @@ main {
 .button-container {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
   margin-bottom: 60px;
+}
+
+.checkout-btn {
+  padding: 10px 100px;
 }
 
 .menu-icons {
@@ -1699,6 +1646,7 @@ main {
   font-size: 18px;
   font-family: "Mulish";
   font-weight: 600;
+  margin: 5px;
 }
 
 .promo-app-span {
