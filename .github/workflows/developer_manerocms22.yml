@@ -23,6 +23,8 @@ jobs:
 
       - name: npm install, build, and test
         run: |
+          ls Manero_Frontend/manero
+          cd Manero_Frontend/manero
           npm install
           npm run build --if-present
           npm run test --if-present
