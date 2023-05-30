@@ -52,7 +52,7 @@ const BestSellerProducts = () => {
             </div>
           </div>
         </section>
-        <div className="row row-cols-1-sm-2">
+        <div >
           <div className='bestproductsitem-container'>
             {
               products.map(product => (<ProductCard key={product.id} product={product} />))

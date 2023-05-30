@@ -12,7 +12,7 @@ const BestSellersGrid = ({title}) => {
             </div>
 
 
-            <div className="row row-cols-1-sm-2">
+            <div>
                 <BestSellers />
             </div>
         </div>
