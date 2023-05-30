@@ -20,7 +20,7 @@ export const CartView = () => {
 	return (
 		<div className='cart-container d-flex flex-column vh-100'>
 			<div className='d-flex flex-direction-column '>
-				<Header title={'Cart'} hasSideIcon={true} isMenu={true} hasCart={true} />
+				<Header title={'Cart'} hasSideIcon={true} isMenu={false} hasCart={true} />
 			</div>
 			<div>
 				{items.length === 0 ? (

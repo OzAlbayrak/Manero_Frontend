@@ -1,7 +1,8 @@
 .checkout-container {
     display: flex;
     justify-content: space-around;
-    margin-left: 0;
+    margin: 5px;
+
 }
 
 
@@ -9,8 +10,15 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 10px;
-    margin-top: 2rem;
+    margin-top: 1rem;
+
+}
+
+.checkout-label {
+    text-align: left;
+    margin-left: 20px;
 
 }
 
@@ -22,12 +30,12 @@
 .shipping-address {
     display: flex;
     justify-content: space-between;
-    margin-left: 10px;
+    margin: 5px;
 
 }
 
 .checkout-info {
-    margin-left: 10px;
+    margin: 5px;
 }
 
 .checkout-info-order {
@@ -42,7 +50,12 @@
 .button-container {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
     margin-bottom: 60px;
+}
+
+.checkout-btn {
+    padding: 10px 100px;
 }
 
 
@@ -85,6 +98,7 @@
     font-size: 18px;
     font-family: 'Mulish';
     font-weight: 600;
+    margin: 5px;
 }
 
 .promo-app-span {

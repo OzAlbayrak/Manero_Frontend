@@ -1,8 +1,7 @@
 .showcase {
     background: $color-theme;
-
     .container {
-        height:500px;
+        height:450px;
         display: flex;
         margin-left: 15px;
         margin-bottom: 15px;
@@ -12,20 +11,20 @@
             display: flex;
             justify-content: left;
             align-items:flex-end;
-            margin-bottom: 30px;
+            margin-bottom: 1rem;
 
             .titles {
                 text-align: left;
                 color: $color-white;
                 
                 .redbullpicture{
-                    max-width: 10rem;
+                    max-width: 9rem;
                 }
             }
         }
     }
     .container2 {
-        height: 300px;
+        height: 250px;
         display: flex;
         justify-content: space-between;
 

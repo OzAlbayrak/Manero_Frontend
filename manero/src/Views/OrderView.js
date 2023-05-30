@@ -41,7 +41,7 @@ const OrderView = () => {
 	}, [items]);
 
 	return (
-		<div className='container d-flex flex-column vh-100'>
+		<div className='order-container d-flex flex-column vh-100 '>
 			<div className='d-flex'>
 				<Header
 					title={'Order'}
@@ -52,7 +52,7 @@ const OrderView = () => {
 			</div>
 			{items.map((item) => (
 				<div key={item.id}>
-					<div className='order-container'>
+					<div className='order-container '>
 						<img src={item.image} className='order-img' alt='...' />
 						<div className='order-info'>
 							<div className='order-info-name'>{item.name}</div>
@@ -100,7 +100,7 @@ const OrderView = () => {
 
 			<div className='mx-auto order-btn-container'>
 				<NavLink to='/Checkout'>
-					<button className='btn rounded-pill my-3 custom-btn'>
+					<button className='order-btn rounded-pill my-3 custom-btn'>
 						PROCEED TO CHECKOUT
 					</button>
 				</NavLink>

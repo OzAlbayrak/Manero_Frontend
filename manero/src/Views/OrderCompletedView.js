@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const OrderCompletedView = () => {
     return (
-        <div>
+        <div className='order-completed-container'>
             <img className='mx-auto d-flex order-completed-img' src={Image} alt="..." />
 
             <h1>Thank you for your order!</h1>
@@ -13,7 +13,7 @@ const OrderCompletedView = () => {
             <h4>Your order will be delivered on time.</h4>
             <h4 className='h4-under'>Thank you!</h4>
 
-            <div className=''>
+            <div>
                 <NavLink to='/Order'>
                     <button className='order-completed-b'>
                         VIEW ORDER
@@ -22,7 +22,7 @@ const OrderCompletedView = () => {
             </div>
 
             <div className='order-completed-p'>
-                <NavLink to='/'>
+                <NavLink to='/Home'>
                     <button className='order-completed-nav'>CONTINUE SHOPPING</button>
                 </NavLink>
             </div>

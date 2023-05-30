@@ -2,6 +2,11 @@
     display: grid;
     grid-template-columns: 1fr 2fr 0.25fr;
     grid-template-areas: "img info btns";
+    margin-top: 20px;
+    margin: 10px;
+    justify-content: center;
+
+
 }
 
 .order-img {
@@ -56,6 +61,11 @@
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
+    margin-top: 40px;
+}
+
+.order-btn {
+    padding: 5px 50px;
 }
 
 

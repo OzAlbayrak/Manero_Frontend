@@ -5,17 +5,17 @@ import { NavLink } from 'react-router-dom';
 
 const OrderFailed = () => {
     return (
-        <div>
+        <div className='order-completed-container'>
             <img className='mx-auto d-flex order-completed-img' src={Image} alt="..." />
 
-            <h1>Sorry!your order has failed!</h1>
+            <h1>Sorry! Your order has failed!</h1>
 
             <h4>Something went wrong. Please try again</h4>
-            <h4>to continue your order.</h4>
+            <h4 className='h4-under'>to continue your order.</h4>
 
-            <div className=''>
+            <div>
                 <NavLink to='/Order'>
-                    <button className='btn rounded-pill my-3 custom-btn order-completed-b'>
+                    <button className='order-completed-b'>
                         TRY AGAIN
                     </button>
                 </NavLink>
