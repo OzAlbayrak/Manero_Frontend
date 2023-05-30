@@ -23,6 +23,7 @@ jobs:
 
       - name: npm install, build, and test
         run: |
+          cd Manero_Frontend/manero
           npm install
           npm run build --if-present
           npm run test --if-present
@@ -54,4 +55,4 @@ jobs:
           app-name: 'manerocms22'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA27F450208C499DB4888B07E6607AFD }}
-          package: Manero_Frontend/manero
+          package: .
