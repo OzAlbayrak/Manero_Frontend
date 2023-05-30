@@ -29,12 +29,14 @@ export const Description = ({ match }) => {
 
   return (
     <div className="container">
+      <div className="descriptionpage">
 
         <div className="card-body">
         {product ? (
         <div>
-          <h2>{product.name}</h2>
-          <p>{product.description}</p>
+          <img src={product.imageName}  alt='...'/>
+          <p className="productname">{product.name}</p>
+          <p>${product.price}</p>
         </div>
           ) : (
             <p>Loading...</p>
@@ -45,21 +47,21 @@ export const Description = ({ match }) => {
       <div>
         <SizeColor />
       </div>
+      <br></br>
       <div>
-        Description
-        <p>
-          Här ska det stå en massa text om produkten. Vi har skor, väskor och en
-          massa kläder samt andra grejer man behöver. Köp denna vara den är
-          Fantastisk!!!!!
-        </p>
+      <h5>Description</h5>
+            
+      <p>{product.description}</p>
       </div>
+      
         <Button btnType="submit" btnText={"+ ADD TO CART"} onClick={() => addItem(product)}></Button> 
-        <div style={{justifyContent: "end"}}>
-                <p>Reviews (23)</p>
-                <NavLink to="/reviews"> <p>View All <i className="fa-solid fa-chevron-right"></i></p></NavLink>
+        <br/>
+        <div className="reviews-viewall">
+           <p className="productname">Reviews (23)</p>
+        <NavLink to="/reviews" className="viewAllLink">   <p>View all <i className="fa-solid fa-chevron-right"></i></p></NavLink>
         </div>
-
-      <div className="d-flex justify-content-center align-items-center">
+      </div>
+      <div className="d-grid justify-content-center align-items-center">
         <div className="row">
           <div className="col-10">
             <p>Anette Black</p>
@@ -71,9 +73,7 @@ export const Description = ({ match }) => {
             <Rating />
           </div>
         </div>
-      </div>
       <hr />
-      <div className="d-flex justify-content-center align-items-center">
         <div className="row">
           <div className="col-10">
             <p>Jenny Wilson</p>
@@ -87,6 +87,7 @@ export const Description = ({ match }) => {
         </div>
       </div>
     </div>
+    
   );
 };
 

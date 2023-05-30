@@ -43,7 +43,7 @@ function App() {
           <Route path="/Reset" element={<ResetedPassword />} />
           <Route path="/Created" element={<AccountCreated />} />
           <Route path="/Description/:productId" element={<DescriptionView />} />
-          <Route path="/AllReviewsView" element={<AllReviewsView />} />
+          <Route path="/reviews" element={<AllReviewsView />} />
           <Route path="/" element={<GetStartedHomeView />} />
           <Route
             path="/GetStartedWelcome"

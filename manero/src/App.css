@@ -1234,6 +1234,26 @@ main {
   display: block !important;
 }
 
+.descriptionpage {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-viewall {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviews-viewall .viewAllLink {
+  text-decoration: none;
+  color: #111111;
+}
+
+.productname {
+  font-weight: bold;
+}
+
 .search-container {
   border: none;
 }

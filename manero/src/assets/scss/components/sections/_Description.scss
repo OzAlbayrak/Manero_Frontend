@@ -1,0 +1,19 @@
+.descriptionpage{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+.reviews-viewall{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .viewAllLink{
+        text-decoration: none;
+        color: $color-blackish;
+    }
+}
+.productname{
+    font-weight: bold;
+}
