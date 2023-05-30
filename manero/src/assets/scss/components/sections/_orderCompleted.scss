@@ -1,13 +1,25 @@
+.order-completed-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+
 .order-completed-img {
     margin-top: 80px;
 }
 
 h1 {
+    font-size: 22px;
+    font-weight: 900;
     text-align: center;
     margin-top: 40px;
 }
 
 h4 {
+    font-size: 16px;
+    font-weight: 400;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -21,11 +33,10 @@ h4 {
 }
 
 .order-completed-b {
-    margin-left: 450px;
-    padding: 10px 180px;
+    padding: 10px 120px;
     font-size: 14px;
     font-weight: 600;
-    font-family: 'Mulish', sans-serif;
+
     border-radius: 40px;
     background-color: black;
     color: white;
@@ -34,16 +45,19 @@ h4 {
 }
 
 .order-completed-p {
-    text-align: start;
-    margin-left: 55px;
+
+    display: flex;
+    justify-content: center;
+
 }
 
 .order-completed-nav {
+    font-size: 14px;
+    font-weight: 600;
     background: none;
     border: none;
     color: black;
     cursor: pointer;
     margin-bottom: 40px;
-    text-align: center;
-    margin-left: 530px;
+
 }
