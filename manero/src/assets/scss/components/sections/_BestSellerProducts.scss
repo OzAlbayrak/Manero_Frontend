@@ -1,7 +1,10 @@
+
 .bestproduct-grid {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
     .salesBtnContainer{
         display: flex;
         justify-content: space-between;
@@ -36,7 +39,7 @@
           display: inline;
           border: none;
           background-color: $color-white;
-          font-size: 14px;
+          font-size: 12px;
           &:hover {
             display: block;
         }
@@ -49,8 +52,6 @@
             grid-template-columns: 1fr 1fr;
             margin-bottom: 2rem;
         }
-    }
-
     .title {
         font-size: 40px;
         font-weight: bolder;
@@ -98,12 +99,34 @@
                     }
                 }
             }
+            .heart{
+                border: none;
+                background: none;
+                font-size: 16px;
+                color: black;
+                cursor: pointer;
+                transition: color 0.3s ease;
+            }
+            .heart:hover {
+                color: red;
+              }
+              
+              .heart-active {
+                border: none;
+                background: none;
+                font-size: 24px;
+                color: red;
+                cursor: pointer;
+                transition: color 0.3s ease;
+              }
+            }
             .btn-theme {
                 position: absolute;
                 bottom: 0;
                 
                 
             }
+            
         }
 
         .card-body {
@@ -133,4 +156,5 @@
             }
         }
     }
+
 }

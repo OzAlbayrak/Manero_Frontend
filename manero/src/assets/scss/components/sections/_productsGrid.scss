@@ -2,7 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 375px;
     .home-container {
+        
         min-width: 375px;
         .slide-container{
             display: flex;
@@ -14,7 +16,7 @@
         .item-container{
             display: flex;
             overflow-y: hidden;
-            justify-content: center;
+            justify-content: start;
             margin-left: 15px;
             margin-bottom: 25px;
         }
@@ -51,7 +53,7 @@
         margin-right: 10px;
         text-align: center;
         cursor: pointer;
-        min-width: 23rem;
+        min-width: 15rem;
 
         .card-img-container {
             display: grid;
