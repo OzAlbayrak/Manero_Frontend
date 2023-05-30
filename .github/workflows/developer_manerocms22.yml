@@ -23,7 +23,8 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          cd OzAlbayrak/Manero_Frontend/manero
+          git clone https://github.com/OzAlbayrak/Manero_Frontend.git
+          cd Manero_Frontend/manero
           npm install
           npm run build --if-present
           npm run test --if-present
