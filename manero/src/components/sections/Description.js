@@ -54,7 +54,7 @@ export const Description = ({ match }) => {
       <p>{product.description}</p>
       </div>
       
-        <Button btnType="submit" btnText={"+ ADD TO CART"} onClick={() => addItem(product)}></Button> 
+        <Button btnType="submit" btnText={"+ ADD TO CART"} handleClick={() => addItem(product)}></Button> 
         <br/>
         <div className="reviews-viewall">
            <p className="productname">Reviews (23)</p>
