@@ -4,9 +4,11 @@ import Button from "../individuals/Button";
 import Rating from "../individuals/Rating";
 import RatingStars from "../individuals/RatingStars";
 import { NavLink, useParams } from "react-router-dom";
+import { useShoppingCartContext } from '../../contexts/ShoppingCartContext'
 export const Description = () => {
 
   const [product, setProduct] = useState({})
+  const {addItem} = useShoppingCartContext()
   const { id } = useParams()
 
   useEffect(() => {
@@ -41,7 +43,7 @@ export const Description = () => {
           Fantastisk!!!!!
         </p>
       </div>
-        <Button btnType="submit" btnText={"+ ADD TO CART"} />
+        <Button btnType="submit" btnText={"+ ADD TO CART"} onClick={() => addItem(product)}></Button> 
         <div style={{justifyContent: "end"}}>
                 <p>Reviews (23)</p>
                 <NavLink to="/reviews"> <p>View All <i className="fa-solid fa-chevron-right"></i></p></NavLink>
