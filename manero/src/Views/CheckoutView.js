@@ -81,15 +81,15 @@ const CheckoutView = () => {
 	};
 
 	/* const increaseTotItem = ((item) => {
-     setTotAmountOfItems(totAmountOfItems + 1);
-     setTotPrice(totPrice + item.price);
-     addItem(item);
+	 setTotAmountOfItems(totAmountOfItems + 1);
+	 setTotPrice(totPrice + item.price);
+	 addItem(item);
    })
  
    const decreaseTotItem = ((item) => {
-     setTotAmountOfItems(totAmountOfItems - 1);
-     setTotPrice(totPrice - item.price);
-     removeItem(item);
+	 setTotAmountOfItems(totAmountOfItems - 1);
+	 setTotPrice(totPrice - item.price);
+	 removeItem(item);
    })*/
 
 	useEffect(() => {
@@ -112,8 +112,7 @@ const CheckoutView = () => {
 	return (
 		<div className='d-flex flex-column vh-100'>
 			<div className='checkout-container m-1'>
-				<SideIcon />
-				<Header title={'Checkout'} isMenu={true}></Header>
+				<Header title={'Checkout'} hasSideIcon={true} isMenu={false} ></Header>
 			</div>
 
 			<div className='checkout-info'>
@@ -203,22 +202,22 @@ const CheckoutView = () => {
 export default CheckoutView;
 
 /* <p className='discount'>Discount
-            <div>
-              {promoCodes}
-            </div>
-          </p>
-          {
-            totPrice >= 100
-              ?
-              <p className='delivery'>Delivery
-                <div>
-                  Free
-                </div>
-              </p>
-              :
-              <p className='delivery'>Delivery
-                <div>
-                  $49
-                </div>
-              </p>
-          }*/
+			<div>
+			  {promoCodes}
+			</div>
+		  </p>
+		  {
+			totPrice >= 100
+			  ?
+			  <p className='delivery'>Delivery
+				<div>
+				  Free
+				</div>
+			  </p>
+			  :
+			  <p className='delivery'>Delivery
+				<div>
+				  $49
+				</div>
+			  </p>
+		  }*/

@@ -18,90 +18,88 @@ const PromoCodesVoucher = () => {
     setUsedLink(true);
   };
 
-  const copyToClipboard = async (promoCopy, promoId) => {
+  const copyToClipboard = async (promoId) => {
     try {
-      await navigator.clipboard.writeText(promoCopy);
-      setCopiedText((prevState) => ({
-        ...prevState,
-        [promoId]: true,
-      }));
-      setTimeout(() => {
+      const promo = promocodes.find((promo) => promo.id === promoId);
+      if (promo) {
+        await navigator.clipboard.writeText(promo.name);
         setCopiedText((prevState) => ({
           ...prevState,
-          [promoId]: false,
+          [promoId]: true,
         }));
-      }, 1200);
+        setTimeout(() => {
+          setCopiedText((prevState) => ({
+            ...prevState,
+            [promoId]: false,
+          }));
+        }, 1200);
+      }
     } catch (error) {
       console.error("Error copying promo code", error);
     }
   };
 
-  useEffect(() => {
-    fetchPromoCodes();
-  }, []);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const fetchPromoCodes = async () => {
-    try {
-      const response = await fetch("https://sijb-cms22-backend.azurewebsites.net/api/promoCode");
-      if (response.ok) {
-        const data = await response.json();
-        console.log(data); // Felsökning: Skriv ut datan i konsolen
-        const promoCodeNames = data.value.map((code) => code.name);
-        setPromocodes(promoCodeNames);
-      } else {
-        console.log("Failed to fetch");
-      }
-    } catch (error) {
-      console.log("Error promocodes", error);
-    }
-  };
+  useEffect(() => {
+    fetch("https://sijb-cms22-backend.azurewebsites.net/api/promoCode")
+      .then((response) => {
+        if (!response.ok) {
+          throw Error("could not fetch the data for that resource");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setData(data);
+        setPromocodes(data); // Uppdatera promokoderna med API-data
+        setLoading(false);
+        setError(null);
+        console.log(data);
+      })
+      .catch((err) => {
+        setLoading(false);
+        setError(err.message);
+      });
+  }, []);
 
   return (
     <div className='container d-flex flex-column'>
       <Header
-				title={'My promocodes'}
-				hasSideIcon={true}
-				isMenu={false}
-				hasCart={false}
-			></Header>
+        title={'My promocodes'}
+        hasSideIcon={true}
+        isMenu={false}
+        hasCart={false}
+      ></Header>
       <div className="voucher-link">
         <a className={ currentLink ? "promo-current-link active" : "promo-current-link" } href="" onClick={handleCurrentClick}>Current</a>
         <a className={usedLink ? "promo-used-link active" : "promo-used-link"} href="/" onClick={handleUsedClick}>Used</a>
       </div>
       <hr />
-      <div className="containerpro">
-        <img src={EmptyImg} alt="EmptyImg" />
-        <div className="promo-company-info">
-          <p className="promo-company-name">Acme Co.</p>
-          <h3 className="promored" style={promoCodeColor(50)}>50% off</h3>
-          <p className="promo-validation">Valid until June 30, 2024</p>
-        </div>
-        <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard(promocodes[0], "promo1")}></i>
+{loading ? (
+  <p>Loading...</p>
+) : error ? (
+  <p>Error: {error}</p>
+) : (
+  promocodes.map((promo) => (
+    <div key={promo.id} className="containerpro">
+      <img src={EmptyImg} alt="empty" />
+      <div className="promo-company-info">
+        
+        <p className="promo-company-name">{promo.name}</p>
+        <h3 className="promored" style={promoCodeColor(promo.discount * 100)}>
+          {promo.discount * 100}% off
+        </h3>
+        <p className="promo-validation">Valid to {new Date(promo.expiryDate).toISOString().split('T')[0]}</p>
+        {copiedText[promo.id] && <span className="copied-message">Copied</span>}
       </div>
-      {copiedText["promo1"] && <span className="copied-message">Copied</span>}
+      <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard(promo.id)}></i>
       <hr />
-      <div className="containerpro">
-        <img src={EmptyImg} alt="empty" />
-        <div className="promo-company-info">
-          <p className="promo-company-name">Abstergo Ltd.</p>
-          <h3 className="promoyellow" style={promoCodeColor(30)}>30% off</h3>
-          <p className="promo-validation">Valid until August 30, 2023</p>
-        </div>
-        <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard(promocodes[1], "promo2")}></i>
-      </div>
-      {copiedText["promo2"] && <span className="copied-message">Copied</span>}
-      <hr />
-      <div className="containerpro">
-        <img src={EmptyImg} alt="empty" />
-        <div className="promo-company-info">
-          <p className="promo-company-name">Barone LLC.</p>
-          <h3 className="promoyellow" style={promoCodeColor(15)}>15% off</h3>
-          <p className="promo-validation">Valid until December 31, 2023</p>
-        </div>
-        <i className="fa-light fa-copy promo-copy-btn" onClick={() => copyToClipboard(promocodes[2], "promo3")}></i>
-      </div>
-      {copiedText["promo3"] && <span className="copied-message">Copied</span>}
-      <hr />
+    </div>
+  ))
+)}
+
     </div>
   );
 };
