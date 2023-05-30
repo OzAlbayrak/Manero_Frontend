@@ -8,7 +8,11 @@ const ProfileView = () => {
 	const [signOutOverlay, setSignOutOverlay] = useState(false);
 
 	return (
-		<div className=' d-flex flex-column  vh-100'>
+		<div
+			className={`d-flex flex-column  vh-100 ${
+				signOutOverlay ? 'overflow-hidden' : ''
+			}`}
+		>
 			{signOutOverlay && (
 				<SignOut
 					setSignOutOverlay={setSignOutOverlay}

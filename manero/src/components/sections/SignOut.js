@@ -3,16 +3,18 @@ import Button from '../individuals/Button';
 import { useProfileContext } from '../../contexts/ProfileContext';
 import { useNavigate } from 'react-router-dom';
 import { useAddressContext } from '../../contexts/AddressContext';
+import { useCreditCardContext } from '../../contexts/CreditCardContext';
 
 const SignOut = ({ signOutOverlay, setSignOutOverlay }) => {
 	const { setProfile } = useProfileContext();
 	const { setAddresses } = useAddressContext();
+	const { setCreditCards } = useCreditCardContext();
 	const navigate = useNavigate();
 	const signOut = () => {
 		sessionStorage.clear();
 		setProfile({});
 		setAddresses({});
-		//Kanske även creditcard och promocode
+		setCreditCards({});
 		navigate('/home');
 		console.log('signed out');
 	};
