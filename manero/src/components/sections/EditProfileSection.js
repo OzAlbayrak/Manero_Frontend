@@ -18,6 +18,12 @@ const EditProfileSection = () => {
 	const [success, setSuccess] = useState();
 	const navigate = useNavigate();
 
+	let location = '';
+
+	if (addresses.length > 0) {
+		location = addresses[0].city;
+	}
+
 	const validateEmail = (res) => {
 		if (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(res.email)) {
 			return true;
@@ -88,7 +94,7 @@ const EditProfileSection = () => {
 					name={'location'}
 					nameid={'location'}
 					labelName={'location'}
-					value={addresses[0].city}
+					value={location}
 					disabled={true}
 				/>
 				<div className='text-center mx-auto px-3'>
