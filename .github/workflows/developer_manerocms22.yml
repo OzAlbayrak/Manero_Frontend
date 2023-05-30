@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'manerocms22'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_77C8D1DABEE0469B9417D0F94C557411 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA27F450208C499DB4888B07E6607AFD }}
           package: .
