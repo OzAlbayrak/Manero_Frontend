@@ -5,30 +5,40 @@ import Rating from "../individuals/Rating";
 import RatingStars from "../individuals/RatingStars";
 import { NavLink, useParams } from "react-router-dom";
 import { useShoppingCartContext } from '../../contexts/ShoppingCartContext'
-export const Description = () => {
+
+
+export const Description = ({ match }) => {
 
   const [product, setProduct] = useState({})
   const {addItem} = useShoppingCartContext()
-  const { id } = useParams()
+  const { productId } = useParams()
 
   useEffect(() => {
-    fetch(`https://sijb-cms22-backend.azurewebsites.net/api/Products/${id}`)
-    .then(res => res.json())
-    .then(data => {
-      setProduct(data)
-    })
-  }, [])
+    const fetchProduct = async () => {
+      try {
+        const response = await fetch(`https://sijb-cms22-backend.azurewebsites.net/api/Products/${productId}`);
+        const data = await response.json();
+        setProduct(data);
+      } 
+      catch (error) {
+      }
+    };
+    fetchProduct();
+  }, [productId]);
 
-  
+
   return (
     <div className="container">
 
-      {id}
-
         <div className="card-body">
-          <RatingStars />
-            <h5 className="card-title">{product.name}</h5>
-            <p className="card-price">{product.price}$</p>
+        {product ? (
+        <div>
+          <h2>{product.name}</h2>
+          <p>{product.description}</p>
+        </div>
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
 
 
