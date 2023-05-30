@@ -15,7 +15,7 @@ const WishListView = () => {
 	};
 
 	return (
-		<div className='d-flex flex-column overflow-hidden vh-100 m-0 p-0'>
+		<div className='d-flex flex-column vh-100 m-0 p-0'>
 			<Header
 				title={'Wishlist'}
 				hasSideIcon={true}
