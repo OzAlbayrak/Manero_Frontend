@@ -54,8 +54,6 @@ const SignUp = () => {
     if (validateEmail(res) && validatePassword(res)) {
       const result = await register(res);
 
-      console.log("res: ", result);
-
       switch (result.status) {
         case 201:
           {
