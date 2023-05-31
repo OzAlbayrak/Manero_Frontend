@@ -44,7 +44,7 @@ function App() {
           <Route path="/Created" element={<AccountCreated />} />
           <Route path="/Description/:productId" element={<DescriptionView />} />
           <Route path="/reviews" element={<AllReviewsView />} />
-          <Route path="/GetStarted" element={<GetStartedHomeView />} />
+          <Route path="/home" element={<GetStartedHomeView />} />
           <Route
             path="/GetStartedWelcome"
             element={<GetStartedWelcomeView />}
