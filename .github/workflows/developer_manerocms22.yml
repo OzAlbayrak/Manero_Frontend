@@ -41,6 +41,8 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    env:
+        ci: "false"
 
     steps:
       - name: Download artifact from build job
@@ -56,5 +58,3 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA27F450208C499DB4888B07E6607AFD }}
           package: .
-env:
-  CI: 'false'
