@@ -1369,6 +1369,7 @@ main {
 }
 .genders-container .gender-buttons .gender-button {
   border: none;
+  color: black;
   margin-left: 2.5vh;
   margin-right: 2.5vh;
 }
@@ -1376,6 +1377,8 @@ main {
   text-decoration: none;
   background-color: #dbe3f5;
   border-radius: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
   cursor: pointer;
 }
 

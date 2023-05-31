@@ -58,7 +58,7 @@ const WishListView = () => {
 										className='menu-link-product'
 										onClick={() => addItem(product)}
 									>
-										<i class="fa-thin fa-bag-shopping"></i>
+										<i className='fa-light fa-shopping-bag '></i>
 									</button>
 								</div>
 							</div>

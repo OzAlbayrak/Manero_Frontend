@@ -34,6 +34,7 @@
 
         .gender-button{
             border: none;
+            color: black;
             margin-left: 2.5vh;
             margin-right: 2.5vh;
         }
@@ -41,6 +42,8 @@
             text-decoration: none;
             background-color: $color-theme;
             border-radius: 25px;
+            padding-left: 15px;
+            padding-right: 15px;
             cursor: pointer;
         }
     }
