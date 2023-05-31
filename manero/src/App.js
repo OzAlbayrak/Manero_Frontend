@@ -38,13 +38,13 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/home" element={<HomeView />} />
+          <Route path="/" element={<HomeView />} />
           <Route path="/bestSellers" element={<BestSellerView />} />
           <Route path="/Reset" element={<ResetedPassword />} />
           <Route path="/Created" element={<AccountCreated />} />
           <Route path="/Description/:productId" element={<DescriptionView />} />
           <Route path="/reviews" element={<AllReviewsView />} />
-          <Route path="/" element={<GetStartedHomeView />} />
+          <Route path="/GetStarted" element={<GetStartedHomeView />} />
           <Route
             path="/GetStartedWelcome"
             element={<GetStartedWelcomeView />}
