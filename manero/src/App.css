@@ -214,11 +214,49 @@ button {
   margin-left: 10px;
 }
 
-.star-rating {
+.star-rating-review {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
+  font-size: 36px;
+}
+
+.review-input-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-text-center-label {
+  width: 375px;
+  position: relative;
+  display: flex;
+}
+
+.review-label {
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 12px;
+  background-color: white;
+  padding: 5px;
+  left: 40px;
+  top: -2px;
+  padding-bottom: 0;
+}
+
+.review-baseinput {
+  margin: 10px;
+  min-width: 335px;
+  border: 2px solid #dbe3f5;
+  border-radius: 50px;
+  padding: 12px 20px;
+  z-index: -1;
+}
+
+.color-grey {
+  color: #dbe3f5;
 }
 
 .submit-button-wrapper {
