@@ -23,7 +23,7 @@ const ProductCard = ({ product }) => {
               <i className="fa-regular fa-heart"></i>
             </button>
             <button className="menu-link-product" onClick={() => addItem(product)}>
-              <i className="fa-light fa-bag-shopping"></i>
+            <i class="fa-thin fa-bag-shopping"></i>
             </button>
           </div>
         </div>
