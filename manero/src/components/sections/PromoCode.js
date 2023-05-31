@@ -3,6 +3,7 @@ import Promocodes from "../../assets/images/Promocodes.svg";
 import Rectangle from "../../assets/images/Rectangle.svg";
 import InputField from "../individuals/InputField";
 import Button from "../individuals/Button";
+import { useNavigate } from 'react-router-dom';
 import Header from "./Header";
 import { usePromoCodeContext } from "../../contexts/PromoCodeContext";
 
@@ -15,6 +16,8 @@ const PromoCode = () => {
     setVoucherCode(event.target.value);
   };
 
+  const navigate = useNavigate();
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -25,13 +28,12 @@ const PromoCode = () => {
       console.log("API-svar:", data);
 
       // Kontrollera om värdekoden finns i listan
-      const voucherExists = data.value.some(
-        (item) => item.name === voucherCode
-      );
+      const voucherExists = data.some((item) => item.name === voucherCode);
 
       if (voucherExists) {
         setValidationResult({ valid: true });
-        addPromoCode(voucherCode)
+        addPromoCode(voucherCode);
+        navigate('/intern-sida');
       } else {
         setValidationResult({ valid: false });
       }
@@ -73,8 +75,8 @@ const PromoCode = () => {
         <h2 className="promo-h2">yet!</h2>
       </div>
       <div className="promo-input">
-      <div className="container d-flex flex-column">
-      {validationResult && (
+        <div className="container d-flex flex-column">
+          {validationResult && (
             <div className="promo-validation">
               {validationResult.valid ? (
                 <p className="promo-valid">Valid</p>

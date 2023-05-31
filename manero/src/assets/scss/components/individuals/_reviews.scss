@@ -12,3 +12,77 @@
     align-items: center;
     margin-bottom: 10rem;
 }
+.Review-Container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.revpicture{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.revText{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 1rem;
+
+}
+.revText-small{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.star-rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.review-input {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	.text-center-review-input {
+		width: 375px;
+		position: relative;
+		.baselabel-review-input {
+			text-transform: uppercase;
+			position: absolute;
+			font-size: 12px;
+			background-color: white;
+			padding: 5px;
+			left: 40px;
+			top: -2px;
+			padding-bottom: 0;
+		}
+		.review-input-base {
+			margin: 10px;
+			min-width: 335px;
+			border: 2px solid $color-theme;
+			border: 2px solid $color-theme;
+			border-radius: 50px;
+			padding: 12px 20px;
+			z-index: -1;
+		}
+	}
+}
+
+.submit-button-wrapper {
+    width: 200px;
+    height: 50px;
+  }
+  
+  .submit-button-wrapper button {
+    font-size: 16px;
+  }
+  

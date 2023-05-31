@@ -65,14 +65,6 @@ body {
   color: #dbe3f5;
 }
 
-.keep-menu-down-outer {
-  height: 100%;
-  max-height: calc(100vh - 70px);
-}
-.keep-menu-down-outer .keep-menu-down-inner {
-  min-height: 100%;
-}
-
 .custom-btn {
   background-color: #111111;
   border: #111111 solid 2px;
@@ -153,7 +145,7 @@ body {
 
 .star-rating span {
   display: inline-block;
-  font-size: 25px;
+  font-size: 40px;
   cursor: pointer;
 }
 
@@ -188,6 +180,54 @@ button {
   justify-content: center;
   align-items: center;
   margin-bottom: 10rem;
+}
+
+.Review-Container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.revpicture {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.revText {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 1rem;
+}
+
+.revText-small {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.submit-button-wrapper {
+  width: 200px;
+  height: 50px;
+}
+
+.submit-button-wrapper button {
+  font-size: 16px;
 }
 
 .field {
@@ -1655,93 +1695,6 @@ main {
   height: 22px;
   margin-right: 10px;
   cursor: pointer;
-}
-
-.Review-Container {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-
-.revpicture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -4rem;
-  margin-bottom: -1rem;
-}
-
-.revText {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-top: 1rem;
-}
-
-.revText-small {
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.star-rating {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-
-.review-inputBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.review-inputBox input {
-  height: 111px;
-  width: 335px;
-  border: 2px solid #DBE3F5;
-  border-radius: 25px;
-  outline: none;
-  color: #222529;
-  font-size: 18px;
-  padding: 0 12px 60px;
-  display: inline-block;
-}
-
-.review-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.review-btn .review-btn-submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 335px;
-  border-radius: 25px;
-  background-color: #111111;
-  border: #111111 solid 2px;
-  color: white;
-  margin-bottom: 1rem;
-}
-.review-btn .review-btn-submit:hover {
-  border: #222529 solid 2px;
-  background-color: transparent;
-  color: #222529;
-}
-.review-btn .review-btn-submit:active {
-  border: #111111 solid 3px;
 }
 
 .payment-container {

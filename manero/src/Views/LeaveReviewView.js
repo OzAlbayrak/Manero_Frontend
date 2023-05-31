@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/sections/Header';
-import Reviews from '../components/individuals/Reviews';
+import Reviews from '../components/sections/Reviews';
 
 export const LeaveReviewView = () => {
   return (

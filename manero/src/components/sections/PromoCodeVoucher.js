@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from './Header';
 import EmptyImg from "../../assets/images/empty-img.svg";
+import { useNavigate } from 'react-router-dom';
+
 
 const PromoCodesVoucher = () => {
   const [currentLink, setCurrentLink] = useState("");
@@ -18,6 +20,8 @@ const PromoCodesVoucher = () => {
     setUsedLink(true);
   };
 
+  const navigate = useNavigate();
+  
   const copyToClipboard = async (promoId) => {
     try {
       const promo = promocodes.find((promo) => promo.id === promoId);
@@ -32,6 +36,7 @@ const PromoCodesVoucher = () => {
             ...prevState,
             [promoId]: false,
           }));
+          navigate('/intern-sida');
         }, 1200);
       }
     } catch (error) {
@@ -86,7 +91,6 @@ const PromoCodesVoucher = () => {
     <div key={promo.id} className="containerpro">
       <img src={EmptyImg} alt="empty" />
       <div className="promo-company-info">
-        
         <p className="promo-company-name">{promo.name}</p>
         <h3 className="promored" style={promoCodeColor(promo.discount * 100)}>
           {promo.discount * 100}% off
