@@ -81,15 +81,15 @@ const CheckoutView = () => {
 	};
 
 	/* const increaseTotItem = ((item) => {
-     setTotAmountOfItems(totAmountOfItems + 1);
-     setTotPrice(totPrice + item.price);
-     addItem(item);
+	 setTotAmountOfItems(totAmountOfItems + 1);
+	 setTotPrice(totPrice + item.price);
+	 addItem(item);
    })
  
    const decreaseTotItem = ((item) => {
-     setTotAmountOfItems(totAmountOfItems - 1);
-     setTotPrice(totPrice - item.price);
-     removeItem(item);
+	 setTotAmountOfItems(totAmountOfItems - 1);
+	 setTotPrice(totPrice - item.price);
+	 removeItem(item);
    })*/
 
 	useEffect(() => {
@@ -112,8 +112,7 @@ const CheckoutView = () => {
 	return (
 		<div className='d-flex flex-column vh-100'>
 			<div className='checkout-container m-1'>
-				<SideIcon />
-				<Header title={'Checkout'} isMenu={true}></Header>
+				<Header title={'Checkout'} hasSideIcon={true} isMenu={false} ></Header>
 			</div>
 
 			<div className='checkout-info'>
@@ -171,11 +170,11 @@ const CheckoutView = () => {
 			<hr />
 
 			<form className='checkout-form' onSubmit={handleOnSubmit}>
-				<label>COMMENT</label>
+				<label className='checkout-label'>COMMENT</label>
 				<div>
 					<textarea
 						className='area'
-						rows='8'
+						rows='10'
 						colum='10'
 						value={comments}
 						onChange={(e) => setComments(e.target.value)}
@@ -185,7 +184,7 @@ const CheckoutView = () => {
 				<div className='mx-auto button-container'>
 					<NavLink>
 						<button
-							className='btn rounded-pill my-3 custom-btn'
+							className='checkout-btn rounded-pill my-3 custom-btn'
 							type='submit'
 							onClick={handleOnSubmit}
 						>
@@ -203,22 +202,22 @@ const CheckoutView = () => {
 export default CheckoutView;
 
 /* <p className='discount'>Discount
-            <div>
-              {promoCodes}
-            </div>
-          </p>
-          {
-            totPrice >= 100
-              ?
-              <p className='delivery'>Delivery
-                <div>
-                  Free
-                </div>
-              </p>
-              :
-              <p className='delivery'>Delivery
-                <div>
-                  $49
-                </div>
-              </p>
-          }*/
+			<div>
+			  {promoCodes}
+			</div>
+		  </p>
+		  {
+			totPrice >= 100
+			  ?
+			  <p className='delivery'>Delivery
+				<div>
+				  Free
+				</div>
+			  </p>
+			  :
+			  <p className='delivery'>Delivery
+				<div>
+				  $49
+				</div>
+			  </p>
+		  }*/

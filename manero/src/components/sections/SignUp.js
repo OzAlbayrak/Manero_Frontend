@@ -152,7 +152,7 @@ const SignUp = () => {
           appId="778333243702664"
           onResolve={(res) => {
             handleResponse(res);
-            navigate("/");
+            navigate("/home");
           }}
           onReject={(error) => {
             console.log("error:", error);
@@ -184,7 +184,7 @@ const SignUp = () => {
           scope="openid profile email"
           onResolve={(res) => {
             handleResponse(res);
-            navigate("/");
+            navigate("/home");
           }}
           onReject={(error) => {
             console.log(error);

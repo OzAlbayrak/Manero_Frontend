@@ -4,50 +4,64 @@ import Button from "../individuals/Button";
 import Rating from "../individuals/Rating";
 import RatingStars from "../individuals/RatingStars";
 import { NavLink, useParams } from "react-router-dom";
-export const Description = () => {
+import { useShoppingCartContext } from '../../contexts/ShoppingCartContext'
+
+
+export const Description = ({ match }) => {
 
   const [product, setProduct] = useState({})
-  const { id } = useParams()
+  const {addItem} = useShoppingCartContext()
+  const { productId } = useParams()
 
   useEffect(() => {
-    fetch(`https://sijb-cms22-backend.azurewebsites.net/api/Products/${id}`)
-    .then(res => res.json())
-    .then(data => {
-      setProduct(data)
-    })
-  }, [])
+    const fetchProduct = async () => {
+      try {
+        const response = await fetch(`https://sijb-cms22-backend.azurewebsites.net/api/Products/${productId}`);
+        const data = await response.json();
+        setProduct(data);
+      } 
+      catch (error) {
+      }
+    };
+    fetchProduct();
+  }, [productId]);
 
-  
+
   return (
     <div className="container">
-
-      {id}
+      <div className="descriptionpage">
 
         <div className="card-body">
-          <RatingStars />
-            <h5 className="card-title">{product.name}</h5>
-            <p className="card-price">{product.price}$</p>
+        {product ? (
+        <div>
+          <img src={product.imageName}  alt='...'/>
+          <p className="productname">{product.name}</p>
+          <p>${product.price}</p>
+        </div>
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
 
 
       <div>
         <SizeColor />
       </div>
+      <br></br>
       <div>
-        Description
-        <p>
-          Här ska det stå en massa text om produkten. Vi har skor, väskor och en
-          massa kläder samt andra grejer man behöver. Köp denna vara den är
-          Fantastisk!!!!!
-        </p>
+      <h5>Description</h5>
+            
+      <p>{product.description}</p>
       </div>
-        <Button btnType="submit" btnText={"+ ADD TO CART"} />
-        <div style={{justifyContent: "end"}}>
-                <p>Reviews (23)</p>
-                <NavLink to="/reviews"> <p>View All <i className="fa-solid fa-chevron-right"></i></p></NavLink>
+      
+        <Button btnType="submit" btnText={"+ ADD TO CART"} handleClick={() => addItem(product)}></Button> 
+        <br/>
+        <div className="reviews-viewall">
+           <p className="productname">Reviews (23)</p>
+        <NavLink to="/reviews" className="viewAllLink">   <p>View all <i className="fa-solid fa-chevron-right"></i></p></NavLink>
         </div>
-
-      <div className="d-flex justify-content-center align-items-center">
+      </div>
+      <div className="d-grid justify-content-center align-items-center">
         <div className="row">
           <div className="col-10">
             <p>Anette Black</p>
@@ -59,9 +73,7 @@ export const Description = () => {
             <Rating />
           </div>
         </div>
-      </div>
       <hr />
-      <div className="d-flex justify-content-center align-items-center">
         <div className="row">
           <div className="col-10">
             <p>Jenny Wilson</p>
@@ -75,6 +87,7 @@ export const Description = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

@@ -42,8 +42,8 @@ function App() {
           <Route path="/bestSellers" element={<BestSellerView />} />
           <Route path="/Reset" element={<ResetedPassword />} />
           <Route path="/Created" element={<AccountCreated />} />
-          <Route path="/Description" element={<DescriptionView />} />
-          <Route path="/AllReviewsView" element={<AllReviewsView />} />
+          <Route path="/Description/:productId" element={<DescriptionView />} />
+          <Route path="/reviews" element={<AllReviewsView />} />
           <Route path="/" element={<GetStartedHomeView />} />
           <Route
             path="/GetStartedWelcome"

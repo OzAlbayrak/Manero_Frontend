@@ -1,7 +1,7 @@
 import RatingStars from './RatingStars'
 import { useShoppingCartContext } from '../../contexts/ShoppingCartContext'
 import { useWishlistContext } from '../../contexts/WishlistContext'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const ProductCard = ({ product }) => {
   const {addItem} = useShoppingCartContext()
@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
   
   return <div className="card">
         <div className="card-img-container">
-        <NavLink to="/description"><img src={product.imageName} className="card-img-top" alt="..." /></NavLink>
+        <Link to={`/description/${product.id}`}><img src={product.imageName} className="card-img-top" alt="..." /></Link>
           <div className="card-menu d-xl-none">
             <button className={isInWishlist(product.id) ? 'heart-active' : 'heart'} onClick={handleWishlistClick}>
               <i className="fa-regular fa-heart"></i>

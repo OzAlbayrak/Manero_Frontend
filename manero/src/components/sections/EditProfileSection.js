@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ProfilePicture from '../individuals/ProfilePicture';
 import { useProfileContext } from '../../contexts/ProfileContext';
 
@@ -10,7 +10,7 @@ import { useAddressContext } from '../../contexts/AddressContext';
 
 const EditProfileSection = () => {
 	const { profile } = useProfileContext();
-	const { addresses } = useAddressContext();
+	const { addresses, getUserAddresses } = useAddressContext();
 	const [name, setName] = useState(profile.name);
 	const [email, setEmail] = useState(profile.email);
 	const [phone, setPhone] = useState(profile.phoneNumber);
@@ -18,8 +18,11 @@ const EditProfileSection = () => {
 	const [success, setSuccess] = useState();
 	const navigate = useNavigate();
 
-	let location = '';
+	useEffect(() => {
+		getUserAddresses();
+	}, []);
 
+	let location = '';
 	if (addresses.length > 0) {
 		location = addresses[0].city;
 	}

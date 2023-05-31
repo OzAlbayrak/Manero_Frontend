@@ -340,7 +340,7 @@ button {
   background: #dbe3f5;
 }
 .showcase .container {
-  height: 500px;
+  height: 450px;
   display: flex;
   margin-left: 15px;
   margin-bottom: 15px;
@@ -350,17 +350,17 @@ button {
   display: flex;
   justify-content: left;
   align-items: flex-end;
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
 }
 .showcase .container .content .titles {
   text-align: left;
   color: #ffffff;
 }
 .showcase .container .content .titles .redbullpicture {
-  max-width: 10rem;
+  max-width: 9rem;
 }
 .showcase .container2 {
-  height: 300px;
+  height: 250px;
   display: flex;
   justify-content: space-between;
 }
@@ -392,6 +392,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 375px;
 }
 .product-grid .home-container {
   min-width: 375px;
@@ -405,7 +406,7 @@ button {
 .product-grid .home-container .item-container {
   display: flex;
   overflow-y: hidden;
-  justify-content: center;
+  justify-content: start;
   margin-left: 15px;
   margin-bottom: 25px;
 }
@@ -437,7 +438,7 @@ button {
   margin-right: 10px;
   text-align: center;
   cursor: pointer;
-  min-width: 23rem;
+  min-width: 15rem;
 }
 .product-grid .card .card-img-container {
   display: grid;
@@ -1182,7 +1183,7 @@ main {
   display: inline;
   border: none;
   background-color: #ffffff;
-  font-size: 14px;
+  font-size: 12px;
 }
 .bestproduct-grid .salesBtnContainer .dropdownitems:hover {
   display: block;
@@ -1192,14 +1193,14 @@ main {
   grid-template-columns: 1fr 1fr;
   margin-bottom: 2rem;
 }
-.bestproduct-grid .title {
+.bestproduct-grid .bestproductscontainer .title {
   font-size: 40px;
   font-weight: bolder;
   text-align: left;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
-.bestproduct-grid .card {
+.bestproduct-grid .bestproductscontainer .card {
   z-index: 0;
   border: none;
   margin-left: 10px;
@@ -1208,17 +1209,17 @@ main {
   cursor: pointer;
   min-width: 2rem;
 }
-.bestproduct-grid .card .card-img-container {
+.bestproduct-grid .bestproductscontainer .card .card-img-container {
   display: grid;
   position: relative;
 }
-.bestproduct-grid .card .card-img-container .card-menu {
+.bestproduct-grid .bestproductscontainer .card .card-img-container .card-menu {
   position: absolute;
   top: 10px;
   right: 10px;
   display: block;
 }
-.bestproduct-grid .card .card-img-container .card-menu .menu-link {
+.bestproduct-grid .bestproductscontainer .card .card-img-container .card-menu .menu-link {
   background-color: none;
   color: #222529;
   width: 36px;
@@ -1231,35 +1232,74 @@ main {
   border: none;
   outline: none;
 }
-.bestproduct-grid .card .card-img-container .card-menu .menu-link:hover {
+.bestproduct-grid .bestproductscontainer .card .card-img-container .card-menu .menu-link:hover {
   background-color: #222529;
   color: #ffffff;
   text-decoration: none;
 }
-.bestproduct-grid .card .card-img-container .btn-theme {
+.bestproduct-grid .bestproductscontainer .card .card-img-container .heart {
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.bestproduct-grid .bestproductscontainer .card .card-img-container .heart:hover {
+  color: red;
+}
+.bestproduct-grid .bestproductscontainer .card .card-img-container .heart-active {
+  border: none;
+  background: none;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.bestproduct-grid .bestproductscontainer .card .btn-theme {
   position: absolute;
   bottom: 0;
 }
-.bestproduct-grid .card .card-body {
+.bestproduct-grid .bestproductscontainer .card-body {
   text-align: center;
 }
-.bestproduct-grid .card .card-body .card-title {
+.bestproduct-grid .bestproductscontainer .card-body .card-title {
   margin-top: 1rem;
   font-size: 1rem;
   font-weight: 100;
   text-align: left;
 }
-.bestproduct-grid .card .card-body .card-price {
+.bestproduct-grid .bestproductscontainer .card-body .card-price {
   margin-top: 1rem;
   font-size: 18px;
   font-weight: 100;
   text-align: left;
 }
-.bestproduct-grid .card:hover .card-menu {
+.bestproduct-grid .bestproductscontainer:hover .card-menu {
   display: block !important;
 }
-.bestproduct-grid .card:hover .btn-theme {
+.bestproduct-grid .bestproductscontainer:hover .btn-theme {
   display: block !important;
+}
+
+.descriptionpage {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-viewall {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviews-viewall .viewAllLink {
+  text-decoration: none;
+  color: #111111;
+}
+
+.productname {
+  font-weight: bold;
 }
 
 .search-container {
@@ -1420,23 +1460,24 @@ main {
   display: grid;
   grid-template-columns: 1fr 2fr 0.25fr;
   grid-template-areas: "img info btns";
-  margin: 3px;
+  margin: 10px;
+  justify-content: center;
 }
 
-.cart.img {
+.cart-img {
   grid-area: img;
   overflow: hidden;
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 150px;
+  margin-bottom: 10px;
 }
 
 .cart-info {
   grid-area: info;
   display: flex;
-  margin-top: 10px;
-  margin-bottom: 50px;
+  margin-top: 0px;
+  margin-bottom: 20px;
   flex-direction: column;
   justify-content: center;
   text-align: left;
@@ -1453,7 +1494,19 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1px;
+  padding: 2px;
+  align-items: center;
+}
+
+.cart-info-btn {
+  border: none;
+  background-color: white;
+  color: black;
+}
+
+.cart-total-price {
+  display: flex;
+  justify-content: space-between;
 }
 
 .cart-btn-container {
@@ -1467,27 +1520,29 @@ main {
   z-index: 2;
 }
 
-.cart-icon {
-  position: absolute;
-  right: 40px;
-  top: 40px;
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-.cart-total {
-  position: relative;
-  top: 4px;
-  right: 25px;
-  background-color: red;
-  color: white;
-  font-size: 8px;
-  padding: 3px;
-  border-radius: 50%;
+.cart-delivery-p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.odp {
+  color: rgb(13, 147, 102);
 }
 
 .order-container {
   display: grid;
   grid-template-columns: 1fr 2fr 0.25fr;
   grid-template-areas: "img info btns";
+  margin-top: 20px;
+  margin: 10px;
+  justify-content: center;
 }
 
 .order-img {
@@ -1539,6 +1594,11 @@ main {
   display: flex;
   justify-content: center;
   margin-bottom: 80px;
+  margin-top: 40px;
+}
+
+.order-btn {
+  padding: 5px 50px;
 }
 
 .menu-icons {
@@ -1565,15 +1625,21 @@ main {
 .checkout-container {
   display: flex;
   justify-content: space-around;
-  margin-left: 0;
+  margin: 5px;
 }
 
 .checkout-form {
   display: grid;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 10px;
-  margin-top: 2rem;
+  margin-top: 1rem;
+}
+
+.checkout-label {
+  text-align: left;
+  margin-left: 20px;
 }
 
 .area {
@@ -1584,11 +1650,11 @@ main {
 .shipping-address {
   display: flex;
   justify-content: space-between;
-  margin-left: 10px;
+  margin: 5px;
 }
 
 .checkout-info {
-  margin-left: 10px;
+  margin: 5px;
 }
 
 .checkout-info-order {
@@ -1603,7 +1669,12 @@ main {
 .button-container {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
   margin-bottom: 60px;
+}
+
+.checkout-btn {
+  padding: 10px 100px;
 }
 
 .menu-icons {
@@ -1643,6 +1714,7 @@ main {
   font-size: 18px;
   font-family: "Mulish";
   font-weight: 600;
+  margin: 5px;
 }
 
 .promo-app-span {
@@ -1717,16 +1789,27 @@ main {
   background-color: rgb(244, 248, 250);
 }
 
+.order-completed-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
 .order-completed-img {
   margin-top: 80px;
 }
 
 h1 {
+  font-size: 22px;
+  font-weight: 900;
   text-align: center;
   margin-top: 40px;
 }
 
 h4 {
+  font-size: 16px;
+  font-weight: 400;
   text-align: center;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -1740,11 +1823,9 @@ h4 {
 }
 
 .order-completed-b {
-  margin-left: 450px;
-  padding: 10px 180px;
+  padding: 10px 120px;
   font-size: 14px;
   font-weight: 600;
-  font-family: "Mulish", sans-serif;
   border-radius: 40px;
   background-color: black;
   color: white;
@@ -1752,18 +1833,18 @@ h4 {
 }
 
 .order-completed-p {
-  text-align: start;
-  margin-left: 55px;
+  display: flex;
+  justify-content: center;
 }
 
 .order-completed-nav {
+  font-size: 14px;
+  font-weight: 600;
   background: none;
   border: none;
   color: black;
   cursor: pointer;
   margin-bottom: 40px;
-  text-align: center;
-  margin-left: 530px;
 }
 
 .profile-section {

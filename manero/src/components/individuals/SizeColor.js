@@ -53,12 +53,12 @@ import { useState } from 'react';
             XXL
           </button>
         </div>
+        <br></br>
         <div>
-          <p >Color</p>
-          <div>
+          <div className='d-flex align-items-center'>Color
             <button           
               value="red"
-              style={{ marginRight:"1rem" ,borderRadius: "15px", height: "2rem", width: "2rem", backgroundColor: "red"}}
+              style={{ marginLeft:"1rem", marginRight:"1rem" ,borderRadius: "15px", height: "2rem", width: "2rem", backgroundColor: "red"}}
               onClick={(e) => setSelectedColor(e.target.value)}
             >
               
