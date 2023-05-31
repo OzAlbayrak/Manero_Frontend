@@ -488,7 +488,7 @@ button {
   right: 10px;
   display: block;
 }
-.product-grid .card .card-img-container .card-menu .menu-link {
+.product-grid .card .card-img-container .card-menu .menu-link-product {
   background-color: none;
   color: #222529;
   width: 36px;
@@ -502,7 +502,7 @@ button {
   outline: none;
   background: none;
 }
-.product-grid .card .card-img-container .card-menu .menu-link:hover {
+.product-grid .card .card-img-container .card-menu .menu-link-product:hover {
   color: #dbe3f5;
   text-decoration: none;
 }
@@ -1176,11 +1176,11 @@ main {
   height: 30px;
   width: 30px;
 }
-.wishlist-container .wishlist-btns .menu-link {
+.wishlist-container .wishlist-btns .menu-link-product {
   border: none;
   background: none;
 }
-.wishlist-container .wishlist-btns .menu-link:hover {
+.wishlist-container .wishlist-btns .menu-link-product:hover {
   color: #dbe3f5 !important;
   text-decoration: none;
 }
@@ -1257,7 +1257,7 @@ main {
   right: 10px;
   display: block;
 }
-.bestproduct-grid .bestproductscontainer .card .card-img-container .card-menu .menu-link {
+.bestproduct-grid .bestproductscontainer .card .card-img-container .card-menu .menu-link-product {
   background-color: none;
   color: #222529;
   width: 36px;
@@ -1270,7 +1270,7 @@ main {
   border: none;
   outline: none;
 }
-.bestproduct-grid .bestproductscontainer .card .card-img-container .card-menu .menu-link:hover {
+.bestproduct-grid .bestproductscontainer .card .card-img-container .card-menu .menu-link-product:hover {
   background-color: #222529;
   color: #ffffff;
   text-decoration: none;
@@ -1431,7 +1431,7 @@ main {
   right: 10px;
   display: block;
 }
-.filtred-products-container .filtred-products .card .card-img-container .card-menu .menu-link {
+.filtred-products-container .filtred-products .card .card-img-container .card-menu .menu-link-product {
   background-color: none;
   color: #222529;
   width: 36px;
@@ -1445,7 +1445,7 @@ main {
   outline: none;
   background: none;
 }
-.filtred-products-container .filtred-products .card .card-img-container .card-menu .menu-link:hover {
+.filtred-products-container .filtred-products .card .card-img-container .card-menu .menu-link-product:hover {
   color: #dbe3f5;
   text-decoration: none;
 }
