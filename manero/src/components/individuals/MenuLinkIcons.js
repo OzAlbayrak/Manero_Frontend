@@ -2,7 +2,14 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const MenuLinkIcons = () => {
-	//const [selectedPage, setSelectedPage] = useState();
+	const profileLink = () => {
+		const provider = sessionStorage.getItem('provider');
+		if (provider) {
+			return 'profile';
+		} else {
+			return 'signin';
+		}
+	};
 
 	return (
 		<div className='bottom-menu-container'>
@@ -27,7 +34,11 @@ const MenuLinkIcons = () => {
 						<i className='fa-light fa-heart'></i>
 					</div>
 				</NavLink>
-				<NavLink to='/profile' className='menu-link' activeclassname='active'>
+				<NavLink
+					to={`/${profileLink()}`}
+					className='menu-link'
+					activeclassname='active'
+				>
 					<div>
 						<i className='fa-light fa-user'></i>
 					</div>
