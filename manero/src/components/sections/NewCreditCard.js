@@ -103,7 +103,7 @@ const NewCreditCard = () => {
           </label>
           <input
             className="cvv-input"
-            type="password"
+            type="text"
             name="cvvCode"
             id="cvvCode"
             maxLength={3}
