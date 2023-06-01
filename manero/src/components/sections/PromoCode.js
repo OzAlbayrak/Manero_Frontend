@@ -33,7 +33,7 @@ const PromoCode = () => {
       if (voucherExists) {
         setValidationResult({ valid: true });
         addPromoCode(voucherCode);
-        navigate('/intern-sida');
+        window.location.href = 'https://victorious-sea-00fa7bc03.3.azurestaticapps.net/Order';
       } else {
         setValidationResult({ valid: false });
       }
