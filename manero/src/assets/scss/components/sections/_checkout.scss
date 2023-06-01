@@ -1,107 +1,98 @@
 .checkout-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 5px;
-
+	max-width: 100%;
+	width: 600px;
 }
 
-
 .checkout-form {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 10px;
-    margin-top: 1rem;
-
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 10px;
+	margin-top: 1rem;
 }
 
 .checkout-label {
-    text-align: left;
-    margin-left: 20px;
-
+	text-align: left;
+	margin-left: 20px;
 }
 
 .area {
-    border-radius: 10px;
-    width: 300px;
+	border-radius: 10px;
+	width: 300px;
 }
 
 .shipping-address {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px;
-
+	display: flex;
+	justify-content: space-between;
+	margin: 5px;
 }
 
 .checkout-info {
-    margin: 5px;
+	margin: 5px;
 }
 
 .checkout-info-order {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .p-info {
-    margin-left: 10px;
+	margin-left: 10px;
 }
 
 .button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 60px;
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	margin-bottom: 60px;
 }
 
 .checkout-btn {
-    padding: 10px 100px;
+	padding: 10px 100px;
 }
 
-
-
 .menu-icons {
-    position: relative;
+	position: relative;
 }
 
 .info-color {
-    background-color: rgb(235, 245, 247);
+	background-color: rgb(235, 245, 247);
 }
 
 .totItem {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .totPrice {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .discount {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
-
 .delivery {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .check-inf {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .semi {
-    font-size: 18px;
-    font-family: 'Mulish';
-    font-weight: 600;
-    margin: 5px;
+	font-size: 18px;
+	font-family: 'Mulish';
+	font-weight: 600;
+	margin: 5px;
 }
 
 .promo-app-span {
-    margin-left: 4px;
-    color: rgb(31, 152, 112);
+	margin-left: 4px;
+	color: rgb(31, 152, 112);
 }

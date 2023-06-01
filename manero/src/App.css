@@ -1007,6 +1007,9 @@ main {
 .header-toggle {
   cursor: pointer;
 }
+.header-toggle .hamburger-menu {
+  margin-left: 5vw;
+}
 
 .sidebar {
   z-index: 9;
@@ -1093,7 +1096,7 @@ main {
   text-decoration: none;
   font-size: 14px;
   transform: translateX(-5px) translateY(-135px);
-  color: #B3B9C7;
+  color: #b3b9c7;
 }
 .inputBox .icon {
   color: rgba(179, 185, 199, 0.5843137255);
@@ -1105,7 +1108,7 @@ main {
 .inputBox input {
   height: 50px;
   width: 100%;
-  border: 1px solid #B3B9C7;
+  border: 1px solid #b3b9c7;
   background: #111111;
   border-radius: 25px;
   outline: none;
@@ -1116,7 +1119,7 @@ main {
 .inputBox label {
   position: absolute;
   left: 0;
-  color: #B3B9C7;
+  color: #b3b9c7;
   transform: translateX(20px) translateY(-60px);
   font-size: 12px;
   padding: 0 6px 0 6px;
@@ -1503,11 +1506,16 @@ main {
 }
 
 .cart-container {
+  max-width: 100%;
+  width: 600px;
+}
+
+.cart-card {
   display: grid;
   grid-template-columns: 1fr 2fr 0.25fr;
   grid-template-areas: "img info btns";
   margin: 10px;
-  justify-content: center;
+  align-content: center;
 }
 
 .cart-img {
@@ -1583,6 +1591,11 @@ main {
 }
 
 .order-container {
+  max-width: 100%;
+  width: 600px;
+}
+
+.order-card {
   display: grid;
   grid-template-columns: 1fr 2fr 0.25fr;
   grid-template-areas: "img info btns";
@@ -1669,9 +1682,8 @@ main {
 }
 
 .checkout-container {
-  display: flex;
-  justify-content: space-around;
-  margin: 5px;
+  max-width: 100%;
+  width: 600px;
 }
 
 .checkout-form {
@@ -1816,7 +1828,9 @@ main {
 }
 
 .payment-container {
-  margin: 20px;
+  padding: 20px;
+  max-width: 100%;
+  width: 600px;
 }
 
 .payment-header {

@@ -1,19 +1,21 @@
 .payment-container {
-    margin: 20px;
+	padding: 20px;
+	max-width: 100%;
+	width: 600px;
 }
 
 .payment-header {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .payment-custom-radio {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .payment-color {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(244, 248, 250);
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(244, 248, 250);
 }

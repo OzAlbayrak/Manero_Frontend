@@ -9,6 +9,7 @@ import { PromoCodeProvider } from '../contexts/PromoCodeContext';
 import { useAddressContext } from '../contexts/AddressContext';
 import { useCreditCardContext } from '../contexts/CreditCardContext';
 import { useProfileContext } from '../contexts/ProfileContext';
+import Button from '../components/individuals/Button';
 
 const CheckoutView = () => {
 	const { items, addItem, removeItem } = useShoppingCartContext();
@@ -111,89 +112,86 @@ const CheckoutView = () => {
 
 	return (
 		<div className='d-flex flex-column vh-100'>
-			<div className='checkout-container m-1'>
-				<Header title={'Checkout'} hasSideIcon={true} isMenu={false} ></Header>
-			</div>
+			<Header title={'Checkout'} hasSideIcon={true} isMenu={false}></Header>
 
-			<div className='checkout-info'>
-				<div className='checkout-info-order'>
-					<p className='semi'>My order</p>
-					<p className='totPrice'>
-						<div>${totPrice}</div>
-					</p>
-				</div>
-
-				<div className='info-color'>
-					<hr />
-					<p className='totItem'>
-						{items.map((item) => (
-							<div key={item.id}>
-								<div className='check-inf'>
-									<div>{item.name}</div>
-									<div>
-										{item.quantity} x ${item.price}
-									</div>
-								</div>
-							</div>
-						))}
-					</p>
-
-					<p className='discount'>Discount</p>
-					<div></div>
-
-					<div className='d-flex order-delivery-p'>
-						<p className='delivery'>Delivery</p>
-						<p className='odp'>Free</p>
+			<div className='checkout-container mx-auto'>
+				<div className='checkout-info'>
+					<div className='checkout-info-order'>
+						<p className='semi'>My order</p>
+						<p className='totPrice'>
+							<div>${totPrice}</div>
+						</p>
 					</div>
 
-					<hr />
+					<div className='info-color'>
+						<hr />
+						<p className='totItem'>
+							{items.map((item) => (
+								<div key={item.id}>
+									<div className='check-inf'>
+										<div>{item.name}</div>
+										<div>
+											{item.quantity} x ${item.price}
+										</div>
+									</div>
+								</div>
+							))}
+						</p>
+
+						<p className='discount'>Discount</p>
+						<div></div>
+
+						<div className='d-flex order-delivery-p'>
+							<p className='delivery'>Delivery</p>
+							<p className='odp'>Free</p>
+						</div>
+
+						<hr />
+					</div>
 				</div>
-			</div>
 
-			<div className='shipping-address'>
-				<p className='semi'>Shipping details</p>
-				<NavLink to='/Shippment'>
-					<i className='fa-regular fa-chevron-right'></i>
-				</NavLink>
-			</div>
-			<p className='p-info'>Nordkapsvägen 1, 136 57, Vega SVERIGE</p>
-
-			<hr />
-			<div className='shipping-address'>
-				<p className='semi'>Payment Method</p>
-				<NavLink to='/Payment'>
-					<i className='fa-regular fa-chevron-right'></i>
-				</NavLink>
-			</div>
-			<p className='p-info'>7741********6644</p>
-
-			<hr />
-
-			<form className='checkout-form' onSubmit={handleOnSubmit}>
-				<label className='checkout-label'>COMMENT</label>
-				<div>
-					<textarea
-						className='area'
-						rows='10'
-						colum='10'
-						value={comments}
-						onChange={(e) => setComments(e.target.value)}
-						placeholder='Enter your comment'
-					/>
-				</div>
-				<div className='mx-auto button-container'>
-					<NavLink>
-						<button
-							className='checkout-btn rounded-pill my-3 custom-btn'
-							type='submit'
-							onClick={handleOnSubmit}
-						>
-							Confirm Order
-						</button>
+				<div className='shipping-address'>
+					<p className='semi'>Shipping details</p>
+					<NavLink to='/Shippment'>
+						<i className='fa-regular fa-chevron-right'></i>
 					</NavLink>
 				</div>
-			</form>
+				<p className='p-info'>Nordkapsvägen 1, 136 57, Vega SVERIGE</p>
 
+				<hr />
+				<div className='shipping-address'>
+					<p className='semi'>Payment Method</p>
+					<NavLink to='/Payment'>
+						<i className='fa-regular fa-chevron-right'></i>
+					</NavLink>
+				</div>
+				<p className='p-info'>7741********6644</p>
+
+				<hr />
+
+				<form className='checkout-form' onSubmit={handleOnSubmit}>
+					<label className='checkout-label'>COMMENT</label>
+					<div>
+						<textarea
+							className='area'
+							rows='10'
+							colum='10'
+							value={comments}
+							onChange={(e) => setComments(e.target.value)}
+							placeholder='Enter your comment'
+						/>
+					</div>
+					<div className='mx-auto button-container'>
+						<NavLink>
+							<Button
+								btnText={'Confirm Order'}
+								btnType='submit'
+								handleClick={handleOnSubmit}
+							/>
+						</NavLink>
+					</div>
+				</form>
+			</div>
 			<MenuLinkIcons />
 		</div>
 	);

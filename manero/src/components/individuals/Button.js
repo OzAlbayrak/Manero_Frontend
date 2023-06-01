@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Button = ({ btnType = 'submit', btnText, handleClick }) => {
-	// const btnText = 'Button';
 	return (
 		/* knappen har width: 100%; . Den bör alltså ha ett föräldra-element med en begränsad vidd (tex max-width: 430px;) */
 

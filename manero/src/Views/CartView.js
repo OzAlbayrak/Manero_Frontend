@@ -18,11 +18,11 @@ export const CartView = () => {
 	}, [items]);
 
 	return (
-		<div className='cart-container d-flex flex-column vh-100'>
+		<div className='d-flex flex-column vh-100'>
 			<div className='d-flex flex-direction-column '>
 				<Header title={'Cart'} hasSideIcon={true} isMenu={false} hasCart={true} />
 			</div>
-			<div>
+			<div className='cart-container mx-auto'>
 				{items.length === 0 ? (
 					<div className='text-center'>
 						<img className='mx-auto' src={Image} />
@@ -46,7 +46,7 @@ export const CartView = () => {
 					<div className='text-center'>
 						{items.map((item) => (
 							<div key={item.id}>
-								<div className='cart-container'>
+								<div className='cart-card'>
 									<img src={item.image} className='cart-img' alt='...' />
 
 									<div className='cart-info'>
