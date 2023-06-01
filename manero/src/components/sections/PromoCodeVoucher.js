@@ -36,7 +36,7 @@ const PromoCodesVoucher = () => {
             ...prevState,
             [promoId]: false,
           }));
-          navigate('/intern-sida');
+          navigate('https://victorious-sea-00fa7bc03.3.azurestaticapps.net/Promocode');
         }, 1200);
       }
     } catch (error) {

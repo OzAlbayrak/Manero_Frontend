@@ -14,6 +14,7 @@ import ResetPassword from "./components/sections/ResetPassword";
 import CartView from "./Views/CartView";
 import WishlistView from "./Views/WishlistView";
 import PromocodesView from "./Views/PromocodesView";
+import PromoCodeVoucher from "./Views/PromoCodeVoucher";
 import BestSellerView from "./Views/BestSellerView";
 import SearchView from "./Views/SearchView";
 import OrderView from "./Views/OrderView";
@@ -59,6 +60,7 @@ function App() {
           <Route path="/Cart" element={<CartView />} />
           <Route path="/Wishlist" element={<WishlistView />} />
           <Route path="/PromoCode" element={<PromocodesView />} />
+          <Route path="/PromoCodeVoucher" element={<PromoCodeVoucher />} />
           <Route path="/Order" element={<OrderView />} />
           <Route path="/Checkout" element={<CheckoutView />} />
           <Route path="/Shippment" element={<ShippmentView />} />
