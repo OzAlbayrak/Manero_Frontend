@@ -22,6 +22,7 @@ const PromoCodesVoucher = () => {
 
   const navigate = useNavigate();
   
+  
   const copyToClipboard = async (promoId) => {
     try {
       const promo = promocodes.find((promo) => promo.id === promoId);
@@ -36,13 +37,14 @@ const PromoCodesVoucher = () => {
             ...prevState,
             [promoId]: false,
           }));
-          navigate('/Promocode');
+          window.location.href = 'https://victorious-sea-00fa7bc03.3.azurestaticapps.net/Promocode';
         }, 1200);
       }
     } catch (error) {
       console.error("Error copying promo code", error);
     }
   };
+  
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
