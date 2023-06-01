@@ -4,7 +4,7 @@ import React from 'react'
 
 const Rating = () => {
   return (
-    <div className="rating">
+    <div className="ratingrev">
       <i className="fa-sharp fa-solid fa-star"></i>
       <i className="fa-sharp fa-solid fa-star"></i>
       <i className="fa-sharp fa-solid fa-star"></i>
