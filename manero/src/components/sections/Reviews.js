@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../sections/Header";
 import Image from "../../assets/images/LeaveReview.svg";
+import InputField from "../individuals/InputField";
 
 const Reviews = () => {
   const [rating, setRating] = useState(0);
@@ -12,20 +13,19 @@ const Reviews = () => {
       
     setRating(0);
     setReviewText("");
-
   };
 
   const handleReviewTextChange = (e) => {
     setReviewText(e.target.value);
   };
 
-  const ReviewInput = ({ value, onChange, placeholder, name }) => {
+  const ReviewInput = ({ reviewValue, reviewOnChange, reviewPlaceholder, reviewName }) => {
     return (
       <textarea className="review-baseinput"
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        name={name}
+        value={reviewValue}
+        onChange={reviewOnChange}
+        placeholder={reviewPlaceholder}
+        name={reviewName}
       ></textarea>
     );
   };
@@ -69,22 +69,25 @@ const Reviews = () => {
       <p className="revText-small">
         Your comments and suggestions help us improve the service quality better!
       </p>
+      <form>
       <div className="review-input-container">
-      <div className="review-text-center-label">
-    <label className="review-label">Review</label>
-        <ReviewInput
-          value={reviewText}
-          onChange={handleReviewTextChange}
-          placeholder="Enter your review"
-          name="review"
-        />
+        <div className="review-text-center-label">
+          <label className="review-label">Review</label>
+          <ReviewInput
+            reviewValue={reviewText}
+            reviewOnChange={handleReviewTextChange}
+            reviewPlaceholder="Enter your review"
+            reviewName="review"
+          />
+        </div>
       </div>
-      </div>
+      
       <div className="review-btn d-flex aligns-items-center justify-content-center">
         <div className="submit-button-wrapper mt-4">
           <ReviewButton btnText="Submit" handleClick={handleReviewSubmit} />
         </div>
       </div>
+      </form>
     </div>
   );
 };
