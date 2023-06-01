@@ -84,6 +84,7 @@ const SignIn = () => {
         <div className="d-flex justify-content-between container text-center my-3">
           <div>
             <input
+              className="me-2 ms-3"
               type="checkbox"
               id="rememberMe"
               name="rememberMe"
@@ -96,7 +97,7 @@ const SignIn = () => {
           </div>
           <NavLink
             to="/ForgotPassword"
-            className="text-dark-color register-link"
+            className="text-dark-color register-link me-3"
           >
             Forgot password?
           </NavLink>
