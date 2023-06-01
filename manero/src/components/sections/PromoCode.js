@@ -27,7 +27,6 @@ const PromoCode = () => {
       const data = await response.json();
       console.log("API-svar:", data);
 
-      // Kontrollera om värdekoden finns i listan
       const voucherExists = data.some((item) => item.name === voucherCode);
 
       if (voucherExists) {
