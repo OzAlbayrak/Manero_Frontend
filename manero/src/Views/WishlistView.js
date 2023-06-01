@@ -48,17 +48,17 @@ const WishListView = () => {
 								<div className='wishlist-btns'>
 									<button
 										id='heart'
-										className='menu-link'
+										className='menu-link-product'
 										onClick={() => handleRemoveFromWishlist(product.id)}
 									>
 										<i className='fa-solid fa-heart'></i>
 									</button>
 									<button
 										id='bag'
-										className='menu-link'
+										className='menu-link-product'
 										onClick={() => addItem(product)}
 									>
-										<i className='fa-light fa-bag-shopping'></i>
+										<i className='fa-light fa-shopping-bag '></i>
 									</button>
 								</div>
 							</div>

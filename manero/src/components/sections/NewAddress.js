@@ -25,13 +25,8 @@ const NewAddress = () => {
     const res = Object.fromEntries(formData);
     const token = sessionStorage.getItem("apiAccessToken");
 
-    console.log("token", token);
-    console.log("res", res);
-
     if (validateForm(res)) {
       const result = await registerAddress(res, token);
-
-      console.log("result:", result);
 
       switch (result.status) {
         case 200:

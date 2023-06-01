@@ -22,8 +22,8 @@ const ProductCard = ({ product }) => {
             <button className={isInWishlist(product.id) ? 'heart-active' : 'heart'} onClick={handleWishlistClick}>
               <i className="fa-regular fa-heart"></i>
             </button>
-            <button className="menu-link" onClick={() => addItem(product)}>
-              <i className="fa-light fa-bag-shopping"></i>
+            <button className="menu-link-product" onClick={() => addItem(product)}>
+            <i className='fa-light fa-shopping-bag '></i>
             </button>
           </div>
         </div>

@@ -6,6 +6,10 @@ const SideMenu = () => {
   const [show, setShow] = useState(false);
   const [showcontact, setShowContact] = useState(false);
 
+  const getToken = () => {
+    return sessionStorage.getItem("apiAccessToken");
+  };
+
   return (
     <main className={show ? "space-toggle" : null}>
       <header className={`header ${show ? "space-toggle" : null}`}>
@@ -27,9 +31,15 @@ const SideMenu = () => {
               <NavLink to="/Search" className="nav-link actives">
                 <span className="nav-link-name">Products</span>
               </NavLink>
-              <NavLink to="/SignIn" className="nav-link">
-                <span className="nav-link-name">Log in</span>
-              </NavLink>
+              {getToken() ? (
+                <NavLink to="/Profile" className="nav-link">
+                  <span className="nav-link-name">My profile</span>
+                </NavLink>
+              ) : (
+                <NavLink to="/SignIn" className="nav-link">
+                  <span className="nav-link-name">Log in</span>
+                </NavLink>
+              )}
             </div>
             <section className="contactpage">
               <div
