@@ -1,63 +1,64 @@
-.wishlist-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "img img info info info btns";
-    margin-bottom: 5vh;
+.whishlist-box {
+	max-width: 100%;
+	width: 600px;
+}
 
-    .wishlist-img{
-        grid-area: img;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 150px;
+.wishlist-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: 'img img info info info btns';
+	margin-bottom: 5vh;
 
-    }
-    .wishlist-info{
-        grid-area: info;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        flex-direction: column;
-        align-items: left;
-        margin-left: 10px;
+	.wishlist-img {
+		grid-area: img;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		height: 150px;
+	}
+	.wishlist-info {
+		grid-area: info;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		flex-direction: column;
+		align-items: left;
+		margin-left: 10px;
+	}
+	.wishlist-btns {
+		grid-area: btns;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 
-    }
-    .wishlist-btns{
-        grid-area: btns;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+		#heart {
+			color: red;
 
-        #heart{
-            color:red;
+			&:hover {
+				color: black;
+			}
+		}
 
-            &:hover{
-                color:black;
-            }
-        }
+		#bag {
+			color: white;
+			background-color: black;
+			border-radius: 50%;
+			height: 30px;
+			width: 30px;
+		}
 
-        #bag{
-            color: white;
-            background-color: black;
-            border-radius: 50%;
-            height: 30px;
-            width: 30px;;
-        }
+		.menu-link-product {
+			border: none;
+			background: none;
 
-        .menu-link-product{
-            border:none;
-            background:none;
-
-            &:hover {
-                color: $color-theme !important;
-                text-decoration: none;
-            }
-        }
-
-
-    }
-}    
+			&:hover {
+				color: $color-theme !important;
+				text-decoration: none;
+			}
+		}
+	}
+}

@@ -1,36 +1,37 @@
-.myaddress{
-    //margin: 50px 0px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
+.myaddress {
+	//margin: 50px 0px;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-items: center;
 
-    .media-border{
-        display: flex;
-        flex-direction: column; 
+	.media-border {
+		display: flex;
+		flex-direction: column;
+		max-width: 100%;
+		width: 600px;
 
-        .field-box{
-            .field{
-                min-width: 360px;
-                max-width: none;
-                .field-content{
-        
-                    .sub-text{
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
-        
-        .new-address-box{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 40px;
+		.field-box {
+			.field {
+				min-width: 360px;
+				max-width: none;
+				.field-content {
+					.sub-text {
+						font-size: 14px;
+					}
+				}
+			}
+		}
 
-            p{
-                margin-top: 10px;
-            }
-        }
-    }
+		.new-address-box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 40px;
+
+			p {
+				margin-top: 10px;
+			}
+		}
+	}
 }

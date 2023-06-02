@@ -22,7 +22,7 @@ const WishListView = () => {
 				isMenu={true}
 				hasCart={true}
 			></Header>
-			<div>
+			<div className='whishlist-box mx-auto'>
 				{wishlist.length === 0 ? (
 					<div className='text-center'>
 						<img className='password-image mx-auto' src={Image} alt='...' />

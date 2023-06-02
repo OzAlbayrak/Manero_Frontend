@@ -1139,6 +1139,11 @@ main {
   max-width: 335px;
 }
 
+.whishlist-box {
+  max-width: 100%;
+  width: 600px;
+}
+
 .wishlist-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -2113,6 +2118,8 @@ h4 {
 .myaddress .media-border {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+  width: 600px;
 }
 .myaddress .media-border .field-box .field {
   min-width: 360px;
@@ -2131,6 +2138,10 @@ h4 {
   margin-top: 10px;
 }
 
+.payment-method .payment-method-container {
+  max-width: 100%;
+  width: 600px;
+}
 .payment-method .slide-container {
   display: flex;
   align-items: center;
